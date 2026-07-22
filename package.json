@@ -1,0 +1,9 @@
+{
+  "name": "one-piece-idle-pirate-wiki",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node tools/build-static.mjs"
+  }
+}
