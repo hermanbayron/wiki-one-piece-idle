@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formaciones | One Piece Idle Pirate Wiki</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="index.html" aria-label="Ir al inicio">
+        <span class="brand-mark">OP</span>
+        <span>Idle Pirate Wiki</span>
+      </a>
+      <nav class="nav-links" aria-label="Secciones principales">
+        <a href="index.html">Inicio</a>
+        <a href="ciudad.html">Ciudad</a>
+        <a href="instance.html">Instance</a>
+        <a href="trial.html">Trial</a>
+        <a href="impel-down.html">Impel Down</a>
+        <a href="boss.html">Boss</a>
+        <a href="arena.html">Arena</a>
+        <a href="heroes.html">Héroes</a>
+        <a href="summon.html">Summon</a>
+        <a href="altar.html">Altar</a>
+        <a href="combate.html">Combate</a>
+        <a class="active" href="formaciones.html">Formaciones</a>
+        <a href="market.html">Market</a>
+        <a href="materiales.html">Materiales</a>
+        <a href="vegapunk.html">Vegapunk</a>
+        <a href="sistemas.html">Sistemas</a>
+        <a href="leaderboard.html">Leaderboard</a>
+        <a href="estrategia.html">Estrategia</a>
+        <a href="video.html">Video</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="section page-header">
+        <p class="eyebrow">Composiciones</p>
+        <h1>Recomendaciones de formaciones</h1>
+        <p>
+          Cada equipo usa hasta 5 héroes: 2 posiciones delanteras para aguantar
+          presión y 3 posiciones traseras para daño, curación o control. Las
+          formaciones son editables desde esta misma página y se guardan en tu
+          navegador.
+        </p>
+        <div class="status-row">
+          <span class="status-badge confirmed">2 adelante / 3 atrás</span>
+          <span class="status-badge observed">Con imágenes de héroes</span>
+          <span class="status-badge pending">Plantillas editables</span>
+        </div>
+      </section>
+
+      <section class="section alt">
+        <div class="section-heading">
+          <p class="eyebrow">Lectura rápida</p>
+          <h2>Cómo leer una formación</h2>
+        </div>
+        <div class="formation-guide">
+          <article>
+            <span class="formation-token front">Front</span>
+            <h3>Delanteros</h3>
+            <p>Busca supervivencia, reducción de daño, revivir, escudos o tanques que compren turnos.</p>
+          </article>
+          <article>
+            <span class="formation-token back">Back</span>
+            <h3>Retaguardia</h3>
+            <p>Coloca carries, buffers, curas y control. Aquí suelen ir los héroes que definen la pelea.</p>
+          </article>
+          <article>
+            <span class="formation-token open">Editable</span>
+            <h3>Huecos abiertos</h3>
+            <p>Si falta un héroe probado, deja la ranura libre y completa la nota cuando tengas datos.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="formation-toolbar">
+          <div>
+            <p class="eyebrow">Equipos</p>
+            <h2>Formaciones guardadas</h2>
+          </div>
+          <div class="formation-actions">
+            <button class="wiki-button" id="add-formation" type="button">Agregar formación</button>
+            <button class="wiki-button secondary" id="reset-formations" type="button">Restaurar ejemplos</button>
+          </div>
+        </div>
+        <p class="catalog-help">
+          Toca Editar para cambiar nombre, objetivo, héroes y notas. Los cambios quedan guardados localmente.
+        </p>
+        <div id="formation-list" class="formation-list" aria-live="polite"></div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Wiki fan-made en construcción. Los datos se ajustan con capturas, videos y pruebas del juego.</p>
+    </footer>
+
+    <template id="formation-card-template">
+      <article class="formation-card">
+        <div class="formation-card-header">
+          <div>
+            <p class="formation-purpose"></p>
+            <h3></h3>
+          </div>
+          <div class="formation-card-actions">
+            <button class="wiki-button secondary edit-formation" type="button">Editar</button>
+          </div>
+        </div>
+
+        <div class="formation-board" aria-label="Tablero de formación">
+          <div class="formation-row formation-row-front">
+            <div class="formation-slot" data-slot="front1"></div>
+            <div class="formation-slot" data-slot="front2"></div>
+          </div>
+          <div class="formation-row formation-row-back">
+            <div class="formation-slot" data-slot="back1"></div>
+            <div class="formation-slot" data-slot="back2"></div>
+            <div class="formation-slot" data-slot="back3"></div>
+          </div>
+        </div>
+
+        <div class="formation-notes"></div>
+        <form class="formation-editor" hidden>
+          <div class="formation-editor-grid">
+            <label>
+              Nombre
+              <input name="name" type="text" />
+            </label>
+            <label>
+              Objetivo
+              <input name="purpose" type="text" />
+            </label>
+            <label>
+              Frente 1
+              <select name="front1"></select>
+            </label>
+            <label>
+              Frente 2
+              <select name="front2"></select>
+            </label>
+            <label>
+              Atrás 1
+              <select name="back1"></select>
+            </label>
+            <label>
+              Atrás 2
+              <select name="back2"></select>
+            </label>
+            <label>
+              Atrás 3
+              <select name="back3"></select>
+            </label>
+          </div>
+          <label class="formation-note-input">
+            Notas
+            <textarea name="notes" rows="4"></textarea>
+          </label>
+          <div class="formation-card-actions">
+            <button class="wiki-button save-formation" type="submit">Guardar</button>
+            <button class="wiki-button secondary cancel-formation" type="button">Cancelar</button>
+          </div>
+        </form>
+      </article>
+    </template>
+
+    <script>
+      const heroPool = [
+        { id: "", name: "Ranura abierta", role: "OPEN", portrait: "" },
+        { id: "kaido", name: "Kaido", role: "DEF", portrait: "images/heroes/kaido/kaido-hero-profile.jpeg" },
+        { id: "jinbe-new-world", name: "Jinbe (New World)", role: "DEF", portrait: "images/heroes/jinbe-new-world/hero-jinbe-new-world-card-ur.jpeg" },
+        { id: "marco", name: "Marco", role: "SUP", portrait: "images/heroes/marco/hero-marco-card-ur.jpeg" },
+        { id: "rayleigh", name: "Rayleigh", role: "ATK", portrait: "images/heroes/rayleigh/hero-rayleigh-card-ur.jpeg" },
+        { id: "big-mom", name: "Big Mom", role: "ATK", portrait: "images/heroes/big-mom/hero-big-mom-card-ur.jpeg" },
+        { id: "king", name: "King", role: "ATK", portrait: "images/heroes/king/hero-king-card-ur.jpeg" },
+        { id: "katakuri", name: "Katakuri", role: "ATK", portrait: "images/heroes/katakuri/hero-katakuri-card-ur.jpeg" },
+        { id: "akainu-new-world", name: "Akainu (New World)", role: "ATK", portrait: "images/heroes/akainu/hero-akainu-new-world-card-ur.jpeg" },
+        { id: "cracker", name: "Cracker", role: "ATK", portrait: "images/heroes/cracker/hero-cracker-profile.jpeg" },
+        { id: "smoothie", name: "Smoothie", role: "SUP", portrait: "images/heroes/smoothie/hero-smoothie-card-ur.jpeg" },
+        { id: "nekomamushi", name: "Nekomamushi", role: "SUP", portrait: "images/heroes/nekomamushi/hero-nekomamushi-card-ur.jpeg" },
+        { id: "otohime", name: "Otohime", role: "SUP", portrait: "images/heroes/otohime/hero-otohime-card-ur.jpeg" },
+        { id: "luffy-gear-4", name: "Luffy (Gear 4)", role: "ATK", portrait: "images/heroes/luffy-gear-4/hero-luffy-gear-4-card-ur.jpeg" },
+        { id: "zoro-new-world", name: "Zoro (New World)", role: "ATK", portrait: "images/heroes/zoro-new-world/hero-zoro-new-world-card-ssr.jpeg" },
+        { id: "enel", name: "Enel", role: "ATK", portrait: "images/heroes/enel/hero-enel-card-ssr.jpeg" },
+        { id: "bartolomeo", name: "Bartolomeo", role: "DEF", portrait: "images/heroes/bartolomeo/hero-bartolomeo-card-ssr.jpeg" },
+      ];
+
+      const defaultFormations = [
+        {
+          name: "Daño crítico estable",
+          purpose: "Arena / progreso general",
+          front1: "kaido",
+          front2: "jinbe-new-world",
+          back1: "big-mom",
+          back2: "rayleigh",
+          back3: "marco",
+          notes:
+            "Kaido y Jinbe compran turnos. Big Mom y Rayleigh cargan el daño principal; Marco sostiene con curación y resurrección.",
+        },
+        {
+          name: "Explosión ofensiva",
+          purpose: "Boss / daño máximo",
+          front1: "kaido",
+          front2: "",
+          back1: "king",
+          back2: "katakuri",
+          back3: "akainu-new-world",
+          notes:
+            "Pensada para probar daño alto. La segunda ranura frontal queda abierta hasta confirmar qué tanque mantiene mejor vivos a los carries.",
+        },
+        {
+          name: "Big Mom Band",
+          purpose: "Sinergia de banda",
+          front1: "",
+          front2: "",
+          back1: "big-mom",
+          back2: "katakuri",
+          back3: "cracker",
+          notes:
+            "Base para comparar héroes de Big Mom Band. Falta definir los dos delanteros según resistencia, buffs y pruebas reales.",
+        },
+        {
+          name: "Soporte y control",
+          purpose: "Peleas largas",
+          front1: "jinbe-new-world",
+          front2: "kaido",
+          back1: "marco",
+          back2: "nekomamushi",
+          back3: "otohime",
+          notes:
+            "Equipo defensivo para revisar curación, reducción de daño, energía enemiga y buffs de retaguardia.",
+        },
+      ];
+
+      const storageKey = "opIdlePirateFormations";
+      const list = document.querySelector("#formation-list");
+      const template = document.querySelector("#formation-card-template");
+
+      function loadFormations() {
+        try {
+          return JSON.parse(localStorage.getItem(storageKey)) || defaultFormations;
+        } catch (error) {
+          return defaultFormations;
+        }
+      }
+
+      function saveFormations(formations) {
+        localStorage.setItem(storageKey, JSON.stringify(formations));
+      }
+
+      function getHero(id) {
+        return heroPool.find((hero) => hero.id === id) || heroPool[0];
+      }
+
+      function renderSlot(slot, heroId, label) {
+        const hero = getHero(heroId);
+        slot.className = `formation-slot ${hero.id ? "" : "is-open"}`;
+        slot.innerHTML = "";
+        const badge = document.createElement("span");
+        badge.className = `formation-position ${label.includes("Frente") ? "front" : "back"}`;
+        badge.textContent = label;
+        slot.append(badge);
+
+        if (!hero.id) {
+          const empty = document.createElement("div");
+          empty.className = "formation-empty";
+          empty.textContent = "Libre";
+          slot.append(empty);
+          return;
+        }
+
+        const img = document.createElement("img");
+        img.src = hero.portrait;
+        img.alt = hero.name;
+        const meta = document.createElement("div");
+        meta.className = "formation-hero-meta";
+        meta.innerHTML = `<strong>${hero.name}</strong><span class="role-pill role-${hero.role.toLowerCase()}">${hero.role}</span>`;
+        slot.append(img, meta);
+      }
+
+      function fillSelect(select, value) {
+        select.innerHTML = "";
+        heroPool.forEach((hero) => {
+          const option = document.createElement("option");
+          option.value = hero.id;
+          option.textContent = hero.name;
+          option.selected = hero.id === value;
+          select.append(option);
+        });
+      }
+
+      function renderFormations() {
+        const formations = loadFormations();
+        list.innerHTML = "";
+        formations.forEach((formation, index) => {
+          const card = template.content.firstElementChild.cloneNode(true);
+          card.querySelector("h3").textContent = formation.name || "Formación sin nombre";
+          card.querySelector(".formation-purpose").textContent = formation.purpose || "Objetivo pendiente";
+          renderSlot(card.querySelector('[data-slot="front1"]'), formation.front1, "Frente 1");
+          renderSlot(card.querySelector('[data-slot="front2"]'), formation.front2, "Frente 2");
+          renderSlot(card.querySelector('[data-slot="back1"]'), formation.back1, "Atrás 1");
+          renderSlot(card.querySelector('[data-slot="back2"]'), formation.back2, "Atrás 2");
+          renderSlot(card.querySelector('[data-slot="back3"]'), formation.back3, "Atrás 3");
+          card.querySelector(".formation-notes").textContent = formation.notes || "Notas pendientes.";
+
+          const editor = card.querySelector(".formation-editor");
+          editor.elements.name.value = formation.name || "";
+          editor.elements.purpose.value = formation.purpose || "";
+          editor.elements.notes.value = formation.notes || "";
+          ["front1", "front2", "back1", "back2", "back3"].forEach((slot) => {
+            fillSelect(editor.elements[slot], formation[slot] || "");
+          });
+
+          card.querySelector(".edit-formation").addEventListener("click", () => {
+            editor.hidden = false;
+            card.classList.add("is-editing");
+          });
+          card.querySelector(".cancel-formation").addEventListener("click", () => {
+            editor.hidden = true;
+            card.classList.remove("is-editing");
+          });
+          editor.addEventListener("submit", (event) => {
+            event.preventDefault();
+            const current = loadFormations();
+            current[index] = {
+              name: editor.elements.name.value.trim(),
+              purpose: editor.elements.purpose.value.trim(),
+              front1: editor.elements.front1.value,
+              front2: editor.elements.front2.value,
+              back1: editor.elements.back1.value,
+              back2: editor.elements.back2.value,
+              back3: editor.elements.back3.value,
+              notes: editor.elements.notes.value.trim(),
+            };
+            saveFormations(current);
+            renderFormations();
+          });
+          list.append(card);
+        });
+      }
+
+      document.querySelector("#add-formation").addEventListener("click", () => {
+        const formations = loadFormations();
+        formations.push({
+          name: "Nueva formación",
+          purpose: "Objetivo pendiente",
+          front1: "",
+          front2: "",
+          back1: "",
+          back2: "",
+          back3: "",
+          notes: "Completar con pruebas, counters o modo recomendado.",
+        });
+        saveFormations(formations);
+        renderFormations();
+      });
+
+      document.querySelector("#reset-formations").addEventListener("click", () => {
+        saveFormations(defaultFormations);
+        renderFormations();
+      });
+
+      renderFormations();
+    </script>
+  </body>
+</html>
