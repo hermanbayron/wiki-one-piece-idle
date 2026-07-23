@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>One Piece Idle Pirate Wiki</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="index.html" aria-label="Ir al inicio">
+        <span class="brand-mark">OP</span>
+        <span>Idle Pirate Wiki</span>
+      </a>
+                        <nav class="nav-links" aria-label="Secciones principales">
+        <a class="active" href="index.html">Inicio</a>
+        <a href="ciudad.html">Ciudad</a>
+        <a href="instance.html">Instance</a>
+        <a href="trial.html">Trial</a>
+        <a href="impel-down.html">Impel Down</a>
+        <a href="boss.html">Boss</a>
+        <a href="arena.html">Arena</a>
+        <a href="heroes.html">Héroes</a>
+        <a href="summon.html">Summon</a>
+        <a href="altar.html">Altar</a>
+        <a href="combate.html">Combate</a>
+        <a href="formaciones.html">Formaciones</a>
+        <a href="market.html">Market</a>
+        <a href="materiales.html">Materiales</a>
+        <a href="vegapunk.html">Vegapunk</a>
+        <a href="sistemas.html">Sistemas</a>
+        <a href="leaderboard.html">Leaderboard</a>
+        <a href="estrategia.html">Estrategia</a>
+        <a href="video.html">Video</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero wiki-hero">
+        <figure class="app-icon image-slot">
+          <img
+            src="images/ui/icono.jpg"
+            alt="Icono de One Piece Idle Pirate"
+            onerror="this.closest('figure').classList.add('is-missing'); this.remove();"
+          />
+        </figure>
+
+        <div class="hero-copy">
+          <p class="eyebrow">Wiki no oficial</p>
+          <h1>One Piece Idle Pirate</h1>
+          <p>
+            Archivo para ordenar todo lo que vayamos descubriendo del juego:
+            ciudad principal, héroes, eventos, recompensas, recursos, modos y
+            consejos de progreso.
+          </p>
+          <div class="status-row">
+            <span class="status-badge confirmed">Datos confirmados</span>
+            <span class="status-badge observed">Capturas analizadas</span>
+            <span class="status-badge pending">Wiki en progreso</span>
+          </div>
+          <div class="search-wrap">
+            <label for="wiki-search">Buscar en la wiki</label>
+            <input
+              id="wiki-search"
+              type="search"
+              placeholder="Ej: poder, diamantes, ciudad, héroes..."
+              autocomplete="off"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="quick-stats" aria-label="Resumen del juego">
+        <article data-search-item>
+          <span>Plataforma</span>
+          <strong>App móvil</strong>
+        </article>
+        <article data-search-item>
+          <span>Héroes</span>
+          <strong>28 fichas registradas</strong>
+        </article>
+        <article data-search-item>
+          <span>Progreso</span>
+          <strong>Poder y héroes</strong>
+        </article>
+        <article data-search-item>
+          <span>Estado</span>
+          <strong>Wiki en expansión</strong>
+        </article>
+      </section>
+
+      <section class="section alt" data-search-block>
+        <div class="section-heading">
+          <p class="eyebrow">Ruta rápida</p>
+          <h2>Qué consultar primero</h2>
+        </div>
+        <div class="priority-strip">
+          <article data-search-item>
+            <strong>Farmeo diario</strong>
+            <p>Instance, Trial, Boss y Market concentran los recursos que más se repiten.</p>
+          </article>
+          <article data-search-item>
+            <strong>Subir héroes</strong>
+            <p>Héroes, Summon, Altar y Materiales explican nivel, límites y reciclaje.</p>
+          </article>
+          <article data-search-item>
+            <strong>Medir progreso</strong>
+            <p>Arena, Leaderboard y Estrategia ayudan a comparar poder, daño y rendimiento.</p>
+          </article>
+          <article data-search-item>
+            <strong>Fuentes</strong>
+            <p>Video y capturas sirven para revisar mecánicas todavía incompletas.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" data-search-block>
+        <div class="section-heading">
+          <p class="eyebrow">Secciones principales</p>
+          <h2>Secciones de la wiki</h2>
+        </div>
+        <div class="card-grid page-cards">
+          <a class="info-card link-card" href="ciudad.html" data-search-item>
+            <span class="role">Pantalla inicial</span>
+            <h3>Ciudad principal</h3>
+            <p>
+              Mapa con accesos a Instance, Boss, Arena, Market, Trial, Altar,
+              Leaderboard, Impel Down y más.
+            </p>
+          </a>
+          <a class="info-card link-card" href="instance.html" data-search-item>
+            <span class="role">Mazmorras</span>
+            <h3>Instance</h3>
+            <p>
+              Resource, Gear y Dial Instance para farmear EXP, Breakthrough,
+              Forge Stone, Enhance Stone, Crystal Dust, equipo y diales.
+            </p>
+          </a>
+          <a class="info-card link-card" href="boss.html" data-search-item>
+            <span class="role">Jefes</span>
+            <h3>Boss</h3>
+            <p>
+              Boss Contest, Sea Train, Voyage Adventure y Enemy Incoming con
+              intentos, rankings de daño y recompensas por mail.
+            </p>
+          </a>
+          <a class="info-card link-card" href="market.html" data-search-item>
+            <span class="role">Tienda</span>
+            <h3>Market</h3>
+            <p>
+              Common Market y VIP Market con compras por oro o diamantes,
+              refresh, descuentos y productos agotados.
+            </p>
+          </a>
+          <a class="info-card link-card" href="materiales.html" data-search-item>
+            <span class="role">Glosario</span>
+            <h3>Materiales</h3>
+            <p>
+              EXP Pass, Breakthrough Pass, stones, plucks, monedas, shards y
+              fuentes de farmeo registradas.
+            </p>
+          </a>
+          <a class="info-card link-card" href="leaderboard.html" data-search-item>
+            <span class="role">Ranking</span>
+            <h3>Leaderboard</h3>
+            <p>
+              Rankings de poder, nivel, stage, contest, Sea Train, Impel Down y
+              gremios.
+            </p>
+          </a>
+          <a class="info-card link-card" href="heroes.html" data-search-item>
+            <span class="role">Colección</span>
+            <h3>Héroes</h3>
+            <p>
+              Página para registrar personajes, nivel, rol, rareza, habilidades,
+              prioridad de mejora y notas.
+            </p>
+          </a>
+          <a class="info-card link-card" href="formaciones.html" data-search-item>
+            <span class="role">Composiciones</span>
+            <h3>Formaciones</h3>
+            <p>
+              Equipos de 2 adelante y 3 atrás con recomendaciones, huecos
+              abiertos y editor visual para guardar tus pruebas.
+            </p>
+          </a>
+          <a class="info-card link-card" href="sistemas.html" data-search-item>
+            <span class="role">Mecánicas</span>
+            <h3>Sistemas</h3>
+            <p>
+              Recursos, eventos, mochila, Vegapunk's Lab con S/SS/SSS Lab,
+              recompensas idle y materiales como Medicine Herb.
+            </p>
+          </a>
+          <a class="info-card link-card" href="vegapunk.html" data-search-item>
+            <span class="role">Laboratorio</span>
+            <h3>Vegapunk's Lab</h3>
+            <p>
+              S Lab, SS Lab, SSS Lab, guardians, Resonance, recompensas idle y
+              Potion Crafting con Medicine Herb.
+            </p>
+          </a>
+          <a class="info-card link-card" href="trial.html" data-search-item>
+            <span class="role">Desafíos</span>
+            <h3>Trial</h3>
+            <p>
+              Lista de pruebas: Long Ring Island Adventure, Supernova Showdown,
+              Thriller Bark y Haki Training Room.
+            </p>
+          </a>
+          <a class="info-card link-card" href="impel-down.html" data-search-item>
+            <span class="role">Torre</span>
+            <h3>Impel Down</h3>
+            <p>
+              Stages, cofres, shards SSR, efectos de piso y submodo Endless
+              Prison con objetivos por estrellas.
+            </p>
+          </a>
+          <a class="info-card link-card" href="arena.html" data-search-item>
+            <span class="role">PvP</span>
+            <h3>Arena</h3>
+            <p>
+              Ranking de jugadores, intentos, rivales, recompensas, formación y
+              tienda de arena.
+            </p>
+          </a>
+          <a class="info-card link-card" href="video.html" data-search-item>
+            <span class="role">Fuente</span>
+            <h3>Videos y fuentes</h3>
+            <p>
+              Registro para revisar navegación, cambios de pantalla y detalles
+              que no aparecen en capturas estáticas.
+            </p>
+          </a>
+          <a class="info-card link-card" href="combate.html" data-search-item>
+            <span class="role">Sistema</span>
+            <h3>Combate</h3>
+            <p>
+              Peleas por turnos, límite de turnos, barra 0/175, estados, daño,
+              bloqueo y habilidades especiales.
+            </p>
+          </a>
+          <a class="info-card link-card" href="summon.html" data-search-item>
+            <span class="role">Invocación</span>
+            <h3>Summon</h3>
+            <p>
+              Common, Advanced, Friend y Tree of Knowledge para obtener héroes,
+              fragmentos y selecciones SSR.
+            </p>
+          </a>
+          <a class="info-card link-card" href="altar.html" data-search-item>
+            <span class="role">Reciclaje</span>
+            <h3>Altar</h3>
+            <p>
+              Rebirth, Dissolve, Swap, HP Boost y filtros para héroes, gear,
+              armas y diales.
+            </p>
+          </a>
+          <a class="info-card link-card" href="estrategia.html" data-search-item>
+            <span class="role">Daño</span>
+            <h3>Estrategia</h3>
+            <p>
+              Comparativas de dúos, críticos, habilidad potenciada y buenas
+              opciones como Big Mom, Rayleigh, Katakuri y Akainu.
+            </p>
+          </a>
+        </div>
+      </section>
+
+      <section class="section alt" data-search-block>
+        <div class="section-heading">
+          <p class="eyebrow">Datos visibles en tus capturas</p>
+          <h2>Resumen de cuenta observado</h2>
+        </div>
+        <div class="article-grid">
+          <article data-search-item>
+            <h3>Jugador</h3>
+            <p>Nombre visible: Hides. Nivel visible: Lv.230. VIP visible: V6.</p>
+          </article>
+          <article data-search-item>
+            <h3>Recursos</h3>
+            <p>Oro visible: 15.2M. Diamantes visibles: 403.</p>
+          </article>
+          <article data-search-item>
+            <h3>Poder</h3>
+            <p>Poder visible en la captura: 1424384169.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" data-search-block>
+        <div class="section-heading">
+          <p class="eyebrow">Para completar la wiki</p>
+          <h2>Datos que faltan</h2>
+        </div>
+        <div class="article-grid">
+          <article data-search-item>
+            <h3>Habilidades de héroes</h3>
+            <p>
+              Capturas de cada skill con porcentajes exactos, cooldowns,
+              objetivos, estados aplicados y condiciones de activación.
+            </p>
+          </article>
+          <article data-search-item>
+            <h3>Recompensas por modo</h3>
+            <p>
+              Pantallas de reward completo de Boss, Trial, Instance, Impel Down,
+              Market y Vegapunk para separar drops comunes de drops valiosos.
+            </p>
+          </article>
+          <article data-search-item>
+            <h3>Costos de progreso</h3>
+            <p>
+              Cantidades de gold, EXP Pass y Breakthrough Pass por tramo de
+              niveles, especialmente desde 100 en adelante.
+            </p>
+          </article>
+          <article data-search-item>
+            <h3>Builds recomendadas</h3>
+            <p>
+              Capturas de diales, gear, armas y recomendaciones por héroe para
+              comparar qué conviene comprar o equipar.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <p class="empty-state" id="empty-state" hidden>
+        No encontré resultados en esta página.
+      </p>
+    </main>
+
+    <footer>
+      <p>Fan wiki no oficial para organizar la información de One Piece Idle Pirate.</p>
+    </footer>
+
+    <script>
+      const searchInput = document.querySelector("#wiki-search");
+      const searchItems = [...document.querySelectorAll("[data-search-item]")];
+      const sections = [...document.querySelectorAll("[data-search-block]")];
+      const emptyState = document.querySelector("#empty-state");
+
+      searchInput.addEventListener("input", () => {
+        const query = searchInput.value.trim().toLowerCase();
+        let visibleItems = 0;
+
+        searchItems.forEach((item) => {
+          const matches = item.textContent.toLowerCase().includes(query);
+          item.hidden = query.length > 0 && !matches;
+          if (!item.hidden) visibleItems += 1;
+        });
+
+        sections.forEach((section) => {
+          const hasVisibleItem = [...section.querySelectorAll("[data-search-item]")].some(
+            (item) => !item.hidden
+          );
+          section.hidden = query.length > 0 && !hasVisibleItem;
+        });
+
+        emptyState.hidden = visibleItems !== 0;
+      });
+    </script>
+  </body>
+</html>
+

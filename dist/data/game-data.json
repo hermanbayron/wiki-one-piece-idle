@@ -1,0 +1,2352 @@
+{
+  "game": {
+    "name": "One Piece Idle Pirate",
+    "type": "Idle RPG mobile",
+    "status": "Fan wiki in progress"
+  },
+  "player": {
+    "name": "Hides",
+    "level": 230,
+    "vip": 6,
+    "cityPower": 1424384169,
+    "arenaPowerLabel": "1.4B",
+    "goldLabel": "15.2M",
+    "diamonds": 403
+  },
+  "screens": {
+    "trial": {
+      "image": "images/trial/Trial.jpeg",
+      "sourceImages": [
+        "images/trial/trial-long-ring-board-before-throw.jpeg",
+        "images/trial/trial-long-ring-board-after-throw.jpeg",
+        "images/trial/trial-supernova-showdown-map.jpeg",
+        "images/trial/trial-thriller-bark-floor-114.jpeg",
+        "images/trial/trial-haki-training-room.jpeg"
+      ],
+      "modesObserved": [
+        {
+          "name": "Long Ring Island Adventure",
+          "type": "board / dice",
+          "actionsObserved": "1/15 then 0/15 after Throw",
+          "mechanics": [
+            "Board movement",
+            "Throw button",
+            "Dice result",
+            "Items owned panel",
+            "Prevent button",
+            "Timer around 01:43"
+          ],
+          "currencyObserved": 100,
+          "rewardReading": "Board tiles include coins, diamonds, and usable items. Store is available inside the mode."
+        },
+        {
+          "name": "Supernova Showdown",
+          "type": "stage map",
+          "actionsObserved": "0/1 on menu",
+          "mechanics": [
+            "Stage map",
+            "Defeated nodes",
+            "Raid",
+            "Revive",
+            "Supernova Store"
+          ],
+          "currencyObserved": 1100,
+          "raidCostObserved": 400,
+          "visibleStageMilestones": [
+            4,
+            6,
+            8,
+            10
+          ],
+          "rewardReading": "Progress is tracked by defeated stage nodes and side chest milestones."
+        },
+        {
+          "name": "Thriller Bark",
+          "type": "floor / path map",
+          "actionsObserved": "20/50 on menu",
+          "floorObserved": 114,
+          "mechanics": [
+            "Reset Map",
+            "Remaining 3/50",
+            "Chest counters",
+            "Timer 00:02:26"
+          ],
+          "resetMapRemaining": 1,
+          "rewardReading": "Visible remaining counters show chest and enemy-style rewards on the current floor."
+        },
+        {
+          "name": "Haki Training Room",
+          "type": "timing / reward bar",
+          "actionsObserved": "0/6",
+          "mechanics": [
+            "Start button",
+            "Reward meter",
+            "Rewards Preview",
+            "Timer 02:25:22"
+          ],
+          "rewardsPreviewObserved": [
+            "Haoshoku Pluck",
+            "Busoshoku Pluck",
+            "Kenbunshoku Pluck",
+            "Basic Pluck"
+          ],
+          "rewardReading": "Reward color appears tied to the position reached on the vertical meter."
+        }
+      ],
+      "pendingConfirmation": [
+        "Exact reset timing for each Trial mode",
+        "Full reward table",
+        "Whether Prevent consumes owned items",
+        "How Supernova raid cost scales",
+        "How Haki reward meter decides reward color"
+      ]
+    },
+    "arena": {
+      "image": "images/arena/Arena.jpeg",
+      "type": "PvP / ranking",
+      "myRanking": 2,
+      "attempts": {
+        "current": 0,
+        "max": 5
+      },
+      "visibleActions": [
+        "Leaderboard",
+        "Refresh",
+        "Record",
+        "Reward",
+        "Lineup",
+        "Arena Store",
+        "Return"
+      ],
+      "podium": [
+        {
+          "rank": 1,
+          "player": "ZeroQ8",
+          "level": 250,
+          "vip": 15,
+          "powerLabel": "4.3B",
+          "powerObserved": 4317513117
+        },
+        {
+          "rank": 2,
+          "player": "Hides",
+          "level": 230,
+          "vip": 6,
+          "powerLabel": "1.4B"
+        },
+        {
+          "rank": 3,
+          "player": "Gertrude",
+          "level": 225,
+          "vip": 0,
+          "powerLabel": "1.1B"
+        }
+      ],
+      "visibleOpponents": [
+        {
+          "rank": 1,
+          "player": "ZeroQ8",
+          "level": 250,
+          "powerObserved": 4317513117
+        },
+        {
+          "rank": 3,
+          "player": "Gertrude",
+          "level": 225,
+          "powerObserved": null,
+          "note": "Power partially covered by character art"
+        },
+        {
+          "rank": 4,
+          "player": "AKAME",
+          "level": 222,
+          "powerObserved": 1154762675
+        },
+        {
+          "rank": 5,
+          "player": "Mofix124",
+          "level": 229,
+          "powerObserved": 985458317
+        },
+        {
+          "rank": 6,
+          "player": "Schweigi",
+          "level": 227,
+          "powerObserved": 751833866
+        }
+      ],
+      "observations": [
+        "Arena is reached from Main City.",
+        "The screen combines a podium display and selectable rival list.",
+        "My Ranking shows the player's current position.",
+        "Attempts use current/max format.",
+        "Refresh likely rerolls visible opponents.",
+        "Lineup likely controls the team used in Arena.",
+        "Arena Store is a mode-specific shop."
+      ],
+      "pendingConfirmation": [
+        "Season reset timing",
+        "Exact reward table",
+        "Whether attacks consume one attempt",
+        "Whether defense uses the same Lineup",
+        "Currency used by Arena Store"
+      ]
+    },
+    "combat": {
+      "sourceVideo": "Video local no publicado; usar frames extraidos en images/videos/",
+      "detailedFrames": "images/videos/video-frames-1s/",
+      "type": "turn-based battle",
+      "observedFormation": {
+        "alliesVisible": 5,
+        "enemiesVisible": 2
+      },
+      "turnLimit": {
+        "startsAt": 20,
+        "observedValues": [
+          20,
+          19,
+          18,
+          17
+        ]
+      },
+      "controls": [
+        "Speed x1",
+        "Speed x2",
+        "Auto",
+        "Quit"
+      ],
+      "cannotBeSkipped": true,
+      "bottomGauge": {
+        "observedMax": 175,
+        "observedValues": [
+          0,
+          25,
+          65,
+          95,
+          110,
+          135
+        ],
+        "meaning": "Pending confirmation: energy, rage, ultimate, or team skill meter"
+      },
+      "observedMechanics": [
+        "Battle Start overlay",
+        "Unit levels shown next to health bars",
+        "Buff and debuff icons above units",
+        "Area damage hitting multiple allied units",
+        "Block text appears during damage resolution",
+        "Full-screen special animation appears near the end"
+      ],
+      "specialAnimationObserved": {
+        "character": "Doflamingo",
+        "timestampSeconds": 35.64
+      },
+      "pendingConfirmation": [
+        "Exact meaning of the 0/175 gauge",
+        "Whether the gauge is global or character-specific",
+        "Exact turn order rule",
+        "Names and effects of status icons",
+        "All combat character names"
+      ],
+      "sourceVideoLocalOnly": "images/videos/WhatsApp Video 2026-07-09 at 21.07.13.mp4"
+    },
+    "adventure": {
+      "sourceVideo": "Video local no publicado; usar frames extraidos en images/videos/",
+      "chapterObserved": "Hell04-21 Merciless Death Match III",
+      "visibleActions": [
+        "Challenge Boss",
+        "Map",
+        "Fast Idling"
+      ],
+      "idleRewardObserved": {
+        "idlingTime": "03:08:02",
+        "rewards": {
+          "goldLabel": "573.9K",
+          "greenResourceLabel": "459.2K",
+          "purpleResourceLabel": "11.5K",
+          "blueResource": 1375
+        },
+        "efficiencyPerHour": {
+          "gold": 183139,
+          "exp": 161467,
+          "blueResource": 146511,
+          "purpleResource": 3663
+        },
+        "vipNote": "VIP7 increases Idling Efficiency benefits by 30%"
+      },
+      "sourceVideoLocalOnly": "images/videos/WhatsApp Video 2026-07-09 at 22.19.51.mp4"
+    },
+    "instance": {
+      "sourceImages": [
+        "images/instance/instance-menu.jpeg",
+        "images/instance/instance-resource-exp-stage-37.jpeg",
+        "images/instance/instance-resource-breakthrough-stage-37.jpeg",
+        "images/instance/instance-resource-forge-stone-stage-35.jpeg",
+        "images/instance/instance-resource-enhance-stone-stage-35.jpeg",
+        "images/instance/instance-resource-crystal-dust-stage-34.jpeg",
+        "images/instance/instance-gear-stage-28.jpeg",
+        "images/instance/instance-dial-stage-27.jpeg",
+        "images/materials/material-exp-pass.jpeg",
+        "images/materials/material-breakthrough-pass.jpeg",
+        "images/materials/material-forge-stone.jpeg",
+        "images/materials/material-enhance-stone.jpeg",
+        "images/materials/material-crystal-dust.jpeg",
+        "images/materials/material-refine-stone.jpeg"
+      ],
+      "typesObserved": [
+        "Resource Instance",
+        "Gear Instance",
+        "Dial Instance"
+      ],
+      "menuRemainingText": "0 times remaining",
+      "resourcesObserved": {
+        "goldLabel": "13.5M",
+        "diamonds": 3445
+      },
+      "attemptsObserved": {
+        "current": 0,
+        "max": 2
+      },
+      "attemptRulesConfirmedByPlayer": {
+        "baseDailyAttempts": 2,
+        "resourceInstanceExtraAttempts": [
+          {
+            "purchase": 1,
+            "costDiamonds": 60
+          },
+          {
+            "purchase": 2,
+            "costDiamonds": 60
+          },
+          {
+            "purchase": 3,
+            "costDiamonds": 120
+          }
+        ],
+        "gearInstanceExtraAttemptCostDiamonds": 120,
+        "dialInstanceExtraAttemptCostDiamonds": 120
+      },
+      "mainAction": "Raid",
+      "resourceTabsObserved": [
+        "Exp",
+        "Breakthrough",
+        "Forge Stone",
+        "Enhance Stone",
+        "Crystal Dust"
+      ],
+      "stagesObserved": [
+        {
+          "type": "Dial Instance",
+          "from": 26,
+          "to": 27,
+          "rewardNote": "Loot today shows three dial icons"
+        },
+        {
+          "type": "Gear Instance",
+          "from": 27,
+          "to": 28,
+          "rewardNote": "Pass Reward shows two gear icons"
+        },
+        {
+          "type": "Resource Instance - Crystal Dust",
+          "from": 33,
+          "to": 34,
+          "rewardLabel": "13.7K + 5160 EXP"
+        },
+        {
+          "type": "Resource Instance - Forge Stone",
+          "from": 34,
+          "to": 35,
+          "rewardLabel": "11.8K + 5160 EXP"
+        },
+        {
+          "type": "Resource Instance - Enhance Stone",
+          "from": 34,
+          "to": 35,
+          "rewardLabel": "15.6K + 5160 EXP"
+        },
+        {
+          "type": "Resource Instance - Exp",
+          "from": 36,
+          "to": 37,
+          "rewardLabel": "508.6K + 5100 EXP"
+        },
+        {
+          "type": "Resource Instance - Breakthrough",
+          "from": 36,
+          "to": 37,
+          "rewardLabel": "15.5K + 5100 EXP"
+        }
+      ],
+      "observations": [
+        "Instance is reached from Main City.",
+        "It appears to be the daily material farming mode.",
+        "Resource Instance lets the player choose the material category.",
+        "Gear Instance and Dial Instance are separate material branches, not one combined category.",
+        "Gear Instance is used for gear/equipment rewards.",
+        "Dial Instance is used for dial rewards.",
+        "Locked future stages are shown with a padlock icon.",
+        "Increasing stage likely improves reward amount or quality."
+      ],
+      "materialsConfirmedByPlayer": {
+        "expPass": {
+          "image": "images/materials/material-exp-pass.jpeg",
+          "use": "Used with gold to level up heroes"
+        },
+        "breakthroughPass": {
+          "image": "images/materials/material-breakthrough-pass.jpeg",
+          "use": "Raises hero level caps at levels 20, 40, 60, 80, 100, then every 10 levels"
+        },
+        "enhanceStone": {
+          "image": "images/materials/material-enhance-stone.jpeg",
+          "use": "Gear enhancement material",
+          "sourcesObserved": [
+            "Enhance Stone Instance",
+            "Market"
+          ]
+        },
+        "crystalDust": {
+          "image": "images/materials/material-crystal-dust.jpeg",
+          "use": "Dial enhancement material",
+          "sourcesObserved": [
+            "Crystal Dust Instance",
+            "Enemy Incoming"
+          ]
+        },
+        "forgeStone": {
+          "image": "images/materials/material-forge-stone.jpeg",
+          "use": "Weapon enhancement material",
+          "sourcesObserved": [
+            "Z Forge Stone Instance",
+            "Enemy Incoming"
+          ]
+        },
+        "refineStone": {
+          "image": "images/materials/material-refine-stone.jpeg",
+          "use": "Gear star-up material",
+          "sourcesObserved": [
+            "Gear Instance"
+          ]
+        }
+      },
+      "pendingConfirmation": [
+        "Daily reset time",
+        "Exact unlock condition for locked stages",
+        "Full reward table by stage"
+      ]
+    },
+    "market": {
+      "sourceImages": [
+        "images/market/market-common-market.jpeg",
+        "images/market/market-vip-market.jpeg",
+        "images/city/city-market-store-map.jpeg"
+      ],
+      "tabsObserved": [
+        "Common Market",
+        "VIP Market"
+      ],
+      "resourcesObserved": {
+        "goldLabel": "13.5M",
+        "diamonds": 3445
+      },
+      "refreshObserved": {
+        "commonMarket": "Refresh costs 20 diamonds and shows timer 00:43:54",
+        "vipMarket": "Free Refresh (5)"
+      },
+      "observations": [
+        "Market is reached from Main City.",
+        "Items can cost gold or diamonds.",
+        "Discount labels such as 30% off and 50% off are visible.",
+        "Sold Out state is visible.",
+        "Products include fragments, materials, resource bundles, and tickets/items."
+      ],
+      "recommendations": [
+        "Common Market is better for basic resources and gold purchases.",
+        "VIP Market concentrates rarer materials and SSR/SR fragments that usually cost diamonds.",
+        "Use VIP Free Refresh attempts before spending premium currency.",
+        "In Common Market, wait for the timer or buy clear discounts before paying 20 diamonds to refresh."
+      ]
+    },
+    "leaderboard": {
+      "sourceImages": [
+        "images/leaderboard/leaderboard-power.jpeg",
+        "images/leaderboard/leaderboard-level.jpeg",
+        "images/leaderboard/leaderboard-stage-board.jpeg",
+        "images/leaderboard/leaderboard-contest.jpeg",
+        "images/leaderboard/leaderboard-sea-train.jpeg",
+        "images/leaderboard/leaderboard-impel-down.jpeg",
+        "images/leaderboard/leaderboard-guild-board.jpeg"
+      ],
+      "tabsObserved": [
+        "Power Leaderboard",
+        "Level Leaderboard",
+        "Stage Board",
+        "Contest Leaderboard",
+        "Sea Train Board",
+        "Impel Down",
+        "Guild Board"
+      ],
+      "hidesObserved": {
+        "powerLeaderboard": {
+          "rank": 7,
+          "bestPowerLabel": "1.5B"
+        },
+        "levelLeaderboard": {
+          "rank": 10,
+          "currentLevel": 231
+        },
+        "stageBoard": {
+          "rank": 6,
+          "currentStage": "Hell04-35"
+        },
+        "contestLeaderboard": {
+          "rank": 6,
+          "arenaRanking": 6
+        },
+        "seaTrainBoard": {
+          "rank": 10,
+          "highestFloor": 66
+        },
+        "impelDown": {
+          "rank": 7,
+          "highestFloor": 1839
+        },
+        "guildBoard": {
+          "guild": "KINGS",
+          "guildRank": 1,
+          "guildLevel": 20
+        }
+      }
+    },
+    "boss": {
+      "sourceImages": [
+        "images/boss/Boss.jpeg",
+        "images/boss/boss-contest-low-level-list.jpeg",
+        "images/boss/boss-contest-high-level-list.jpeg",
+        "images/boss/boss-contest-luffy-challenge.jpeg"
+      ],
+      "modesObserved": [
+        {
+          "name": "Boss Contest",
+          "attemptsObserved": "0/2",
+          "type": "shared boss damage contest"
+        },
+        {
+          "name": "Sea Train",
+          "attemptsObserved": "0/1",
+          "type": "train/carriage boss challenge"
+        },
+        {
+          "name": "Voyage Adventure",
+          "attemptsObserved": "1/5",
+          "type": "voyage exploration and encounters"
+        },
+        {
+          "name": "Enemy Incoming",
+          "attemptsObserved": "2/6",
+          "type": "incoming enemy damage event"
+        }
+      ],
+      "bossContest": {
+        "resourceObserved": "Scroll 0/2",
+        "bossesObserved": [
+          "Luffy Lv.40",
+          "Zoro Lv.80",
+          "Ace Lv.80",
+          "Aokiji Lv.120",
+          "Blackbeard Lv.120",
+          "Doflamingo Lv.120",
+          "Aokiji Lv.150",
+          "Blackbeard Lv.150",
+          "Doflamingo Lv.150"
+        ],
+        "actionsObserved": [
+          "Challenge",
+          "2x Challenge",
+          "Rewards Preview"
+        ],
+        "challengeCost": {
+          "normal": "1 Scroll",
+          "double": "2 Scroll"
+        },
+        "rewardSections": [
+          "Ownership Reward",
+          "DMG Ranking"
+        ],
+        "observations": [
+          "Bosses show HP 100%, Owner None, and Participants 0 Players.",
+          "2x Challenge shows Multiple Rewards.",
+          "Killer reward belongs to the player who kills the boss and is issued by mail.",
+          "Damage ranking rewards are issued by mail.",
+          "If nobody has attacked, the page shows No players challenge the BOSS."
+        ]
+      }
+    },
+    "newSystemsObserved": {
+      "sourceImages": [
+        "images/boss/boss-contest-low-level-list.jpeg",
+        "images/boss/boss-contest-high-level-list.jpeg",
+        "images/boss/boss-contest-luffy-challenge.jpeg",
+        "images/boss/sea-train-carriage-7.jpeg",
+        "images/boss/voyage-adventure-main.jpeg",
+        "images/boss/enemy-incoming-cp9.jpeg",
+        "images/boss/team-instance-recruit-hall.jpeg",
+        "images/boss/team-instance-recruit-panel-hint.jpeg"
+      ],
+      "bossContest": {
+        "resourceObserved": "Scroll 0/2",
+        "bossesObserved": [
+          "Luffy Lv.40",
+          "Zoro Lv.80",
+          "Ace Lv.80",
+          "Aokiji Lv.120/150",
+          "Blackbeard Lv.120/150",
+          "Doflamingo Lv.120/150"
+        ],
+        "actionsObserved": [
+          "Challenge",
+          "2x Challenge",
+          "Rewards Preview"
+        ],
+        "notes": [
+          "Bosses show Owner None and Participants 0 Players.",
+          "Killer rewards and damage ranking rewards are issued by mail."
+        ]
+      },
+      "seaTrain": {
+        "trainObserved": 66,
+        "carriageObserved": 7,
+        "actionsObserved": [
+          "Challenge",
+          "Skip",
+          "Inject Hormone",
+          "Daily Rewards"
+        ],
+        "specialtyObserved": "Support Counter: Damage increases by 50% against Support type heroes"
+      },
+      "voyageAdventure": {
+        "attemptsObserved": "0/10",
+        "actionsObserved": [
+          "Explore",
+          "Friend Assistance",
+          "Enemy Boat Incoming"
+        ]
+      },
+      "enemyIncoming": {
+        "attemptsObserved": "0/2",
+        "bossObserved": "CP9",
+        "myRank": 5,
+        "myDamagePercent": 8,
+        "buffObserved": "Heroes with SHICHIBUKAI label gain 50% DMG Boost"
+      },
+      "teamInstance": {
+        "actionsObserved": [
+          "Recruit Hall",
+          "Inter-server Team Instance",
+          "Personal Team Instance",
+          "Team Instance Store",
+          "Team Instance Record"
+        ],
+        "eventObserved": "Meteor Volcano",
+        "remainingAttemptsObserved": "0/1",
+        "note": "Failing Personal Team Instance Guide will not deduct attempts"
+      }
+    },
+    "summon": {
+      "sourceVideo": "Video local no publicado; usar frames extraidos en images/videos/",
+      "banners": [
+        {
+          "name": "Common Summon",
+          "rule": "You can gain SR Hero at most",
+          "freeTimerObserved": "02:18:35",
+          "resource": "blue ticket"
+        },
+        {
+          "name": "Advanced Summon",
+          "rule": "10x Summon guarantees SR Hero",
+          "freeTimerObserved": "23:59:54",
+          "resource": "red ticket / diamonds",
+          "ticketsObserved": 262,
+          "diamondsObserved": 403,
+          "grantsSsrProgress": "70/800",
+          "hasWishlist": true
+        },
+        {
+          "name": "Friend Summon",
+          "rule": "Can even obtain a SR Hero"
+        },
+        {
+          "name": "Tree of Knowledge",
+          "rule": "Grant SR, SSR Heroes at your pick",
+          "currencyObserved": 49,
+          "heroCostObserved": 5,
+          "storageObserved": 1,
+          "refresh": "Automatically refresh after 05 Day(s)",
+          "vipNote": "VIP14 or above player's purchase attempts +1"
+        }
+      ],
+      "resultObserved": {
+        "banner": "Advanced Summon",
+        "reward": "Kuro fragments",
+        "amount": 80
+      },
+      "sourceVideoLocalOnly": "images/videos/WhatsApp Video 2026-07-09 at 22.19.51.mp4"
+    },
+    "heroes": {
+      "sourceVideo": "Video local no publicado; usar frames extraidos en images/videos/",
+      "sourceImages": [
+        "images/heroes/rayleigh/skill-rayleigh-haki-expert.jpeg",
+        "images/materials/material-breakthrough-pass.jpeg",
+        "images/heroes/rayleigh/skill-rayleigh-legendary-first-mate.jpeg",
+        "images/heroes/finishing-move/hero-clap-detail.jpeg",
+        "images/heroes/rayleigh/skill-rayleigh-excessive-strike.jpeg",
+        "images/materials/material-exp-pass.jpeg",
+        "images/heroes/rayleigh/skill-rayleigh-eyes-of-heart.jpeg",
+        "images/heroes/finishing-move/heroes-finishing-move-lineup.jpeg",
+        "images/heroes/rayleigh/hero-rayleigh-card-ur.jpeg",
+        "images/heroes/rayleigh/skill-rayleigh-pluto.jpeg",
+        "images/heroes/finishing-move/hero-grand-impact-detail.jpeg",
+        "images/heroes/finishing-move/heroes-finishing-move-resonance.jpeg",
+        "images/heroes/kaido/kaido-hero-profile.jpeg",
+        "images/heroes/kaido/kaido-portrait.jpeg",
+        "images/heroes/kaido/kaido-skill-bolo-breath.jpeg",
+        "images/heroes/kaido/kaido-skill-strongest-creature.jpeg",
+        "images/heroes/kaido/kaido-skill-kosanze-ragnaraku.jpeg",
+        "images/heroes/kaido/kaido-skill-kundali-dragon-swarm.jpeg",
+        "images/heroes/kaido/kaido-skill-beasts-start.jpeg",
+        "images/heroes/kaido/kaido-skill-beasts-end.jpeg",
+        "images/heroes/rayleigh/handbook-rayleigh-relation-match.jpeg",
+        "images/heroes/big-mom/handbook-big-mom-relation-match.jpeg",
+        "images/heroes/hero-shards-list.jpeg",
+        "images/heroes/cracker/handbook-cracker-relation-match.jpeg",
+        "images/heroes/cracker/hero-cracker-profile.jpeg",
+        "images/heroes/cracker/cracker-portrait.jpeg",
+        "images/heroes/cracker/skill-cracker-biscuit-assault.jpeg",
+        "images/heroes/cracker/skill-cracker-biscuit-hell.jpeg",
+        "images/heroes/cracker/skill-cracker-crush-biscuit.jpeg",
+        "images/heroes/cracker/skill-cracker-hard-biscuit.jpeg",
+        "images/heroes/cracker/skill-cracker-pretzel.jpeg",
+        "images/heroes/jack/handbook-jack-recommendations.jpeg",
+        "images/heroes/jack/hero-jack-card-ur.jpeg",
+        "images/heroes/jack/skill-jack-drought.jpeg",
+        "images/heroes/jack/skill-jack-ivory-combo.jpeg",
+        "images/heroes/jack/skill-jack-mammoth-roar.jpeg",
+        "images/heroes/jack/skill-jack-massacre.jpeg",
+        "images/heroes/jack/skill-jack-shake-the-ground.jpeg",
+        "images/heroes/smoothie/handbook-smoothie-recommendations.jpeg",
+        "images/heroes/smoothie/hero-smoothie-card-ur.jpeg",
+        "images/heroes/smoothie/skill-smoothie-mega-size.jpeg",
+        "images/heroes/smoothie/skill-smoothie-moisture-purify.jpeg",
+        "images/heroes/smoothie/skill-smoothie-moisture-squeeze.jpeg",
+        "images/heroes/smoothie/skill-smoothie-moisture-sword.jpeg",
+        "images/heroes/smoothie/skill-smoothie-stream-barrier.jpeg",
+        "images/heroes/katakuri/handbook-katakuri-recommendations.jpeg",
+        "images/heroes/katakuri/hero-katakuri-card-ur.jpeg",
+        "images/heroes/katakuri/skill-katakuri-kuri-mochi.jpeg",
+        "images/heroes/katakuri/skill-katakuri-mochi-combo.jpeg",
+        "images/heroes/katakuri/skill-katakuri-mochi-strike.jpeg",
+        "images/heroes/katakuri/skill-katakuri-prediction.jpeg",
+        "images/heroes/katakuri/skill-katakuri-tea-time.jpeg",
+        "images/heroes/akainu/handbook-akainu-new-world-recommendations.jpeg",
+        "images/heroes/akainu/hero-akainu-new-world-card-ur.jpeg",
+        "images/heroes/akainu/skill-akainu-admirals-deterrence.jpeg",
+        "images/heroes/akainu/skill-akainu-guren-inferno.jpeg",
+        "images/heroes/akainu/skill-akainu-lava-from-hell.jpeg",
+        "images/heroes/akainu/skill-akainu-meteor-volcano.jpeg",
+        "images/heroes/akainu/skill-akainu-shielding-lava.jpeg",
+        "images/heroes/luffy-gear-4/handbook-luffy-gear-4-recommendations.jpeg",
+        "images/heroes/luffy-gear-4/hero-luffy-gear-4-card-ur.jpeg",
+        "images/heroes/luffy-gear-4/skill-luffy-gear-4-awakening-of-fruit.jpeg",
+        "images/heroes/luffy-gear-4/skill-luffy-gear-4-conquer-gun.jpeg",
+        "images/heroes/luffy-gear-4/skill-luffy-gear-4-gomu-gomu-jet-bazooka.jpeg",
+        "images/heroes/luffy-gear-4/skill-luffy-gear-4-rubber-cannon-ball.jpeg",
+        "images/heroes/luffy-gear-4/skill-luffy-gear-4-rubber-python.jpeg",
+        "images/heroes/enel/handbook-enel-recommendations.jpeg",
+        "images/heroes/enel/hero-enel-card-ssr.jpeg",
+        "images/heroes/enel/skill-enel-divine-punishment.jpeg",
+        "images/heroes/enel/skill-enel-gloam-paddling.jpeg",
+        "images/heroes/enel/skill-enel-heart-web.jpeg",
+        "images/heroes/enel/skill-enel-sango.jpeg",
+        "images/heroes/enel/skill-enel-thunder-shock.jpeg",
+        "images/heroes/zoro-new-world/handbook-zoro-new-world-recommendations.jpeg",
+        "images/heroes/zoro-new-world/hero-zoro-new-world-card-ssr.jpeg",
+        "images/heroes/zoro-new-world/skill-zoro-new-world-black-blade.jpeg",
+        "images/heroes/zoro-new-world/skill-zoro-new-world-black-rope-great-tornado.jpeg",
+        "images/heroes/zoro-new-world/skill-zoro-new-world-daishinkan.jpeg",
+        "images/heroes/zoro-new-world/skill-zoro-new-world-ultra-tora-gari.jpeg",
+        "images/heroes/zoro-new-world/skill-zoro-new-world-yakkodori.jpeg",
+        "images/heroes/king/hero-king-card-ur.jpeg",
+        "images/heroes/king/handbook-king-comments.jpeg",
+        "images/heroes/king/handbook-king-recommendations.jpeg",
+        "images/heroes/king/skill-king-tankyudon.jpeg",
+        "images/heroes/king/skill-king-barizodon.jpeg",
+        "images/heroes/king/skill-king-andon.jpeg",
+        "images/heroes/king/skill-king-omori-karyudon.jpeg",
+        "images/heroes/king/skill-king-karyudon.jpeg",
+        "images/heroes/nekomamushi/hero-nekomamushi-card-ur.jpeg",
+        "images/heroes/nekomamushi/handbook-nekomamushi-comments.jpeg",
+        "images/heroes/nekomamushi/handbook-nekomamushi-recommendations.jpeg",
+        "images/heroes/nekomamushi/skill-nekomamushi-red-cat-dance.jpeg",
+        "images/heroes/nekomamushi/skill-nekomamushi-sulongs-roar-a.jpeg",
+        "images/heroes/nekomamushi/skill-nekomamushi-sulongs-roar.jpeg",
+        "images/heroes/nekomamushi/skill-nekomamushi-arc-burst.jpeg",
+        "images/heroes/nekomamushi/skill-nekomamushi-electro-armor.jpeg",
+        "images/heroes/nekomamushi/skill-nekomamushi-the-night-lord.jpeg",
+        "images/heroes/jinbe-new-world/hero-jinbe-new-world-card-ur.jpeg",
+        "images/heroes/jinbe-new-world/handbook-jinbe-new-world-comments.jpeg",
+        "images/heroes/jinbe-new-world/handbook-jinbe-new-world-recommendations.jpeg",
+        "images/heroes/jinbe-new-world/skill-jinbe-yarinami-murasame.jpeg",
+        "images/heroes/jinbe-new-world/skill-jinbe-senmaigawara-seiken.jpeg",
+        "images/heroes/jinbe-new-world/skill-jinbe-power-counter.jpeg",
+        "images/heroes/jinbe-new-world/skill-jinbe-fish-man-karate.jpeg",
+        "images/heroes/jinbe-new-world/skill-jinbe-ogi-karate.jpeg",
+        "images/heroes/otohime/hero-otohime-card-ur.jpeg",
+        "images/heroes/otohime/handbook-otohime-comments.jpeg",
+        "images/heroes/otohime/handbook-otohime-recommendations.jpeg",
+        "images/heroes/otohime/skill-otohime-resonance-speech.jpeg",
+        "images/heroes/otohime/skill-otohime-inspiration.jpeg",
+        "images/heroes/otohime/skill-otohime-queens-protection.jpeg",
+        "images/heroes/otohime/skill-otohime-heart-of-everything.jpeg",
+        "images/heroes/otohime/skill-otohime-will-succession.jpeg",
+        "images/heroes/marco/hero-marco-card-ur.jpeg",
+        "images/heroes/marco/handbook-marco-comments.jpeg",
+        "images/heroes/marco/handbook-marco-recommendations.jpeg",
+        "images/heroes/marco/skill-marco-zoan-combo.jpeg",
+        "images/heroes/marco/skill-marco-hoo-in.jpeg",
+        "images/heroes/marco/skill-marco-flame-of-rebirth.jpeg",
+        "images/heroes/marco/skill-marco-blue-flames-of-resurrection.jpeg",
+        "images/heroes/marco/skill-marco-sacrifice.jpeg"
+      ],
+      "collectionObserved": "111/130",
+      "raritiesObserved": [
+        "UR",
+        "SSR",
+        "SR",
+        "R"
+      ],
+      "rolesObserved": [
+        "ATK",
+        "DEF",
+        "SUP"
+      ],
+      "tabsObserved": [
+        "Hero",
+        "Finishing Move",
+        "Shard",
+        "Handbook"
+      ],
+      "filtersObserved": [
+        "All",
+        "Default",
+        "HP Boost"
+      ],
+      "handbookObserved": {
+        "hpBoostCount": "12/127",
+        "displayLevel": 300
+      },
+      "levelMaterialsConfirmedByPlayer": {
+        "expPass": "Used with gold to level heroes",
+        "breakthroughPass": "Raises level caps at 20, 40, 60, 80, 100, then every 10 levels"
+      },
+      "finishingMoveObserved": {
+        "screens": [
+          "Finishing Move list",
+          "Finishing Move Resonance",
+          "Grand Impact detail",
+          "Clap detail"
+        ],
+        "examples": [
+          "Grand Impact",
+          "Clap"
+        ],
+        "actionsObserved": [
+          "Advance",
+          "Reshape",
+          "Upgrade"
+        ],
+        "materialsObserved": {
+          "terminatingPower": {
+            "image": "images/materials/material-terminating-power.jpeg",
+            "use": "Finishing Move upgrade material",
+            "sourcesObserved": [
+              "Skypiea Race",
+              "Market"
+            ]
+          },
+          "terminatingSoul": {
+            "image": "images/materials/material-terminating-soul.jpeg",
+            "use": "Finishing Move reshape material",
+            "sourcesObserved": [
+              "Boss Contest",
+              "Market"
+            ]
+          },
+          "cageShard": {
+            "image": "images/materials/material-cage-shard.jpeg",
+            "use": "Collect 100 shards to compose Finishing Move - Cage",
+            "sourcesObserved": [
+              "Boss Conquest"
+            ]
+          }
+        }
+      },
+      "systemsPendingConfirmation": [
+        "Resonance rules",
+        "Shard rules",
+        "Handbook bonuses"
+      ],
+      "catalogUi": {
+        "filters": [
+          "name",
+          "rarity",
+          "role",
+          "affinity",
+          "skillStatus"
+        ],
+        "affinitiesObservedOrPlanned": [
+          "Pirate",
+          "Captain",
+          "Legendary",
+          "No.1 Swordsman",
+          "Four Emperors",
+          "Big Mom Band",
+          "Beasts Pirates",
+          "Marine",
+          "Marine Admirals",
+          "Marine Marshall",
+          "Marine Science Troop",
+          "Logia Fruit",
+          "Superman Fruit",
+          "Paramecia",
+          "Zoan Fruit",
+          "Artificial Fruit",
+          "Undercover",
+          "Wano Country",
+          "Fish Man",
+          "Strawhat Pirates",
+          "Sun Pirates",
+          "A.S.L",
+          "Buggy Pirates",
+          "Thriller Bark",
+          "Royal Deputy",
+          "Rebels",
+          "Germa",
+          "Skypiea Priest",
+          "Skypiea Residence",
+          "Baroque",
+          "Water 7",
+          "Worst Generation",
+          "Bliking Pirates",
+          "SHICHIBUKAI",
+          "Greed",
+          "Gentleman",
+          "Blackbeard Pirates",
+          "Whitebeard Pirates",
+          "Celestial Dragons",
+          "Donquixote",
+          "CP0",
+          "CP9",
+          "Okama",
+          "Impel Down",
+          "Royalty",
+          "Sin fruta"
+        ],
+        "sourceImages": [
+          "images/heroes/big-mom/hero-big-mom-card-ur.jpeg",
+          "images/heroes/big-mom/skill-big-mom-raitei.jpeg",
+          "images/heroes/big-mom/skill-big-mom-eating-disorder.jpeg",
+          "images/heroes/big-mom/skill-big-mom-soul-pocus.jpeg",
+          "images/heroes/big-mom/skill-big-mom-soul-deterrence.jpeg",
+          "images/heroes/big-mom/skill-big-mom-soul-tax.jpeg",
+          "images/heroes/filters/heroes-filter-legendary.jpeg",
+          "images/heroes/filters/heroes-filter-logia.jpeg",
+          "images/heroes/filters/heroes-filter-superman-fruit.jpeg",
+          "images/heroes/filters/heroes-filter-zoan-fruit.jpeg",
+          "images/heroes/filters/heroes-filter-all.jpeg",
+          "images/heroes/luffy-gear-2/hero-luffy-gear-2-card-sr.jpeg",
+          "images/heroes/luffy-gear-2/handbook-luffy-gear-2-relation-match.jpeg",
+          "images/heroes/luffy-gear-2/skill-luffy-gear-2-jet-pistol.jpeg",
+          "images/heroes/luffy-gear-2/skill-luffy-gear-2-jet-rocket.jpeg",
+          "images/heroes/luffy-gear-2/skill-luffy-gear-2-jet-rubber-combo.jpeg",
+          "images/heroes/luffy-gear-2/skill-luffy-gear-2-jet-rubber-hammer.jpeg",
+          "images/heroes/bartolomeo/hero-bartolomeo-card-ssr.jpeg",
+          "images/heroes/bartolomeo/handbook-bartolomeo-relation-match.jpeg",
+          "images/heroes/bartolomeo/skill-bartolomeo-barrier-breakthrough.jpeg",
+          "images/heroes/bartolomeo/skill-bartolomeo-protective-barrier.jpeg",
+          "images/heroes/bartolomeo/skill-bartolomeo-ridicule.jpeg",
+          "images/heroes/bartolomeo/skill-bartolomeo-barrier-ball.jpeg",
+          "images/heroes/bartolomeo/skill-bartolomeo-barrier-gun.jpeg",
+          "images/heroes/zoro/hero-zoro-card-r.jpeg",
+          "images/heroes/zoro/handbook-zoro-relation-match.jpeg",
+          "images/heroes/zoro/skill-zoro-ghost-slash.jpeg",
+          "images/heroes/zoro/skill-zoro-survival.jpeg",
+          "images/heroes/zoro/skill-zoro-concentrate.jpeg",
+          "images/heroes/usopp/hero-usopp-card-n.jpeg",
+          "images/heroes/usopp/handbook-usopp-relation-match.jpeg",
+          "images/heroes/usopp/skill-usopp-ultimate-fire-bird-star.jpeg",
+          "images/heroes/usopp/skill-usopp-bravado.jpeg",
+          "images/heroes/jack/handbook-jack-recommendations.jpeg",
+          "images/heroes/jack/hero-jack-card-ur.jpeg",
+          "images/heroes/jack/skill-jack-drought.jpeg",
+          "images/heroes/jack/skill-jack-ivory-combo.jpeg",
+          "images/heroes/jack/skill-jack-mammoth-roar.jpeg",
+          "images/heroes/jack/skill-jack-massacre.jpeg",
+          "images/heroes/jack/skill-jack-shake-the-ground.jpeg",
+          "images/heroes/smoothie/handbook-smoothie-recommendations.jpeg",
+          "images/heroes/smoothie/hero-smoothie-card-ur.jpeg",
+          "images/heroes/smoothie/skill-smoothie-mega-size.jpeg",
+          "images/heroes/smoothie/skill-smoothie-moisture-purify.jpeg",
+          "images/heroes/smoothie/skill-smoothie-moisture-squeeze.jpeg",
+          "images/heroes/smoothie/skill-smoothie-moisture-sword.jpeg",
+          "images/heroes/smoothie/skill-smoothie-stream-barrier.jpeg",
+          "images/heroes/katakuri/handbook-katakuri-recommendations.jpeg",
+          "images/heroes/katakuri/hero-katakuri-card-ur.jpeg",
+          "images/heroes/katakuri/skill-katakuri-kuri-mochi.jpeg",
+          "images/heroes/katakuri/skill-katakuri-mochi-combo.jpeg",
+          "images/heroes/katakuri/skill-katakuri-mochi-strike.jpeg",
+          "images/heroes/katakuri/skill-katakuri-prediction.jpeg",
+          "images/heroes/katakuri/skill-katakuri-tea-time.jpeg",
+          "images/heroes/akainu/handbook-akainu-new-world-recommendations.jpeg",
+          "images/heroes/akainu/hero-akainu-new-world-card-ur.jpeg",
+          "images/heroes/akainu/skill-akainu-admirals-deterrence.jpeg",
+          "images/heroes/akainu/skill-akainu-guren-inferno.jpeg",
+          "images/heroes/akainu/skill-akainu-lava-from-hell.jpeg",
+          "images/heroes/akainu/skill-akainu-meteor-volcano.jpeg",
+          "images/heroes/akainu/skill-akainu-shielding-lava.jpeg",
+          "images/heroes/luffy-gear-4/handbook-luffy-gear-4-recommendations.jpeg",
+          "images/heroes/luffy-gear-4/hero-luffy-gear-4-card-ur.jpeg",
+          "images/heroes/luffy-gear-4/skill-luffy-gear-4-awakening-of-fruit.jpeg",
+          "images/heroes/luffy-gear-4/skill-luffy-gear-4-conquer-gun.jpeg",
+          "images/heroes/luffy-gear-4/skill-luffy-gear-4-gomu-gomu-jet-bazooka.jpeg",
+          "images/heroes/luffy-gear-4/skill-luffy-gear-4-rubber-cannon-ball.jpeg",
+          "images/heroes/luffy-gear-4/skill-luffy-gear-4-rubber-python.jpeg",
+          "images/heroes/enel/handbook-enel-recommendations.jpeg",
+          "images/heroes/enel/hero-enel-card-ssr.jpeg",
+          "images/heroes/enel/skill-enel-divine-punishment.jpeg",
+          "images/heroes/enel/skill-enel-gloam-paddling.jpeg",
+          "images/heroes/enel/skill-enel-heart-web.jpeg",
+          "images/heroes/enel/skill-enel-sango.jpeg",
+          "images/heroes/enel/skill-enel-thunder-shock.jpeg",
+          "images/heroes/zoro-new-world/handbook-zoro-new-world-recommendations.jpeg",
+          "images/heroes/zoro-new-world/hero-zoro-new-world-card-ssr.jpeg",
+          "images/heroes/zoro-new-world/skill-zoro-new-world-black-blade.jpeg",
+          "images/heroes/zoro-new-world/skill-zoro-new-world-black-rope-great-tornado.jpeg",
+          "images/heroes/zoro-new-world/skill-zoro-new-world-daishinkan.jpeg",
+          "images/heroes/zoro-new-world/skill-zoro-new-world-ultra-tora-gari.jpeg",
+          "images/heroes/zoro-new-world/skill-zoro-new-world-yakkodori.jpeg",
+          "images/heroes/king/hero-king-card-ur.jpeg",
+          "images/heroes/king/handbook-king-comments.jpeg",
+          "images/heroes/king/handbook-king-recommendations.jpeg",
+          "images/heroes/king/skill-king-tankyudon.jpeg",
+          "images/heroes/king/skill-king-barizodon.jpeg",
+          "images/heroes/king/skill-king-andon.jpeg",
+          "images/heroes/king/skill-king-omori-karyudon.jpeg",
+          "images/heroes/king/skill-king-karyudon.jpeg",
+          "images/heroes/nekomamushi/hero-nekomamushi-card-ur.jpeg",
+          "images/heroes/nekomamushi/handbook-nekomamushi-comments.jpeg",
+          "images/heroes/nekomamushi/handbook-nekomamushi-recommendations.jpeg",
+          "images/heroes/nekomamushi/skill-nekomamushi-red-cat-dance.jpeg",
+          "images/heroes/nekomamushi/skill-nekomamushi-sulongs-roar-a.jpeg",
+          "images/heroes/nekomamushi/skill-nekomamushi-sulongs-roar.jpeg",
+          "images/heroes/nekomamushi/skill-nekomamushi-arc-burst.jpeg",
+          "images/heroes/nekomamushi/skill-nekomamushi-electro-armor.jpeg",
+          "images/heroes/nekomamushi/skill-nekomamushi-the-night-lord.jpeg",
+          "images/heroes/jinbe-new-world/hero-jinbe-new-world-card-ur.jpeg",
+          "images/heroes/jinbe-new-world/handbook-jinbe-new-world-comments.jpeg",
+          "images/heroes/jinbe-new-world/handbook-jinbe-new-world-recommendations.jpeg",
+          "images/heroes/jinbe-new-world/skill-jinbe-yarinami-murasame.jpeg",
+          "images/heroes/jinbe-new-world/skill-jinbe-senmaigawara-seiken.jpeg",
+          "images/heroes/jinbe-new-world/skill-jinbe-power-counter.jpeg",
+          "images/heroes/jinbe-new-world/skill-jinbe-fish-man-karate.jpeg",
+          "images/heroes/jinbe-new-world/skill-jinbe-ogi-karate.jpeg",
+          "images/heroes/otohime/hero-otohime-card-ur.jpeg",
+          "images/heroes/otohime/handbook-otohime-comments.jpeg",
+          "images/heroes/otohime/handbook-otohime-recommendations.jpeg",
+          "images/heroes/otohime/skill-otohime-resonance-speech.jpeg",
+          "images/heroes/otohime/skill-otohime-inspiration.jpeg",
+          "images/heroes/otohime/skill-otohime-queens-protection.jpeg",
+          "images/heroes/otohime/skill-otohime-heart-of-everything.jpeg",
+          "images/heroes/otohime/skill-otohime-will-succession.jpeg",
+          "images/heroes/marco/hero-marco-card-ur.jpeg",
+          "images/heroes/marco/handbook-marco-comments.jpeg",
+          "images/heroes/marco/handbook-marco-recommendations.jpeg",
+          "images/heroes/marco/skill-marco-zoan-combo.jpeg",
+          "images/heroes/marco/skill-marco-hoo-in.jpeg",
+          "images/heroes/marco/skill-marco-flame-of-rebirth.jpeg",
+          "images/heroes/marco/skill-marco-blue-flames-of-resurrection.jpeg",
+          "images/heroes/marco/skill-marco-sacrifice.jpeg"
+        ],
+        "completeHeroCards": [
+          "Big Mom",
+          "Rayleigh",
+          "Kaido",
+          "Cracker",
+          "Luffy (Gear 2)",
+          "Bartolomeo",
+          "Zoro",
+          "Usopp",
+          "Katakuri",
+          "Akainu (New World)",
+          "Jack",
+          "Smoothie",
+          "Luffy (Gear 4)",
+          "Enel",
+          "Zoro (New World)",
+          "King",
+          "Nekomamushi",
+          "Jinbe (New World)",
+          "Otohime",
+          "Marco"
+        ],
+        "pendingSkillCards": [],
+        "heroAffinityTags": {
+          "Big Mom": {
+            "status": "observed in handbook relation screenshot",
+            "tags": [
+              "Pirate",
+              "Four Emperors",
+              "Big Mom Band",
+              "Superman Fruit",
+              "Paramecia",
+              "Captain"
+            ]
+          },
+          "Rayleigh": {
+            "status": "observed in handbook relation screenshot",
+            "tags": [
+              "No.1 Swordsman",
+              "Legendary",
+              "Pirate",
+              "Sin fruta"
+            ]
+          },
+          "Cracker": {
+            "status": "observed in handbook relation screenshot",
+            "tags": [
+              "Pirate",
+              "Big Mom Band",
+              "Superman Fruit",
+              "Paramecia"
+            ]
+          },
+          "Kaido": {
+            "status": "inferred from visible affinity filters and hero identity; needs direct handbook screenshot",
+            "tags": [
+              "Pirate",
+              "Four Emperors",
+              "Beasts Pirates",
+              "Zoan Fruit",
+              "Captain"
+            ]
+          },
+          "Katakuri": {
+            "status": "observed in handbook relation screenshot",
+            "tags": [
+              "Pirate",
+              "Royal Deputy",
+              "Big Mom Band",
+              "Superman Fruit",
+              "Paramecia"
+            ]
+          },
+          "Akainu": {
+            "status": "observed in handbook relation screenshot",
+            "tags": [
+              "Marine Marshall",
+              "Logia Fruit",
+              "Marine"
+            ]
+          },
+          "Jack": {
+            "status": "observed in handbook relation screenshot",
+            "tags": [
+              "Pirate",
+              "Beasts Pirates",
+              "Zoan Fruit",
+              "Fish Man"
+            ]
+          },
+          "Smoothie": {
+            "status": "observed in handbook relation screenshot",
+            "tags": [
+              "Pirate",
+              "Big Mom Band",
+              "Royal Deputy",
+              "Superman Fruit",
+              "Paramecia"
+            ]
+          },
+          "Luffy (Gear 4)": {
+            "status": "observed in handbook relation screenshot",
+            "tags": [
+              "A.S.L",
+              "Worst Generation",
+              "Superman Fruit",
+              "Paramecia",
+              "Pirate",
+              "Captain",
+              "Strawhat Pirates"
+            ]
+          },
+          "Enel": {
+            "status": "observed in handbook relation screenshot",
+            "tags": [
+              "Skypiea Residence",
+              "Logia Fruit"
+            ]
+          },
+          "Zoro (New World)": {
+            "status": "observed in handbook relation screenshot",
+            "tags": [
+              "Strawhat Pirates",
+              "Worst Generation",
+              "Pirate",
+              "No.1 Swordsman"
+            ]
+          },
+          "Akainu (old planned labels)": {
+            "status": "legacy/planned label kept as reference until older Akainu variant is confirmed",
+            "tags": [
+              "Marine",
+              "Marine Admirals",
+              "Logia Fruit"
+            ]
+          },
+          "Luffy (Gear 2)": {
+            "status": "observed in handbook relation screenshot",
+            "tags": [
+              "A.S.L",
+              "Superman Fruit",
+              "Paramecia",
+              "Strawhat Pirates",
+              "Worst Generation",
+              "Pirate",
+              "Captain"
+            ]
+          },
+          "Bartolomeo": {
+            "status": "observed in handbook relation screenshot",
+            "tags": [
+              "Pirate",
+              "Superman Fruit",
+              "Paramecia"
+            ]
+          },
+          "Zoro": {
+            "status": "observed in handbook relation screenshot",
+            "tags": [
+              "Strawhat Pirates",
+              "Pirate",
+              "No.1 Swordsman"
+            ]
+          },
+          "Usopp": {
+            "status": "observed in handbook relation screenshot",
+            "tags": [
+              "Strawhat Pirates",
+              "Pirate"
+            ]
+          },
+          "King": {
+            "status": "observed in handbook relation screenshot",
+            "tags": [
+              "Pirate",
+              "Beasts Pirates",
+              "Zoan Fruit",
+              "Royal Deputy"
+            ]
+          },
+          "Nekomamushi": {
+            "status": "observed in handbook relation screenshot; role set as SUP",
+            "tags": [
+              "Pirate",
+              "Wano Country"
+            ]
+          },
+          "Jinbe (New World)": {
+            "status": "observed in handbook relation screenshot",
+            "tags": [
+              "Pirate",
+              "Strawhat Pirates",
+              "Fish Man"
+            ]
+          },
+          "Otohime": {
+            "status": "observed in handbook relation screenshot; role set as SUP",
+            "tags": [
+              "Legendary",
+              "Fish Man",
+              "Royalty"
+            ]
+          },
+          "Marco": {
+            "status": "observed in handbook relation screenshot; role set as SUP",
+            "tags": [
+              "Zoan Fruit",
+              "Pirate",
+              "Whitebeard Pirates"
+            ]
+          }
+        },
+        "heroRecommendations": {
+          "Jack": {
+            "image": "images/heroes/jack/handbook-jack-recommendations.jpeg",
+            "dial": "Blue dial",
+            "weapon": "Iron",
+            "gear": "Defend"
+          },
+          "Smoothie": {
+            "image": "images/heroes/smoothie/handbook-smoothie-recommendations.jpeg",
+            "dial": "Shell-style dial",
+            "weapon": "Paper",
+            "gear": "Wrath"
+          },
+          "Katakuri": {
+            "image": "images/heroes/katakuri/handbook-katakuri-recommendations.jpeg",
+            "dial": "Red spiral dial",
+            "weapon": "Arashi",
+            "gear": "Explode"
+          },
+          "Akainu (New World)": {
+            "image": "images/heroes/akainu/handbook-akainu-new-world-recommendations.jpeg",
+            "dial": "Red spiral dial",
+            "weapon": "Arashi",
+            "gear": "Explode"
+          },
+          "Luffy (Gear 4)": {
+            "image": "images/heroes/luffy-gear-4/handbook-luffy-gear-4-recommendations.jpeg",
+            "dial": "Red spiral dial",
+            "weapon": "Arashi",
+            "gear": "Explode"
+          },
+          "Enel": {
+            "image": "images/heroes/enel/handbook-enel-recommendations.jpeg",
+            "dial": "Red spiral dial",
+            "weapon": "Arashi",
+            "gear": "Explode"
+          },
+          "Zoro (New World)": {
+            "image": "images/heroes/zoro-new-world/handbook-zoro-new-world-recommendations.jpeg",
+            "dial": "Red spiral dial",
+            "weapon": "Arashi",
+            "gear": "Explode"
+          }
+        },
+        "completeHeroCardsCount": 20
+      },
+      "bigMomSkillCards": [
+        {
+          "name": "Raitei",
+          "type": "Active",
+          "icon": "images/heroes/skill-icons/big-mom-raitei.jpg",
+          "values": {
+            "baseDamage": "80% ATK to all enemies",
+            "calmBonus": "150% ATK additional damage to one enemy",
+            "furyEffect": "Serious Wound 18% for 2 turns",
+            "seriousWoundNote": "At the end, deals extra damage based on total damage received during the effect",
+            "shownLevel": "Max Level"
+          },
+          "spanishReading": "Activa de área: hace 80% del ATK de Big Mom a todos los enemigos; en Calm suma 150% ATK a 1 enemigo; en Fury aplica Serious Wound 18% por 2 turnos."
+        },
+        {
+          "name": "Eating Disorder",
+          "type": "Passive",
+          "icon": "images/heroes/skill-icons/big-mom-eating-disorder.jpg",
+          "values": {
+            "critRate": "40%",
+            "critDamage": "30%",
+            "withBigMomBand": "Enter Calm and gain 50% Break Rate",
+            "withoutBigMomBand": "Enter Fury and gain 20% Crit Rate",
+            "shownLevel": "Max Level"
+          },
+          "spanishReading": "Pasiva central: +40% Crit Rate y +30% Crit DMG durante toda la batalla. Con aliado Big Mom Band entra en Calm y gana +50% Break Rate; sin ese aliado entra en Fury y gana +20% Crit Rate adicional."
+        },
+        {
+          "name": "Soul Pocus",
+          "type": "Passive",
+          "icon": "images/heroes/skill-icons/big-mom-soul-pocus.jpg",
+          "values": {
+            "battleDamageIncrease": "15%",
+            "againstControlTarget": "Dealt damage raises to 35%",
+            "shownLevel": "Max Level"
+          },
+          "spanishReading": "Pasiva de daño: +15% DMG en batalla; contra objetivos en Control el bonus sube a +35% DMG."
+        },
+        {
+          "name": "Soul Deterrence",
+          "type": "Passive",
+          "icon": "images/heroes/skill-icons/big-mom-soul-deterrence.jpg",
+          "values": {
+            "raiteiDebuff": "Target DMG -10% for 2 turns",
+            "lowHpCondition": "Target HP lower than 45%",
+            "terrorDuration": "2 turns",
+            "triggerLimit": "Once every 6 turns",
+            "terrorEffect": "50% rate to render target unable to move",
+            "shownLevel": "Max Level"
+          },
+          "spanishReading": "Pasiva ligada a Raitei: reduce el daño del objetivo 10% por 2 turnos; si el objetivo queda bajo 45% HP aplica Terror por 2 turnos, una vez cada 6 turnos, con 50% de probabilidad de impedir movimiento."
+        },
+        {
+          "name": "Soul Tax",
+          "type": "Passive",
+          "icon": "images/heroes/skill-icons/big-mom-soul-tax.jpg",
+          "values": {
+            "trigger": "When a hero dies on the field",
+            "baseCritDamagePerStack": "5%",
+            "maxStacks": 5,
+            "baseMaxCritDamage": "25%",
+            "awakenRequirement": "Awaken Red 5-Star",
+            "awakenCritDamagePerStack": "7%",
+            "awakenMaxCritDamage": "35%"
+          },
+          "spanishReading": "Pasiva de escalado: cada muerte en campo da +5% Crit DMG hasta 5 stacks (+25%). Con Awaken Red 5-Star sube a +7% por stack, máximo +35%."
+        }
+      ],
+      "rayleighSkillCards": [
+        {
+          "name": "Pluto",
+          "type": "Active",
+          "icon": "images/heroes/skill-icons/rayleigh-pluto.jpg",
+          "values": {
+            "baseDamage": "80% ATK to all enemies",
+            "dodgeRatePerStack": "3%",
+            "maxStacks": 5,
+            "maxDodgeRate": "15%",
+            "shownLevel": "Max Level"
+          },
+          "spanishReading": "Activa de área: hace daño igual al 80% del ATK de Rayleigh a todos los enemigos y aumenta su Dodge Rate +3%, hasta 5 stacks (+15%)."
+        },
+        {
+          "name": "Haki Expert",
+          "type": "Passive",
+          "icon": "images/heroes/skill-icons/rayleigh-haki-expert.jpg",
+          "values": {
+            "critRate": "40%",
+            "critDamage": "30%",
+            "kenbunshokuChanceWhenEnergyFull": "50%",
+            "kenbunshokuEffect": "Next attack Crit Rate +25%",
+            "busoshokuChanceWhenEnergyFull": "50%",
+            "busoshokuEffect": "Next damage +21%",
+            "haoshokuChanceWhenEnergyFull": "50%",
+            "haoshokuEffect": "Next skill damage +21%",
+            "shownLevel": "Max Level"
+          },
+          "spanishReading": "Pasiva central: +40% Crit Rate y +30% Crit DMG. Con energía llena puede ganar Kenbunshoku, Busoshoku o Haoshoku con 50% cada uno; esos estados potencian el siguiente ataque/daño/skill."
+        },
+        {
+          "name": "Legendary First Mate",
+          "type": "Passive",
+          "icon": "images/heroes/skill-icons/rayleigh-legendary-first-mate.jpg",
+          "values": {
+            "condition": "At beginning of turn, if in any Haki status",
+            "shield": "54% ATK",
+            "shownLevel": "Max Level"
+          },
+          "spanishReading": "Al inicio del turno, si Rayleigh está en cualquier estado Haki, obtiene un escudo igual al 54% de su ATK."
+        },
+        {
+          "name": "Excessive Strike",
+          "type": "Passive",
+          "icon": "images/heroes/skill-icons/rayleigh-excessive-strike.jpg",
+          "values": {
+            "condition": "When energy is full",
+            "hakiChance": "70%",
+            "shownLevel": "Max Level"
+          },
+          "spanishReading": "Cuando la energía está llena, la probabilidad de ganar estado Haki sube a 70%."
+        },
+        {
+          "name": "Eyes of Heart",
+          "type": "Passive",
+          "icon": "images/heroes/skill-icons/rayleigh-eyes-of-heart.jpg",
+          "values": {
+            "condition": "When in shield status",
+            "critDamage": "25%",
+            "shownLevel": "Max Level"
+          },
+          "spanishReading": "Mientras Rayleigh está en estado de escudo, gana +25% Crit DMG."
+        }
+      ],
+      "completeHeroCards": [
+        "Big Mom",
+        "Rayleigh",
+        "Kaido",
+        "Cracker",
+        "Luffy (Gear 2)",
+        "Bartolomeo",
+        "Zoro",
+        "Usopp",
+        "Katakuri",
+        "Akainu (New World)",
+        "Jack",
+        "Smoothie",
+        "Luffy (Gear 4)",
+        "Enel",
+        "Zoro (New World)",
+        "King",
+        "Nekomamushi",
+        "Jinbe (New World)",
+        "Otohime",
+        "Marco"
+      ],
+      "pendingSkillCards": [],
+      "kaidoSkillCards": [
+        {
+          "name": "Bolo Breath",
+          "type": "Active",
+          "icon": "images/heroes/skill-icons/kaido-bolo-breath.jpg",
+          "values": {
+            "baseDamage": "80% ATK to all enemies",
+            "healingReduction": "20% for 3 rounds",
+            "statusDefinition": "Healing Reduction reduces healing received",
+            "shownLevel": "Max Level"
+          },
+          "spanishReading": "Activa de área: hace daño igual al 80% del ATK de Kaido a todos los enemigos y aplica Healing Reduction de 20% durante 3 rondas."
+        },
+        {
+          "name": "Strongest Creature",
+          "type": "Passive",
+          "icon": "images/heroes/skill-icons/kaido-strongest-creature.jpg",
+          "values": {
+            "critRate": "28%",
+            "critDamage": "21%",
+            "battleStartSelfHpReduction": "50%",
+            "reviveHp": "64%",
+            "reviveLimit": "Once per game",
+            "shownLevel": "Max Level"
+          },
+          "spanishReading": "Pasiva central: +28% Crit Rate y +21% Crit DMG durante la batalla. Al inicio reduce su propio HP 50%; al morir revive en la siguiente ronda con 64% HP, una vez por partida."
+        },
+        {
+          "name": "Kosanze Ragnaraku",
+          "type": "Passive",
+          "icon": "images/heroes/skill-icons/kaido-kosanze-ragnaraku.jpg",
+          "values": {
+            "afterResurrectionCritDamage": "9%",
+            "afterResurrectionHitRate": "5%",
+            "shownLevel": "Max Level"
+          },
+          "spanishReading": "Después de resucitar, Kaido gana +9% Crit DMG y +5% Hit Rate."
+        },
+        {
+          "name": "Kundali Dragon Swarm",
+          "type": "Passive",
+          "icon": "images/heroes/skill-icons/kaido-kundali-dragon-swarm.jpg",
+          "values": {
+            "afterResurrectionActiveSkillHealing": "100%",
+            "duration": "3 rounds",
+            "shownLevel": "Max Level"
+          },
+          "spanishReading": "Después de resucitar, el efecto de curación de las habilidades activas de Kaido aumenta a 100% durante 3 rondas."
+        },
+        {
+          "name": "Beasts",
+          "type": "Passive",
+          "icon": "images/heroes/skill-icons/kaido-beasts.jpg",
+          "values": {
+            "trigger": "When critically hit",
+            "stackGain": "1 Beasts mark",
+            "maxStacks": 3,
+            "fullStackBonus": "Next active skill damage +20%",
+            "consume": "All Beasts marks are cleared after the bonus",
+            "afterRevive": "Gain full Beasts stacks immediately after reviving",
+            "shownLevel": "Max Level"
+          },
+          "spanishReading": "Al recibir un crítico, Kaido acumula 1 marca Beasts, hasta 3. Con marcas completas, la siguiente habilidad activa hace +20% de daño y consume las marcas. Al revivir gana marcas completas inmediatamente."
+        }
+      ],
+      "crackerSkillCards": [
+        {
+          "name": "Biscuit Assault",
+          "type": "Active",
+          "icon": "images/heroes/skill-icons/cracker-biscuit-assault.jpg",
+          "values": {
+            "baseDamage": "80% ATK to all enemies",
+            "healReduce": "30% for 3 turns",
+            "statusDefinition": "Heal Reduce reduces healing received",
+            "shownLevel": "Max Level"
+          },
+          "spanishReading": "Activa de área: hace daño igual al 80% del ATK de Cracker a todos los enemigos y aplica Heal Reduce de 30% durante 3 turnos."
+        },
+        {
+          "name": "Biscuit Hell",
+          "type": "Passive",
+          "icon": "images/heroes/skill-icons/cracker-biscuit-hell.jpg",
+          "values": {
+            "critRate": "40%",
+            "critDamage": "30%",
+            "battleStartDamageIncreaseStages": "5 stages of 10% DMG Increase",
+            "stageLoss": "Loses 1 stage at the end of each turn",
+            "practicalOpeningBonus": "Up to 50% DMG Increase at battle start",
+            "shownLevel": "Max Level"
+          },
+          "spanishReading": "Pasiva central: +40% Crit Rate y +30% Crit DMG. Al inicio obtiene 5 etapas de +10% DMG Increase y pierde 1 etapa al final de cada turno."
+        },
+        {
+          "name": "Crush Biscuit",
+          "type": "Passive",
+          "icon": "images/heroes/skill-icons/cracker-crush-biscuit.jpg",
+          "values": {
+            "firstCommonAttackBonus": "6% of target HP",
+            "cap": "Not higher than 220% of own ATK",
+            "shownLevel": "Max Level"
+          },
+          "spanishReading": "El primer ataque común causa daño adicional igual al 6% del HP del objetivo, con tope de 220% del ATK propio."
+        },
+        {
+          "name": "Hard Biscuit",
+          "type": "Passive",
+          "icon": "images/heroes/skill-icons/cracker-hard-biscuit.jpg",
+          "values": {
+            "battleStartSpeed": "15",
+            "terrorCondition": "Target HP higher than 80%",
+            "terrorDuration": "2 turns",
+            "triggerLimit": "Once per battle",
+            "terrorEffect": "50% rate to render target unable to move",
+            "shownLevel": "Max Level"
+          },
+          "spanishReading": "Al inicio de la batalla gana +15 SPD. Aplica Terror por 2 turnos al objetivo con HP mayor a 80%, una vez por batalla; Terror tiene 50% de probabilidad de impedir movimiento."
+        },
+        {
+          "name": "Pretzel",
+          "type": "Passive",
+          "icon": "images/heroes/skill-icons/cracker-pretzel.jpg",
+          "values": {
+            "perBiscuitHellStage": "6% Hit Rate",
+            "openingAtFiveStages": "Up to 30% Hit Rate",
+            "shownLevel": "Max Level"
+          },
+          "spanishReading": "Cada etapa de Biscuit Hell aumenta el Hit Rate de Cracker +6%; con 5 etapas puede iniciar con +30% Hit Rate."
+        }
+      ],
+      "newHeroCardsCompletedFromImages": {
+        "heroes": [
+          "Jack",
+          "Smoothie",
+          "Katakuri",
+          "Akainu (New World)",
+          "Luffy (Gear 4)",
+          "Enel",
+          "Zoro (New World)"
+        ],
+        "sourceImagesAdded": 90,
+        "note": "All seven new hero cards have portrait, handbook recommendation image, and skill screenshots connected to the catalog."
+      },
+      "completeHeroCardsCount": 20,
+      "sourceVideoLocalOnly": "images/videos/WhatsApp Video 2026-07-09 at 22.19.51.mp4"
+    },
+    "materials": {
+      "generalObserved": {
+        "teamInstanceCoin": {
+          "image": "images/materials/material-team-instance-coin.jpeg",
+          "use": "Exchange currency for Team Instance Store",
+          "sourcesObserved": [
+            "Team Instance"
+          ]
+        },
+        "endurancePass": {
+          "image": "images/materials/material-endurance-pass.jpeg",
+          "use": "Taijutsu Training material containing unlimited power",
+          "sourcesObserved": [
+            "Idling",
+            "Long Ring Island Adventure"
+          ]
+        },
+        "trainingPass": {
+          "image": "images/materials/material-training-pass.jpeg",
+          "use": "Potential system material unlocked after the hero is awakened to 3-star",
+          "sourcesObserved": [
+            "Thriller Bark",
+            "Market"
+          ]
+        },
+        "historicStele": {
+          "image": "images/materials/material-historic-stele.jpeg",
+          "use": "Ancient rune stele used to recruit SR or SSR heroes at Tree of Knowledge",
+          "unlockNote": "Tree of Knowledge unlocks at Lv.60"
+        },
+        "magnetPowder": {
+          "image": "images/materials/material-magnet-powder.jpeg",
+          "use": "Permanent Compass upgrade material",
+          "sourcesObserved": [
+            "Voyage Adventure",
+            "Enemy Incoming",
+            "Market"
+          ]
+        },
+        "magnetStone": {
+          "image": "images/materials/material-magnet-stone.jpeg",
+          "use": "Permanent Compass advancement material",
+          "sourcesObserved": [
+            "Voyage Adventure",
+            "Enemy Incoming"
+          ]
+        }
+      },
+      "hakiPlucksObserved": [
+        {
+          "name": "Haoshoku Pluck",
+          "image": "images/materials/material-haoshoku-pluck.jpeg",
+          "use": "Cost for enemy Haki skill"
+        },
+        {
+          "name": "Kenbunshoku Pluck",
+          "image": "images/materials/material-kenbunshoku-pluck.jpeg",
+          "use": "Cost for enemy Haki skill"
+        },
+        {
+          "name": "Busoshoku Pluck",
+          "image": "images/materials/material-busoshoku-pluck.jpeg",
+          "use": "Cost for enemy Haki skill"
+        },
+        {
+          "name": "Basic Pluck",
+          "image": "images/materials/material-basic-pluck.jpeg",
+          "use": "Cost for enemy Haki skill"
+        }
+      ]
+    },
+    "offers": {
+      "sourceVideo": "Video local no publicado; usar frames extraidos en images/videos/",
+      "skinOfferObserved": {
+        "character": "Luffy Dressrosa",
+        "rarity": "SSR",
+        "priceUsd": 4.99,
+        "text": "Top up $4.99 to get Luffy's skin"
+      },
+      "sourceVideoLocalOnly": "images/videos/WhatsApp Video 2026-07-09 at 22.19.51.mp4"
+    },
+    "arenaStore": {
+      "sourceVideo": "Video local no publicado; usar frames extraidos en images/videos/",
+      "currencyObserved": 8200,
+      "storeLevel": 3,
+      "refresh": "Automatically refresh after 05 Day(s)",
+      "tabsObserved": [
+        "Altar Store",
+        "Arena Store",
+        "Senior Arena Store",
+        "Guild Shop",
+        "Showdown Store"
+      ],
+      "itemsObserved": {
+        "type": "UR hero fragments",
+        "amount": 10,
+        "cost": 24000,
+        "storageExamples": [
+          2,
+          3,
+          0
+        ],
+        "soldOutObserved": true
+      },
+      "visibleAction": "Go to Arena",
+      "sourceVideoLocalOnly": "images/videos/WhatsApp Video 2026-07-09 at 22.30.21.mp4"
+    },
+    "altar": {
+      "sourceVideo": "Video local no publicado; usar frames extraidos en images/videos/",
+      "categories": {
+        "Hero": [
+          "Rebirth",
+          "Dissolve",
+          "Swap"
+        ],
+        "Gear": [
+          "Rebirth",
+          "Dissolve",
+          "HP Boost"
+        ],
+        "Weapon": [
+          "Rebirth",
+          "Dissolve",
+          "HP Boost"
+        ],
+        "Dial": [
+          "Rebirth",
+          "Dissolve"
+        ]
+      },
+      "heroRebirth": {
+        "currencyObserved": 1437,
+        "costDiamondsObserved": 0,
+        "hasKeepStarLevel": true,
+        "note": "Resonance heroes must be dismounted from resonance before rebirth"
+      },
+      "weaponDissolve": {
+        "currencyObserved": 1088,
+        "buttons": [
+          "Fast Filter",
+          "Dissolve",
+          "Dissolve Preview"
+        ],
+        "itemsObserved": [
+          "Paper Lv1",
+          "Gun Lv1"
+        ]
+      },
+      "dialFilter": {
+        "types": [
+          "Impact Dial",
+          "Flame Dials",
+          "Tone Dials",
+          "Breath Dials",
+          "Water Dial",
+          "Flash Dial"
+        ],
+        "colors": [
+          "Green",
+          "Blue",
+          "Purple"
+        ]
+      },
+      "sourceVideoLocalOnly": "images/videos/WhatsApp Video 2026-07-09 at 22.30.21.mp4"
+    },
+    "strategyExamples": {
+      "sourceImages": [
+        "images/strategy/resumen-danos.jpeg",
+        "images/strategy/duo big mom y cracker.jpeg",
+        "images/strategy/duo katakuri y akainu.jpeg",
+        "images/strategy/duo rayleigh y kaido.jpeg"
+      ],
+      "warning": "Example values only. Damage changes with items, dials, talents, awaken, buffs, level, formation, and enemy.",
+      "damageScaleFromNormalBasic": {
+        "comparisonBase": "Each character normal basic attack = 100%",
+        "testedEnemy": "Cocodrilo / Crocodile in the provided examples",
+        "characters": [
+          {
+            "name": "Rayleigh",
+            "criticalBasicPercent": 205.6,
+            "boostedCriticalSkillPercent": 295.5,
+            "note": "Strong critical scaling and good buff conversion."
+          },
+          {
+            "name": "Kaido",
+            "criticalBasicPercent": 153.6,
+            "boostedCriticalSkillPercent": 189.1,
+            "note": "More stable growth, lower critical spike in this test."
+          },
+          {
+            "name": "Big Mom",
+            "criticalBasicPercent": 280.9,
+            "boostedCriticalSkillPercent": 1236.0,
+            "note": "Largest spike by far; excellent candidate as explosive carry."
+          },
+          {
+            "name": "Cracker",
+            "criticalBasicPercent": 155.6,
+            "boostedCriticalSkillPercent": 110.3,
+            "note": "High base damage with lower relative boosted critical skill jump."
+          },
+          {
+            "name": "Katakuri",
+            "criticalBasicPercent": 196.1,
+            "boostedCriticalSkillPercent": 172.5,
+            "note": "Strong basic critical productivity."
+          },
+          {
+            "name": "Akainu",
+            "criticalBasicPercent": 177.7,
+            "boostedCriticalSkillPercent": 195.4,
+            "note": "Good multi-hit skill productivity."
+          }
+        ]
+      },
+      "duos": [
+        {
+          "name": "Big Mom + Cracker",
+          "image": "images/strategy/duo big mom y cracker.jpeg",
+          "summary": "Big Mom scales massively with critical skill and buffs; Cracker brings high base damage and stable growth."
+        },
+        {
+          "name": "Katakuri + Akainu",
+          "image": "images/strategy/duo katakuri y akainu.jpeg",
+          "summary": "Very close maximum productivity; Katakuri leads basic critical damage while Akainu benefits from multi-hit skills."
+        },
+        {
+          "name": "Rayleigh + Kaido",
+          "image": "images/strategy/duo rayleigh y kaido.jpeg",
+          "summary": "Rayleigh scales better with critical damage; Kaido shows steadier buff-based improvement."
+        }
+      ],
+      "recommendedOptions": [
+        "Big Mom as an explosive boosted critical skill carry.",
+        "Rayleigh as a strong critical attacker.",
+        "Katakuri and Akainu for burst/multi-hit comparisons.",
+        "Cracker and Kaido as stable options depending on gear and buffs."
+      ]
+    },
+    "heroDetails": {
+      "sourceVideo": "Video local no publicado; usar frames extraidos en images/videos/",
+      "bigMom": {
+        "rarity": "UR",
+        "role": "ATK",
+        "level": "270/280",
+        "powerLabel": "143.5M",
+        "qualification": 608,
+        "stats": {
+          "atk": 1382221,
+          "hp": 17553497,
+          "def": 43821,
+          "spd": 403
+        },
+        "tabs": [
+          "Info",
+          "Skill",
+          "Dial",
+          "Talent"
+        ],
+        "relationsObserved": [
+          {
+            "name": "Challenge",
+            "bonus": "+10% Crit"
+          },
+          {
+            "name": "Marriage",
+            "bonus": "+15% HP, +5% Dodge"
+          }
+        ],
+        "skillsObserved": [
+          {
+            "name": "Raitei",
+            "type": "Active",
+            "icon": "images/heroes/skill-icons/big-mom-raitei.jpg",
+            "values": {
+              "baseDamage": "80% ATK to all enemies",
+              "calmBonus": "150% ATK additional damage to one enemy",
+              "furyEffect": "Serious Wound 18% for 2 turns",
+              "seriousWoundNote": "At the end, deals extra damage based on total damage received during the effect",
+              "shownLevel": "Max Level"
+            },
+            "spanishReading": "Activa de área: hace 80% del ATK de Big Mom a todos los enemigos; en Calm suma 150% ATK a 1 enemigo; en Fury aplica Serious Wound 18% por 2 turnos."
+          },
+          {
+            "name": "Eating Disorder",
+            "type": "Passive",
+            "icon": "images/heroes/skill-icons/big-mom-eating-disorder.jpg",
+            "values": {
+              "critRate": "40%",
+              "critDamage": "30%",
+              "withBigMomBand": "Enter Calm and gain 50% Break Rate",
+              "withoutBigMomBand": "Enter Fury and gain 20% Crit Rate",
+              "shownLevel": "Max Level"
+            },
+            "spanishReading": "Pasiva central: +40% Crit Rate y +30% Crit DMG durante toda la batalla. Con aliado Big Mom Band entra en Calm y gana +50% Break Rate; sin ese aliado entra en Fury y gana +20% Crit Rate adicional."
+          },
+          {
+            "name": "Soul Pocus",
+            "type": "Passive",
+            "icon": "images/heroes/skill-icons/big-mom-soul-pocus.jpg",
+            "values": {
+              "battleDamageIncrease": "15%",
+              "againstControlTarget": "Dealt damage raises to 35%",
+              "shownLevel": "Max Level"
+            },
+            "spanishReading": "Pasiva de daño: +15% DMG en batalla; contra objetivos en Control el bonus sube a +35% DMG."
+          },
+          {
+            "name": "Soul Deterrence",
+            "type": "Passive",
+            "icon": "images/heroes/skill-icons/big-mom-soul-deterrence.jpg",
+            "values": {
+              "raiteiDebuff": "Target DMG -10% for 2 turns",
+              "lowHpCondition": "Target HP lower than 45%",
+              "terrorDuration": "2 turns",
+              "triggerLimit": "Once every 6 turns",
+              "terrorEffect": "50% rate to render target unable to move",
+              "shownLevel": "Max Level"
+            },
+            "spanishReading": "Pasiva ligada a Raitei: reduce el daño del objetivo 10% por 2 turnos; si el objetivo queda bajo 45% HP aplica Terror por 2 turnos, una vez cada 6 turnos, con 50% de probabilidad de impedir movimiento."
+          },
+          {
+            "name": "Soul Tax",
+            "type": "Passive",
+            "icon": "images/heroes/skill-icons/big-mom-soul-tax.jpg",
+            "values": {
+              "trigger": "When a hero dies on the field",
+              "baseCritDamagePerStack": "5%",
+              "maxStacks": 5,
+              "baseMaxCritDamage": "25%",
+              "awakenRequirement": "Awaken Red 5-Star",
+              "awakenCritDamagePerStack": "7%",
+              "awakenMaxCritDamage": "35%"
+            },
+            "spanishReading": "Pasiva de escalado: cada muerte en campo da +5% Crit DMG hasta 5 stacks (+25%). Con Awaken Red 5-Star sube a +7% por stack, máximo +35%."
+          }
+        ]
+      },
+      "sourceVideoLocalOnly": "images/videos/WhatsApp Video 2026-07-09 at 22.30.21.mp4"
+    },
+    "social": {
+      "sourceImages": [
+        "images/social/friends-list.jpeg",
+        "images/social/friends-recommend-search.jpeg",
+        "images/social/friends-applications.jpeg",
+        "images/social/friends-blacklist-empty.jpeg"
+      ],
+      "observations": [
+        "Friends screen shows friend count 30/30.",
+        "Buttons observed: Attack Lineup and Fast Claim and Send.",
+        "Tabs observed: Friends, Recommend, Applications, Blacklist.",
+        "Applications show accept and reject actions.",
+        "Blacklist can be empty."
+      ]
+    },
+    "vip": {
+      "sourceImages": [
+        "images/vip/premium-month-pass.jpeg",
+        "images/vip/vip-1-perk.jpeg",
+        "images/vip/vip-2-perk.jpeg",
+        "images/vip/vip-3-perk.jpeg",
+        "images/vip/vip-4-perk.jpeg",
+        "images/vip/vip-5-perk.jpeg",
+        "images/vip/vip-6-perk.jpeg",
+        "images/vip/vip-7-perk.jpeg",
+        "images/vip/vip-8-perk.jpeg",
+        "images/vip/vip-9-perk.jpeg",
+        "images/vip/vip-10-perk.jpeg",
+        "images/vip/vip-11-perk.jpeg",
+        "images/vip/vip-12-perk.jpeg",
+        "images/vip/vip-13-perk.jpeg",
+        "images/vip/vip-14-perk.jpeg",
+        "images/vip/vip-15-perk.jpeg",
+        "images/vip/vip-16-perk.jpeg",
+        "images/vip/vip-17-perk.jpeg",
+        "images/vip/vip-18-perk.jpeg",
+        "images/vip/vip-19-perk.jpeg"
+      ],
+      "observations": [
+        "VIP Perk screens observed from VIP1 to VIP19.",
+        "Premium Month Pass, Month Breakthrough Pass and Month Summon Pass observed.",
+        "VIP perks mainly add idling yield, package amount, purchase attempts, refresh attempts and mode challenge attempts.",
+        "Exact values should be transcribed from zoomed captures before making a final VIP table."
+      ],
+      "importantVisiblePatterns": [
+        "Idling Yield increases with VIP level.",
+        "Resource, Gear and Dial Instance purchase attempts increase at higher VIP levels.",
+        "Market refresh and challenge purchase attempts increase with VIP level."
+      ]
+    },
+    "impelDown": {
+      "sourceImages": [
+        "images/impel-down/impel-down-stage-1840-pass-reward.jpeg",
+        "images/impel-down/impel-down-reward-ssr-shards-10.jpeg",
+        "images/impel-down/impel-down-reward-ssr-shards-5.jpeg",
+        "images/impel-down/endless-prison-stage-progress.jpeg"
+      ],
+      "type": "tower / stage challenge",
+      "normalMode": {
+        "visibleStages": [
+          1840,
+          1845,
+          1850,
+          1855
+        ],
+        "attemptsObserved": "10/10",
+        "enemyObserved": "Whitebeard",
+        "leaderboard": true,
+        "seasonTimeVisible": "Ends after 29 Day(s)",
+        "stageEffectObserved": "At battle start, all friendly units with Superman Fruit label have 100% chance to be frozen for 4 turns."
+      },
+      "ssrShardRewardPattern": [
+        {
+          "stagePattern": "10, 20, 30, etc. / multiples of 10",
+          "ssrShards": 10,
+          "otherObservedRewards": [
+            "10 red tickets",
+            "5 UR/Slip shards in observed screenshot"
+          ]
+        },
+        {
+          "stagePattern": "5, 15, 25, etc. / intermediate 5 stages",
+          "ssrShards": 5,
+          "otherObservedRewards": [
+            "10 red tickets"
+          ]
+        }
+      ],
+      "endlessPrison": {
+        "sourceImage": "images/impel-down/endless-prison-stage-progress.jpeg",
+        "totalStarsObserved": "30/180",
+        "chestMilestonesObserved": [
+          "40 Star(s)",
+          "50 Star(s)",
+          "60 Star(s)",
+          "70 Star(s)"
+        ],
+        "attemptsObserved": "0/5",
+        "stageObserved": 11,
+        "enemyObserved": "Absalom",
+        "objectivesObserved": [
+          "Clear this Stage",
+          "Clear the stage with a lineup without Big Mom Band and Legendary",
+          "Clear in 10 Turns"
+        ],
+        "unlockUserLevel": 220,
+        "rewardCategoryObserved": "plants / medicine creation materials",
+        "materialsObserved": [
+          {
+            "name": "Medicine Herb",
+            "type": "Medicine Creation Materials",
+            "obtainMethod": [
+              "Endless Prison",
+              "Vegapunk's Lab"
+            ],
+            "sellStatus": "Unable to Sell",
+            "note": "Observed in Backpack material tooltip."
+          }
+        ],
+        "sourceImages": [
+          "images/impel-down/endless-prison-stage-progress.jpeg",
+          "images/impel-down/endless-prison-rewards-preview-medicine-herb.jpeg",
+          "images/impel-down/endless-prison-reward-medicine-herb-40.jpeg",
+          "images/impel-down/endless-prison-reward-medicine-herb-60.jpeg"
+        ],
+        "starRewardPatternObserved": [
+          {
+            "condition": "Obtain 1 Star(s)",
+            "reward": "Medicine Herb x2"
+          },
+          {
+            "condition": "Obtain 2 Star(s)",
+            "reward": "Medicine Herb x2"
+          },
+          {
+            "condition": "Obtain 3 Star(s)",
+            "reward": "Medicine Herb x2"
+          }
+        ],
+        "accumulatedRewardsObserved": [
+          {
+            "totalStars": "30/180",
+            "reward": "Medicine Herb x60"
+          },
+          {
+            "reward": "Medicine Herb x40",
+            "note": "Observed in reward popup; exact total stars not visible in popup beyond background."
+          }
+        ]
+      },
+      "pendingConfirmation": [
+        "Whether UR/Slip shards always appear on multiples of 10 or only in some brackets.",
+        "Whether Stage Effects rotate by block, enemy, or season.",
+        "Full Endless Prison chest rewards at 40/50/60/70 stars and complete plant list."
+      ]
+    },
+    "systems": {
+      "vegapunksLab": {
+        "sourceImage": "images/systems/sss-lab-idle-rewards.jpeg",
+        "accessButton": "Vegapunk's",
+        "labsObserved": [
+          "S Lab",
+          "SS Lab",
+          "SSS Lab"
+        ],
+        "activeLabObserved": "SSS Lab",
+        "actionsObserved": [
+          "Rules",
+          "Fast-Claim",
+          "Collect",
+          "Go to Resonance"
+        ],
+        "currentTotalCreditObserved": 7806,
+        "idleRewardsObserved": [
+          {
+            "lab": "S Lab",
+            "enemyLevel": 100,
+            "idlingLength": "07:45:07",
+            "reward": "diamond x40",
+            "acquiredItems": "0/120"
+          },
+          {
+            "lab": "S Lab",
+            "enemyLevel": 103,
+            "idlingLength": "01:13:03",
+            "reward": "purple ticket x2000",
+            "acquiredItems": "0/6000"
+          },
+          {
+            "lab": "S Lab",
+            "enemyLevel": 106,
+            "idlingLength": "03:49:02",
+            "reward": "green resource x30K",
+            "acquiredItems": "0/90000"
+          },
+          {
+            "lab": "S Lab",
+            "enemyLevel": 109,
+            "idlingLength": "05:24:23",
+            "reward": "blue resource x400",
+            "acquiredItems": "0/1200"
+          },
+          {
+            "lab": "S Lab",
+            "enemyLevel": 112,
+            "idlingLength": "07:22:49",
+            "reward": "dark material x200",
+            "acquiredItems": "0/600"
+          },
+          {
+            "lab": "SS Lab",
+            "enemyLevel": 135,
+            "idlingLength": "00:41:16",
+            "reward": "diamond x40",
+            "acquiredItems": "0/120"
+          },
+          {
+            "lab": "SS Lab",
+            "enemyLevel": 140,
+            "idlingLength": "04:07:29",
+            "reward": "purple ticket x2000",
+            "acquiredItems": "0/6000"
+          },
+          {
+            "lab": "SS Lab",
+            "enemyLevel": 145,
+            "idlingLength": "04:38:27",
+            "reward": "green resource x30K",
+            "acquiredItems": "0/90000"
+          },
+          {
+            "lab": "SS Lab",
+            "enemyLevel": 150,
+            "idlingLength": "04:41:20",
+            "reward": "blue resource x400",
+            "acquiredItems": "0/1200"
+          },
+          {
+            "lab": "SS Lab",
+            "enemyLevel": 155,
+            "idlingLength": "00:58:46",
+            "reward": "dark material x200",
+            "acquiredItems": "0/600"
+          },
+          {
+            "lab": "SSS Lab",
+            "enemyLevel": 247,
+            "idlingLength": "04:09:01",
+            "reward": "Medicine Herb x2",
+            "acquiredItems": "0/6"
+          },
+          {
+            "lab": "SSS Lab",
+            "enemyLevel": 249,
+            "idlingLength": "03:59:36",
+            "reward": "diamond x40",
+            "acquiredItems": "0/120"
+          },
+          {
+            "lab": "SSS Lab",
+            "enemyLevel": 256,
+            "idlingLength": "01:36:13",
+            "reward": "purple ticket x2400",
+            "acquiredItems": "0/7200"
+          },
+          {
+            "lab": "SSS Lab",
+            "enemyLevel": 258,
+            "idlingLength": "02:01:15",
+            "reward": "green resource x3000",
+            "acquiredItems": "0/9000"
+          },
+          {
+            "lab": "SSS Lab",
+            "enemyLevel": 260,
+            "idlingLength": "09:16:16",
+            "reward": "gold resource x100",
+            "acquiredItems": "0/300"
+          }
+        ],
+        "notes": [
+          "Vegapunk's button opens S Lab, SS Lab, and SSS Lab.",
+          "Vegapunk's Lab is an obtain method for Medicine Herb."
+        ],
+        "sourceImages": [
+          "images/systems/vegapunks-lab-s-lab-idle-rewards.jpeg",
+          "images/systems/vegapunks-lab-ss-lab-idle-rewards.jpeg",
+          "images/systems/sss-lab-idle-rewards.jpeg",
+          "images/systems/vegapunks-lab-rules.jpeg",
+          "images/systems/resonance-hero-qualification.jpeg",
+          "images/systems/vegapunks-lab-guardian-deploy.jpeg",
+          "images/systems/vegapunks-lab-potion-crafting.jpeg"
+        ],
+        "guardiansPerLab": 10,
+        "challengeIntervalHours": 10,
+        "creditRequirement": "Player Credit must qualify; required credits are based on total credits of heroes in resonance.",
+        "idleRewardLimit": "No more rewards are generated once max idling rewards are met.",
+        "resonanceObserved": {
+          "totalQualification": 7806,
+          "resonanceLevel": 41,
+          "teamHPBonus": 319550,
+          "teamATKBonus": 19910
+        },
+        "guardianDeployObserved": {
+          "teamPowerLabel": "510M",
+          "enemyLevel": 300,
+          "enemyPowerLabel": "????Power",
+          "note": "Some heroes show Already Deployed and cannot be reused in the deploy list."
+        },
+        "potionCraftingObserved": {
+          "sourceImage": "images/systems/vegapunks-lab-potion-crafting.jpeg",
+          "proficiency": {
+            "level": 9,
+            "progress": "320/2000"
+          },
+          "costPerCraft": {
+            "medicineHerb": 1,
+            "gold": 8000
+          },
+          "currentMedicineHerbObserved": 0,
+          "roleChances": {
+            "ATK": "58%",
+            "DEF": "21%",
+            "SUP": "21%"
+          },
+          "actionsObserved": [
+            "Fast Craft",
+            "Craft",
+            "Creative Direction"
+          ]
+        }
+      }
+    },
+    "formations": {
+      "page": "formaciones.html",
+      "layout": "2 front heroes and 3 back heroes",
+      "editable": true,
+      "editFlow": "Click a formation slot/image to open a visual hero picker modal. Used heroes are disabled to prevent duplicates.",
+      "storage": "localStorage key opIdlePirateFormations, version opIdlePirateFormationsVersion=2",
+      "initialRecommendations": [
+        "Daño crítico estable",
+        "Big Mom Band",
+        "Legendarios",
+        "Marines",
+        "Explosión ofensiva",
+        "Soporte y control"
+      ],
+      "pendingData": [
+        "confirmar segundo delantero para Big Mom Band",
+        "agregar más héroes Legendary cuando haya fichas completas",
+        "agregar más Marines cuando haya capturas de habilidades y builds",
+        "ajustar equipos según items, diales, awaken y velocidad"
+      ]
+    }
+  },
+  "materials": {
+    "medicineHerb": {
+      "name": "Medicine Herb",
+      "type": "Medicine Creation Materials",
+      "obtainMethod": [
+        "Endless Prison",
+        "Vegapunk's Lab"
+      ],
+      "unlockUserLevelForEndlessPrison": 220,
+      "sellStatus": "Unable to Sell",
+      "status": "observed from backpack tooltip",
+      "usedIn": [
+        "Vegapunk's Lab Potion Crafting"
+      ],
+      "craftingCostObserved": {
+        "medicineHerb": 1,
+        "gold": 8000
+      }
+    }
+  }
+}

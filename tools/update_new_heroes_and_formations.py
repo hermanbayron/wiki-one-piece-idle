@@ -175,42 +175,42 @@ new_heroes = r'''
           ],
         },
         {
-          name: "Caesar",
+          name: "Perospero",
           rarity: "UR",
           role: "SUP",
-          affinities: ["Scientist", "Punk Hazard", "Logia Fruit", "Control", "Gas"],
+          affinities: ["Big Mom Band", "Pirate", "Superman Fruit", "Paramecia", "Control"],
           status: "partial",
-          portrait: "images/heroes/caesar/hero-caesar-card-ur.jpeg",
+          portrait: "images/heroes/perospero/hero-perospero-card-ur.jpeg",
           level: "No visible",
           power: "No visible",
           qualification: "No visible",
           source: "Capturas nuevas de Handbook",
           summary:
-            "Soporte de control con Confusion, Vulnerable y mejoras cuando sus ataques son esquivados.",
+            "Soporte de control con control, Vulnerable y mejoras cuando sus ataques son esquivados.",
           recommended: {
             dial: "Blue support dial observado.",
             weapon: "Gear/weapon defensivo visto en la ficha.",
             gear: "Recomendacion pendiente de traducir completa.",
-            image: "images/heroes/caesar/handbook-caesar-recommendations.jpeg",
+            image: "images/heroes/perospero/handbook-perospero-recommendations.jpeg",
           },
           stats: {},
           skills: [
             {
               name: "Slime Ball",
               type: "Activa",
-              icon: "images/heroes/skill-icons/caesar-slime-ball.jpg",
+              icon: "images/heroes/skill-icons/perospero-slime-ball.jpg",
               summary:
-                "Daño a todos los enemigos con probabilidad de Confusion.",
+                "Daño a todos los enemigos con probabilidad de control.",
               effects: [
                 ["Daño principal", "60% ATK a todos los enemigos"],
-                ["Control", "30% de probabilidad de aplicar Confusion durante 1 turno"],
-                ["Confusion", "el objetivo tiene chance de golpear aliados"],
+                ["Control", "30% de probabilidad de aplicar control durante 1 turno"],
+                ["Control", "el objetivo queda afectado por el control indicado en la captura"],
               ],
             },
             {
               name: "Fragile Illusion",
               type: "Pasiva",
-              icon: "images/heroes/skill-icons/caesar-fragile-illusion.jpg",
+              icon: "images/heroes/skill-icons/perospero-fragile-illusion.jpg",
               summary:
                 "Castiga objetivos bajo control.",
               effects: [
@@ -220,7 +220,7 @@ new_heroes = r'''
             {
               name: "Candyman",
               type: "Pasiva",
-              icon: "images/heroes/skill-icons/caesar-candy-wall.jpg",
+              icon: "images/heroes/skill-icons/perospero-candy-wall.jpg",
               summary:
                 "Si le esquivan el ataque normal, sube su control.",
               effects: [
@@ -529,7 +529,7 @@ def update_formations() -> None:
         { id: "aokiji", name: "Aokiji", role: "SUP", portrait: "images/heroes/aokiji/hero-aokiji-card-ur.jpeg", tags: ["Marine", "Marine Admirals", "Logia Fruit", "Control"] },
         { id: "tsuru", name: "Tsuru", role: "SUP", portrait: "images/heroes/tsuru/hero-tsuru-card-ur.jpeg", tags: ["Marine", "Superman Fruit", "Paramecia", "Healer"] },
         { id: "shiki", name: "Shiki", role: "ATK", portrait: "images/heroes/shiki/hero-shiki-card-ur.jpeg", tags: ["Legendary", "Pirate", "No.1 Swordsman"] },
-        { id: "caesar", name: "Caesar", role: "SUP", portrait: "images/heroes/caesar/hero-caesar-card-ur.jpeg", tags: ["Scientist", "Logia Fruit", "Control"] },
+        { id: "perospero", name: "Perospero", role: "SUP", portrait: "images/heroes/perospero/hero-perospero-card-ur.jpeg", tags: ["Big Mom Band", "Pirate", "Paramecia", "Control"] },
         { id: "moria", name: "Moria", role: "SUP", portrait: "images/heroes/moria/hero-moria-card-ssr.jpeg", tags: ["Pirate", "Warlord", "Paramecia", "Control"] },
         { id: "law", name: "Law", role: "SUP", portrait: "images/heroes/law/hero-law-card-ssr.jpeg", tags: ["Pirate", "Worst Generation", "Paramecia", "Healer"] },
         { id: "perona", name: "Perona", role: "SUP", portrait: "images/heroes/perona/hero-perona-card-ssr.jpeg", tags: ["Pirate", "Thriller Bark", "Paramecia", "Control"] },
@@ -599,9 +599,9 @@ def update_formations() -> None:
           front2: "bartolomeo",
           back1: "law",
           back2: "perona",
-          back3: "caesar",
+          back3: "perospero",
           notes:
-            "Formación de control con SSR y soportes: Moria sobrevive, Bartolomeo protege, Law cura, Perona aplica Terror y Caesar añade Confusion/Vulnerable.",
+            "Formación de control con SSR y soportes: Moria sobrevive, Bartolomeo protege, Law cura, Perona aplica Terror y Perospero añade control/Vulnerable.",
           advice:
             "Ideal para probar alternativas si no tienes todos los UR subidos. No busca explotar daño máximo: busca negar turnos, sobrevivir y ganar por desgaste.",
         },
