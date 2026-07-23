@@ -2284,3 +2284,16 @@ footer p {
     padding: 10px;
   }
 }
+
+
+.formation-advice {
+  margin-top: 10px;
+  padding: 12px 14px;
+  color: #23303f;
+  font-size: 0.9rem;
+  line-height: 1.55;
+  background: #fff7df;
+  border: 1px solid #d7bc79;
+  border-left: 4px solid #a87425;
+  border-radius: 3px;
+}

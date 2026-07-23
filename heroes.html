@@ -44,7 +44,7 @@
           fragmentos, movimientos finales y handbook de bonos.
         </p>
           <div class="status-row">
-            <span class="status-badge confirmed">20 fichas completas</span>
+            <span class="status-badge confirmed">22 fichas completas · 6 parciales</span>
             <span class="status-badge confirmed">EXP y límites confirmados</span>
             <span class="status-badge observed">Remates observados</span>
             <span class="status-badge pending">Resonance por completar</span>
@@ -178,7 +178,7 @@
         </div>
         <div id="hero-count" class="strategy-note" aria-live="polite"></div>
         <p class="catalog-help">
-          Usa los filtros para comparar carries, afinidades y fichas completas. Las habilidades con valores confirmados salen dentro del popup de cada héroe.
+          Usa los filtros para comparar carries, tanques, soportes, afinidades y fichas completas o parciales. Las habilidades con valores confirmados salen dentro del popup de cada héroe.
         </p>
         <div id="hero-catalog" class="hero-catalog-grid"></div>
         <div id="hero-modal-root"></div>
@@ -1320,13 +1320,13 @@
           qualification: "10 Min",
           source: "Capturas completas de Handbook",
           summary:
-            "Carry ATK de Beasts Pirates centrado en da?o cr?tico, acumulaciones de Andon y remate contra enemigos por debajo de 40% HP. Es una opci?n ofensiva muy fuerte cuando el equipo puede mantenerlo vivo.",
+            "Carry ATK de Beasts Pirates centrado en daño crítico, acumulaciones de Andon y remate contra enemigos por debajo de 40% HP. Es una opción ofensiva muy fuerte cuando el equipo puede mantenerlo vivo.",
           recommended: {
             image: "images/heroes/king/handbook-king-recommendations.jpeg",
             dial: "Dial rojo de espiral",
             weapon: "Arashi",
             gear: "Explode",
-            note: "Build agresiva: cr?tico, da?o explosivo y presi?n temprana.",
+            note: "Build agresiva: crítico, daño explosivo y presión temprana.",
           },
           stats: {
             rating: "10 Min",
@@ -1340,11 +1340,11 @@
               summary:
                 "Activa multi-golpe con control. Prioriza objetivos sin repetir y pierde eficiencia si vuelve a golpear el mismo objetivo.",
               effects: [
-                ["Golpes", "5 etapas de da?o"],
-                ["Da?o por etapa", "72% ATK"],
+                ["Golpes", "5 etapas de daño"],
+                ["Daño por etapa", "72% ATK"],
                 ["Control", "30% de probabilidad de causar Terror durante 2 turnos"],
                 ["Regla de objetivo", "el ataque prioritario no repite objetivo"],
-                ["Da?o repetido", "si golpea un objetivo repetido, el da?o se reduce a la mitad"],
+                ["Daño repetido", "si golpea un objetivo repetido, el daño se reduce a la mitad"],
                 ["Terror", "control con 50% de probabilidad de impedir que el objetivo se mueva"],
                 ["Nivel mostrado", "Max Level"],
               ],
@@ -1354,12 +1354,12 @@
               type: "Pasiva",
               icon: "images/heroes/skill-icons/king-barizodon.jpg",
               summary:
-                "Escala da?o cr?tico cuando mueren aliados, por eso puede cerrar peleas si llega vivo al final.",
+                "Escala daño crítico cuando mueren aliados, por eso puede cerrar peleas si llega vivo al final.",
               effects: [
                 ["Inicio de batalla", "+25% Crit DMG"],
                 ["Muerte aliada", "+15% Crit DMG por aliado muerto"],
                 ["Acumulaciones", "hasta 5 veces"],
-                ["M?ximo pr?ctico", "+75% Crit DMG adicional por muertes"],
+                ["Máximo práctico", "+75% Crit DMG adicional por muertes"],
                 ["Nivel mostrado", "Max Level"],
               ],
             },
@@ -1368,11 +1368,11 @@
               type: "Pasiva",
               icon: "images/heroes/skill-icons/king-andon.jpg",
               summary:
-                "Pasiva base de cr?tico y ejecuci?n. Mejora mucho el da?o contra objetivos debilitados.",
+                "Pasiva base de crítico y ejecución. Mejora mucho el daño contra objetivos debilitados.",
               effects: [
-                ["Crit Rate", "+40% mientras est? en batalla"],
-                ["Crit DMG", "+30% mientras est? en batalla"],
-                ["Objetivo bajo", "+40% da?o contra enemigos con menos de 40% HP"],
+                ["Crit Rate", "+40% mientras está en batalla"],
+                ["Crit DMG", "+30% mientras está en batalla"],
+                ["Objetivo bajo", "+40% daño contra enemigos con menos de 40% HP"],
                 ["Nivel mostrado", "Max Level"],
               ],
             },
@@ -1381,10 +1381,10 @@
               type: "Pasiva",
               icon: "images/heroes/skill-icons/king-omori-karyudon.jpg",
               summary:
-                "Convierte las acumulaciones de Andon en aumento directo de da?o.",
+                "Convierte las acumulaciones de Andon en aumento directo de daño.",
               effects: [
-                ["Por stack de Andon", "+6% da?o"],
-                ["Con 5 stacks", "+30% da?o"],
+                ["Por stack de Andon", "+6% daño"],
+                ["Con 5 stacks", "+30% daño"],
                 ["Nivel mostrado", "Max Level"],
               ],
             },
@@ -1396,7 +1396,7 @@
                 "Genera Andon por turno y agrega robo de vida cuando llega a 5 stacks.",
               effects: [
                 ["Inicio de turno", "gana 1 stack de Andon"],
-                ["L?mite", "hasta 5 stacks"],
+                ["Límite", "hasta 5 stacks"],
                 ["Con 5 stacks", "cada stack otorga 20% lifesteal"],
                 ["Nivel mostrado", "Max Level"],
               ],
@@ -1415,13 +1415,13 @@
           qualification: "9 Min",
           source: "Capturas completas de Handbook",
           summary:
-            "Soporte de Wano que baja curaci?n enemiga, aporta capas de Sulong al equipo y reduce energ?a con ataques normales.",
+            "Soporte de Wano que baja curación enemiga, aporta capas de Sulong al equipo y reduce energía con ataques normales.",
           recommended: {
             image: "images/heroes/nekomamushi/handbook-nekomamushi-recommendations.jpeg",
             dial: "Dial azul de caracol",
             weapon: "Iron o Month",
             gear: "Wind",
-            note: "Build de soporte: utilidad, reducci?n de energ?a y consistencia para el equipo.",
+            note: "Build de soporte: utilidad, reducción de energía y consistencia para el equipo.",
           },
           stats: {
             rating: "9 Min",
@@ -1433,11 +1433,11 @@
               type: "Activa",
               icon: "images/heroes/skill-icons/nekomamushi-red-cat-dance.jpg",
               summary:
-                "Activa de ?rea con reducci?n de curaci?n para cortar sustain enemigo.",
+                "Activa de área con reducción de curación para cortar sustain enemigo.",
               effects: [
-                ["Da?o principal", "56% ATK a todos los enemigos"],
-                ["Heal Reduce", "reduce la curaci?n recibida por todos los enemigos en 20%"],
-                ["Duraci?n", "3 turnos"],
+                ["Daño principal", "56% ATK a todos los enemigos"],
+                ["Heal Reduce", "reduce la curación recibida por todos los enemigos en 20%"],
+                ["Duración", "3 turnos"],
                 ["Nivel mostrado", "Max Level"],
               ],
             },
@@ -1446,13 +1446,13 @@
               type: "Pasiva",
               icon: "images/heroes/skill-icons/nekomamushi-sulongs-roar.jpg",
               summary:
-                "Despu?s de usar skill, convierte debuffs aliados en capas de Sulong para todo el equipo.",
+                "Después de usar skill, convierte debuffs aliados en capas de Sulong para todo el equipo.",
               effects: [
-                ["Activaci?n", "despu?s de lanzar la skill"],
+                ["Activación", "después de lanzar la skill"],
                 ["Capa 1", "+15% Hit"],
                 ["Capa 2", "+15% Crit Rate"],
                 ["Capa 3", "+20% DMG Reduction Rate"],
-                ["Duraci?n", "3 turnos"],
+                ["Duración", "3 turnos"],
                 ["Nivel mostrado", "Max Level"],
               ],
             },
@@ -1477,8 +1477,8 @@
                 "Le da autosustain cuando recibe debuffs.",
               effects: [
                 ["Al recibir debuff", "gana Healing equivalente a 10% HP"],
-                ["L?mite", "se activa 1 vez por ronda"],
-                ["Healing", "aumenta la curaci?n recibida por s? mismo"],
+                ["Límite", "se activa 1 vez por ronda"],
+                ["Healing", "aumenta la curación recibida por sí mismo"],
                 ["Nivel mostrado", "Max Level"],
               ],
             },
@@ -1487,9 +1487,9 @@
               type: "Pasiva",
               icon: "images/heroes/skill-icons/nekomamushi-the-night-lord.jpg",
               summary:
-                "Control indirecto por energ?a. Cada b?sico que conecta retrasa la skill enemiga.",
+                "Control indirecto por energía. Cada básico que conecta retrasa la skill enemiga.",
               effects: [
-                ["Ataque normal", "si golpea, reduce 25 de energ?a del objetivo"],
+                ["Ataque normal", "si golpea, reduce 25 de energía del objetivo"],
                 ["Nivel mostrado", "Max Level"],
               ],
             },
@@ -1507,13 +1507,13 @@
           qualification: "9.4 Min",
           source: "Capturas completas de Handbook",
           summary:
-            "Tanque DEF de Strawhat Pirates. Mezcla da?o en ?rea que escala con HP propio, curaci?n gradual, reducci?n de da?o para aliados y contraataques.",
+            "Tanque DEF de Strawhat Pirates. Mezcla daño en área que escala con HP propio, curación gradual, reducción de daño para aliados y contraataques.",
           recommended: {
             image: "images/heroes/jinbe-new-world/handbook-jinbe-new-world-recommendations.jpeg",
             dial: "Dial azul de caracol",
             weapon: "Iron",
             gear: "Defend",
-            note: "Build defensiva: HP, aguante y mitigaci?n para alargar peleas.",
+            note: "Build defensiva: HP, aguante y mitigación para alargar peleas.",
           },
           stats: {
             rating: "9.4 Min",
@@ -1525,10 +1525,10 @@
               type: "Activa",
               icon: "images/heroes/skill-icons/jinbe-yarinami-murasame.jpg",
               summary:
-                "Activa de ?rea que combina ATK con una parte basada en el HP propio.",
+                "Activa de área que combina ATK con una parte basada en el HP propio.",
               effects: [
-                ["Da?o principal", "80% ATK a todos los enemigos"],
-                ["Da?o adicional", "agrega 2% del HP propio de Jinbe"],
+                ["Daño principal", "80% ATK a todos los enemigos"],
+                ["Daño adicional", "agrega 2% del HP propio de Jinbe"],
                 ["Nivel mostrado", "Max Level"],
               ],
             },
@@ -1537,12 +1537,12 @@
               type: "Pasiva",
               icon: "images/heroes/skill-icons/jinbe-senmaigawara-seiken.jpg",
               summary:
-                "Compensa un inicio arriesgado con curaci?n creciente por rondas.",
+                "Compensa un inicio arriesgado con curación creciente por rondas.",
               effects: [
                 ["Ataque normal", "hace 40% ATK"],
                 ["Skill Damage", "+20%"],
                 ["Inicio de batalla", "reduce su propio HP en 50%"],
-                ["Curaci?n por rondas", "gana Healing de 5%, 10%, 15%, 20% y 25% en rondas sucesivas"],
+                ["Curación por rondas", "gana Healing de 5%, 10%, 15%, 20% y 25% en rondas sucesivas"],
                 ["Nivel mostrado", "Max Level"],
               ],
             },
@@ -1551,10 +1551,10 @@
               type: "Pasiva",
               icon: "images/heroes/skill-icons/jinbe-power-counter.jpg",
               summary:
-                "Contraataque defensivo. La captura muestra el porcentaje como undefined, as? que queda marcado para confirmar.",
+                "Contraataque defensivo. La captura muestra el porcentaje como undefined, así que queda marcado para confirmar.",
               effects: [
                 ["Al recibir ataque", "probabilidad de contraatacar con ataque normal"],
-                ["L?mite", "m?ximo 1 vez por turno"],
+                ["Límite", "máximo 1 vez por turno"],
                 ["Valor pendiente", "la captura muestra undefined en la probabilidad"],
                 ["Nivel mostrado", "Max Level"],
               ],
@@ -1564,10 +1564,10 @@
               type: "Pasiva",
               icon: "images/heroes/skill-icons/jinbe-fish-man-karate.jpg",
               summary:
-                "Recuperaci?n por b?sicos para sostenerse en peleas largas.",
+                "Recuperación por básicos para sostenerse en peleas largas.",
               effects: [
                 ["Ataque normal", "recupera 3% HP propio"],
-                ["L?mite", "hasta 2 veces por turno"],
+                ["Límite", "hasta 2 veces por turno"],
                 ["Nivel mostrado", "Max Level"],
               ],
             },
@@ -1576,12 +1576,12 @@
               type: "Pasiva",
               icon: "images/heroes/skill-icons/jinbe-ogi-karate.jpg",
               summary:
-                "Despu?s de atacar, fortalece la reducci?n de da?o del equipo.",
+                "Después de atacar, fortalece la reducción de daño del equipo.",
               effects: [
-                ["Despu?s de ataque normal", "todos los aliados ganan +3% DMG Reduction Rate"],
-                ["Duraci?n", "5 turnos"],
+                ["Después de ataque normal", "todos los aliados ganan +3% DMG Reduction Rate"],
+                ["Duración", "5 turnos"],
                 ["Acumulaciones", "hasta 5 stacks"],
-                ["L?mite", "hasta 2 veces por turno"],
+                ["Límite", "hasta 2 veces por turno"],
                 ["Nivel mostrado", "Max Level"],
               ],
             },
@@ -1599,7 +1599,7 @@
           qualification: "8 Min",
           source: "Capturas completas de Handbook",
           summary:
-            "Soporte para composiciones con Legendary. Reduce da?o y Hit enemigo, aumenta el da?o y cr?tico de la retaguardia y deja buffs al morir.",
+            "Soporte para composiciones con Legendary. Reduce daño y Hit enemigo, aumenta el daño y crítico de la retaguardia y deja buffs al morir.",
           recommended: {
             image: "images/heroes/otohime/handbook-otohime-recommendations.jpeg",
             dial: "Dial azul de caracol",
@@ -1617,12 +1617,12 @@
               type: "Activa",
               icon: "images/heroes/skill-icons/otohime-resonance-speech.jpg",
               summary:
-                "Activa de ?rea con doble reducci?n ofensiva sobre enemigos.",
+                "Activa de área con doble reducción ofensiva sobre enemigos.",
               effects: [
-                ["Da?o principal", "56% ATK a todos los enemigos"],
-                ["Debuff de da?o", "reduce el da?o del objetivo en 10%"],
+                ["Daño principal", "56% ATK a todos los enemigos"],
+                ["Debuff de daño", "reduce el daño del objetivo en 10%"],
                 ["Debuff de Hit", "reduce Hit Rate del objetivo en 10%"],
-                ["Duraci?n", "2 turnos"],
+                ["Duración", "2 turnos"],
                 ["Nivel mostrado", "Max Level"],
               ],
             },
@@ -1631,11 +1631,11 @@
               type: "Pasiva",
               icon: "images/heroes/skill-icons/otohime-inspiration.jpg",
               summary:
-                "Buffea el pr?ximo skill damage de la retaguardia, con bonus extra para Legendary.",
+                "Buffea el próximo skill damage de la retaguardia, con bonus extra para Legendary.",
               effects: [
-                ["Despu?s de activa", "la pr?xima skill de aliados en retaguardia gana +30% da?o"],
-                ["Legendary", "el efecto aumenta 80% para h?roes Legendary"],
-                ["L?mite", "se puede activar 1 vez cada 5 turnos"],
+                ["Después de activa", "la próxima skill de aliados en retaguardia gana +30% daño"],
+                ["Legendary", "el efecto aumenta 80% para héroes Legendary"],
+                ["Límite", "se puede activar 1 vez cada 5 turnos"],
                 ["Nivel mostrado", "Max Level"],
               ],
             },
@@ -1644,9 +1644,9 @@
               type: "Pasiva",
               icon: "images/heroes/skill-icons/otohime-queens-protection.jpg",
               summary:
-                "Escudo defensivo autom?tico cuando cae de vida.",
+                "Escudo defensivo automático cuando cae de vida.",
               effects: [
-                ["Condici?n", "cuando su HP baja de 70%"],
+                ["Condición", "cuando su HP baja de 70%"],
                 ["Escudo", "recibe shield equivalente a 30% HP"],
                 ["Nivel mostrado", "Max Level"],
               ],
@@ -1656,11 +1656,11 @@
               type: "Pasiva",
               icon: "images/heroes/skill-icons/otohime-heart-of-everything.jpg",
               summary:
-                "Aumenta el cr?tico de la retaguardia despu?s de usar activa.",
+                "Aumenta el crítico de la retaguardia después de usar activa.",
               effects: [
-                ["Despu?s de activa", "los pr?ximos 2 ataques de aliados en retaguardia ganan +15% Crit Rate"],
-                ["Legendary", "el efecto aumenta 80% para h?roes Legendary"],
-                ["L?mite", "se puede activar 1 vez cada 5 turnos"],
+                ["Después de activa", "los próximos 2 ataques de aliados en retaguardia ganan +15% Crit Rate"],
+                ["Legendary", "el efecto aumenta 80% para héroes Legendary"],
+                ["Límite", "se puede activar 1 vez cada 5 turnos"],
                 ["Nivel mostrado", "Max Level"],
               ],
             },
@@ -1672,8 +1672,8 @@
                 "Buff de muerte para sostener el cierre de pelea del equipo.",
               effects: [
                 ["Al morir", "todos los aliados ganan +20% Crit Rate"],
-                ["Duraci?n", "3 turnos"],
-                ["Legendary", "el efecto aumenta 50% para h?roes Legendary"],
+                ["Duración", "3 turnos"],
+                ["Legendary", "el efecto aumenta 50% para héroes Legendary"],
                 ["Nivel mostrado", "Max Level"],
               ],
             },
@@ -1691,13 +1691,13 @@
           qualification: "9.7 Min",
           source: "Capturas completas de Handbook",
           summary:
-            "Soporte Zoan de Whitebeard Pirates con curaci?n, aumento de da?o aliado y resurrecci?n. Es muy valioso en equipos que necesitan aguantar una segunda rotaci?n.",
+            "Soporte Zoan de Whitebeard Pirates con curación, aumento de daño aliado y resurrección. Es muy valioso en equipos que necesitan aguantar una segunda rotación.",
           recommended: {
             image: "images/heroes/marco/handbook-marco-recommendations.jpeg",
-            dial: "Dial rojo tipo c?psula",
+            dial: "Dial rojo tipo cápsula",
             weapon: "Paper",
             gear: "Vitality",
-            note: "Build de sustain: curaci?n, supervivencia y utilidad para peleas largas.",
+            note: "Build de sustain: curación, supervivencia y utilidad para peleas largas.",
           },
           stats: {
             rating: "9.7 Min",
@@ -1709,10 +1709,10 @@
               type: "Activa",
               icon: "images/heroes/skill-icons/marco-zoan-combo.jpg",
               summary:
-                "Activa h?brida: golpea a un enemigo y cura a todo el equipo.",
+                "Activa híbrida: golpea a un enemigo y cura a todo el equipo.",
               effects: [
-                ["Da?o", "60% ATK a 1 enemigo"],
-                ["Curaci?n", "cura a todos los aliados por 95% ATK"],
+                ["Daño", "60% ATK a 1 enemigo"],
+                ["Curación", "cura a todos los aliados por 95% ATK"],
                 ["Nivel mostrado", "Max Level"],
               ],
             },
@@ -1721,10 +1721,10 @@
               type: "Pasiva",
               icon: "images/heroes/skill-icons/marco-hoo-in.jpg",
               summary:
-                "Despu?s de curar/usar activa, aumenta el da?o del equipo.",
+                "Después de curar/usar activa, aumenta el daño del equipo.",
               effects: [
-                ["Despu?s de activa", "todos los aliados ganan +25% da?o"],
-                ["Duraci?n", "2 turnos"],
+                ["Después de activa", "todos los aliados ganan +25% daño"],
+                ["Duración", "2 turnos"],
                 ["Nivel mostrado", "Max Level"],
               ],
             },
@@ -1733,11 +1733,11 @@
               type: "Pasiva",
               icon: "images/heroes/skill-icons/marco-flame-of-rebirth.jpg",
               summary:
-                "Auto-resurrecci?n para volver una vez a la pelea.",
+                "Auto-resurrección para volver una vez a la pelea.",
               effects: [
                 ["Al morir", "revive en el siguiente turno"],
                 ["HP al revivir", "20% HP"],
-                ["L?mite", "1 vez por batalla"],
+                ["Límite", "1 vez por batalla"],
                 ["Nivel mostrado", "Max Level"],
               ],
             },
@@ -1746,12 +1746,12 @@
               type: "Pasiva",
               icon: "images/heroes/skill-icons/marco-blue-flames-of-resurrection.jpg",
               summary:
-                "Aplica una resurrecci?n preventiva al aliado prioritario cuando Marco usa su activa.",
+                "Aplica una resurrección preventiva al aliado prioritario cuando Marco usa su activa.",
               effects: [
                 ["Al usar activa", "aplica Rebirth al aliado prioritario"],
                 ["Efecto", "si muere, revive en el siguiente turno"],
                 ["HP al revivir", "20% HP"],
-                ["L?mite", "hasta 1 vez"],
+                ["Límite", "hasta 1 vez"],
                 ["Nivel mostrado", "Max Level"],
               ],
             },
@@ -1760,7 +1760,7 @@
               type: "Pasiva",
               icon: "images/heroes/skill-icons/marco-sacrifice.jpg",
               summary:
-                "Curaci?n final para todo el equipo cuando Marco cae.",
+                "Curación final para todo el equipo cuando Marco cae.",
               effects: [
                 ["Al morir", "cura a todos los aliados por 40% ATK"],
                 ["Nivel mostrado", "Max Level"],
@@ -2122,6 +2122,482 @@
             },
           ],
         },
+        {
+          name: "Aokiji",
+          rarity: "UR",
+          role: "SUP",
+          affinities: ["Marine Admirals", "Logia Fruit", "Marine", "Control", "Ice"],
+          status: "complete",
+          portrait: "images/heroes/aokiji/hero-aokiji-card-ur.jpeg",
+          level: "No visible",
+          power: "No visible",
+          qualification: "No visible",
+          source: "Capturas nuevas de Handbook",
+          summary:
+            "Soporte de control para equipos Marine/Logia. Congela, reduce recuperacion de energia y castiga objetivos congelados.",
+          recommended: {
+            dial: "Blue Shell observado en Handbook.",
+            weapon: "Iron / Gun segun captura de recomendaciones.",
+            gear: "Wind observado como opcion sugerida.",
+            image: "images/heroes/aokiji/handbook-aokiji-recommendations.jpeg",
+            note: "Buen candidato para acompañar a Akainu o Sengoku cuando necesitas control y limpieza de buffs.",
+          },
+          stats: {},
+          skills: [
+            {
+              name: "Partisan",
+              type: "Activa",
+              icon: "images/heroes/skill-icons/aokiji-partisan.jpg",
+              summary:
+                "Activa de control aleatorio. Golpea a 3 enemigos y puede congelarlos.",
+              effects: [
+                ["Daño principal", "80% ATK a 3 enemigos aleatorios"],
+                ["Control", "25% de probabilidad de aplicar Frozen durante 1 turno"],
+                ["Frozen", "estado de control que impide moverse al objetivo"],
+                ["Nivel mostrado", "Max Level"],
+              ],
+            },
+            {
+              name: "Fragility",
+              type: "Pasiva",
+              icon: "images/heroes/skill-icons/aokiji-fragility.jpg",
+              summary:
+                "Aumenta el castigo sobre enemigos congelados.",
+              effects: [
+                ["Contra Frozen", "al atacar objetivos congelados aumenta el daño recibido por ellos en 25%"],
+                ["Duracion", "2 turnos"],
+                ["Nivel mostrado", "Max Level"],
+              ],
+            },
+            {
+              name: "Ice Time",
+              type: "Pasiva",
+              icon: "images/heroes/skill-icons/aokiji-ice-time.jpg",
+              summary:
+                "Mejora Partisan con dispersion de buffs y mas daño contra enemigos con reduccion de energia.",
+              effects: [
+                ["Disperse", "Partisan elimina 1 buff del objetivo"],
+                ["Contra Energy Restoration reduce", "elimina 1 buff adicional y aumenta el daño causado en 28%"],
+                ["Disperse", "quita efectos positivos del objetivo"],
+                ["Nivel mostrado", "Max Level"],
+              ],
+            },
+            {
+              name: "Frost Blade",
+              type: "Pasiva",
+              icon: "images/heroes/skill-icons/aokiji-frost-blade.jpg",
+              summary:
+                "Convierte el ataque normal en control y reduccion de recuperacion de energia.",
+              effects: [
+                ["Ataque normal", "reduce la recuperacion de energia del objetivo en 50% durante 2 turnos"],
+                ["Control", "100% de probabilidad de aplicar Frozen durante 1 turno al golpear"],
+                ["Nivel mostrado", "Max Level"],
+              ],
+            },
+            {
+              name: "Frigid Capsule",
+              type: "Pasiva",
+              icon: "images/heroes/skill-icons/aokiji-frigid-capsule.jpg",
+              summary:
+                "Seguro defensivo cuando Aokiji queda bajo de vida.",
+              effects: [
+                ["Condicion", "cuando su HP baja de 30%"],
+                ["Contraataque de control", "100% de probabilidad de congelar al atacante"],
+                ["Curacion", "recibe Healing equivalente a 28% HP"],
+                ["Limite", "se activa 1 vez por batalla"],
+              ],
+            },
+          ],
+        },
+        {
+          name: "Sengoku",
+          rarity: "UR",
+          role: "DEF",
+          affinities: ["Marine Marshall", "Zoan Fruit", "Marine", "Tank", "Shield"],
+          status: "complete",
+          portrait: "images/heroes/sengoku/hero-sengoku-card-ur.jpeg",
+          level: "No visible",
+          power: "No visible",
+          qualification: "No visible",
+          source: "Capturas nuevas de Handbook",
+          summary:
+            "Tanque Marine con escudo propio, reduccion de daño y soporte a Marine Admirals.",
+          recommended: {
+            dial: "Blue defensive dial observado.",
+            weapon: "Iron recomendado en captura.",
+            gear: "Defend gear observado.",
+            image: "images/heroes/sengoku/handbook-sengoku-recommendations.jpeg",
+            note: "La captura de comentarios lo marca como muy buen DEF; encaja delante de Aokiji y Akainu.",
+          },
+          stats: {},
+          skills: [
+            {
+              name: "Sengoku the Buddha",
+              type: "Activa",
+              icon: "images/heroes/skill-icons/sengoku-the-buddha.jpg",
+              summary:
+                "Activa defensiva: pega a todos y se coloca escudo.",
+              effects: [
+                ["Daño principal", "70% ATK a todos los enemigos"],
+                ["Escudo", "gana shield equivalente a 100% ATK"],
+                ["Nivel mostrado", "Max Level"],
+              ],
+            },
+            {
+              name: "Powerful Shield",
+              type: "Pasiva",
+              icon: "images/heroes/skill-icons/sengoku-powerful-shield.jpg",
+              summary:
+                "Hace que sus escudos rindan mucho mas.",
+              effects: [
+                ["Con shield activo", "reduce el daño recibido en 30%"],
+                ["Nivel mostrado", "Max Level"],
+              ],
+            },
+            {
+              name: "Justice",
+              type: "Pasiva",
+              icon: "images/heroes/skill-icons/sengoku-justice.jpg",
+              summary:
+                "Escala mejor si el equipo incluye Marine Admirals.",
+              effects: [
+                ["Con Marine Admirals aliados", "+10% DMG Reduction propio"],
+                ["Nivel mostrado", "Max Level"],
+              ],
+            },
+            {
+              name: "Top Command",
+              type: "Pasiva",
+              icon: "images/heroes/skill-icons/sengoku-top-command.jpg",
+              summary:
+                "Buffea el combo de los Marine Admirals despues de usar la activa.",
+              effects: [
+                ["Tras Sengoku the Buddha", "+15% Combo Rate a Marine Admirals aliados"],
+                ["Duracion", "2 turnos"],
+                ["Nivel mostrado", "Max Level"],
+              ],
+            },
+            {
+              name: "Deterrence the Buddha",
+              type: "Pasiva",
+              icon: "images/heroes/skill-icons/sengoku-deterrence-the-buddha.jpg",
+              summary:
+                "Debuff defensivo al recibir ataques.",
+              effects: [
+                ["Al ser atacado", "40% de probabilidad de reducir el skill damage del atacante en 15%"],
+                ["Duracion", "1 turno"],
+                ["Nivel mostrado", "Max Level"],
+              ],
+            },
+          ],
+        },
+        {
+          name: "Caesar",
+          rarity: "UR",
+          role: "SUP",
+          affinities: ["Scientist", "Punk Hazard", "Logia Fruit", "Control", "Gas"],
+          status: "partial",
+          portrait: "images/heroes/caesar/hero-caesar-card-ur.jpeg",
+          level: "No visible",
+          power: "No visible",
+          qualification: "No visible",
+          source: "Capturas nuevas de Handbook",
+          summary:
+            "Soporte de control con Confusion, Vulnerable y mejoras cuando sus ataques son esquivados.",
+          recommended: {
+            dial: "Blue support dial observado.",
+            weapon: "Gear/weapon defensivo visto en la ficha.",
+            gear: "Recomendacion pendiente de traducir completa.",
+            image: "images/heroes/caesar/handbook-caesar-recommendations.jpeg",
+          },
+          stats: {},
+          skills: [
+            {
+              name: "Slime Ball",
+              type: "Activa",
+              icon: "images/heroes/skill-icons/caesar-slime-ball.jpg",
+              summary:
+                "Daño a todos los enemigos con probabilidad de Confusion.",
+              effects: [
+                ["Daño principal", "60% ATK a todos los enemigos"],
+                ["Control", "30% de probabilidad de aplicar Confusion durante 1 turno"],
+                ["Confusion", "el objetivo tiene chance de golpear aliados"],
+              ],
+            },
+            {
+              name: "Fragile Illusion",
+              type: "Pasiva",
+              icon: "images/heroes/skill-icons/caesar-fragile-illusion.jpg",
+              summary:
+                "Castiga objetivos bajo control.",
+              effects: [
+                ["Contra Control", "aplica 25% Vulnerable durante 2 turnos"],
+              ],
+            },
+            {
+              name: "Candyman",
+              type: "Pasiva",
+              icon: "images/heroes/skill-icons/caesar-candy-wall.jpg",
+              summary:
+                "Si le esquivan el ataque normal, sube su control.",
+              effects: [
+                ["Al fallar/dodge del ataque normal", "+20% Control Rate durante 2 turnos"],
+              ],
+            },
+          ],
+        },
+        {
+          name: "Tsuru",
+          rarity: "UR",
+          role: "SUP",
+          affinities: ["Marine", "Marine Staff", "Superman Fruit", "Paramecia", "Healer"],
+          status: "partial",
+          portrait: "images/heroes/tsuru/hero-tsuru-card-ur.jpeg",
+          level: "No visible",
+          power: "No visible",
+          qualification: "No visible",
+          source: "Capturas nuevas de Handbook",
+          summary:
+            "Soporte Marine de limpieza, curacion y proteccion. Las capturas muestran vulnerabilidad enemiga y mejoras defensivas aliadas.",
+          recommended: {
+            dial: "Blue support dial observado.",
+            weapon: "Weapon Match visible en captura.",
+            gear: "Gear defensivo/soporte observado.",
+            image: "images/heroes/tsuru/handbook-tsuru-recommendations.jpeg",
+          },
+          stats: {},
+          skills: [
+            {
+              name: "Mind Cleansing",
+              type: "Activa",
+              icon: "images/heroes/skill-icons/tsuru-mind-cleansing.jpg",
+              summary:
+                "Activa mixta: daña enemigos y cura aliados con menor vida.",
+              effects: [
+                ["Daño principal", "240% ATK a 3 enemigos aleatorios"],
+                ["Curacion", "cura a 3 aliados de menor HP por un valor basado en ATK"],
+                ["Nota", "el porcentaje de curacion exacto necesita una captura mas nitida"],
+              ],
+            },
+            {
+              name: "Traces of Heart",
+              type: "Pasiva",
+              icon: "images/heroes/skill-icons/tsuru-traces-of-heart.jpg",
+              summary:
+                "Despues de Mind Cleansing refuerza a aliados bajos de vida.",
+              effects: [
+                ["Tras la activa", "aumenta DMG Reduction de 2 aliados de menor HP en 18%"],
+                ["Duracion", "2 turnos"],
+              ],
+            },
+            {
+              name: "Wash Wash Fruit",
+              type: "Pasiva",
+              icon: "images/heroes/skill-icons/tsuru-wash-wash-fruit.jpg",
+              summary:
+                "Añade Vulnerable a los objetivos de Mind Cleansing.",
+              effects: [
+                ["Objetivos de Mind Cleansing", "reciben 20% Vulnerable durante 2 turnos"],
+              ],
+            },
+          ],
+        },
+        {
+          name: "Shiki",
+          rarity: "UR",
+          role: "ATK",
+          affinities: ["Legendary", "Pirate", "No.1 Swordsman", "Control", "Flying Pirate"],
+          status: "partial",
+          portrait: "images/heroes/shiki/hero-shiki-card-ur.jpeg",
+          level: "No visible",
+          power: "No visible",
+          qualification: "No visible",
+          source: "Capturas nuevas de Handbook",
+          summary:
+            "Atacante de combo. Sus pasivas suben Crit Rate, Combo Rate y sustain cuando sus combos o habilidades interactuan con dodge.",
+          recommended: {
+            dial: "Dial ofensivo observado.",
+            weapon: "Weapon Match visible en captura.",
+            gear: "Gear ofensivo observado.",
+            image: "images/heroes/shiki/handbook-shiki-recommendations.jpeg",
+          },
+          stats: {},
+          skills: [
+            {
+              name: "Blood Dye",
+              type: "Pasiva",
+              icon: "images/heroes/skill-icons/shiki-blood-dye.jpg",
+              summary:
+                "Mejora Hit Rate y daño de skill durante secuencias de combo.",
+              effects: [
+                ["Hit Rate", "+10% Hit Rate al cumplir la condicion de la pasiva"],
+                ["Durante combo", "+15% skill damage para la siguiente habilidad"],
+                ["Nota", "la condicion completa requiere captura mas nitida"],
+              ],
+            },
+            {
+              name: "Gravity Blade",
+              type: "Pasiva",
+              icon: "images/heroes/skill-icons/shiki-gravity-blade.jpg",
+              summary:
+                "Aumenta Combo Rate y vuelve a escalar si le esquivan.",
+              effects: [
+                ["Combo", "+15% Combo Rate"],
+                ["Si el combo es esquivado", "+15% Combo Rate adicional durante 2 turnos"],
+              ],
+            },
+          ],
+        },
+        {
+          name: "Moria",
+          rarity: "SSR",
+          role: "SUP",
+          affinities: ["Pirate", "Warlord", "Superman Fruit", "Paramecia", "Control"],
+          status: "partial",
+          portrait: "images/heroes/moria/hero-moria-card-ssr.jpeg",
+          level: "No visible",
+          power: "No visible",
+          qualification: "No visible",
+          source: "Capturas nuevas de Handbook",
+          summary:
+            "Soporte SSR de supervivencia y buffs. Puede ganar Invincible al caer bajo HP y revive una vez.",
+          recommended: {
+            dial: "Dial de soporte observado.",
+            weapon: "Weapon Match visible.",
+            gear: "Gear Match visible.",
+            image: "images/heroes/moria/handbook-moria-recommendations.jpeg",
+          },
+          stats: {},
+          skills: [
+            {
+              name: "Shadow Clone",
+              type: "Pasiva",
+              icon: "images/heroes/skill-icons/moria-shadow-clone.jpg",
+              summary:
+                "Seguro defensivo cuando baja mucho de vida.",
+              effects: [
+                ["Condicion", "cuando su HP baja de 40%"],
+                ["Efecto", "gana Invincible durante 2 turnos"],
+                ["Invincible", "no recibe ataques ni daño"],
+              ],
+            },
+            {
+              name: "Nightmare",
+              type: "Pasiva",
+              icon: "images/heroes/skill-icons/moria-nightmare.jpg",
+              summary:
+                "Revive una vez despues de morir.",
+              effects: [
+                ["Al morir", "revive al siguiente turno"],
+                ["HP al revivir", "50% HP"],
+                ["Limite", "1 vez por batalla"],
+              ],
+            },
+          ],
+        },
+        {
+          name: "Law",
+          rarity: "SSR",
+          role: "SUP",
+          affinities: ["Pirate", "Worst Generation", "Superman Fruit", "Paramecia", "Healer"],
+          status: "partial",
+          portrait: "images/heroes/law/hero-law-card-ssr.jpeg",
+          level: "No visible",
+          power: "No visible",
+          qualification: "No visible",
+          source: "Capturas nuevas de Handbook",
+          summary:
+            "Soporte SSR con curacion grupal y burst a un objetivo. Muy util para estabilizar peleas largas.",
+          recommended: {
+            dial: "Support dial observado en captura.",
+            weapon: "Weapon Match visible.",
+            gear: "Gear Match visible.",
+            image: "images/heroes/law/handbook-law-comments.jpeg",
+          },
+          stats: {},
+          skills: [
+            {
+              name: "Gamma Knife",
+              type: "Activa",
+              icon: "images/heroes/skill-icons/law-gamma-knife.jpg",
+              summary:
+                "Gran golpe a un objetivo y curacion para todo el equipo.",
+              effects: [
+                ["Daño principal", "600% ATK a 1 enemigo"],
+                ["Curacion", "cura a todos los aliados por 60% ATK"],
+                ["Nivel mostrado", "Max Level"],
+              ],
+            },
+            {
+              name: "Room",
+              type: "Pasiva",
+              icon: "images/heroes/skill-icons/law-room.jpg",
+              summary:
+                "Buff inicial de precision para el equipo.",
+              effects: [
+                ["Inicio de batalla", "+30% Hit Rate a todos los aliados"],
+                ["Duracion", "3 rondas"],
+              ],
+            },
+          ],
+        },
+        {
+          name: "Perona",
+          rarity: "SSR",
+          role: "SUP",
+          affinities: ["Pirate", "Thriller Bark", "Superman Fruit", "Paramecia", "Control"],
+          status: "partial",
+          portrait: "images/heroes/perona/hero-perona-card-ssr.jpeg",
+          level: "No visible",
+          power: "No visible",
+          qualification: "No visible",
+          source: "Capturas nuevas de Handbook",
+          summary:
+            "Soporte de Terror y vulnerabilidad. Buena opcion barata para control si faltan UR completos.",
+          recommended: {
+            dial: "Support dial observado.",
+            weapon: "Weapon Match visible.",
+            gear: "Gear Match visible.",
+            image: "images/heroes/perona/handbook-perona-recommendations.jpeg",
+          },
+          stats: {},
+          skills: [
+            {
+              name: "Kage Ghost",
+              type: "Activa",
+              icon: "images/heroes/skill-icons/perona-kage-ghost.jpg",
+              summary:
+                "Control en area con probabilidad de Terror.",
+              effects: [
+                ["Daño principal", "76% ATK a todos los enemigos"],
+                ["Control", "35% de probabilidad de aplicar Terror durante 1 turno"],
+                ["Terror", "50% de probabilidad de impedir que el objetivo se mueva"],
+              ],
+            },
+            {
+              name: "Negative Bomb",
+              type: "Pasiva",
+              icon: "images/heroes/skill-icons/perona-negative-bomb.jpg",
+              summary:
+                "La activa añade vulnerabilidad.",
+              effects: [
+                ["Tras activa", "aplica 15% Vulnerable durante 2 turnos"],
+              ],
+            },
+            {
+              name: "Ghost Ghost Boost",
+              type: "Pasiva",
+              icon: "images/heroes/skill-icons/perona-ghost-ghost-boost.jpg",
+              summary:
+                "Gana reduccion de daño cuando mueren aliados.",
+              effects: [
+                ["Al morir un aliado", "+13% DMG Reduction"],
+                ["Acumulaciones", "hasta 3 stacks"],
+              ],
+            },
+          ],
+        },
+
       ];
 
       const heroCatalog = document.querySelector("#hero-catalog");

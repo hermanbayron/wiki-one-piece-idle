@@ -123,6 +123,7 @@
         </div>
 
         <div class="formation-notes"></div>
+        <div class="formation-advice"></div>
         <form class="formation-editor" hidden>
           <div class="formation-editor-grid text-only">
             <label>
@@ -137,6 +138,10 @@
           <label class="formation-note-input">
             Notas
             <textarea name="notes" rows="4"></textarea>
+          </label>
+          <label class="formation-note-input">
+            Consejo de uso
+            <textarea name="advice" rows="4"></textarea>
           </label>
           <div class="formation-card-actions">
             <button class="wiki-button save-formation" type="submit">Guardar</button>
@@ -173,6 +178,14 @@
 
       const heroPool = [
         { id: "", name: "Ranura abierta", role: "OPEN", portrait: "", tags: [] },
+        { id: "sengoku", name: "Sengoku", role: "DEF", portrait: "images/heroes/sengoku/hero-sengoku-card-ur.jpeg", tags: ["Marine", "Marine Marshall", "Zoan Fruit"] },
+        { id: "aokiji", name: "Aokiji", role: "SUP", portrait: "images/heroes/aokiji/hero-aokiji-card-ur.jpeg", tags: ["Marine", "Marine Admirals", "Logia Fruit", "Control"] },
+        { id: "tsuru", name: "Tsuru", role: "SUP", portrait: "images/heroes/tsuru/hero-tsuru-card-ur.jpeg", tags: ["Marine", "Superman Fruit", "Paramecia", "Healer"] },
+        { id: "shiki", name: "Shiki", role: "ATK", portrait: "images/heroes/shiki/hero-shiki-card-ur.jpeg", tags: ["Legendary", "Pirate", "No.1 Swordsman"] },
+        { id: "caesar", name: "Caesar", role: "SUP", portrait: "images/heroes/caesar/hero-caesar-card-ur.jpeg", tags: ["Scientist", "Logia Fruit", "Control"] },
+        { id: "moria", name: "Moria", role: "SUP", portrait: "images/heroes/moria/hero-moria-card-ssr.jpeg", tags: ["Pirate", "Warlord", "Paramecia", "Control"] },
+        { id: "law", name: "Law", role: "SUP", portrait: "images/heroes/law/hero-law-card-ssr.jpeg", tags: ["Pirate", "Worst Generation", "Paramecia", "Healer"] },
+        { id: "perona", name: "Perona", role: "SUP", portrait: "images/heroes/perona/hero-perona-card-ssr.jpeg", tags: ["Pirate", "Thriller Bark", "Paramecia", "Control"] },
         { id: "kaido", name: "Kaido", role: "DEF", portrait: "images/heroes/kaido/kaido-hero-profile.jpeg", tags: ["Beasts Pirates", "Zoan Fruit", "Four Emperors"] },
         { id: "jinbe-new-world", name: "Jinbe (New World)", role: "DEF", portrait: "images/heroes/jinbe-new-world/hero-jinbe-new-world-card-ur.jpeg", tags: ["Strawhat Pirates", "Fish Man", "Pirate"] },
         { id: "marco", name: "Marco", role: "SUP", portrait: "images/heroes/marco/hero-marco-card-ur.jpeg", tags: ["Whitebeard Pirates", "Zoan Fruit", "Pirate"] },
@@ -196,73 +209,85 @@
           name: "Daño crítico estable",
           purpose: "Arena / progreso general",
           front1: "kaido",
-          front2: "jinbe-new-world",
+          front2: "sengoku",
           back1: "big-mom",
           back2: "rayleigh",
           back3: "marco",
           notes:
-            "Kaido y Jinbe compran turnos. Big Mom y Rayleigh cargan el daño principal; Marco sostiene con curación y resurrección.",
+            "Doble frente resistente para que Big Mom y Rayleigh tengan turnos. Marco sostiene con curación y resurrección.",
+          advice:
+            "Usala cuando no sabes qué vas a enfrentar. Si te falta daño, cambia Marco por Akainu; si te falta aguante, deja a Marco y sube prioridad de gear DEF en los frontales.",
         },
         {
           name: "Big Mom Band",
           purpose: "Sinergia de banda",
-          front1: "smoothie",
-          front2: "",
+          front1: "sengoku",
+          front2: "smoothie",
           back1: "big-mom",
           back2: "katakuri",
           back3: "cracker",
           notes:
-            "Núcleo Big Mom Band con Big Mom, Katakuri, Cracker y Smoothie. La segunda ranura frontal queda abierta hasta confirmar el mejor tanque o soporte de la banda.",
+            "Big Mom, Katakuri, Cracker y Smoothie activan el núcleo Big Mom Band. Sengoku entra como tanque externo porque todavía falta confirmar otro frontal perfecto de la banda.",
+          advice:
+            "Big Mom debe ser el carry mejor equipado. Katakuri y Cracker aportan daño constante; Smoothie ayuda a sostener. Si desbloqueas un tanque Big Mom Band fuerte, reemplaza a Sengoku.",
         },
         {
           name: "Legendarios",
           purpose: "Núcleo Legendary / peleas largas",
           front1: "kaido",
-          front2: "jinbe-new-world",
+          front2: "sengoku",
           back1: "rayleigh",
-          back2: "otohime",
-          back3: "marco",
+          back2: "shiki",
+          back3: "otohime",
           notes:
-            "Rayleigh y Otohime son el n?cleo Legendary confirmado. Kaido, Jinbe y Marco completan aguante, curación y control mientras faltan más capturas de héroes Legendary.",
+            "Rayleigh y Shiki dan presión ofensiva Legendary. Kaido y Sengoku absorben; Otohime aporta soporte para alargar la pelea.",
+          advice:
+            "Buena para probar daño de carries caros. Rayleigh necesita stats ofensivas; Shiki funciona mejor si el equipo aguanta suficientes turnos para aprovechar combo y crit.",
         },
         {
           name: "Marines",
           purpose: "Marine / Logia",
-          front1: "",
+          front1: "sengoku",
           front2: "",
           back1: "akainu-new-world",
-          back2: "",
-          back3: "",
+          back2: "aokiji",
+          back3: "tsuru",
           notes:
-            "Akainu es el carry Marine confirmado. Dejo el resto abierto para completar cuando tengamos más Marines con ficha y habilidades revisadas.",
+            "Sengoku activa defensa y bonifica Marine Admirals. Akainu aporta daño, Aokiji control y Tsuru curación/limpieza.",
+          advice:
+            "Usala contra equipos que dependen de buffs o de moverse primero. Aokiji congela y dispersa; Sengoku compra tiempo para que Akainu limpie. La segunda ranura frontal queda editable para tu mejor DEF.",
         },
         {
-          name: "Explosión ofensiva",
-          purpose: "Boss / daño máximo",
+          name: "Control económico",
+          purpose: "SSR / control y sustain",
+          front1: "moria",
+          front2: "bartolomeo",
+          back1: "law",
+          back2: "perona",
+          back3: "caesar",
+          notes:
+            "Formación de control con SSR y soportes: Moria sobrevive, Bartolomeo protege, Law cura, Perona aplica Terror y Caesar añade Confusion/Vulnerable.",
+          advice:
+            "Ideal para probar alternativas si no tienes todos los UR subidos. No busca explotar daño máximo: busca negar turnos, sobrevivir y ganar por desgaste.",
+        },
+        {
+          name: "Boss / daño máximo",
+          purpose: "Boss / rankings de daño",
           front1: "kaido",
           front2: "",
-          back1: "king",
+          back1: "big-mom",
           back2: "katakuri",
           back3: "akainu-new-world",
           notes:
-            "Pensada para probar daño alto. La segunda ranura frontal queda abierta hasta confirmar qué tanque mantiene mejor vivos a los carries.",
-        },
-        {
-          name: "Soporte y control",
-          purpose: "Peleas largas",
-          front1: "jinbe-new-world",
-          front2: "kaido",
-          back1: "marco",
-          back2: "nekomamushi",
-          back3: "otohime",
-          notes:
-            "Equipo defensivo para revisar curación, reducción de daño, energía enemiga y buffs de retaguardia.",
+            "Tres carries fuertes para medir daño bruto. Kaido intenta sostener el frente; la segunda ranura queda libre para tu mejor tanque o buff real.",
+          advice:
+            "Usala en Boss si el equipo no muere demasiado rápido. Si cae antes de rotar habilidades, cambia un carry por Marco, Tsuru o Law y compara el daño total, no solo el daño por turno.",
         },
       ];
 
       const storageKey = "opIdlePirateFormations";
       const storageVersionKey = "opIdlePirateFormationsVersion";
-      const storageVersion = "2";
+      const storageVersion = "3";
       const list = document.querySelector("#formation-list");
       const template = document.querySelector("#formation-card-template");
       const picker = document.querySelector("#hero-picker");
@@ -370,11 +395,13 @@
             renderSlot(card.querySelector(`[data-slot="${slotKey}"]`), formation[slotKey], label, index, slotKey);
           });
           card.querySelector(".formation-notes").textContent = formation.notes || "Notas pendientes.";
+          card.querySelector(".formation-advice").textContent = formation.advice ? `Consejo: ${formation.advice}` : "Consejo: pendiente de pruebas.";
 
           const editor = card.querySelector(".formation-editor");
           editor.elements.name.value = formation.name || "";
           editor.elements.purpose.value = formation.purpose || "";
           editor.elements.notes.value = formation.notes || "";
+          editor.elements.advice.value = formation.advice || "";
 
           card.querySelector(".edit-formation").addEventListener("click", () => {
             editor.hidden = false;
@@ -392,6 +419,7 @@
               name: editor.elements.name.value.trim(),
               purpose: editor.elements.purpose.value.trim(),
               notes: editor.elements.notes.value.trim(),
+              advice: editor.elements.advice.value.trim(),
             });
             saveFormations(current);
             renderFormations();
@@ -420,7 +448,7 @@
             ? `<img src="${hero.portrait}" alt="${hero.name}" /><span>${hero.name}</span><small class="role-pill role-${hero.role.toLowerCase()}">${hero.role}</small>`
             : `<span class="hero-picker-open">Libre</span><small>Vaciar ranura</small>`;
           if (disabled) {
-            button.title = "Ya est? usado en esta formación";
+            button.title = "Ya está usado en esta formación";
           }
           button.addEventListener("click", () => selectHero(hero.id));
           pickerGrid.append(button);
