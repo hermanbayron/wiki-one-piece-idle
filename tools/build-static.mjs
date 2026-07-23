@@ -50,9 +50,15 @@ await writeFile(
   path.join(dist, "server", "index.js"),
   `import { readFile, stat } from "node:fs/promises";
 import path from "node:path";
-import { fileURLToPath } from "node:url";
 
-const siteRoot = path.resolve(fileURLToPath(new URL("../", import.meta.url)));
+function getSiteRoot() {
+  const cwd = process.cwd();
+  if (path.basename(cwd) === "server") return path.resolve(cwd, "..");
+  if (path.basename(cwd) === "dist") return cwd;
+  return path.resolve(cwd, "dist");
+}
+
+const siteRoot = getSiteRoot();
 const types = {
   ".html": "text/html; charset=utf-8",
   ".css": "text/css; charset=utf-8",
