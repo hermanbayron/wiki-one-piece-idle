@@ -52,7 +52,7 @@ await writeFile(
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
-const siteRoot = path.resolve(fileURLToPath(new URL("..", import.meta.url)));
+const siteRoot = path.resolve(fileURLToPath(new URL("../", import.meta.url)));
 const types = {
   ".html": "text/html; charset=utf-8",
   ".css": "text/css; charset=utf-8",
