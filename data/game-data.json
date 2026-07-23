@@ -2311,17 +2311,21 @@
       "page": "formaciones.html",
       "layout": "2 front heroes and 3 back heroes",
       "editable": true,
-      "storage": "localStorage key opIdlePirateFormations",
+      "editFlow": "Click a formation slot/image to open a visual hero picker modal. Used heroes are disabled to prevent duplicates.",
+      "storage": "localStorage key opIdlePirateFormations, version opIdlePirateFormationsVersion=2",
       "initialRecommendations": [
-        "Da?o cr?tico estable",
-        "Explosi?n ofensiva",
+        "Daño crítico estable",
         "Big Mom Band",
+        "Legendarios",
+        "Marines",
+        "Explosión ofensiva",
         "Soporte y control"
       ],
       "pendingData": [
-        "confirmar mejores delanteros para equipos full da?o",
-        "agregar counters por modo cuando haya m?s pruebas",
-        "ajustar equipos seg?n items, diales, awaken y velocidad"
+        "confirmar segundo delantero para Big Mom Band",
+        "agregar más héroes Legendary cuando haya fichas completas",
+        "agregar más Marines cuando haya capturas de habilidades y builds",
+        "ajustar equipos según items, diales, awaken y velocidad"
       ]
     }
   },

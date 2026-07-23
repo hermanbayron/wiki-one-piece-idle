@@ -88,7 +88,7 @@
           </div>
         </div>
         <p class="catalog-help">
-          Toca Editar para cambiar nombre, objetivo, héroes y notas. Los cambios quedan guardados localmente.
+          Toca cualquier retrato o ranura para cambiar el héroe con un selector visual. Editar texto queda para nombre, objetivo y notas.
         </p>
         <div id="formation-list" class="formation-list" aria-live="polite"></div>
       </section>
@@ -106,7 +106,7 @@
             <h3></h3>
           </div>
           <div class="formation-card-actions">
-            <button class="wiki-button secondary edit-formation" type="button">Editar</button>
+            <button class="wiki-button secondary edit-formation" type="button">Editar texto</button>
           </div>
         </div>
 
@@ -124,7 +124,7 @@
 
         <div class="formation-notes"></div>
         <form class="formation-editor" hidden>
-          <div class="formation-editor-grid">
+          <div class="formation-editor-grid text-only">
             <label>
               Nombre
               <input name="name" type="text" />
@@ -132,26 +132,6 @@
             <label>
               Objetivo
               <input name="purpose" type="text" />
-            </label>
-            <label>
-              Frente 1
-              <select name="front1"></select>
-            </label>
-            <label>
-              Frente 2
-              <select name="front2"></select>
-            </label>
-            <label>
-              Atrás 1
-              <select name="back1"></select>
-            </label>
-            <label>
-              Atrás 2
-              <select name="back2"></select>
-            </label>
-            <label>
-              Atrás 3
-              <select name="back3"></select>
             </label>
           </div>
           <label class="formation-note-input">
@@ -166,25 +146,49 @@
       </article>
     </template>
 
+    <div class="formation-modal-backdrop" id="hero-picker" hidden>
+      <section class="formation-modal" role="dialog" aria-modal="true" aria-labelledby="hero-picker-title">
+        <div class="formation-modal-header">
+          <div>
+            <p class="eyebrow">Cambiar posición</p>
+            <h2 id="hero-picker-title">Elegir héroe</h2>
+          </div>
+          <button class="wiki-button secondary" id="close-hero-picker" type="button">Cerrar</button>
+        </div>
+        <p class="catalog-help" id="hero-picker-help">
+          Los héroes ya usados en esta formación quedan bloqueados para evitar repetidos.
+        </p>
+        <div class="hero-picker-grid" id="hero-picker-grid"></div>
+      </section>
+    </div>
+
     <script>
+      const slotLabels = {
+        front1: "Frente 1",
+        front2: "Frente 2",
+        back1: "Atrás 1",
+        back2: "Atrás 2",
+        back3: "Atrás 3",
+      };
+
       const heroPool = [
-        { id: "", name: "Ranura abierta", role: "OPEN", portrait: "" },
-        { id: "kaido", name: "Kaido", role: "DEF", portrait: "images/heroes/kaido/kaido-hero-profile.jpeg" },
-        { id: "jinbe-new-world", name: "Jinbe (New World)", role: "DEF", portrait: "images/heroes/jinbe-new-world/hero-jinbe-new-world-card-ur.jpeg" },
-        { id: "marco", name: "Marco", role: "SUP", portrait: "images/heroes/marco/hero-marco-card-ur.jpeg" },
-        { id: "rayleigh", name: "Rayleigh", role: "ATK", portrait: "images/heroes/rayleigh/hero-rayleigh-card-ur.jpeg" },
-        { id: "big-mom", name: "Big Mom", role: "ATK", portrait: "images/heroes/big-mom/hero-big-mom-card-ur.jpeg" },
-        { id: "king", name: "King", role: "ATK", portrait: "images/heroes/king/hero-king-card-ur.jpeg" },
-        { id: "katakuri", name: "Katakuri", role: "ATK", portrait: "images/heroes/katakuri/hero-katakuri-card-ur.jpeg" },
-        { id: "akainu-new-world", name: "Akainu (New World)", role: "ATK", portrait: "images/heroes/akainu/hero-akainu-new-world-card-ur.jpeg" },
-        { id: "cracker", name: "Cracker", role: "ATK", portrait: "images/heroes/cracker/hero-cracker-profile.jpeg" },
-        { id: "smoothie", name: "Smoothie", role: "SUP", portrait: "images/heroes/smoothie/hero-smoothie-card-ur.jpeg" },
-        { id: "nekomamushi", name: "Nekomamushi", role: "SUP", portrait: "images/heroes/nekomamushi/hero-nekomamushi-card-ur.jpeg" },
-        { id: "otohime", name: "Otohime", role: "SUP", portrait: "images/heroes/otohime/hero-otohime-card-ur.jpeg" },
-        { id: "luffy-gear-4", name: "Luffy (Gear 4)", role: "ATK", portrait: "images/heroes/luffy-gear-4/hero-luffy-gear-4-card-ur.jpeg" },
-        { id: "zoro-new-world", name: "Zoro (New World)", role: "ATK", portrait: "images/heroes/zoro-new-world/hero-zoro-new-world-card-ssr.jpeg" },
-        { id: "enel", name: "Enel", role: "ATK", portrait: "images/heroes/enel/hero-enel-card-ssr.jpeg" },
-        { id: "bartolomeo", name: "Bartolomeo", role: "DEF", portrait: "images/heroes/bartolomeo/hero-bartolomeo-card-ssr.jpeg" },
+        { id: "", name: "Ranura abierta", role: "OPEN", portrait: "", tags: [] },
+        { id: "kaido", name: "Kaido", role: "DEF", portrait: "images/heroes/kaido/kaido-hero-profile.jpeg", tags: ["Beasts Pirates", "Zoan Fruit", "Four Emperors"] },
+        { id: "jinbe-new-world", name: "Jinbe (New World)", role: "DEF", portrait: "images/heroes/jinbe-new-world/hero-jinbe-new-world-card-ur.jpeg", tags: ["Strawhat Pirates", "Fish Man", "Pirate"] },
+        { id: "marco", name: "Marco", role: "SUP", portrait: "images/heroes/marco/hero-marco-card-ur.jpeg", tags: ["Whitebeard Pirates", "Zoan Fruit", "Pirate"] },
+        { id: "rayleigh", name: "Rayleigh", role: "ATK", portrait: "images/heroes/rayleigh/hero-rayleigh-card-ur.jpeg", tags: ["Legendary", "Pirate", "No.1 Swordsman"] },
+        { id: "big-mom", name: "Big Mom", role: "ATK", portrait: "images/heroes/big-mom/hero-big-mom-card-ur.jpeg", tags: ["Big Mom Band", "Four Emperors", "Paramecia"] },
+        { id: "king", name: "King", role: "ATK", portrait: "images/heroes/king/hero-king-card-ur.jpeg", tags: ["Beasts Pirates", "Zoan Fruit", "Pirate"] },
+        { id: "katakuri", name: "Katakuri", role: "ATK", portrait: "images/heroes/katakuri/hero-katakuri-card-ur.jpeg", tags: ["Big Mom Band", "Paramecia", "Pirate"] },
+        { id: "akainu-new-world", name: "Akainu (New World)", role: "ATK", portrait: "images/heroes/akainu/hero-akainu-new-world-card-ur.jpeg", tags: ["Marine", "Marine Admirals", "Logia Fruit"] },
+        { id: "cracker", name: "Cracker", role: "ATK", portrait: "images/heroes/cracker/hero-cracker-profile.jpeg", tags: ["Big Mom Band", "Paramecia", "Pirate"] },
+        { id: "smoothie", name: "Smoothie", role: "SUP", portrait: "images/heroes/smoothie/hero-smoothie-card-ur.jpeg", tags: ["Big Mom Band", "Pirate"] },
+        { id: "nekomamushi", name: "Nekomamushi", role: "SUP", portrait: "images/heroes/nekomamushi/hero-nekomamushi-card-ur.jpeg", tags: ["Wano Country", "Pirate"] },
+        { id: "otohime", name: "Otohime", role: "SUP", portrait: "images/heroes/otohime/hero-otohime-card-ur.jpeg", tags: ["Legendary", "Fish Man", "Royalty"] },
+        { id: "luffy-gear-4", name: "Luffy (Gear 4)", role: "ATK", portrait: "images/heroes/luffy-gear-4/hero-luffy-gear-4-card-ur.jpeg", tags: ["Strawhat Pirates", "Captain", "Paramecia"] },
+        { id: "zoro-new-world", name: "Zoro (New World)", role: "ATK", portrait: "images/heroes/zoro-new-world/hero-zoro-new-world-card-ssr.jpeg", tags: ["Strawhat Pirates", "Worst Generation", "Pirate"] },
+        { id: "enel", name: "Enel", role: "ATK", portrait: "images/heroes/enel/hero-enel-card-ssr.jpeg", tags: ["Logia Fruit", "Skypiea"] },
+        { id: "bartolomeo", name: "Bartolomeo", role: "DEF", portrait: "images/heroes/bartolomeo/hero-bartolomeo-card-ssr.jpeg", tags: ["Pirate", "Paramecia"] },
       ];
 
       const defaultFormations = [
@@ -200,6 +204,39 @@
             "Kaido y Jinbe compran turnos. Big Mom y Rayleigh cargan el daño principal; Marco sostiene con curación y resurrección.",
         },
         {
+          name: "Big Mom Band",
+          purpose: "Sinergia de banda",
+          front1: "smoothie",
+          front2: "",
+          back1: "big-mom",
+          back2: "katakuri",
+          back3: "cracker",
+          notes:
+            "Núcleo Big Mom Band con Big Mom, Katakuri, Cracker y Smoothie. La segunda ranura frontal queda abierta hasta confirmar el mejor tanque o soporte de la banda.",
+        },
+        {
+          name: "Legendarios",
+          purpose: "Núcleo Legendary / peleas largas",
+          front1: "kaido",
+          front2: "jinbe-new-world",
+          back1: "rayleigh",
+          back2: "otohime",
+          back3: "marco",
+          notes:
+            "Rayleigh y Otohime son el n?cleo Legendary confirmado. Kaido, Jinbe y Marco completan aguante, curación y control mientras faltan más capturas de héroes Legendary.",
+        },
+        {
+          name: "Marines",
+          purpose: "Marine / Logia",
+          front1: "",
+          front2: "",
+          back1: "akainu-new-world",
+          back2: "",
+          back3: "",
+          notes:
+            "Akainu es el carry Marine confirmado. Dejo el resto abierto para completar cuando tengamos más Marines con ficha y habilidades revisadas.",
+        },
+        {
           name: "Explosión ofensiva",
           purpose: "Boss / daño máximo",
           front1: "kaido",
@@ -209,17 +246,6 @@
           back3: "akainu-new-world",
           notes:
             "Pensada para probar daño alto. La segunda ranura frontal queda abierta hasta confirmar qué tanque mantiene mejor vivos a los carries.",
-        },
-        {
-          name: "Big Mom Band",
-          purpose: "Sinergia de banda",
-          front1: "",
-          front2: "",
-          back1: "big-mom",
-          back2: "katakuri",
-          back3: "cracker",
-          notes:
-            "Base para comparar héroes de Big Mom Band. Falta definir los dos delanteros según resistencia, buffs y pruebas reales.",
         },
         {
           name: "Soporte y control",
@@ -235,29 +261,75 @@
       ];
 
       const storageKey = "opIdlePirateFormations";
+      const storageVersionKey = "opIdlePirateFormationsVersion";
+      const storageVersion = "2";
       const list = document.querySelector("#formation-list");
       const template = document.querySelector("#formation-card-template");
+      const picker = document.querySelector("#hero-picker");
+      const pickerTitle = document.querySelector("#hero-picker-title");
+      const pickerGrid = document.querySelector("#hero-picker-grid");
+      let activePick = null;
+
+      function normalizeFormation(formation) {
+        const clean = { ...formation };
+        const used = new Set();
+        Object.keys(slotLabels).forEach((slot) => {
+          const value = clean[slot] || "";
+          if (!value) return;
+          if (used.has(value)) {
+            clean[slot] = "";
+            return;
+          }
+          used.add(value);
+        });
+        return clean;
+      }
+
+      function setDefaultFormations() {
+        const clean = defaultFormations.map(normalizeFormation);
+        localStorage.setItem(storageKey, JSON.stringify(clean));
+        localStorage.setItem(storageVersionKey, storageVersion);
+        return clean;
+      }
 
       function loadFormations() {
+        if (localStorage.getItem(storageVersionKey) !== storageVersion) {
+          return setDefaultFormations();
+        }
         try {
-          return JSON.parse(localStorage.getItem(storageKey)) || defaultFormations;
+          const stored = JSON.parse(localStorage.getItem(storageKey));
+          if (!Array.isArray(stored)) return setDefaultFormations();
+          return stored.map(normalizeFormation);
         } catch (error) {
-          return defaultFormations;
+          return setDefaultFormations();
         }
       }
 
       function saveFormations(formations) {
-        localStorage.setItem(storageKey, JSON.stringify(formations));
+        localStorage.setItem(storageKey, JSON.stringify(formations.map(normalizeFormation)));
+        localStorage.setItem(storageVersionKey, storageVersion);
       }
 
       function getHero(id) {
         return heroPool.find((hero) => hero.id === id) || heroPool[0];
       }
 
-      function renderSlot(slot, heroId, label) {
+      function getUsedHeroIds(formation, currentSlot) {
+        return new Set(
+          Object.keys(slotLabels)
+            .filter((slot) => slot !== currentSlot)
+            .map((slot) => formation[slot])
+            .filter(Boolean),
+        );
+      }
+
+      function renderSlot(slot, heroId, label, formationIndex, slotKey) {
         const hero = getHero(heroId);
         slot.className = `formation-slot ${hero.id ? "" : "is-open"}`;
         slot.innerHTML = "";
+        slot.tabIndex = 0;
+        slot.setAttribute("role", "button");
+        slot.setAttribute("aria-label", `Cambiar ${label}`);
         const badge = document.createElement("span");
         badge.className = `formation-position ${label.includes("Frente") ? "front" : "back"}`;
         badge.textContent = label;
@@ -266,28 +338,24 @@
         if (!hero.id) {
           const empty = document.createElement("div");
           empty.className = "formation-empty";
-          empty.textContent = "Libre";
+          empty.innerHTML = "<strong>Libre</strong><span>Tocar para elegir</span>";
           slot.append(empty);
-          return;
+        } else {
+          const img = document.createElement("img");
+          img.src = hero.portrait;
+          img.alt = hero.name;
+          const meta = document.createElement("div");
+          meta.className = "formation-hero-meta";
+          meta.innerHTML = `<strong>${hero.name}</strong><span class="role-pill role-${hero.role.toLowerCase()}">${hero.role}</span>`;
+          slot.append(img, meta);
         }
 
-        const img = document.createElement("img");
-        img.src = hero.portrait;
-        img.alt = hero.name;
-        const meta = document.createElement("div");
-        meta.className = "formation-hero-meta";
-        meta.innerHTML = `<strong>${hero.name}</strong><span class="role-pill role-${hero.role.toLowerCase()}">${hero.role}</span>`;
-        slot.append(img, meta);
-      }
-
-      function fillSelect(select, value) {
-        select.innerHTML = "";
-        heroPool.forEach((hero) => {
-          const option = document.createElement("option");
-          option.value = hero.id;
-          option.textContent = hero.name;
-          option.selected = hero.id === value;
-          select.append(option);
+        slot.addEventListener("click", () => openHeroPicker(formationIndex, slotKey));
+        slot.addEventListener("keydown", (event) => {
+          if (event.key === "Enter" || event.key === " ") {
+            event.preventDefault();
+            openHeroPicker(formationIndex, slotKey);
+          }
         });
       }
 
@@ -298,20 +366,15 @@
           const card = template.content.firstElementChild.cloneNode(true);
           card.querySelector("h3").textContent = formation.name || "Formación sin nombre";
           card.querySelector(".formation-purpose").textContent = formation.purpose || "Objetivo pendiente";
-          renderSlot(card.querySelector('[data-slot="front1"]'), formation.front1, "Frente 1");
-          renderSlot(card.querySelector('[data-slot="front2"]'), formation.front2, "Frente 2");
-          renderSlot(card.querySelector('[data-slot="back1"]'), formation.back1, "Atrás 1");
-          renderSlot(card.querySelector('[data-slot="back2"]'), formation.back2, "Atrás 2");
-          renderSlot(card.querySelector('[data-slot="back3"]'), formation.back3, "Atrás 3");
+          Object.entries(slotLabels).forEach(([slotKey, label]) => {
+            renderSlot(card.querySelector(`[data-slot="${slotKey}"]`), formation[slotKey], label, index, slotKey);
+          });
           card.querySelector(".formation-notes").textContent = formation.notes || "Notas pendientes.";
 
           const editor = card.querySelector(".formation-editor");
           editor.elements.name.value = formation.name || "";
           editor.elements.purpose.value = formation.purpose || "";
           editor.elements.notes.value = formation.notes || "";
-          ["front1", "front2", "back1", "back2", "back3"].forEach((slot) => {
-            fillSelect(editor.elements[slot], formation[slot] || "");
-          });
 
           card.querySelector(".edit-formation").addEventListener("click", () => {
             editor.hidden = false;
@@ -324,22 +387,72 @@
           editor.addEventListener("submit", (event) => {
             event.preventDefault();
             const current = loadFormations();
-            current[index] = {
+            current[index] = normalizeFormation({
+              ...current[index],
               name: editor.elements.name.value.trim(),
               purpose: editor.elements.purpose.value.trim(),
-              front1: editor.elements.front1.value,
-              front2: editor.elements.front2.value,
-              back1: editor.elements.back1.value,
-              back2: editor.elements.back2.value,
-              back3: editor.elements.back3.value,
               notes: editor.elements.notes.value.trim(),
-            };
+            });
             saveFormations(current);
             renderFormations();
           });
           list.append(card);
         });
       }
+
+      function openHeroPicker(formationIndex, slotKey) {
+        const formations = loadFormations();
+        const formation = formations[formationIndex];
+        activePick = { formationIndex, slotKey };
+        pickerTitle.textContent = `Elegir héroe para ${slotLabels[slotKey]}`;
+        pickerGrid.innerHTML = "";
+        const used = getUsedHeroIds(formation, slotKey);
+        const currentHero = formation[slotKey] || "";
+
+        heroPool.forEach((hero) => {
+          const disabled = Boolean(hero.id && used.has(hero.id));
+          const selected = hero.id === currentHero;
+          const button = document.createElement("button");
+          button.className = `hero-picker-card ${hero.id ? "" : "is-open"} ${selected ? "is-selected" : ""}`;
+          button.type = "button";
+          button.disabled = disabled;
+          button.innerHTML = hero.id
+            ? `<img src="${hero.portrait}" alt="${hero.name}" /><span>${hero.name}</span><small class="role-pill role-${hero.role.toLowerCase()}">${hero.role}</small>`
+            : `<span class="hero-picker-open">Libre</span><small>Vaciar ranura</small>`;
+          if (disabled) {
+            button.title = "Ya est? usado en esta formación";
+          }
+          button.addEventListener("click", () => selectHero(hero.id));
+          pickerGrid.append(button);
+        });
+
+        picker.hidden = false;
+      }
+
+      function closeHeroPicker() {
+        picker.hidden = true;
+        activePick = null;
+      }
+
+      function selectHero(heroId) {
+        if (!activePick) return;
+        const formations = loadFormations();
+        const formation = formations[activePick.formationIndex];
+        if (heroId && getUsedHeroIds(formation, activePick.slotKey).has(heroId)) return;
+        formation[activePick.slotKey] = heroId;
+        formations[activePick.formationIndex] = normalizeFormation(formation);
+        saveFormations(formations);
+        closeHeroPicker();
+        renderFormations();
+      }
+
+      document.querySelector("#close-hero-picker").addEventListener("click", closeHeroPicker);
+      picker.addEventListener("click", (event) => {
+        if (event.target === picker) closeHeroPicker();
+      });
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape" && !picker.hidden) closeHeroPicker();
+      });
 
       document.querySelector("#add-formation").addEventListener("click", () => {
         const formations = loadFormations();
@@ -351,14 +464,14 @@
           back1: "",
           back2: "",
           back3: "",
-          notes: "Completar con pruebas, counters o modo recomendado.",
+          notes: "Completar con pruebas, counters o modo recomendado. Toca cada ranura para elegir héroe.",
         });
         saveFormations(formations);
         renderFormations();
       });
 
       document.querySelector("#reset-formations").addEventListener("click", () => {
-        saveFormations(defaultFormations);
+        setDefaultFormations();
         renderFormations();
       });
 
