@@ -303,6 +303,75 @@ main {
   line-height: 1.35;
 }
 
+.affinity-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.affinity-summary-grid article,
+.wiki-disclosure {
+  background: #fbf7ee;
+  border: 1px solid var(--line);
+  border-radius: 3px;
+}
+
+.affinity-summary-grid article {
+  padding: 14px;
+}
+
+.affinity-summary-grid h3 {
+  margin-bottom: 6px;
+}
+
+.wiki-disclosure {
+  padding: 0;
+}
+
+.wiki-disclosure summary {
+  cursor: pointer;
+  padding: 14px 16px;
+  font-weight: 800;
+  color: var(--ink);
+}
+
+.wiki-disclosure[open] summary {
+  border-bottom: 1px solid var(--line);
+}
+
+.affinity-source-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(126px, 1fr));
+  gap: 10px;
+  padding: 14px;
+}
+
+.affinity-source-grid figure {
+  margin: 0;
+  overflow: hidden;
+  background: #0e1822;
+  border: 1px solid #7d705d;
+  border-radius: 3px;
+}
+
+.affinity-source-grid img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 9 / 16;
+  object-fit: contain;
+  background: #0e1822;
+}
+
+.affinity-source-grid figcaption {
+  padding: 7px 8px;
+  color: #f7efd9;
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-align: center;
+  background: rgba(11, 17, 24, 0.94);
+}
+
 .sun {
   position: absolute;
   top: 36px;
@@ -1114,7 +1183,7 @@ p {
 .hero-meta .affinity-marine-marshall,
 .hero-meta .affinity-marine-science-troop,
 .hero-meta .affinity-undercover,
-.hero-meta .affinity-cp0,
+.hero-meta .affinity-cpo,
 .hero-meta .affinity-cp9 {
   color: #172e4d;
   background: #d9e2f4;
@@ -2547,6 +2616,7 @@ h4,
   .article-grid,
   .material-grid,
   .role-overview-grid,
+  .affinity-summary-grid,
   .formation-guide,
   .strategy-grid,
   .page-layout,
@@ -2653,6 +2723,10 @@ h4,
   .hero-picker-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
+  .affinity-source-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 430px) {
@@ -2710,6 +2784,10 @@ h4,
   }
 
   .hero-picker-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .affinity-source-grid {
     grid-template-columns: 1fr;
   }
 }
