@@ -2297,3 +2297,419 @@ footer p {
   border-left: 4px solid #a87425;
   border-radius: 3px;
 }
+
+/* Responsive hardening for every wiki view. */
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+img,
+video,
+canvas,
+svg {
+  max-width: 100%;
+}
+
+main,
+footer,
+.topbar,
+.section,
+.hero,
+.info-card,
+.material-card,
+.formation-card,
+.hero-profile-card,
+.hero-modal,
+.formation-modal {
+  min-width: 0;
+}
+
+p,
+li,
+td,
+th,
+span,
+strong,
+h1,
+h2,
+h3,
+h4,
+.hero-card-body,
+.hero-modal-summary,
+.formation-notes,
+.formation-advice {
+  overflow-wrap: anywhere;
+}
+
+.nav-links {
+  -webkit-overflow-scrolling: touch;
+}
+
+.wiki-table-wrap {
+  max-width: 100%;
+}
+
+.wiki-table {
+  min-width: 680px;
+}
+
+.hero-catalog-grid {
+  justify-content: start;
+}
+
+.hero-filter-panel,
+.formation-editor-grid,
+.hero-picker-grid,
+.card-grid,
+.systems,
+.guide,
+.article-grid,
+.priority-strip,
+.material-grid,
+.frame-grid,
+.role-overview-grid {
+  min-width: 0;
+}
+
+.hero-filter-panel input,
+.hero-filter-panel select,
+.formation-editor input,
+.formation-editor select,
+.formation-editor textarea,
+.search-wrap input,
+.wiki-hero .search-wrap input {
+  min-width: 0;
+}
+
+.hero-modal-backdrop,
+.formation-modal-backdrop {
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.hero-modal,
+.formation-modal {
+  max-height: calc(100dvh - 24px);
+}
+
+.hero-modal-body,
+.hero-recommendation-panel,
+.skill-card,
+.formation-board,
+.formation-row,
+.formation-toolbar,
+.formation-card-header,
+.formation-card-actions,
+.formation-actions {
+  min-width: 0;
+}
+
+@media (max-width: 980px) {
+  .topbar {
+    position: sticky;
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .brand {
+    width: 100%;
+  }
+
+  .nav-links {
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+    padding: 0 0 6px;
+    scroll-snap-type: x proximity;
+  }
+
+  .nav-links a {
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+  }
+
+  main,
+  footer {
+    width: calc(100% - 16px);
+    margin-top: 12px;
+  }
+
+  .hero,
+  .wiki-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .wiki-hero {
+    align-items: start;
+  }
+
+  .wiki-hero .app-icon {
+    width: 92px;
+    min-height: 92px;
+  }
+
+  .quick-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .hero-filter-panel {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .hero-catalog-grid {
+    grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+  }
+
+  .formation-row-front {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .formation-row-back {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .formation-slot {
+    min-height: 220px;
+  }
+
+  .formation-slot img {
+    min-height: 220px;
+  }
+}
+
+@media (max-width: 720px) {
+  body {
+    background-attachment: scroll;
+  }
+
+  .topbar {
+    padding: 10px 12px;
+  }
+
+  .brand {
+    font-size: 0.98rem;
+  }
+
+  main,
+  footer {
+    width: 100%;
+    margin-top: 0;
+    border-inline: 0;
+  }
+
+  .hero,
+  .section {
+    padding: 16px;
+  }
+
+  .wiki-hero {
+    padding: 14px;
+  }
+
+  .wiki-hero h1,
+  .hero-copy h1,
+  .section-heading h2 {
+    font-size: 2rem;
+    line-height: 1.08;
+  }
+
+  .page-header {
+    padding-bottom: 16px;
+  }
+
+  .hero-copy > p:not(.eyebrow),
+  .wiki-hero .hero-copy > p:not(.eyebrow) {
+    max-width: 100%;
+  }
+
+  .status-row,
+  .formation-actions,
+  .formation-card-actions {
+    gap: 6px;
+  }
+
+  .status-badge {
+    max-width: 100%;
+    white-space: normal;
+    line-height: 1.2;
+  }
+
+  .quick-stats,
+  .priority-strip,
+  .card-grid,
+  .systems,
+  .guide,
+  .article-grid,
+  .material-grid,
+  .role-overview-grid,
+  .formation-guide,
+  .strategy-grid,
+  .page-layout,
+  .frame-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .quick-stats article {
+    border-right: 0;
+  }
+
+  .hero-filter-panel {
+    grid-template-columns: 1fr;
+    padding: 12px;
+  }
+
+  .hero-catalog-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .hero-card-body {
+    padding: 12px;
+  }
+
+  .hero-card-body h3 {
+    font-size: 1.08rem;
+  }
+
+  .hero-card-portrait,
+  .hero-card-portrait img {
+    min-height: 190px;
+  }
+
+  .hero-modal-backdrop,
+  .formation-modal-backdrop {
+    align-items: start;
+    padding: 8px;
+  }
+
+  .hero-modal,
+  .formation-modal {
+    width: 100%;
+    max-height: calc(100dvh - 16px);
+    border-radius: 4px;
+  }
+
+  .hero-modal-header,
+  .formation-modal-header {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+  }
+
+  .hero-modal-body,
+  .skill-card,
+  .hero-recommendation-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .modal-stat-grid,
+  .hero-stat-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-modal-portrait img {
+    max-height: 360px;
+  }
+
+  .hero-recommendation-panel img {
+    width: 100%;
+    max-height: 420px;
+    object-fit: contain;
+  }
+
+  .formation-toolbar,
+  .formation-card-header,
+  .formation-card-actions,
+  .formation-actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .formation-actions .wiki-button,
+  .formation-card-actions .wiki-button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .formation-board {
+    padding: 12px;
+  }
+
+  .formation-row-front,
+  .formation-row-back {
+    grid-template-columns: 1fr;
+  }
+
+  .formation-slot,
+  .formation-slot img {
+    min-height: 250px;
+  }
+
+  .hero-picker-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 430px) {
+  .topbar {
+    padding-inline: 10px;
+  }
+
+  .brand span:last-child {
+    white-space: normal;
+  }
+
+  .nav-links a {
+    padding: 8px;
+    font-size: 0.8rem;
+  }
+
+  .hero,
+  .section,
+  .wiki-hero {
+    padding-inline: 12px;
+  }
+
+  .wiki-hero h1,
+  .hero-copy h1,
+  .section-heading h2 {
+    font-size: 1.72rem;
+  }
+
+  .wiki-hero .app-icon {
+    width: 76px;
+    min-height: 76px;
+  }
+
+  .search-wrap input,
+  .wiki-hero .search-wrap input {
+    width: 100%;
+  }
+
+  .hero-catalog-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-card-portrait,
+  .hero-card-portrait img {
+    min-height: 240px;
+  }
+
+  .material-card img,
+  .screenshot-slot {
+    max-height: 520px;
+  }
+
+  .wiki-table {
+    min-width: 560px;
+  }
+
+  .hero-picker-grid {
+    grid-template-columns: 1fr;
+  }
+}
