@@ -11,6 +11,7 @@ const entries = [
   "data",
   "images",
   "index.css",
+  "language.js",
   "altar.html",
   "arena.html",
   "boss.html",

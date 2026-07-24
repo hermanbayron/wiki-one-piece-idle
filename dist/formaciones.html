@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
@@ -20,7 +20,7 @@
         <a href="impel-down.html">Impel Down</a>
         <a href="boss.html">Boss</a>
         <a href="arena.html">Arena</a>
-        <a href="heroes.html">Héroes</a>
+        <a href="heroes.html">HÃ©roes</a>
         <a href="summon.html">Summon</a>
         <a href="altar.html">Altar</a>
         <a href="combate.html">Combate</a>
@@ -40,38 +40,38 @@
         <p class="eyebrow">Composiciones</p>
         <h1>Recomendaciones de formaciones</h1>
         <p>
-          Cada equipo usa hasta 5 héroes: 2 posiciones delanteras para aguantar
-          presión y 3 posiciones traseras para daño, curación o control. Las
-          formaciones son editables desde esta misma página y se guardan en tu
+          Cada equipo usa hasta 5 hÃ©roes: 2 posiciones delanteras para aguantar
+          presiÃ³n y 3 posiciones traseras para daÃ±o, curaciÃ³n o control. Las
+          formaciones son editables desde esta misma pÃ¡gina y se guardan en tu
           navegador.
         </p>
         <div class="status-row">
-          <span class="status-badge confirmed">2 adelante / 3 atrás</span>
-          <span class="status-badge observed">Con imágenes de héroes</span>
+          <span class="status-badge confirmed">2 adelante / 3 atrÃ¡s</span>
+          <span class="status-badge observed">Con imÃ¡genes de hÃ©roes</span>
           <span class="status-badge pending">Plantillas editables</span>
         </div>
       </section>
 
       <section class="section alt">
         <div class="section-heading">
-          <p class="eyebrow">Lectura rápida</p>
-          <h2>Cómo leer una formación</h2>
+          <p class="eyebrow">Lectura rÃ¡pida</p>
+          <h2>CÃ³mo leer una formaciÃ³n</h2>
         </div>
         <div class="formation-guide">
           <article>
             <span class="formation-token front">Front</span>
             <h3>Delanteros</h3>
-            <p>Busca supervivencia, reducción de daño, revivir, escudos o tanques que compren turnos.</p>
+            <p>Busca supervivencia, reducciÃ³n de daÃ±o, revivir, escudos o tanques que compren turnos.</p>
           </article>
           <article>
             <span class="formation-token back">Back</span>
             <h3>Retaguardia</h3>
-            <p>Coloca carries, buffers, curas y control. Aquí suelen ir los héroes que definen la pelea.</p>
+            <p>Coloca carries, buffers, curas y control. AquÃ­ suelen ir los hÃ©roes que definen la pelea.</p>
           </article>
           <article>
             <span class="formation-token open">Editable</span>
             <h3>Huecos abiertos</h3>
-            <p>Si falta un héroe probado, deja la ranura libre y completa la nota cuando tengas datos.</p>
+            <p>Si falta un hÃ©roe probado, deja la ranura libre y completa la nota cuando tengas datos.</p>
           </article>
         </div>
       </section>
@@ -83,19 +83,19 @@
             <h2>Formaciones guardadas</h2>
           </div>
           <div class="formation-actions">
-            <button class="wiki-button" id="add-formation" type="button">Agregar formación</button>
+            <button class="wiki-button" id="add-formation" type="button">Agregar formaciÃ³n</button>
             <button class="wiki-button secondary" id="reset-formations" type="button">Restaurar ejemplos</button>
           </div>
         </div>
         <p class="catalog-help">
-          Toca cualquier retrato o ranura para cambiar el héroe con un selector visual. Editar texto queda para nombre, objetivo y notas.
+          Toca cualquier retrato o ranura para cambiar el hÃ©roe con un selector visual. Editar texto queda para nombre, objetivo y notas.
         </p>
         <div id="formation-list" class="formation-list" aria-live="polite"></div>
       </section>
     </main>
 
     <footer>
-      <p>Wiki fan-made en construcción. Los datos se ajustan con capturas, videos y pruebas del juego.</p>
+      <p>Wiki fan-made en construcciÃ³n. Los datos se ajustan con capturas, videos y pruebas del juego.</p>
     </footer>
 
     <template id="formation-card-template">
@@ -110,7 +110,7 @@
           </div>
         </div>
 
-        <div class="formation-board" aria-label="Tablero de formación">
+        <div class="formation-board" aria-label="Tablero de formaciÃ³n">
           <div class="formation-row formation-row-front">
             <div class="formation-slot" data-slot="front1"></div>
             <div class="formation-slot" data-slot="front2"></div>
@@ -155,13 +155,13 @@
       <section class="formation-modal" role="dialog" aria-modal="true" aria-labelledby="hero-picker-title">
         <div class="formation-modal-header">
           <div>
-            <p class="eyebrow">Cambiar posición</p>
-            <h2 id="hero-picker-title">Elegir héroe</h2>
+            <p class="eyebrow">Cambiar posiciÃ³n</p>
+            <h2 id="hero-picker-title">Elegir hÃ©roe</h2>
           </div>
           <button class="wiki-button secondary" id="close-hero-picker" type="button">Cerrar</button>
         </div>
         <p class="catalog-help" id="hero-picker-help">
-          Los héroes ya usados en esta formación quedan bloqueados para evitar repetidos.
+          Los hÃ©roes ya usados en esta formaciÃ³n quedan bloqueados para evitar repetidos.
         </p>
         <div class="hero-picker-grid" id="hero-picker-grid"></div>
       </section>
@@ -171,9 +171,9 @@
       const slotLabels = {
         front1: "Frente 1",
         front2: "Frente 2",
-        back1: "Atrás 1",
-        back2: "Atrás 2",
-        back3: "Atrás 3",
+        back1: "AtrÃ¡s 1",
+        back2: "AtrÃ¡s 2",
+        back3: "AtrÃ¡s 3",
       };
 
       const heroPool = [
@@ -206,7 +206,7 @@
 
       const defaultFormations = [
         {
-          name: "Daño crítico estable",
+          name: "DaÃ±o crÃ­tico estable",
           purpose: "Arena / progreso general",
           front1: "kaido",
           front2: "sengoku",
@@ -214,9 +214,9 @@
           back2: "rayleigh",
           back3: "marco",
           notes:
-            "Doble frente resistente para que Big Mom y Rayleigh tengan turnos. Marco sostiene con curación y resurrección.",
+            "Doble frente resistente para que Big Mom y Rayleigh tengan turnos. Marco sostiene con curaciÃ³n y resurrecciÃ³n.",
           advice:
-            "Usala cuando no sabes qué vas a enfrentar. Si te falta daño, cambia Marco por Akainu; si te falta aguante, deja a Marco y sube prioridad de gear DEF en los frontales.",
+            "Usala cuando no sabes quÃ© vas a enfrentar. Si te falta daÃ±o, cambia Marco por Akainu; si te falta aguante, deja a Marco y sube prioridad de gear DEF en los frontales.",
         },
         {
           name: "Big Mom Band",
@@ -227,22 +227,22 @@
           back2: "katakuri",
           back3: "cracker",
           notes:
-            "Big Mom, Katakuri, Cracker y Smoothie activan el núcleo Big Mom Band. Sengoku entra como tanque externo porque todavía falta confirmar otro frontal perfecto de la banda.",
+            "Big Mom, Katakuri, Cracker y Smoothie activan el nÃºcleo Big Mom Band. Sengoku entra como tanque externo porque todavÃ­a falta confirmar otro frontal perfecto de la banda.",
           advice:
-            "Big Mom debe ser el carry mejor equipado. Katakuri y Cracker aportan daño constante; Smoothie ayuda a sostener. Si desbloqueas un tanque Big Mom Band fuerte, reemplaza a Sengoku.",
+            "Big Mom debe ser el carry mejor equipado. Katakuri y Cracker aportan daÃ±o constante; Smoothie ayuda a sostener. Si desbloqueas un tanque Big Mom Band fuerte, reemplaza a Sengoku.",
         },
         {
           name: "Legendarios",
-          purpose: "Núcleo Legendary / peleas largas",
+          purpose: "NÃºcleo Legendary / peleas largas",
           front1: "kaido",
           front2: "sengoku",
           back1: "rayleigh",
           back2: "shiki",
           back3: "otohime",
           notes:
-            "Rayleigh y Shiki dan presión ofensiva Legendary. Kaido y Sengoku absorben; Otohime aporta soporte para alargar la pelea.",
+            "Rayleigh y Shiki dan presiÃ³n ofensiva Legendary. Kaido y Sengoku absorben; Otohime aporta soporte para alargar la pelea.",
           advice:
-            "Buena para probar daño de carries caros. Rayleigh necesita stats ofensivas; Shiki funciona mejor si el equipo aguanta suficientes turnos para aprovechar combo y crit.",
+            "Buena para probar daÃ±o de carries caros. Rayleigh necesita stats ofensivas; Shiki funciona mejor si el equipo aguanta suficientes turnos para aprovechar combo y crit.",
         },
         {
           name: "Marines",
@@ -253,12 +253,12 @@
           back2: "aokiji",
           back3: "tsuru",
           notes:
-            "Sengoku activa defensa y bonifica Marine Admirals. Akainu aporta daño, Aokiji control y Tsuru curación/limpieza.",
+            "Sengoku activa defensa y bonifica Marine Admirals. Akainu aporta daÃ±o, Aokiji control y Tsuru curaciÃ³n/limpieza.",
           advice:
             "Usala contra equipos que dependen de buffs o de moverse primero. Aokiji congela y dispersa; Sengoku compra tiempo para que Akainu limpie. La segunda ranura frontal queda editable para tu mejor DEF.",
         },
         {
-          name: "Control económico",
+          name: "Control econÃ³mico",
           purpose: "SSR / control y sustain",
           front1: "moria",
           front2: "bartolomeo",
@@ -266,22 +266,22 @@
           back2: "perona",
           back3: "perospero",
           notes:
-            "Formación de control con SSR y soportes: Moria sobrevive, Bartolomeo protege, Law cura, Perona aplica Terror y Perospero añade control/Vulnerable.",
+            "FormaciÃ³n de control con SSR y soportes: Moria sobrevive, Bartolomeo protege, Law cura, Perona aplica Terror y Perospero aÃ±ade control/Vulnerable.",
           advice:
-            "Ideal para probar alternativas si no tienes todos los UR subidos. No busca explotar daño máximo: busca negar turnos, sobrevivir y ganar por desgaste.",
+            "Ideal para probar alternativas si no tienes todos los UR subidos. No busca explotar daÃ±o mÃ¡ximo: busca negar turnos, sobrevivir y ganar por desgaste.",
         },
         {
-          name: "Boss / daño máximo",
-          purpose: "Boss / rankings de daño",
+          name: "Boss / daÃ±o mÃ¡ximo",
+          purpose: "Boss / rankings de daÃ±o",
           front1: "kaido",
           front2: "",
           back1: "big-mom",
           back2: "katakuri",
           back3: "akainu-new-world",
           notes:
-            "Tres carries fuertes para medir daño bruto. Kaido intenta sostener el frente; la segunda ranura queda libre para tu mejor tanque o buff real.",
+            "Tres carries fuertes para medir daÃ±o bruto. Kaido intenta sostener el frente; la segunda ranura queda libre para tu mejor tanque o buff real.",
           advice:
-            "Usala en Boss si el equipo no muere demasiado rápido. Si cae antes de rotar habilidades, cambia un carry por Marco, Tsuru o Law y compara el daño total, no solo el daño por turno.",
+            "Usala en Boss si el equipo no muere demasiado rÃ¡pido. Si cae antes de rotar habilidades, cambia un carry por Marco, Tsuru o Law y compara el daÃ±o total, no solo el daÃ±o por turno.",
         },
       ];
 
@@ -389,7 +389,7 @@
         list.innerHTML = "";
         formations.forEach((formation, index) => {
           const card = template.content.firstElementChild.cloneNode(true);
-          card.querySelector("h3").textContent = formation.name || "Formación sin nombre";
+          card.querySelector("h3").textContent = formation.name || "FormaciÃ³n sin nombre";
           card.querySelector(".formation-purpose").textContent = formation.purpose || "Objetivo pendiente";
           Object.entries(slotLabels).forEach(([slotKey, label]) => {
             renderSlot(card.querySelector(`[data-slot="${slotKey}"]`), formation[slotKey], label, index, slotKey);
@@ -432,7 +432,7 @@
         const formations = loadFormations();
         const formation = formations[formationIndex];
         activePick = { formationIndex, slotKey };
-        pickerTitle.textContent = `Elegir héroe para ${slotLabels[slotKey]}`;
+        pickerTitle.textContent = `Elegir hÃ©roe para ${slotLabels[slotKey]}`;
         pickerGrid.innerHTML = "";
         const used = getUsedHeroIds(formation, slotKey);
         const currentHero = formation[slotKey] || "";
@@ -448,7 +448,7 @@
             ? `<img src="${hero.portrait}" alt="${hero.name}" /><span>${hero.name}</span><small class="role-pill role-${hero.role.toLowerCase()}">${hero.role}</small>`
             : `<span class="hero-picker-open">Libre</span><small>Vaciar ranura</small>`;
           if (disabled) {
-            button.title = "Ya está usado en esta formación";
+            button.title = "Ya estÃ¡ usado en esta formaciÃ³n";
           }
           button.addEventListener("click", () => selectHero(hero.id));
           pickerGrid.append(button);
@@ -485,14 +485,14 @@
       document.querySelector("#add-formation").addEventListener("click", () => {
         const formations = loadFormations();
         formations.push({
-          name: "Nueva formación",
+          name: "Nueva formaciÃ³n",
           purpose: "Objetivo pendiente",
           front1: "",
           front2: "",
           back1: "",
           back2: "",
           back3: "",
-          notes: "Completar con pruebas, counters o modo recomendado. Toca cada ranura para elegir héroe.",
+          notes: "Completar con pruebas, counters o modo recomendado. Toca cada ranura para elegir hÃ©roe.",
         });
         saveFormations(formations);
         renderFormations();
@@ -505,5 +505,7 @@
 
       renderFormations();
     </script>
+    <script src="language.js"></script>
   </body>
 </html>
+
