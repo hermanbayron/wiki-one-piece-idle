@@ -916,7 +916,6 @@
           "Marine Science Troop",
           "Logia Fruit",
           "Superman Fruit",
-          "Paramecia",
           "Zoan Fruit",
           "Artificial Fruit",
           "Undercover",
@@ -951,50 +950,226 @@
           "Sin fruta"
         ],
         "battleAffinitySources": [
-          { "name": "Pirate", "bonus": "3 miembros: +3% Credit; 6 miembros: +6% Credit", "image": "images/heroes/filters/affinity-pirate.jpeg" },
-          { "name": "Captain", "bonus": "3 miembros: +18% Credit; 6 miembros: +36% Credit", "image": "images/heroes/filters/affinity-captain.jpeg" },
-          { "name": "Legendary", "bonus": "2 miembros: +27% Credit; 4 miembros: +54% Credit; 6 miembros: +81% Credit", "image": "images/heroes/filters/affinity-legendary.jpeg" },
-          { "name": "No.1 Swordsman", "bonus": "2 miembros: +27% Credit; 4 miembros: +54% Credit; 6 miembros: +81% Credit", "image": "images/heroes/filters/affinity-no1-swordsman.jpeg" },
-          { "name": "Four Emperors", "bonus": "1 miembro: +27% Credit; 2 miembros: +54% Credit", "image": "images/heroes/filters/affinity-four-emperors.jpeg" },
-          { "name": "Big Mom Band", "bonus": "1 miembro: +18% Credit", "image": "images/heroes/filters/affinity-big-mom-band.jpeg" },
-          { "name": "Beasts Pirates", "bonus": "2 miembros: +27% Credit", "image": "images/heroes/filters/affinity-beasts-pirates.jpeg" },
-          { "name": "Marine", "bonus": "2 miembros: +18% Credit", "image": "images/heroes/filters/affinity-marine.jpeg" },
-          { "name": "Marine Admirals", "bonus": "2 miembros: +36% Credit; 4 miembros: +72% Credit; 6 miembros: +108% Credit", "image": "images/heroes/filters/affinity-marine-admirals.jpeg" },
-          { "name": "Marine Marshall", "bonus": "1 miembro: +27% Credit; 2 miembros: +54% Credit; 3 miembros: +81% Credit", "image": "images/heroes/filters/affinity-marine-marshall.jpeg" },
-          { "name": "Marine Science Troop", "bonus": "1 miembro: +18% Credit; 2 miembros: +36% Credit", "image": "images/heroes/filters/affinity-marine-science-troop.jpeg" },
-          { "name": "Zoan Fruit", "bonus": "2 miembros: +18% Credit; 4 miembros: +36% Credit; 6 miembros: +54% Credit", "image": "images/heroes/filters/affinity-zoan-fruit.jpeg" },
-          { "name": "Superman Fruit", "bonus": "2 miembros: +18% Credit; 4 miembros: +36% Credit; 6 miembros: +54% Credit", "image": "images/heroes/filters/affinity-superman-fruit.jpeg" },
-          { "name": "Logia Fruit", "bonus": "2 miembros: +18% Credit; 4 miembros: +36% Credit; 6 miembros: +54% Credit", "image": "images/heroes/filters/affinity-logia-fruit.jpeg" },
-          { "name": "Artificial Fruit", "bonus": "2 miembros: +36% Credit; 4 miembros: +72% Credit", "image": "images/heroes/filters/affinity-artificial-fruit.jpeg" },
-          { "name": "Strawhat Pirates", "bonus": "2 miembros: +18% Credit; 4 miembros: +36% Credit; 6 miembros: +54% Credit", "image": "images/heroes/filters/affinity-strawhat-pirates.jpeg" },
-          { "name": "Worst Generation", "bonus": "2 miembros: +18% Credit; 4 miembros: +36% Credit; 6 miembros: +54% Credit", "image": "images/heroes/filters/affinity-worst-generation.jpeg" },
-          { "name": "A.S.L", "bonus": "2 miembros: +27% Credit; 4 miembros: +54% Credit", "image": "images/heroes/filters/affinity-asl.jpeg" },
-          { "name": "Fish Man", "bonus": "2 miembros: +27% Credit; 4 miembros: +54% Credit", "image": "images/heroes/filters/affinity-fish-man.jpeg" },
-          { "name": "Wano Country", "bonus": "2 miembros: +27% Credit; 4 miembros: +54% Credit; 6 miembros: +81% Credit", "image": "images/heroes/filters/affinity-wano-country.jpeg" },
-          { "name": "Royalty", "bonus": "2 miembros: +27% Credit; 4 miembros: +54% Credit", "image": "images/heroes/filters/affinity-royalty.jpeg" },
-          { "name": "Royal Deputy", "bonus": "2 miembros: +18% Credit", "image": "images/heroes/filters/affinity-royal-deputy.jpeg" },
-          { "name": "CPO", "bonus": "2 miembros: +36% Credit; 4 miembros: +72% Credit; 6 miembros: +108% Credit", "image": "images/heroes/filters/affinity-cpo.jpeg" },
-          { "name": "CP9", "bonus": "2 miembros: +18% Credit; 4 miembros: +36% Credit; 6 miembros: +54% Credit", "image": "images/heroes/filters/affinity-cp9.jpeg" },
-          { "name": "SHICHIBUKAI", "bonus": "2 miembros: +27% Credit; 4 miembros: +54% Credit; 6 miembros: +81% Credit", "image": "images/heroes/filters/affinity-shichibukai.jpeg" },
-          { "name": "Thriller Bark", "bonus": "2 miembros: +36% Credit; 4 miembros: +72% Credit", "image": "images/heroes/filters/affinity-thriller-bark.jpeg" },
-          { "name": "Impel Down", "bonus": "2 miembros: +36% Credit", "image": "images/heroes/filters/affinity-impel-down.jpeg" },
-          { "name": "Skypiea Priest", "bonus": "2 miembros: +36% Credit; 4 miembros: +72% Credit", "image": "images/heroes/filters/affinity-skypiea-priest.jpeg" },
-          { "name": "Skypiea Residence", "bonus": "2 miembros: +27% Credit; 4 miembros: +54% Credit; 6 miembros: +81% Credit", "image": "images/heroes/filters/affinity-skypiea-residence.jpeg" },
-          { "name": "Blackbeard Pirates", "bonus": "2 miembros: +36% Credit; 4 miembros: +72% Credit", "image": "images/heroes/filters/affinity-blackbeard-pirates.jpeg" },
-          { "name": "Whitebeard Pirates", "bonus": "2 miembros: +36% Credit; 4 miembros: +72% Credit", "image": "images/heroes/filters/affinity-whitebeard-pirates.jpeg" },
-          { "name": "Buggy Pirates", "bonus": "2 miembros: +27% Credit; 4 miembros: +54% Credit", "image": "images/heroes/filters/affinity-buggy-pirates.jpeg" },
-          { "name": "Bliking Pirates", "bonus": "2 miembros: +27% Credit; 4 miembros: +54% Credit", "image": "images/heroes/filters/affinity-bliking-pirates.jpeg" },
-          { "name": "Sun Pirates", "bonus": "2 miembros: +27% Credit; 4 miembros: +54% Credit", "image": "images/heroes/filters/affinity-sun-pirates.jpeg" },
-          { "name": "Water 7", "bonus": "2 miembros: +27% Credit; 4 miembros: +54% Credit", "image": "images/heroes/filters/affinity-water-7.jpeg" },
-          { "name": "Rebels", "bonus": "2 miembros: +27% Credit; 4 miembros: +54% Credit; 6 miembros: +81% Credit", "image": "images/heroes/filters/affinity-rebels.jpeg" },
-          { "name": "Germa", "bonus": "2 miembros: +27% Credit", "image": "images/heroes/filters/affinity-germa.jpeg" },
-          { "name": "Gentleman", "bonus": "2 miembros: +27% Credit", "image": "images/heroes/filters/affinity-gentleman.jpeg" },
-          { "name": "Baroque", "bonus": "2 miembros: +27% Credit; 4 miembros: +54% Credit; 6 miembros: +81% Credit", "image": "images/heroes/filters/affinity-baroque.jpeg" },
-          { "name": "Greed", "bonus": "2 miembros: +27% Credit; 4 miembros: +54% Credit; 6 miembros: +81% Credit", "image": "images/heroes/filters/affinity-greed.jpeg" },
-          { "name": "Celestial Dragons", "bonus": "1 miembro: +27% Credit; 2 miembros: +54% Credit", "image": "images/heroes/filters/affinity-celestial-dragons.jpeg" },
-          { "name": "Donquixote", "bonus": "2 miembros: +18% Credit; 4 miembros: +36% Credit", "image": "images/heroes/filters/affinity-donquixote.jpeg" },
-          { "name": "Okama", "bonus": "2 miembros: +36% Credit; 4 miembros: +72% Credit", "image": "images/heroes/filters/affinity-okama.jpeg" },
-          { "name": "Undercover", "bonus": "2 miembros: +36% Credit; 4 miembros: +72% Credit", "image": "images/heroes/filters/affinity-undercover.jpeg" }
+          {
+            "name": "Pirate",
+            "bonus": "3 miembros: +3% Credit; 6 miembros: +6% Credit",
+            "image": "images/heroes/filters/affinity-pirate.jpeg"
+          },
+          {
+            "name": "Captain",
+            "bonus": "3 miembros: +18% Credit; 6 miembros: +36% Credit",
+            "image": "images/heroes/filters/affinity-captain.jpeg"
+          },
+          {
+            "name": "Legendary",
+            "bonus": "2 miembros: +27% Credit; 4 miembros: +54% Credit; 6 miembros: +81% Credit",
+            "image": "images/heroes/filters/affinity-legendary.jpeg"
+          },
+          {
+            "name": "No.1 Swordsman",
+            "bonus": "2 miembros: +27% Credit; 4 miembros: +54% Credit; 6 miembros: +81% Credit",
+            "image": "images/heroes/filters/affinity-no1-swordsman.jpeg"
+          },
+          {
+            "name": "Four Emperors",
+            "bonus": "1 miembro: +27% Credit; 2 miembros: +54% Credit",
+            "image": "images/heroes/filters/affinity-four-emperors.jpeg"
+          },
+          {
+            "name": "Big Mom Band",
+            "bonus": "1 miembro: +18% Credit",
+            "image": "images/heroes/filters/affinity-big-mom-band.jpeg"
+          },
+          {
+            "name": "Beasts Pirates",
+            "bonus": "2 miembros: +27% Credit",
+            "image": "images/heroes/filters/affinity-beasts-pirates.jpeg"
+          },
+          {
+            "name": "Marine",
+            "bonus": "2 miembros: +18% Credit",
+            "image": "images/heroes/filters/affinity-marine.jpeg"
+          },
+          {
+            "name": "Marine Admirals",
+            "bonus": "2 miembros: +36% Credit; 4 miembros: +72% Credit; 6 miembros: +108% Credit",
+            "image": "images/heroes/filters/affinity-marine-admirals.jpeg"
+          },
+          {
+            "name": "Marine Marshall",
+            "bonus": "1 miembro: +27% Credit; 2 miembros: +54% Credit; 3 miembros: +81% Credit",
+            "image": "images/heroes/filters/affinity-marine-marshall.jpeg"
+          },
+          {
+            "name": "Marine Science Troop",
+            "bonus": "1 miembro: +18% Credit; 2 miembros: +36% Credit",
+            "image": "images/heroes/filters/affinity-marine-science-troop.jpeg"
+          },
+          {
+            "name": "Zoan Fruit",
+            "bonus": "2 miembros: +18% Credit; 4 miembros: +36% Credit; 6 miembros: +54% Credit",
+            "image": "images/heroes/filters/affinity-zoan-fruit.jpeg"
+          },
+          {
+            "name": "Superman Fruit",
+            "bonus": "2 miembros: +18% Credit; 4 miembros: +36% Credit; 6 miembros: +54% Credit",
+            "image": "images/heroes/filters/affinity-superman-fruit.jpeg"
+          },
+          {
+            "name": "Logia Fruit",
+            "bonus": "2 miembros: +18% Credit; 4 miembros: +36% Credit; 6 miembros: +54% Credit",
+            "image": "images/heroes/filters/affinity-logia-fruit.jpeg"
+          },
+          {
+            "name": "Artificial Fruit",
+            "bonus": "2 miembros: +36% Credit; 4 miembros: +72% Credit",
+            "image": "images/heroes/filters/affinity-artificial-fruit.jpeg"
+          },
+          {
+            "name": "Strawhat Pirates",
+            "bonus": "2 miembros: +18% Credit; 4 miembros: +36% Credit; 6 miembros: +54% Credit",
+            "image": "images/heroes/filters/affinity-strawhat-pirates.jpeg"
+          },
+          {
+            "name": "Worst Generation",
+            "bonus": "2 miembros: +18% Credit; 4 miembros: +36% Credit; 6 miembros: +54% Credit",
+            "image": "images/heroes/filters/affinity-worst-generation.jpeg"
+          },
+          {
+            "name": "A.S.L",
+            "bonus": "2 miembros: +27% Credit; 4 miembros: +54% Credit",
+            "image": "images/heroes/filters/affinity-asl.jpeg"
+          },
+          {
+            "name": "Fish Man",
+            "bonus": "2 miembros: +27% Credit; 4 miembros: +54% Credit",
+            "image": "images/heroes/filters/affinity-fish-man.jpeg"
+          },
+          {
+            "name": "Wano Country",
+            "bonus": "2 miembros: +27% Credit; 4 miembros: +54% Credit; 6 miembros: +81% Credit",
+            "image": "images/heroes/filters/affinity-wano-country.jpeg"
+          },
+          {
+            "name": "Royalty",
+            "bonus": "2 miembros: +27% Credit; 4 miembros: +54% Credit",
+            "image": "images/heroes/filters/affinity-royalty.jpeg"
+          },
+          {
+            "name": "Royal Deputy",
+            "bonus": "2 miembros: +18% Credit",
+            "image": "images/heroes/filters/affinity-royal-deputy.jpeg"
+          },
+          {
+            "name": "CPO",
+            "bonus": "2 miembros: +36% Credit; 4 miembros: +72% Credit; 6 miembros: +108% Credit",
+            "image": "images/heroes/filters/affinity-cpo.jpeg"
+          },
+          {
+            "name": "CP9",
+            "bonus": "2 miembros: +18% Credit; 4 miembros: +36% Credit; 6 miembros: +54% Credit",
+            "image": "images/heroes/filters/affinity-cp9.jpeg"
+          },
+          {
+            "name": "SHICHIBUKAI",
+            "bonus": "2 miembros: +27% Credit; 4 miembros: +54% Credit; 6 miembros: +81% Credit",
+            "image": "images/heroes/filters/affinity-shichibukai.jpeg"
+          },
+          {
+            "name": "Thriller Bark",
+            "bonus": "2 miembros: +36% Credit; 4 miembros: +72% Credit",
+            "image": "images/heroes/filters/affinity-thriller-bark.jpeg"
+          },
+          {
+            "name": "Impel Down",
+            "bonus": "2 miembros: +36% Credit",
+            "image": "images/heroes/filters/affinity-impel-down.jpeg"
+          },
+          {
+            "name": "Skypiea Priest",
+            "bonus": "2 miembros: +36% Credit; 4 miembros: +72% Credit",
+            "image": "images/heroes/filters/affinity-skypiea-priest.jpeg"
+          },
+          {
+            "name": "Skypiea Residence",
+            "bonus": "2 miembros: +27% Credit; 4 miembros: +54% Credit; 6 miembros: +81% Credit",
+            "image": "images/heroes/filters/affinity-skypiea-residence.jpeg"
+          },
+          {
+            "name": "Blackbeard Pirates",
+            "bonus": "2 miembros: +36% Credit; 4 miembros: +72% Credit",
+            "image": "images/heroes/filters/affinity-blackbeard-pirates.jpeg"
+          },
+          {
+            "name": "Whitebeard Pirates",
+            "bonus": "2 miembros: +36% Credit; 4 miembros: +72% Credit",
+            "image": "images/heroes/filters/affinity-whitebeard-pirates.jpeg"
+          },
+          {
+            "name": "Buggy Pirates",
+            "bonus": "2 miembros: +27% Credit; 4 miembros: +54% Credit",
+            "image": "images/heroes/filters/affinity-buggy-pirates.jpeg"
+          },
+          {
+            "name": "Bliking Pirates",
+            "bonus": "2 miembros: +27% Credit; 4 miembros: +54% Credit",
+            "image": "images/heroes/filters/affinity-bliking-pirates.jpeg"
+          },
+          {
+            "name": "Sun Pirates",
+            "bonus": "2 miembros: +27% Credit; 4 miembros: +54% Credit",
+            "image": "images/heroes/filters/affinity-sun-pirates.jpeg"
+          },
+          {
+            "name": "Water 7",
+            "bonus": "2 miembros: +27% Credit; 4 miembros: +54% Credit",
+            "image": "images/heroes/filters/affinity-water-7.jpeg"
+          },
+          {
+            "name": "Rebels",
+            "bonus": "2 miembros: +27% Credit; 4 miembros: +54% Credit; 6 miembros: +81% Credit",
+            "image": "images/heroes/filters/affinity-rebels.jpeg"
+          },
+          {
+            "name": "Germa",
+            "bonus": "2 miembros: +27% Credit",
+            "image": "images/heroes/filters/affinity-germa.jpeg"
+          },
+          {
+            "name": "Gentleman",
+            "bonus": "2 miembros: +27% Credit",
+            "image": "images/heroes/filters/affinity-gentleman.jpeg"
+          },
+          {
+            "name": "Baroque",
+            "bonus": "2 miembros: +27% Credit; 4 miembros: +54% Credit; 6 miembros: +81% Credit",
+            "image": "images/heroes/filters/affinity-baroque.jpeg"
+          },
+          {
+            "name": "Greed",
+            "bonus": "2 miembros: +27% Credit; 4 miembros: +54% Credit; 6 miembros: +81% Credit",
+            "image": "images/heroes/filters/affinity-greed.jpeg"
+          },
+          {
+            "name": "Celestial Dragons",
+            "bonus": "1 miembro: +27% Credit; 2 miembros: +54% Credit",
+            "image": "images/heroes/filters/affinity-celestial-dragons.jpeg"
+          },
+          {
+            "name": "Donquixote",
+            "bonus": "2 miembros: +18% Credit; 4 miembros: +36% Credit",
+            "image": "images/heroes/filters/affinity-donquixote.jpeg"
+          },
+          {
+            "name": "Okama",
+            "bonus": "2 miembros: +36% Credit; 4 miembros: +72% Credit",
+            "image": "images/heroes/filters/affinity-okama.jpeg"
+          },
+          {
+            "name": "Undercover",
+            "bonus": "2 miembros: +36% Credit; 4 miembros: +72% Credit",
+            "image": "images/heroes/filters/affinity-undercover.jpeg"
+          }
         ],
         "sourceImages": [
           "images/heroes/big-mom/hero-big-mom-card-ur.jpeg",
@@ -1152,7 +1327,6 @@
               "Four Emperors",
               "Big Mom Band",
               "Superman Fruit",
-              "Paramecia",
               "Captain"
             ]
           },
@@ -1227,7 +1401,6 @@
               "A.S.L",
               "Worst Generation",
               "Superman Fruit",
-              "Paramecia",
               "Pirate",
               "Captain",
               "Strawhat Pirates"
@@ -1262,7 +1435,6 @@
             "tags": [
               "A.S.L",
               "Superman Fruit",
-              "Paramecia",
               "Strawhat Pirates",
               "Worst Generation",
               "Pirate",
@@ -2358,7 +2530,7 @@
       "layout": "2 front heroes and 3 back heroes",
       "editable": true,
       "editFlow": "Click a formation slot/image to open a visual hero picker modal. Used heroes are disabled to prevent duplicates.",
-      "storage": "localStorage key opIdlePirateFormations, version opIdlePirateFormationsVersion=2",
+      "storage": "localStorage key opIdlePirateFormations, version opIdlePirateFormationsVersion=5",
       "initialRecommendations": [
         "Daño crítico estable",
         "Big Mom Band",
