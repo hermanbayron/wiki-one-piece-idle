@@ -2424,58 +2424,253 @@
             },
           ],
         },
+
         {
-          name: "Tsuru",
-          rarity: "UR",
-          role: "SUP",
-          affinities: ["Marine", "Superman Fruit"],
-          status: "partial",
-          portrait: "images/heroes/tsuru/hero-tsuru-card-ur.jpeg",
+          name: "Cavendish",
+          rarity: "SSR",
+          role: "ATK",
+          affinities: ["Pirate", "No.1 Swordsman", "Gentleman"],
+          status: "complete",
+          portrait: "images/heroes/cavendish/hero-cavendish-card-ssr.jpeg",
           level: "No visible",
           power: "No visible",
           qualification: "No visible",
           source: "Capturas completas de Handbook",
           summary:
-            "Soporte Marine de limpieza, curacion y proteccion. Las capturas muestran vulnerabilidad enemiga y mejoras defensivas aliadas.",
+            "Atacante SSR orientado a daño en area y presion por golpes sucesivos. Sube Crit Rate, Crit DMG y Hit Rate, y aplica debuffs acumulables al atacar.",
           recommended: {
-            dial: "Blue support dial observado.",
-            weapon: "Weapon Match visible en captura.",
-            gear: "Gear defensivo/soporte observado.",
-            image: "images/heroes/tsuru/handbook-tsuru-recommendations.jpeg",
+            dial: "Dial rojo ofensivo observado.",
+            weapon: "Arashi",
+            gear: "Explode",
+            image: "images/heroes/cavendish/handbook-cavendish-recommendations.jpeg",
+            note: "Recomendacion claramente ofensiva: Arashi + Explode para aprovechar critico, area y debuffs.",
+          },
+          stats: {},
+          skills: [
+            {
+              name: "Biken: Blue Bird",
+              type: "Activa",
+              icon: "images/heroes/cavendish/skill-cavendish-biken-blue-bird.jpeg",
+              summary:
+                "Golpea a todos los enemigos en 4 etapas. Cada etapa aumenta el daño posterior del mismo ataque.",
+              effects: [
+                ["Daño total", "80% ATK a todos los enemigos en 4 etapas"],
+                ["Escalado por etapa", "+20% de daño para la etapa siguiente del ataque actual"],
+                ["Nivel mostrado", "Max Level"],
+              ],
+            },
+            {
+              name: "Precious Metal Axe",
+              type: "Pasiva",
+              icon: "images/heroes/cavendish/skill-cavendish-precious-metal-axe.jpeg",
+              summary:
+                "Al inicio de la ronda se cura. Si ya tiene HP completo, convierte esa curacion en escudo.",
+              effects: [
+                ["Inicio de ronda", "gana Healing igual a 2% HP"],
+                ["Si HP esta completo", "gana la misma cantidad como shield"],
+                ["Healing", "curacion recibida por si mismo"],
+              ],
+            },
+            {
+              name: "Biken: Round Table",
+              type: "Pasiva",
+              icon: "images/heroes/cavendish/skill-cavendish-biken-round-table.jpeg",
+              summary:
+                "Sus ataques pueden aplicar una mezcla de debuffs acumulables: baja precision, baja daño y sube vulnerabilidad del enemigo.",
+              effects: [
+                ["Probabilidad", "50% al atacar"],
+                ["Debuffs", "-1% Hit Rate, -2% DMG y +2% Vulnerable"],
+                ["Duracion", "2 turnos"],
+                ["Acumulaciones", "hasta 5 stacks"],
+              ],
+            },
+            {
+              name: "Biken: Swan Lake",
+              type: "Pasiva",
+              icon: "images/heroes/cavendish/skill-cavendish-biken-swan-lake.jpeg",
+              summary:
+                "Sube mucho su daño critico y agrega daño extra contra objetivos con HP alto.",
+              effects: [
+                ["Crit Rate", "+40%"],
+                ["Crit DMG", "+30%"],
+                ["Contra HP mayor a 70%", "agrega daño de 1.5% Max HP del objetivo"],
+                ["Limite del extra", "hasta 24% del ATK propio"],
+              ],
+            },
+            {
+              name: "Inner Personality",
+              type: "Pasiva",
+              icon: "images/heroes/cavendish/skill-cavendish-inner-personality.jpeg",
+              summary:
+                "Mientras se mantiene por encima de 70% HP, mejora su precision.",
+              effects: [
+                ["Condicion", "HP mayor a 70%"],
+                ["Hit Rate", "+15%"],
+              ],
+            },
+          ],
+        },
+
+        {
+          name: "Jinbe",
+          rarity: "SSR",
+          role: "DEF",
+          affinities: ["Shichibukai", "Pirate", "Sun Pirates", "Captain", "Fish Man"],
+          status: "complete",
+          portrait: "images/heroes/jinbe/hero-jinbe-card-ssr.jpeg",
+          level: "No visible",
+          power: "No visible",
+          qualification: "No visible",
+          source: "Capturas completas de Handbook",
+          summary:
+            "Defensor SSR con daño basado en HP, reduccion de daño por aliados vivos, contraataque y utilidad de limpieza/dispel en ataques normales.",
+          recommended: {
+            dial: "Dial azul defensivo observado.",
+            weapon: "Iron",
+            gear: "Defend",
+            image: "images/heroes/jinbe/handbook-jinbe-recommendations.jpeg",
+            note: "Iron + Defend encaja con su rol DEF y con habilidades que escalan desde HP propio y supervivencia.",
+          },
+          stats: {},
+          skills: [
+            {
+              name: "Buraikan",
+              type: "Activa",
+              icon: "images/heroes/jinbe/skill-jinbe-buraikan.jpeg",
+              summary:
+                "Golpe fuerte a un objetivo, con daño adicional basado en el HP propio.",
+              effects: [
+                ["Daño principal", "120% ATK a 1 enemigo"],
+                ["Daño adicional", "2% del HP propio como daño adicional"],
+                ["Nivel mostrado", "Max Level"],
+              ],
+            },
+            {
+              name: "Kairagi",
+              type: "Pasiva",
+              icon: "images/heroes/jinbe/skill-jinbe-kairagi.jpeg",
+              summary:
+                "Al comenzar su turno gana reduccion de daño segun la cantidad de aliados vivos en el campo.",
+              effects: [
+                ["Inicio de turno", "+6% DMG Reduction por cada unidad aliada en campo, incluyendose a si mismo"],
+                ["Duracion", "1 turno"],
+              ],
+            },
+            {
+              name: "Samegawara Seiken",
+              type: "Pasiva",
+              icon: "images/heroes/jinbe/skill-jinbe-samegawara-seiken.jpeg",
+              summary:
+                "Puede contraatacar cuando recibe daño.",
+              effects: [
+                ["Al ser atacado", "15% de probabilidad de contraatacar"],
+              ],
+            },
+            {
+              name: "Samehada Shotei",
+              type: "Pasiva",
+              icon: "images/heroes/jinbe/skill-jinbe-samehada-shotei.jpeg",
+              summary:
+                "Al morir deja un escudo al aliado con menor HP.",
+              effects: [
+                ["Al morir", "el aliado con menor HP gana shield"],
+                ["Shield", "250% ATK"],
+              ],
+            },
+            {
+              name: "Ogi Shoulder Throw",
+              type: "Pasiva",
+              icon: "images/heroes/jinbe/skill-jinbe-ogi-shoulder-throw.jpeg",
+              summary:
+                "Sus ataques normales pueden quitar buffs enemigos y limpiar debuffs propios.",
+              effects: [
+                ["Ataque normal", "50% de probabilidad de dispersar 2 buffs del objetivo"],
+                ["Ataque normal", "50% de probabilidad de purificar 2 debuffs del usuario"],
+                ["Purification", "disipa debuffs"],
+                ["Disperse", "disipa buffs"],
+              ],
+            },
+          ],
+        },
+        {
+          name: "Tsuru",
+          rarity: "UR",
+          role: "SUP",
+          affinities: ["Superman Fruit", "Marine"],
+          status: "complete",
+          portrait: "images/heroes/tsuru/hero-tsuru-card-ur-new.jpeg",
+          level: "No visible",
+          power: "No visible",
+          qualification: "No visible",
+          source: "Capturas completas de Handbook",
+          summary:
+            "Soporte UR Marine centrado en curacion, limpieza, reduccion de daño aliada, Vulnerable y bloqueo de curacion enemiga.",
+          recommended: {
+            dial: "Dial rojo/blanco de soporte observado.",
+            weapon: "Paper",
+            gear: "Vitality",
+            image: "images/heroes/tsuru/handbook-tsuru-recommendations-new.jpeg",
+            note: "Paper + Vitality confirma un enfoque de soporte: sobrevivir, curar y sostener aliados con menor HP.",
           },
           stats: {},
           skills: [
             {
               name: "Mind Cleansing",
               type: "Activa",
-              icon: "images/heroes/skill-icons/tsuru-mind-cleansing.jpg",
+              icon: "images/heroes/tsuru/skill-tsuru-mind-cleansing.jpeg",
               summary:
-                "Activa mixta: daña enemigos y cura aliados con menor vida.",
+                "Golpea a 3 enemigos aleatorios y da Healing a 3 aliados. Cuando esos aliados son atacados, se curan una vez por turno.",
               effects: [
-                ["Daño principal", "240% ATK a 3 enemigos aleatorios"],
-                ["Curacion", "cura a 3 aliados de menor HP por un valor basado en ATK"],
-                ["Nota", "el porcentaje de curacion exacto necesita una captura mas nitida"],
+                ["Daño principal", "24% ATK a 3 enemigos aleatorios"],
+                ["Buff aliado", "3 aliados ganan Healing durante 1 turno"],
+                ["Healing", "cuando el heroe es atacado, cura HP por 131% ATK"],
+                ["Limite", "puede activarse hasta 1 vez por turno"],
               ],
             },
             {
-              name: "Traces of Heart",
+              name: "Mind Barrier",
               type: "Pasiva",
-              icon: "images/heroes/skill-icons/tsuru-traces-of-heart.jpg",
+              icon: "images/heroes/tsuru/skill-tsuru-mind-barrier.jpeg",
               summary:
-                "Despues de Mind Cleansing refuerza a aliados bajos de vida.",
+                "Despues de Mind Cleansing, cura a 3 aliados priorizando al de menor HP.",
               effects: [
-                ["Tras la activa", "aumenta DMG Reduction de 2 aliados de menor HP en 18%"],
+                ["Tras Mind Cleansing", "cura a 3 aliados por 30% ATK"],
+                ["Prioridad", "elige primero la unidad con menor HP"],
+              ],
+            },
+            {
+              name: "Mind Enhancement",
+              type: "Pasiva",
+              icon: "images/heroes/tsuru/skill-tsuru-mind-enhancement.jpeg",
+              summary:
+                "Sus ataques normales pueden bloquear la curacion del objetivo.",
+              effects: [
+                ["Ataque normal", "80% de probabilidad de aplicar Banned Healing"],
+                ["Duracion", "2 rondas"],
+                ["Banned Healing", "el objetivo no puede recibir curacion"],
+              ],
+            },
+            {
+              name: "Eyes of Heart",
+              type: "Pasiva",
+              icon: "images/heroes/tsuru/skill-tsuru-eyes-of-heart.jpeg",
+              summary:
+                "Despues de Mind Cleansing, mejora la reduccion de daño de 3 aliados con menor HP.",
+              effects: [
+                ["Tras Mind Cleansing", "+15% DMG Reduction a 3 aliados"],
                 ["Duracion", "2 turnos"],
+                ["Prioridad", "afecta a unidades con menor HP"],
               ],
             },
             {
               name: "Wash Wash Fruit",
               type: "Pasiva",
-              icon: "images/heroes/skill-icons/tsuru-wash-wash-fruit.jpg",
+              icon: "images/heroes/tsuru/skill-tsuru-wash-wash-fruit.jpeg",
               summary:
-                "Añade Vulnerable a los objetivos de Mind Cleansing.",
+                "Los objetivos de Mind Cleansing reciben Vulnerable.",
               effects: [
-                ["Objetivos de Mind Cleansing", "reciben 20% Vulnerable durante 2 turnos"],
+                ["Objetivos de Mind Cleansing", "+20% Vulnerable"],
+                ["Duracion", "2 turnos"],
               ],
             },
           ],

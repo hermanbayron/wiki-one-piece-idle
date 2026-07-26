@@ -1294,7 +1294,25 @@
           "images/heroes/marco/skill-marco-hoo-in.jpeg",
           "images/heroes/marco/skill-marco-flame-of-rebirth.jpeg",
           "images/heroes/marco/skill-marco-blue-flames-of-resurrection.jpeg",
-          "images/heroes/marco/skill-marco-sacrifice.jpeg"
+          "images/heroes/marco/skill-marco-sacrifice.jpeg",
+          "images/heroes/cavendish/hero-cavendish-card-ssr.jpeg",
+          "images/heroes/cavendish/handbook-cavendish-recommendations.jpeg",
+          "images/heroes/cavendish/skill-cavendish-biken-blue-bird.jpeg",
+          "images/heroes/cavendish/skill-cavendish-precious-metal-axe.jpeg",
+          "images/heroes/cavendish/skill-cavendish-biken-round-table.jpeg",
+          "images/heroes/cavendish/skill-cavendish-biken-swan-lake.jpeg",
+          "images/heroes/cavendish/skill-cavendish-inner-personality.jpeg",
+          "images/heroes/jinbe/hero-jinbe-card-ssr.jpeg",
+          "images/heroes/jinbe/handbook-jinbe-recommendations.jpeg",
+          "images/heroes/jinbe/skill-jinbe-buraikan.jpeg",
+          "images/heroes/jinbe/skill-jinbe-kairagi.jpeg",
+          "images/heroes/jinbe/skill-jinbe-samegawara-seiken.jpeg",
+          "images/heroes/jinbe/skill-jinbe-samehada-shotei.jpeg",
+          "images/heroes/jinbe/skill-jinbe-ogi-shoulder-throw.jpeg",
+          "images/heroes/tsuru/hero-tsuru-card-ur-new.jpeg",
+          "images/heroes/tsuru/handbook-tsuru-recommendations-new.jpeg",
+          "images/heroes/tsuru/skill-tsuru-mind-enhancement.jpeg",
+          "images/heroes/tsuru/skill-tsuru-eyes-of-heart.jpeg"
         ],
         "completeHeroCards": [
           "Big Mom",
@@ -1316,7 +1334,10 @@
           "Nekomamushi",
           "Jinbe (New World)",
           "Otohime",
-          "Marco"
+          "Marco",
+          "Cavendish",
+          "Jinbe",
+          "Tsuru"
         ],
         "pendingSkillCards": [],
         "heroAffinityTags": {
@@ -1503,6 +1524,31 @@
               "Pirate",
               "Whitebeard Pirates"
             ]
+          },
+          "Cavendish": {
+            "status": "observed in handbook relation screenshot",
+            "tags": [
+              "Pirate",
+              "No.1 Swordsman",
+              "Gentleman"
+            ]
+          },
+          "Jinbe": {
+            "status": "observed in handbook relation screenshot",
+            "tags": [
+              "Shichibukai",
+              "Pirate",
+              "Sun Pirates",
+              "Captain",
+              "Fish Man"
+            ]
+          },
+          "Tsuru": {
+            "status": "observed in handbook relation screenshot",
+            "tags": [
+              "Superman Fruit",
+              "Marine"
+            ]
           }
         },
         "heroRecommendations": {
@@ -1547,9 +1593,27 @@
             "dial": "Red spiral dial",
             "weapon": "Arashi",
             "gear": "Explode"
+          },
+          "Cavendish": {
+            "image": "images/heroes/cavendish/handbook-cavendish-recommendations.jpeg",
+            "dial": "Red offensive dial",
+            "weapon": "Arashi",
+            "gear": "Explode"
+          },
+          "Jinbe": {
+            "image": "images/heroes/jinbe/handbook-jinbe-recommendations.jpeg",
+            "dial": "Blue defensive dial",
+            "weapon": "Iron",
+            "gear": "Defend"
+          },
+          "Tsuru": {
+            "image": "images/heroes/tsuru/handbook-tsuru-recommendations-new.jpeg",
+            "dial": "Support dial",
+            "weapon": "Paper",
+            "gear": "Vitality"
           }
         },
-        "completeHeroCardsCount": 20
+        "completeHeroCardsCount": 23
       },
       "bigMomSkillCards": [
         {
@@ -1849,7 +1913,7 @@
         "sourceImagesAdded": 90,
         "note": "All seven new hero cards have portrait, handbook recommendation image, and skill screenshots connected to the catalog."
       },
-      "completeHeroCardsCount": 20,
+      "completeHeroCardsCount": 23,
       "sourceVideoLocalOnly": "images/videos/WhatsApp Video 2026-07-09 at 22.19.51.mp4"
     },
     "materials": {
@@ -2530,7 +2594,7 @@
       "layout": "2 front heroes and 3 back heroes",
       "editable": true,
       "editFlow": "Click a formation slot/image to open a visual hero picker modal. Used heroes are disabled to prevent duplicates.",
-      "storage": "localStorage key opIdlePirateFormations, version opIdlePirateFormationsVersion=5",
+      "storage": "localStorage key opIdlePirateFormations, version opIdlePirateFormationsVersion=6",
       "initialRecommendations": [
         "Daño crítico estable",
         "Big Mom Band",
