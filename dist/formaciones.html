@@ -88,7 +88,11 @@
           </div>
           <div class="formation-actions">
             <button class="wiki-button" id="add-formation" type="button">Agregar formación</button>
+            <button class="wiki-button secondary" id="export-formations" type="button">Exportar</button>
+            <button class="wiki-button secondary" id="import-formations" type="button">Importar</button>
             <button class="wiki-button secondary" id="reset-formations" type="button">Restaurar ejemplos</button>
+            <button class="wiki-button danger" id="clear-formations" type="button">Eliminar todas</button>
+            <input id="formation-import-file" type="file" accept="application/json,.json" hidden />
           </div>
         </div>
         <p class="catalog-help">
@@ -814,7 +818,8 @@
 
       const storageKey = "opIdlePirateFormations";
       const storageVersionKey = "opIdlePirateFormationsVersion";
-      const storageVersion = "8";
+      const storageVersion = "9";
+      const storageClearedKey = "opIdlePirateFormationsCleared";
       const list = document.querySelector("#formation-list");
       const template = document.querySelector("#formation-card-template");
       const picker = document.querySelector("#hero-picker");
@@ -841,6 +846,7 @@
         const clean = defaultFormations.map(normalizeFormation);
         localStorage.setItem(storageKey, JSON.stringify(clean));
         localStorage.setItem(storageVersionKey, storageVersion);
+        localStorage.removeItem(storageClearedKey);
         return clean;
       }
 
@@ -851,6 +857,9 @@
         try {
           const stored = JSON.parse(localStorage.getItem(storageKey));
           if (!Array.isArray(stored)) return setDefaultFormations();
+          if (!stored.length && localStorage.getItem(storageClearedKey) !== "1") {
+            return setDefaultFormations();
+          }
           return stored.map(normalizeFormation);
         } catch (error) {
           return setDefaultFormations();
@@ -858,8 +867,12 @@
       }
 
       function saveFormations(formations) {
-        localStorage.setItem(storageKey, JSON.stringify(formations.map(normalizeFormation)));
+        const clean = formations.map(normalizeFormation);
+        localStorage.setItem(storageKey, JSON.stringify(clean));
         localStorage.setItem(storageVersionKey, storageVersion);
+        if (clean.length) {
+          localStorage.removeItem(storageClearedKey);
+        }
       }
 
       function sanitizeImportedFormation(formation, index) {
@@ -1093,11 +1106,11 @@
         renderFormations();
       });
 
-      document.querySelector("#export-formations").addEventListener("click", exportFormations);
-      document.querySelector("#import-formations").addEventListener("click", () => {
-        document.querySelector("#formation-import-file").click();
+      document.querySelector("#export-formations")?.addEventListener("click", exportFormations);
+      document.querySelector("#import-formations")?.addEventListener("click", () => {
+        document.querySelector("#formation-import-file")?.click();
       });
-      document.querySelector("#formation-import-file").addEventListener("change", (event) => {
+      document.querySelector("#formation-import-file")?.addEventListener("change", (event) => {
         importFormations(event.target.files[0]);
         event.target.value = "";
       });
@@ -1106,8 +1119,9 @@
         setDefaultFormations();
         renderFormations();
       });
-      document.querySelector("#clear-formations").addEventListener("click", () => {
+      document.querySelector("#clear-formations")?.addEventListener("click", () => {
         if (!confirm("Eliminar todas las formaciones guardadas?")) return;
+        localStorage.setItem(storageClearedKey, "1");
         saveFormations([]);
         renderFormations();
       });
