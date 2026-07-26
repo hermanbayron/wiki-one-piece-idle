@@ -378,6 +378,75 @@
                         "New World"
                 ]
         },
+{
+                "id": "franky-new-world",
+                "name": "Franky (New World)",
+                "role": "DEF",
+                "rarity": "SSR",
+                "portrait": "images/heroes/franky-new-world/hero-franky-new-world-card-ssr.jpeg",
+                "tags": [
+                                "Strawhat Pirates",
+                                "Pirate",
+                                "New World"
+                ]
+},
+{
+                "id": "chopper-new-world",
+                "name": "Chopper (New World)",
+                "role": "SUP",
+                "rarity": "SSR",
+                "portrait": "images/heroes/chopper-new-world/hero-chopper-new-world-card-ssr.jpeg",
+                "tags": [
+                                "Strawhat Pirates",
+                                "Zoan Fruit",
+                                "Pirate",
+                                "New World"
+                ]
+},
+{
+                "id": "kid",
+                "name": "Kid",
+                "role": "ATK",
+                "rarity": "SSR",
+                "portrait": "images/heroes/kid/hero-kid-card-ssr.jpeg",
+                "tags": [
+                                "Worst Generation",
+                                "Superman Fruit",
+                                "Paramecia",
+                                "Pirate",
+                                "Captain"
+                ]
+},
+{
+                "id": "bege",
+                "name": "Bege",
+                "role": "DEF",
+                "rarity": "SSR",
+                "portrait": "images/heroes/bege/hero-bege-card-ssr.jpeg",
+                "tags": [
+                                "Worst Generation",
+                                "Superman Fruit",
+                                "Paramecia",
+                                "Pirate",
+                                "Captain",
+                                "Fire Tank Pirates"
+                ]
+},
+{
+                "id": "x-drake",
+                "name": "X Drake",
+                "role": "ATK",
+                "rarity": "SSR",
+                "portrait": "images/heroes/x-drake/hero-x-drake-card-ssr.jpeg",
+                "tags": [
+                                "Zoan Fruit",
+                                "Worst Generation",
+                                "Pirate",
+                                "Marine",
+                                "Undercover",
+                                "Captain"
+                ]
+},
         {
                 "id": "king",
                 "name": "King",
@@ -718,12 +787,34 @@
                 "back3": "bartolomeo",
                 "notes": "Formacion de dano y aguante con SSR y soportes: Jinbe reduce dano y sobrevive, Bartolomeo puede actuar como carry, Law cura y potencia a aliados con Superman Fruit/Paramecia, Perona aplica Terror y Cavendish anade debilitaciones.",
                 "advice": "Ideal si no tienes todos los UR subidos. No busca solo dano maximo de SSR: busca aguantar turnos, aplicar control y ganar por conjunto de habilidades. Compara Bartolomeo y Cavendish como carry segun el enemigo."
-        }
-];
+        },
+        {
+                "name": "Worst Generation magnetica",
+                "purpose": "Debuffs / marcas / SSR",
+                "front1": "bege",
+                "front2": "law",
+                "back1": "kid",
+                "back2": "x-drake",
+                "back3": "luffy-new-world",
+                "notes": "Plantilla para probar Magnetic Force y presion SSR: Kid marca y pega en area, X Drake persigue objetivos marcados, Bege aporta Taunt y defensa, Law cura, y Luffy suma dano de Worst Generation.",
+                "advice": "Usala para medir si el paquete Kid + X Drake compensa frente a carries UR. Si falta aguante, cambia Luffy por Jack; si falta dano, prueba Big Mom atras y conserva Kid/X Drake como nucleo de marcas."
+        },
+        {
+                "name": "Strawhat New World",
+                "purpose": "Strawhat Pirates / sustain",
+                "front1": "franky-new-world",
+                "front2": "chopper-new-world",
+                "back1": "luffy-new-world",
+                "back2": "zoro-new-world",
+                "back3": "sanji-new-world",
+                "notes": "Equipo tematico Strawhat: Franky da escudo y bloqueo, Chopper cura y protege, Luffy/Zoro/Sanji concentran el dano. Tambien deja probada la sinergia de buffs internos Strawhat.",
+                "advice": "No deberia superar a Big Mom Band o Legendary cuando esos UR estan subidos, pero es una base muy clara para progreso SSR y pruebas de afinidad Strawhat. Si muere rapido, cambia Sanji por Nami o Brook segun necesites soporte o dano."
+        },
+      ];
 
       const storageKey = "opIdlePirateFormations";
       const storageVersionKey = "opIdlePirateFormationsVersion";
-      const storageVersion = "7";
+      const storageVersion = "8";
       const list = document.querySelector("#formation-list");
       const template = document.querySelector("#formation-card-template");
       const picker = document.querySelector("#hero-picker");

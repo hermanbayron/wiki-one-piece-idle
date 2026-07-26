@@ -2015,7 +2015,21 @@
           "weapon": "Arashi",
           "gear": "Explode"
         }
-      }
+      },
+      "registeredCards": 39,
+      "newCardsAdded": [
+        "Franky (New World)",
+        "Chopper (New World)",
+        "Kid",
+        "Bege",
+        "X Drake"
+      ],
+      "completedWithNewSkillCaptures": [
+        "Perospero",
+        "Fujitora",
+        "Law",
+        "Perona"
+      ]
     },
     "materials": {
       "generalObserved": {
@@ -2695,14 +2709,16 @@
       "layout": "2 front heroes and 3 back heroes",
       "editable": true,
       "editFlow": "Click a formation slot/image to open a visual hero picker modal. Used heroes are disabled to prevent duplicates.",
-      "storage": "localStorage key opIdlePirateFormations, version opIdlePirateFormationsVersion=7",
+      "storage": "localStorage key opIdlePirateFormations, version opIdlePirateFormationsVersion=8",
       "initialRecommendations": [
         "Mas fuerte actual: Jack, Law, Perona, Cracker y Big Mom",
         "Boss / dano maximo: Jack, Kaido, Rayleigh, Cracker y Big Mom",
         "Big Mom Band pura: Perospero, Smoothie, Cracker, Katakuri y Big Mom",
         "Equipo de Legendarios: Jinbe (New World), Marco, Otohime, Kaido y Rayleigh",
         "Dano economico SSR: Jinbe, Law, Perona, Cavendish y Bartolomeo",
-        "Marines + tanque y Zoan / Beasts quedan como plantillas alternativas"
+        "Marines + tanque y Zoan / Beasts quedan como plantillas alternativas",
+        "Worst Generation magnetica: Bege, Law, Kid, X Drake y Luffy (New World)",
+        "Strawhat New World: Franky, Chopper, Luffy, Zoro y Sanji"
       ],
       "pendingData": [
         "medir dano real de Big Mom vs Rayleigh vs Cracker en Boss con mismos items y diales",
