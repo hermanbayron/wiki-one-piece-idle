@@ -1319,9 +1319,22 @@
           stats: {},
           skills: [
             {
+              name: "Rapid Freeze",
+              type: "Pasiva",
+              icon: "images/heroes/zoro-new-world/skill-zoro-new-world-rapid-freeze.jpeg",
+              summary:
+                "Permite ataques combinados con aliados Gentleman cuando Zoro hace ataque normal.",
+              effects: [
+                ["Ataque normal", "llama a cualquier aliado Gentleman presente para hacer Pincer Attack"],
+                ["Frecuencia", "puede activarse 1 vez cada 2 turnos"],
+                ["Pincer Attack", "el aliado invocado hace un ataque normal; cada aliado puede ser invocado una vez por ronda"],
+                ["Nivel mostrado", "Max Level"],
+              ],
+            },
+            {
               name: "Black Rope - Great Tornado",
               type: "Activa",
-              icon: "images/heroes/skill-icons/zoro-new-world-black-rope-great-tornado.jpg",
+              icon: "images/heroes/zoro-new-world/skill-zoro-new-world-black-rope-great-tornado.jpeg",
               summary:
                 "Activa de área con reducción de precisión enemiga.",
               effects: [
@@ -1333,7 +1346,7 @@
             {
               name: "Yakkodori",
               type: "Pasiva",
-              icon: "images/heroes/skill-icons/zoro-new-world-yakkodori.jpg",
+              icon: "images/heroes/zoro-new-world/skill-zoro-new-world-yakkodori.jpeg",
               summary:
                 "Pasiva de crítico y ejecución contra enemigos bajos de vida.",
               effects: [
@@ -1346,7 +1359,7 @@
             {
               name: "Daishinkan",
               type: "Pasiva",
-              icon: "images/heroes/skill-icons/zoro-new-world-daishinkan.jpg",
+              icon: "images/heroes/zoro-new-world/skill-zoro-new-world-daishinkan.jpeg",
               summary:
                 "Mitigación acumulable cuando Zoro causa daño crítico.",
               effects: [
@@ -1359,7 +1372,7 @@
             {
               name: "Black Blade",
               type: "Pasiva",
-              icon: "images/heroes/skill-icons/zoro-new-world-black-blade.jpg",
+              icon: "images/heroes/zoro-new-world/skill-zoro-new-world-black-blade.jpeg",
               summary:
                 "Escalado de daño de skill por críticos del equipo.",
               effects: [
@@ -1374,7 +1387,7 @@
             {
               name: "Ultra - Tora Gari",
               type: "Pasiva",
-              icon: "images/heroes/skill-icons/zoro-new-world-ultra-tora-gari.jpg",
+              icon: "images/heroes/zoro-new-world/skill-zoro-new-world-ultra-tora-gari.jpeg",
               summary:
                 "Escalado por muertes de aliados Strawhat Pirates.",
               effects: [
@@ -1382,6 +1395,292 @@
                 ["Acumulaciones", "puede acumularse hasta 3 veces"],
                 ["Máximo", "+36% Crit Rate"],
                 ["Nivel mostrado", "Max Level"],
+              ],
+            },
+          ],
+        },
+
+        {
+          name: "Luffy (New World)",
+          rarity: "SSR",
+          role: "ATK",
+          affinities: ["Strawhat Pirates", "Worst Generation", "Superman Fruit", "Paramecia", "Pirate", "Captain"],
+          status: "complete",
+          portrait: "images/heroes/luffy-new-world/hero-luffy-new-world-card-ssr.jpeg",
+          level: "No visible",
+          power: "No visible",
+          qualification: "No visible",
+          source: "Capturas completas de Handbook",
+          summary:
+            "SSR ATK de Strawhat Pirates. Hace dano de area, aplica Heal Reduce, escala con critico y gana defensa despues de usar su activa.",
+          recommended: {
+            image: "images/heroes/luffy-new-world/handbook-luffy-new-world-recommendations.jpeg",
+            dial: "Dial rojo ofensivo observado.",
+            weapon: "Arashi",
+            gear: "Explode",
+            note: "Build ofensiva para aprovechar critico, dano de area y cierre contra objetivos con HP alto.",
+          },
+          stats: {},
+          skills: [
+            {
+              name: "Rubber Grizzly Magnum",
+              type: "Activa",
+              icon: "images/heroes/luffy-new-world/skill-luffy-new-world-rubber-grizzly-magnum.jpeg",
+              summary: "Golpea a todos los enemigos y reduce la curacion recibida.",
+              effects: [
+                ["Dano principal", "80% ATK a todos los enemigos"],
+                ["Heal Reduce", "30% de reduccion de curacion durante 3 turnos"],
+                ["Nivel mostrado", "Max Level"],
+              ],
+            },
+            {
+              name: "Rubber Giant Pistol",
+              type: "Pasiva",
+              icon: "images/heroes/luffy-new-world/skill-luffy-new-world-rubber-giant-pistol.jpeg",
+              summary: "Sube mucho el critico y pega mas fuerte a enemigos con HP alto.",
+              effects: [
+                ["Crit Rate", "+40% en batalla"],
+                ["Crit DMG", "+30% en batalla"],
+                ["Contra HP alto", "si el objetivo tiene mas de 70% HP, el dano aumenta 20%"],
+              ],
+            },
+            {
+              name: "Rubber Giant Seal",
+              type: "Pasiva",
+              icon: "images/heroes/luffy-new-world/skill-luffy-new-world-rubber-giant-seal.jpeg",
+              summary: "La activa castiga mejor a enemigos con buffs.",
+              effects: [["Rubber Grizzly Magnum", "+15% dano contra enemigos con buffs"]],
+            },
+            {
+              name: "Rubber Shock",
+              type: "Pasiva",
+              icon: "images/heroes/luffy-new-world/skill-luffy-new-world-rubber-shock.jpeg",
+              summary: "Sus ataques normales pueden aplicar Stun.",
+              effects: [
+                ["Ataque normal", "25% de probabilidad de aplicar Stun durante 1 turno"],
+                ["Stun", "control que impide moverse"],
+              ],
+            },
+            {
+              name: "Rubber Giant Balloon",
+              type: "Pasiva",
+              icon: "images/heroes/luffy-new-world/skill-luffy-new-world-rubber-giant-balloon.jpeg",
+              summary: "Despues de la activa gana reduccion de dano e inmunidad temporal a debuffs.",
+              effects: [
+                ["Tras Rubber Grizzly Magnum", "+30% DMG Reduction"],
+                ["Proteccion", "inmune a debuffs durante los siguientes 2 ataques recibidos"],
+              ],
+            },
+          ],
+        },
+        {
+          name: "Sanji (New World)",
+          rarity: "SSR",
+          role: "ATK",
+          affinities: ["Strawhat Pirates", "Pirate", "New World"],
+          status: "complete",
+          portrait: "images/heroes/sanji-new-world/hero-sanji-new-world-card-ssr.jpeg",
+          level: "No visible",
+          power: "No visible",
+          qualification: "No visible",
+          source: "Capturas completas de Handbook",
+          summary:
+            "SSR ATK de remate. Hace dano fuerte a un solo objetivo, escala con critico y gana acumulaciones de Flame cuando caen aliados.",
+          recommended: {
+            image: "images/heroes/sanji-new-world/handbook-sanji-new-world-recommendations.jpeg",
+            dial: "Dial rojo ofensivo observado.",
+            weapon: "Arashi",
+            gear: "Explode",
+            note: "Build de carry: critico, remate y dano a objetivo unico.",
+          },
+          stats: {},
+          skills: [
+            {
+              name: "Yummy Barbecue",
+              type: "Activa",
+              icon: "images/heroes/sanji-new-world/skill-sanji-new-world-yummy-barbecue.jpeg",
+              summary: "Golpe fuerte a un objetivo; remata mejor cuando el enemigo esta bajo de vida.",
+              effects: [
+                ["Dano principal", "220% ATK a 1 enemigo"],
+                ["Contra HP bajo", "si el objetivo tiene menos de 45% HP, el dano aumenta 30%"],
+              ],
+            },
+            {
+              name: "Fiery Steam",
+              type: "Pasiva",
+              icon: "images/heroes/sanji-new-world/skill-sanji-new-world-fiery-steam.jpeg",
+              summary: "Despues de usar skill aumenta su supervivencia.",
+              effects: [
+                ["Tras skill", "+10% DMG Reduction"],
+                ["Acumulaciones", "hasta 3 stacks"],
+              ],
+            },
+            {
+              name: "Devil Diable Jambe",
+              type: "Pasiva",
+              icon: "images/heroes/sanji-new-world/skill-sanji-new-world-devil-diable-jambe.jpeg",
+              summary: "Pasiva de critico y escalado por Flame.",
+              effects: [
+                ["Crit Rate", "+40% en batalla"],
+                ["Crit DMG", "+30% en batalla"],
+                ["Flame", "cada stack aumenta el dano de la siguiente skill"],
+                ["Acumulaciones", "hasta 40 stacks segun captura"],
+              ],
+            },
+            {
+              name: "Flare of Revenge",
+              type: "Pasiva",
+              icon: "images/heroes/sanji-new-world/skill-sanji-new-world-flare-of-revenge.jpeg",
+              summary: "Gana Flame cuando mueren aliados.",
+              effects: [
+                ["Aliado muerto", "gana 5 stacks de Flame"],
+                ["Aliado ATK muerto", "gana 5 stacks adicionales"],
+              ],
+            },
+            {
+              name: "Final Touch",
+              type: "Pasiva",
+              icon: "images/heroes/sanji-new-world/skill-sanji-new-world-final-touch.jpeg",
+              summary: "Aumenta la probabilidad de combo.",
+              effects: [["Combo Rate", "+30% en batalla"]],
+            },
+          ],
+        },
+        {
+          name: "Nami (New World)",
+          rarity: "SSR",
+          role: "SUP",
+          affinities: ["Strawhat Pirates", "Pirate", "New World"],
+          status: "complete",
+          portrait: "images/heroes/nami-new-world/hero-nami-new-world-card-ssr.jpeg",
+          level: "No visible",
+          power: "No visible",
+          qualification: "No visible",
+          source: "Capturas completas de Handbook",
+          summary:
+            "SSR SUP de control y energia. Puede congelar, aumentar dodge/critico del equipo y acelerar energia cuando aliados hacen critico.",
+          recommended: {
+            image: "images/heroes/nami-new-world/handbook-nami-new-world-recommendations.jpeg",
+            dial: "Dial de soporte observado.",
+            weapon: "Weapon Match visible en captura.",
+            gear: "Gear de soporte/control observado.",
+            note: "Mejor leerla como soporte de control: dodge, critico, energia y Freeze.",
+          },
+          stats: {},
+          skills: [
+            {
+              name: "Climate - Snowy Cloud",
+              type: "Activa",
+              icon: "images/heroes/nami-new-world/skill-nami-new-world-climate-snowy-cloud.jpeg",
+              summary: "Dano de area con probabilidad de Frozen.",
+              effects: [
+                ["Dano principal", "67% ATK a todos los enemigos"],
+                ["Control", "5% de probabilidad de causar Frozen durante 1 turno"],
+                ["Frozen", "control que impide moverse"],
+              ],
+            },
+            {
+              name: "Cold Wind Merging",
+              type: "Pasiva",
+              icon: "images/heroes/nami-new-world/skill-nami-new-world-cold-wind-merging.jpeg",
+              summary: "Cambia segun posicion: delante da dodge, atras mejora el control de su activa.",
+              effects: [
+                ["Si esta delante", "+18% Dodge Rate a 3 aliados por 2 turnos"],
+                ["Si esta atras", "Climate - Snowy Cloud aumenta su probabilidad de control"],
+                ["Bonus observado", "control chance aumentado 450% segun captura"],
+              ],
+            },
+            {
+              name: "Scorching Tempo",
+              type: "Pasiva",
+              icon: "images/heroes/nami-new-world/skill-nami-new-world-scorching-tempo.jpeg",
+              summary: "Despues de su activa sube el critico del equipo.",
+              effects: [
+                ["Tras skill", "+15% Crit Rate a todos los aliados por 2 turnos"],
+                ["Strawhat Pirates", "el efecto aumenta 50% para aliados Strawhat Pirates"],
+              ],
+            },
+            {
+              name: "Lightning Charge",
+              type: "Pasiva",
+              icon: "images/heroes/nami-new-world/skill-nami-new-world-lightning-charge.jpeg",
+              summary: "Da energia cuando un aliado hace dano critico.",
+              effects: [
+                ["Critico aliado", "el aliado gana 50% energy"],
+                ["Frecuencia", "puede activarse 1 vez cada 2 turnos"],
+              ],
+            },
+            {
+              name: "Snow Blizzard",
+              type: "Pasiva",
+              icon: "images/heroes/nami-new-world/skill-nami-new-world-snow-blizzard.jpeg",
+              summary: "Autocuracion de emergencia.",
+              effects: [["HP bajo", "cuando queda por debajo de 70% HP, gana Healing igual a 20% HP"]],
+            },
+          ],
+        },
+        {
+          name: "Brook (New World)",
+          rarity: "SSR",
+          role: "ATK",
+          affinities: ["Strawhat Pirates", "Superman Fruit", "Paramecia", "Pirate", "New World"],
+          status: "partial",
+          portrait: "images/heroes/brook-new-world/hero-brook-new-world-card-ssr.jpeg",
+          level: "No visible",
+          power: "No visible",
+          qualification: "No visible",
+          source: "Capturas de Handbook; falta confirmar 1 habilidad si SSR mantiene 5 skills",
+          summary:
+            "SSR ATK con foco a retaguardia, Freeze/Frost y revive una vez. Buen atacante de control para molestar carries de atras.",
+          recommended: {
+            image: "images/heroes/brook-new-world/handbook-brook-new-world-recommendations.jpeg",
+            dial: "Dial rojo ofensivo observado.",
+            weapon: "Arashi",
+            gear: "Explode",
+            note: "Se lee como atacante/control: prioriza retaguardia, revive y congela.",
+          },
+          stats: {},
+          skills: [
+            {
+              name: "Soul Solid",
+              type: "Activa",
+              icon: "images/heroes/brook-new-world/skill-brook-new-world-soul-solid.jpeg",
+              summary: "Golpe a un objetivo en 5 fases, con bonus contra enemigos con HP alto.",
+              effects: [
+                ["Dano principal", "5 fases con dano total de 220% ATK a 1 enemigo"],
+                ["Contra HP alto", "+25% dano si el objetivo tiene mas de 70% HP"],
+              ],
+            },
+            {
+              name: "Ice Blade",
+              type: "Pasiva",
+              icon: "images/heroes/brook-new-world/skill-brook-new-world-ice-blade.jpeg",
+              summary: "Prioriza la fila trasera y puede congelar bajo Frost.",
+              effects: [
+                ["Prioridad", "todos los ataques priorizan enemigos de la fila trasera"],
+                ["Bajo Frost", "el ataque tiene 100% de probabilidad de Freeze por 1 turno"],
+                ["Bajo Frost", "+15% dano"],
+              ],
+            },
+            {
+              name: "Revive-Revive Fruit",
+              type: "Pasiva",
+              icon: "images/heroes/brook-new-world/skill-brook-new-world-revive-revive-fruit.jpeg",
+              summary: "Revive una vez al siguiente turno despues de morir.",
+              effects: [
+                ["Al morir", "revive en el siguiente turno con 20% HP"],
+                ["Extra", "recibe Frost"],
+                ["Limite", "1 vez por batalla"],
+              ],
+            },
+            {
+              name: "Ekaituta: Hitoyogiri",
+              type: "Pasiva",
+              icon: "images/heroes/brook-new-world/skill-brook-new-world-ekaituta-hitoyogiri.jpeg",
+              summary: "Bajo Frost recibe menos dano y queda inmune a debuffs.",
+              effects: [
+                ["Bajo Frost", "reduce el dano recibido 25%"],
+                ["Bajo Frost", "inmune a debuffs"],
               ],
             },
           ],

@@ -1768,9 +1768,14 @@
         "Nekomamushi",
         "Jinbe (New World)",
         "Otohime",
-        "Marco"
+        "Marco",
+        "Luffy (New World)",
+        "Sanji (New World)",
+        "Nami (New World)"
       ],
-      "pendingSkillCards": [],
+      "pendingSkillCards": [
+        "Brook (New World): falta confirmar 1 habilidad si SSR mantiene 5 skills"
+      ],
       "kaidoSkillCards": [
         {
           "name": "Bolo Breath",
@@ -1914,7 +1919,103 @@
         "note": "All seven new hero cards have portrait, handbook recommendation image, and skill screenshots connected to the catalog."
       },
       "completeHeroCardsCount": 23,
-      "sourceVideoLocalOnly": "images/videos/WhatsApp Video 2026-07-09 at 22.19.51.mp4"
+      "sourceVideoLocalOnly": "images/videos/WhatsApp Video 2026-07-09 at 22.19.51.mp4",
+      "assetManifest": [
+        "images/heroes/luffy-new-world/hero-luffy-new-world-card-ssr.jpeg",
+        "images/heroes/luffy-new-world/handbook-luffy-new-world-recommendations.jpeg",
+        "images/heroes/luffy-new-world/skill-luffy-new-world-rubber-grizzly-magnum.jpeg",
+        "images/heroes/luffy-new-world/skill-luffy-new-world-rubber-giant-pistol.jpeg",
+        "images/heroes/luffy-new-world/skill-luffy-new-world-rubber-giant-seal.jpeg",
+        "images/heroes/luffy-new-world/skill-luffy-new-world-rubber-shock.jpeg",
+        "images/heroes/luffy-new-world/skill-luffy-new-world-rubber-giant-balloon.jpeg",
+        "images/heroes/sanji-new-world/hero-sanji-new-world-card-ssr.jpeg",
+        "images/heroes/sanji-new-world/handbook-sanji-new-world-recommendations.jpeg",
+        "images/heroes/sanji-new-world/skill-sanji-new-world-yummy-barbecue.jpeg",
+        "images/heroes/sanji-new-world/skill-sanji-new-world-fiery-steam.jpeg",
+        "images/heroes/sanji-new-world/skill-sanji-new-world-devil-diable-jambe.jpeg",
+        "images/heroes/sanji-new-world/skill-sanji-new-world-flare-of-revenge.jpeg",
+        "images/heroes/sanji-new-world/skill-sanji-new-world-final-touch.jpeg",
+        "images/heroes/nami-new-world/hero-nami-new-world-card-ssr.jpeg",
+        "images/heroes/nami-new-world/handbook-nami-new-world-recommendations.jpeg",
+        "images/heroes/nami-new-world/skill-nami-new-world-climate-snowy-cloud.jpeg",
+        "images/heroes/nami-new-world/skill-nami-new-world-cold-wind-merging.jpeg",
+        "images/heroes/nami-new-world/skill-nami-new-world-scorching-tempo.jpeg",
+        "images/heroes/nami-new-world/skill-nami-new-world-lightning-charge.jpeg",
+        "images/heroes/nami-new-world/skill-nami-new-world-snow-blizzard.jpeg",
+        "images/heroes/brook-new-world/hero-brook-new-world-card-ssr.jpeg",
+        "images/heroes/brook-new-world/handbook-brook-new-world-recommendations.jpeg",
+        "images/heroes/brook-new-world/skill-brook-new-world-soul-solid.jpeg",
+        "images/heroes/brook-new-world/skill-brook-new-world-ice-blade.jpeg",
+        "images/heroes/brook-new-world/skill-brook-new-world-revive-revive-fruit.jpeg",
+        "images/heroes/brook-new-world/skill-brook-new-world-ekaituta-hitoyogiri.jpeg",
+        "images/heroes/zoro-new-world/skill-zoro-new-world-rapid-freeze.jpeg"
+      ],
+      "visibleHeroCardsCount": 34,
+      "heroAffinityTags": {
+        "Luffy (New World)": {
+          "status": "observed in handbook relation screenshot",
+          "tags": [
+            "Strawhat Pirates",
+            "Worst Generation",
+            "Superman Fruit",
+            "Paramecia",
+            "Pirate",
+            "Captain"
+          ]
+        },
+        "Sanji (New World)": {
+          "status": "observed in handbook relation screenshot",
+          "tags": [
+            "Strawhat Pirates",
+            "Pirate",
+            "New World"
+          ]
+        },
+        "Nami (New World)": {
+          "status": "observed in handbook relation screenshot",
+          "tags": [
+            "Strawhat Pirates",
+            "Pirate",
+            "New World"
+          ]
+        },
+        "Brook (New World)": {
+          "status": "observed in handbook relation screenshot; one skill still pending confirmation",
+          "tags": [
+            "Strawhat Pirates",
+            "Superman Fruit",
+            "Paramecia",
+            "Pirate",
+            "New World"
+          ]
+        }
+      },
+      "heroRecommendations": {
+        "Luffy (New World)": {
+          "image": "images/heroes/luffy-new-world/handbook-luffy-new-world-recommendations.jpeg",
+          "dial": "Red offensive dial",
+          "weapon": "Arashi",
+          "gear": "Explode"
+        },
+        "Sanji (New World)": {
+          "image": "images/heroes/sanji-new-world/handbook-sanji-new-world-recommendations.jpeg",
+          "dial": "Red offensive dial",
+          "weapon": "Arashi",
+          "gear": "Explode"
+        },
+        "Nami (New World)": {
+          "image": "images/heroes/nami-new-world/handbook-nami-new-world-recommendations.jpeg",
+          "dial": "Support dial observed",
+          "weapon": "Weapon Match visible",
+          "gear": "Support/control gear observed"
+        },
+        "Brook (New World)": {
+          "image": "images/heroes/brook-new-world/handbook-brook-new-world-recommendations.jpeg",
+          "dial": "Red offensive dial",
+          "weapon": "Arashi",
+          "gear": "Explode"
+        }
+      }
     },
     "materials": {
       "generalObserved": {
