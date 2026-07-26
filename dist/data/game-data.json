@@ -2594,20 +2594,93 @@
       "layout": "2 front heroes and 3 back heroes",
       "editable": true,
       "editFlow": "Click a formation slot/image to open a visual hero picker modal. Used heroes are disabled to prevent duplicates.",
-      "storage": "localStorage key opIdlePirateFormations, version opIdlePirateFormationsVersion=6",
+      "storage": "localStorage key opIdlePirateFormations, version opIdlePirateFormationsVersion=7",
       "initialRecommendations": [
-        "Daño crítico estable",
-        "Big Mom Band",
-        "Legendarios",
-        "Marines",
-        "Explosión ofensiva",
-        "Soporte y control"
+        "Mas fuerte actual: Jack, Law, Perona, Cracker y Big Mom",
+        "Boss / dano maximo: Jack, Kaido, Rayleigh, Cracker y Big Mom",
+        "Big Mom Band pura: Perospero, Smoothie, Cracker, Katakuri y Big Mom",
+        "Equipo de Legendarios: Jinbe (New World), Marco, Otohime, Kaido y Rayleigh",
+        "Dano economico SSR: Jinbe, Law, Perona, Cavendish y Bartolomeo",
+        "Marines + tanque y Zoan / Beasts quedan como plantillas alternativas"
       ],
       "pendingData": [
-        "confirmar segundo delantero para Big Mom Band",
-        "agregar más héroes Legendary cuando haya fichas completas",
-        "agregar más Marines cuando haya capturas de habilidades y builds",
-        "ajustar equipos según items, diales, awaken y velocidad"
+        "medir dano real de Big Mom vs Rayleigh vs Cracker en Boss con mismos items y diales",
+        "confirmar si Law rinde mejor delante o atras segun velocidad y supervivencia",
+        "probar Cavendish por Jack/Kaido en Boss cuando el equipo sobrevive sin doble tanque",
+        "agregar mas Marines cuando haya capturas de habilidades y builds",
+        "ajustar equipos segun items, diales, awaken y velocidad"
+      ],
+      "learnedFromUserTests": [
+        {
+          "name": "Mas fuerte actual",
+          "useCase": "Arena / progreso general",
+          "front": [
+            "Jack",
+            "Law"
+          ],
+          "back": [
+            "Perona",
+            "Cracker",
+            "Big Mom"
+          ],
+          "reading": "Jack sostiene el frente; Law aporta soporte y curacion; Perona aplica control; Cracker presiona dano estable; Big Mom queda como carry principal."
+        },
+        {
+          "name": "Boss / dano maximo",
+          "useCase": "Ranking de dano",
+          "front": [
+            "Jack",
+            "Kaido"
+          ],
+          "back": [
+            "Rayleigh",
+            "Cracker",
+            "Big Mom"
+          ],
+          "reading": "Plantilla mas ofensiva para medir dano total: Rayleigh, Cracker y Big Mom concentran el dano mientras Jack/Kaido aguantan."
+        },
+        {
+          "name": "Big Mom Band pura",
+          "useCase": "Afinidad Big Mom Band",
+          "front": [
+            "Perospero",
+            "Smoothie"
+          ],
+          "back": [
+            "Cracker",
+            "Katakuri",
+            "Big Mom"
+          ],
+          "reading": "Banda completa para activar sinergias de familia; puede necesitar un tanque externo si el frente cae rapido."
+        },
+        {
+          "name": "Equipo de Legendarios",
+          "useCase": "Legendary + sustain y tanque",
+          "front": [
+            "Jinbe (New World)",
+            "Marco"
+          ],
+          "back": [
+            "Otohime",
+            "Kaido",
+            "Rayleigh"
+          ],
+          "reading": "Jinbe y Marco compran turnos; Otohime potencia critico/dano de habilidad; Kaido y Rayleigh son el dano principal."
+        },
+        {
+          "name": "Dano economico",
+          "useCase": "SSR / dano y sustain",
+          "front": [
+            "Jinbe",
+            "Law"
+          ],
+          "back": [
+            "Perona",
+            "Cavendish",
+            "Bartolomeo"
+          ],
+          "reading": "Opcion SSR para aguantar y ganar por habilidades: Jinbe reduce dano, Law cura, Perona controla, Cavendish debilita y Bartolomeo puede hacer de carry."
+        }
       ]
     }
   },
