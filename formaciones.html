@@ -111,6 +111,7 @@
           </div>
           <div class="formation-card-actions">
             <button class="wiki-button secondary edit-formation" type="button">Editar texto</button>
+            <button class="wiki-button danger delete-formation" type="button">Eliminar</button>
           </div>
         </div>
 
@@ -717,6 +718,66 @@
         localStorage.setItem(storageVersionKey, storageVersion);
       }
 
+      function sanitizeImportedFormation(formation, index) {
+        const allowedHeroIds = new Set(heroPool.map((hero) => hero.id));
+        const clean = {
+          name: typeof formation.name === "string" && formation.name.trim() ? formation.name.trim() : `Formacion importada ${index + 1}`,
+          purpose: typeof formation.purpose === "string" ? formation.purpose.trim() : "Objetivo pendiente",
+          front1: allowedHeroIds.has(formation.front1) ? formation.front1 : "",
+          front2: allowedHeroIds.has(formation.front2) ? formation.front2 : "",
+          back1: allowedHeroIds.has(formation.back1) ? formation.back1 : "",
+          back2: allowedHeroIds.has(formation.back2) ? formation.back2 : "",
+          back3: allowedHeroIds.has(formation.back3) ? formation.back3 : "",
+          notes: typeof formation.notes === "string" ? formation.notes.trim() : "",
+          advice: typeof formation.advice === "string" ? formation.advice.trim() : "",
+        };
+        return normalizeFormation(clean);
+      }
+
+      function readImportedFormations(payload) {
+        const rawFormations = Array.isArray(payload) ? payload : payload && payload.formations;
+        if (!Array.isArray(rawFormations)) return [];
+        return rawFormations.map(sanitizeImportedFormation).filter(Boolean);
+      }
+
+      function exportFormations() {
+        const payload = {
+          app: "One Piece Idle Pirate Wiki",
+          type: "formations",
+          version: storageVersion,
+          exportedAt: new Date().toISOString(),
+          formations: loadFormations(),
+        };
+        const blob = new Blob([JSON.stringify(payload, null, 2)], { type: "application/json" });
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement("a");
+        const date = new Date().toISOString().slice(0, 10);
+        link.href = url;
+        link.download = `one-piece-idle-formaciones-${date}.json`;
+        document.body.append(link);
+        link.click();
+        link.remove();
+        URL.revokeObjectURL(url);
+      }
+
+      async function importFormations(file) {
+        if (!file) return;
+        try {
+          const payload = JSON.parse(await file.text());
+          const imported = readImportedFormations(payload);
+          if (!imported.length) {
+            alert("No encontre formaciones validas en ese archivo.");
+            return;
+          }
+          const action = confirm(`Importar ${imported.length} formacion(es)? Esto reemplaza las formaciones guardadas en este navegador.`);
+          if (!action) return;
+          saveFormations(imported);
+          renderFormations();
+        } catch (error) {
+          alert("No pude leer el archivo. Revisa que sea un JSON exportado desde esta wiki.");
+        }
+      }
+
       function getHero(id) {
         return heroPool.find((hero) => hero.id === id) || heroPool[0];
       }
@@ -788,6 +849,14 @@
           card.querySelector(".edit-formation").addEventListener("click", () => {
             editor.hidden = false;
             card.classList.add("is-editing");
+          });
+          card.querySelector(".delete-formation").addEventListener("click", () => {
+            const current = loadFormations();
+            const label = formation.name || `Formacion ${index + 1}`;
+            if (!confirm(`Eliminar "${label}"?`)) return;
+            current.splice(index, 1);
+            saveFormations(current);
+            renderFormations();
           });
           card.querySelector(".cancel-formation").addEventListener("click", () => {
             editor.hidden = true;
@@ -880,8 +949,22 @@
         renderFormations();
       });
 
+      document.querySelector("#export-formations").addEventListener("click", exportFormations);
+      document.querySelector("#import-formations").addEventListener("click", () => {
+        document.querySelector("#formation-import-file").click();
+      });
+      document.querySelector("#formation-import-file").addEventListener("change", (event) => {
+        importFormations(event.target.files[0]);
+        event.target.value = "";
+      });
       document.querySelector("#reset-formations").addEventListener("click", () => {
+        if (!confirm("Restaurar los ejemplos? Esto reemplaza tus formaciones guardadas en este navegador.")) return;
         setDefaultFormations();
+        renderFormations();
+      });
+      document.querySelector("#clear-formations").addEventListener("click", () => {
+        if (!confirm("Eliminar todas las formaciones guardadas?")) return;
+        saveFormations([]);
         renderFormations();
       });
 

@@ -1827,6 +1827,16 @@ li::marker {
   border-color: #405869;
 }
 
+.wiki-button.danger {
+  color: #fff2ec;
+  background: #7a2f2b;
+  border-color: #9b4a3f;
+}
+
+.wiki-button.danger:hover {
+  filter: brightness(1.08);
+}
+
 .formation-guide {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
