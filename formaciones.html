@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
@@ -20,7 +20,7 @@
         <a href="impel-down.html">Impel Down</a>
         <a href="boss.html">Boss</a>
         <a href="arena.html">Arena</a>
-        <a href="heroes.html">HÃ©roes</a>
+        <a href="heroes.html">Héroes</a>
         <a href="summon.html">Summon</a>
         <a href="altar.html">Altar</a>
         <a href="combate.html">Combate</a>
@@ -40,38 +40,38 @@
         <p class="eyebrow">Composiciones</p>
         <h1>Recomendaciones de formaciones</h1>
         <p>
-          Cada equipo usa hasta 5 hÃ©roes: 2 posiciones delanteras para aguantar
-          presiÃ³n y 3 posiciones traseras para daÃ±o, curaciÃ³n o control. Las
-          formaciones son editables desde esta misma pÃ¡gina y se guardan en tu
+          Cada equipo usa hasta 5 héroes: 2 posiciones delanteras para aguantar
+          presión y 3 posiciones traseras para daño, curación o control. Las
+          formaciones son editables desde esta misma página y se guardan en tu
           navegador.
         </p>
         <div class="status-row">
-          <span class="status-badge confirmed">2 adelante / 3 atrÃ¡s</span>
-          <span class="status-badge observed">Con imÃ¡genes de hÃ©roes</span>
+          <span class="status-badge confirmed">2 adelante / 3 atrás</span>
+          <span class="status-badge observed">Con imágenes de héroes</span>
           <span class="status-badge pending">Plantillas editables</span>
         </div>
       </section>
 
       <section class="section alt">
         <div class="section-heading">
-          <p class="eyebrow">Lectura rÃ¡pida</p>
-          <h2>CÃ³mo leer una formaciÃ³n</h2>
+          <p class="eyebrow">Lectura rápida</p>
+          <h2>Cómo leer una formación</h2>
         </div>
         <div class="formation-guide">
           <article>
             <span class="formation-token front">Front</span>
             <h3>Delanteros</h3>
-            <p>Busca supervivencia, reducciÃ³n de daÃ±o, revivir, escudos o tanques que compren turnos.</p>
+            <p>Busca supervivencia, reducción de daño, revivir, escudos o tanques que compren turnos.</p>
           </article>
           <article>
             <span class="formation-token back">Back</span>
             <h3>Retaguardia</h3>
-            <p>Coloca carries, buffers, curas y control. AquÃ­ suelen ir los hÃ©roes que definen la pelea.</p>
+            <p>Coloca carries, buffers, curas y control. Aquí suelen ir los héroes que definen la pelea.</p>
           </article>
           <article>
             <span class="formation-token open">Editable</span>
             <h3>Huecos abiertos</h3>
-            <p>Si falta un hÃ©roe probado, deja la ranura libre y completa la nota cuando tengas datos.</p>
+            <p>Si falta un héroe probado, deja la ranura libre y completa la nota cuando tengas datos.</p>
           </article>
         </div>
       </section>
@@ -83,19 +83,19 @@
             <h2>Formaciones guardadas</h2>
           </div>
           <div class="formation-actions">
-            <button class="wiki-button" id="add-formation" type="button">Agregar formaciÃ³n</button>
+            <button class="wiki-button" id="add-formation" type="button">Agregar formación</button>
             <button class="wiki-button secondary" id="reset-formations" type="button">Restaurar ejemplos</button>
           </div>
         </div>
         <p class="catalog-help">
-          Toca cualquier retrato o ranura para cambiar el hÃ©roe con un selector visual. Editar texto queda para nombre, objetivo y notas.
+          Toca cualquier retrato o ranura para cambiar el héroe con un selector visual. Editar texto queda para nombre, objetivo y notas.
         </p>
         <div id="formation-list" class="formation-list" aria-live="polite"></div>
       </section>
     </main>
 
     <footer>
-      <p>Wiki fan-made en construcciÃ³n. Los datos se ajustan con capturas, videos y pruebas del juego.</p>
+      <p>Wiki fan-made en construcción. Los datos se ajustan con capturas, videos y pruebas del juego.</p>
     </footer>
 
     <template id="formation-card-template">
@@ -110,7 +110,7 @@
           </div>
         </div>
 
-        <div class="formation-board" aria-label="Tablero de formaciÃ³n">
+        <div class="formation-board" aria-label="Tablero de formación">
           <div class="formation-row formation-row-front">
             <div class="formation-slot" data-slot="front1"></div>
             <div class="formation-slot" data-slot="front2"></div>
@@ -155,13 +155,13 @@
       <section class="formation-modal" role="dialog" aria-modal="true" aria-labelledby="hero-picker-title">
         <div class="formation-modal-header">
           <div>
-            <p class="eyebrow">Cambiar posiciÃ³n</p>
-            <h2 id="hero-picker-title">Elegir hÃ©roe</h2>
+            <p class="eyebrow">Cambiar posición</p>
+            <h2 id="hero-picker-title">Elegir héroe</h2>
           </div>
           <button class="wiki-button secondary" id="close-hero-picker" type="button">Cerrar</button>
         </div>
         <p class="catalog-help" id="hero-picker-help">
-          Los hÃ©roes ya usados en esta formaciÃ³n quedan bloqueados para evitar repetidos.
+          Los héroes ya usados en esta formación quedan bloqueados para evitar repetidos.
         </p>
         <div class="hero-picker-grid" id="hero-picker-grid"></div>
       </section>
@@ -171,123 +171,487 @@
       const slotLabels = {
         front1: "Frente 1",
         front2: "Frente 2",
-        back1: "AtrÃ¡s 1",
-        back2: "AtrÃ¡s 2",
-        back3: "AtrÃ¡s 3",
+        back1: "Atrás 1",
+        back2: "Atrás 2",
+        back3: "Atrás 3",
       };
 
       const heroPool = [
-        { id: "", name: "Ranura abierta", role: "OPEN", portrait: "", tags: [] },
-        { id: "sengoku", name: "Sengoku", role: "DEF", portrait: "images/heroes/sengoku/hero-sengoku-card-ur.jpeg", tags: ["Marine", "Marine Marshall", "Zoan Fruit"] },
-        { id: "aokiji", name: "Aokiji", role: "SUP", portrait: "images/heroes/aokiji/hero-aokiji-card-ur.jpeg", tags: ["Marine", "Marine Admirals", "Logia Fruit", "Control"] },
-        { id: "tsuru", name: "Tsuru", role: "SUP", portrait: "images/heroes/tsuru/hero-tsuru-card-ur.jpeg", tags: ["Marine", "Superman Fruit", "Paramecia", "Healer"] },
-        { id: "shiki", name: "Shiki", role: "ATK", portrait: "images/heroes/shiki/hero-shiki-card-ur.jpeg", tags: ["Legendary", "Pirate", "No.1 Swordsman"] },
-        { id: "perospero", name: "Perospero", role: "SUP", portrait: "images/heroes/perospero/hero-perospero-card-ur.jpeg", tags: ["Big Mom Band", "Pirate", "Paramecia", "Control"] },
-        { id: "moria", name: "Moria", role: "SUP", portrait: "images/heroes/moria/hero-moria-card-ssr.jpeg", tags: ["Pirate", "Warlord", "Paramecia", "Control"] },
-        { id: "law", name: "Law", role: "SUP", portrait: "images/heroes/law/hero-law-card-ssr.jpeg", tags: ["Pirate", "Worst Generation", "Paramecia", "Healer"] },
-        { id: "perona", name: "Perona", role: "SUP", portrait: "images/heroes/perona/hero-perona-card-ssr.jpeg", tags: ["Pirate", "Thriller Bark", "Paramecia", "Control"] },
-        { id: "kaido", name: "Kaido", role: "DEF", portrait: "images/heroes/kaido/kaido-hero-profile.jpeg", tags: ["Beasts Pirates", "Zoan Fruit", "Four Emperors"] },
-        { id: "jinbe-new-world", name: "Jinbe (New World)", role: "DEF", portrait: "images/heroes/jinbe-new-world/hero-jinbe-new-world-card-ur.jpeg", tags: ["Strawhat Pirates", "Fish Man", "Pirate"] },
-        { id: "marco", name: "Marco", role: "SUP", portrait: "images/heroes/marco/hero-marco-card-ur.jpeg", tags: ["Whitebeard Pirates", "Zoan Fruit", "Pirate"] },
-        { id: "rayleigh", name: "Rayleigh", role: "ATK", portrait: "images/heroes/rayleigh/hero-rayleigh-card-ur.jpeg", tags: ["Legendary", "Pirate", "No.1 Swordsman"] },
-        { id: "big-mom", name: "Big Mom", role: "ATK", portrait: "images/heroes/big-mom/hero-big-mom-card-ur.jpeg", tags: ["Big Mom Band", "Four Emperors", "Paramecia"] },
-        { id: "king", name: "King", role: "ATK", portrait: "images/heroes/king/hero-king-card-ur.jpeg", tags: ["Beasts Pirates", "Zoan Fruit", "Pirate"] },
-        { id: "katakuri", name: "Katakuri", role: "ATK", portrait: "images/heroes/katakuri/hero-katakuri-card-ur.jpeg", tags: ["Big Mom Band", "Paramecia", "Pirate"] },
-        { id: "akainu-new-world", name: "Akainu (New World)", role: "ATK", portrait: "images/heroes/akainu/hero-akainu-new-world-card-ur.jpeg", tags: ["Marine", "Marine Admirals", "Logia Fruit"] },
-        { id: "cracker", name: "Cracker", role: "ATK", portrait: "images/heroes/cracker/hero-cracker-profile.jpeg", tags: ["Big Mom Band", "Paramecia", "Pirate"] },
-        { id: "smoothie", name: "Smoothie", role: "SUP", portrait: "images/heroes/smoothie/hero-smoothie-card-ur.jpeg", tags: ["Big Mom Band", "Pirate"] },
-        { id: "nekomamushi", name: "Nekomamushi", role: "SUP", portrait: "images/heroes/nekomamushi/hero-nekomamushi-card-ur.jpeg", tags: ["Wano Country", "Pirate"] },
-        { id: "otohime", name: "Otohime", role: "SUP", portrait: "images/heroes/otohime/hero-otohime-card-ur.jpeg", tags: ["Legendary", "Fish Man", "Royalty"] },
-        { id: "luffy-gear-4", name: "Luffy (Gear 4)", role: "ATK", portrait: "images/heroes/luffy-gear-4/hero-luffy-gear-4-card-ur.jpeg", tags: ["Strawhat Pirates", "Captain", "Paramecia"] },
-        { id: "zoro-new-world", name: "Zoro (New World)", role: "ATK", portrait: "images/heroes/zoro-new-world/hero-zoro-new-world-card-ssr.jpeg", tags: ["Strawhat Pirates", "Worst Generation", "Pirate"] },
-        { id: "enel", name: "Enel", role: "ATK", portrait: "images/heroes/enel/hero-enel-card-ssr.jpeg", tags: ["Logia Fruit", "Skypiea"] },
-        { id: "bartolomeo", name: "Bartolomeo", role: "DEF", portrait: "images/heroes/bartolomeo/hero-bartolomeo-card-ssr.jpeg", tags: ["Pirate", "Paramecia"] },
-      ];
+        {
+                "id": "",
+                "name": "Ranura abierta",
+                "role": "OPEN",
+                "rarity": "",
+                "portrait": "",
+                "tags": []
+        },
+        {
+                "id": "big-mom",
+                "name": "Big Mom",
+                "role": "ATK",
+                "rarity": "UR",
+                "portrait": "images/heroes/big-mom/hero-big-mom-card-ur.jpeg",
+                "tags": [
+                        "Pirate",
+                        "Four Emperors",
+                        "Big Mom Band",
+                        "Superman Fruit",
+                        "Paramecia",
+                        "Captain"
+                ]
+        },
+        {
+                "id": "rayleigh",
+                "name": "Rayleigh",
+                "role": "ATK",
+                "rarity": "UR",
+                "portrait": "images/heroes/rayleigh/hero-rayleigh-card-ur.jpeg",
+                "tags": [
+                        "No.1 Swordsman",
+                        "Legendary",
+                        "Pirate",
+                        "Sin fruta"
+                ]
+        },
+        {
+                "id": "kaido",
+                "name": "Kaido",
+                "role": "ATK",
+                "rarity": "UR",
+                "portrait": "images/heroes/kaido/kaido-hero-profile.jpeg",
+                "tags": [
+                        "Pirate",
+                        "Four Emperors",
+                        "Beasts Pirates",
+                        "Zoan Fruit",
+                        "Captain"
+                ]
+        },
+        {
+                "id": "katakuri",
+                "name": "Katakuri",
+                "role": "ATK",
+                "rarity": "UR",
+                "portrait": "images/heroes/katakuri/hero-katakuri-card-ur.jpeg",
+                "tags": [
+                        "Pirate",
+                        "Royal Deputy",
+                        "Big Mom Band",
+                        "Superman Fruit",
+                        "Paramecia"
+                ]
+        },
+        {
+                "id": "akainu-new-world",
+                "name": "Akainu",
+                "role": "ATK",
+                "rarity": "UR",
+                "portrait": "images/heroes/akainu/hero-akainu-new-world-card-ur.jpeg",
+                "tags": [
+                        "Marine Marshall",
+                        "Logia Fruit",
+                        "Marine"
+                ]
+        },
+        {
+                "id": "jack",
+                "name": "Jack",
+                "role": "DEF",
+                "rarity": "UR",
+                "portrait": "images/heroes/jack/hero-jack-card-ur.jpeg",
+                "tags": [
+                        "Pirate",
+                        "Beasts Pirates",
+                        "Zoan Fruit",
+                        "Fish Man"
+                ]
+        },
+        {
+                "id": "smoothie",
+                "name": "Smoothie",
+                "role": "SUP",
+                "rarity": "UR",
+                "portrait": "images/heroes/smoothie/hero-smoothie-card-ur.jpeg",
+                "tags": [
+                        "Pirate",
+                        "Big Mom Band",
+                        "Royal Deputy",
+                        "Superman Fruit",
+                        "Paramecia"
+                ]
+        },
+        {
+                "id": "luffy-gear-4",
+                "name": "Luffy (Gear 4)",
+                "role": "ATK",
+                "rarity": "UR",
+                "portrait": "images/heroes/luffy-gear-4/hero-luffy-gear-4-card-ur.jpeg",
+                "tags": [
+                        "A.S.L",
+                        "Worst Generation",
+                        "Superman Fruit",
+                        "Paramecia",
+                        "Pirate",
+                        "Captain",
+                        "Strawhat Pirates"
+                ]
+        },
+        {
+                "id": "enel",
+                "name": "Enel",
+                "role": "ATK",
+                "rarity": "SSR",
+                "portrait": "images/heroes/enel/hero-enel-card-ssr.jpeg",
+                "tags": [
+                        "Skypiea Residence",
+                        "Logia Fruit"
+                ]
+        },
+        {
+                "id": "zoro-new-world",
+                "name": "Zoro (New World)",
+                "role": "ATK",
+                "rarity": "SSR",
+                "portrait": "images/heroes/zoro-new-world/hero-zoro-new-world-card-ssr.jpeg",
+                "tags": [
+                        "Strawhat Pirates",
+                        "Worst Generation",
+                        "Pirate",
+                        "No.1 Swordsman"
+                ]
+        },
+        {
+                "id": "king",
+                "name": "King",
+                "role": "ATK",
+                "rarity": "UR",
+                "portrait": "images/heroes/king/hero-king-card-ur.jpeg",
+                "tags": [
+                        "Pirate",
+                        "Beasts Pirates",
+                        "Zoan Fruit",
+                        "Royal Deputy"
+                ]
+        },
+        {
+                "id": "nekomamushi",
+                "name": "Nekomamushi",
+                "role": "SUP",
+                "rarity": "UR",
+                "portrait": "images/heroes/nekomamushi/hero-nekomamushi-card-ur.jpeg",
+                "tags": [
+                        "Pirate",
+                        "Wano Country"
+                ]
+        },
+        {
+                "id": "jinbe-new-world",
+                "name": "Jinbe (New World)",
+                "role": "DEF",
+                "rarity": "UR",
+                "portrait": "images/heroes/jinbe-new-world/hero-jinbe-new-world-card-ur.jpeg",
+                "tags": [
+                        "Pirate",
+                        "Strawhat Pirates",
+                        "Fish Man"
+                ]
+        },
+        {
+                "id": "otohime",
+                "name": "Otohime",
+                "role": "SUP",
+                "rarity": "UR",
+                "portrait": "images/heroes/otohime/hero-otohime-card-ur.jpeg",
+                "tags": [
+                        "Legendary",
+                        "Fish Man",
+                        "Royalty"
+                ]
+        },
+        {
+                "id": "marco",
+                "name": "Marco",
+                "role": "SUP",
+                "rarity": "UR",
+                "portrait": "images/heroes/marco/hero-marco-card-ur.jpeg",
+                "tags": [
+                        "Zoan Fruit",
+                        "Pirate",
+                        "Whitebeard Pirates"
+                ]
+        },
+        {
+                "id": "cracker",
+                "name": "Cracker",
+                "role": "ATK",
+                "rarity": "UR",
+                "portrait": "images/heroes/cracker/hero-cracker-profile.jpeg",
+                "tags": [
+                        "Pirate",
+                        "Big Mom Band",
+                        "Superman Fruit",
+                        "Paramecia"
+                ]
+        },
+        {
+                "id": "luffy-gear-2",
+                "name": "Luffy (Gear 2)",
+                "role": "ATK",
+                "rarity": "SR",
+                "portrait": "images/heroes/luffy-gear-2/hero-luffy-gear-2-card-sr.jpeg",
+                "tags": [
+                        "A.S.L",
+                        "Superman Fruit",
+                        "Paramecia",
+                        "Strawhat Pirates",
+                        "Worst Generation",
+                        "Pirate",
+                        "Captain"
+                ]
+        },
+        {
+                "id": "bartolomeo",
+                "name": "Bartolomeo",
+                "role": "ATK",
+                "rarity": "SSR",
+                "portrait": "images/heroes/bartolomeo/hero-bartolomeo-card-ssr.jpeg",
+                "tags": [
+                        "Pirate",
+                        "Superman Fruit",
+                        "Paramecia"
+                ]
+        },
+        {
+                "id": "zoro",
+                "name": "Zoro",
+                "role": "ATK",
+                "rarity": "R",
+                "portrait": "images/heroes/zoro/hero-zoro-card-r.jpeg",
+                "tags": [
+                        "Strawhat Pirates",
+                        "Pirate",
+                        "No.1 Swordsman"
+                ]
+        },
+        {
+                "id": "usopp",
+                "name": "Usopp",
+                "role": "ATK",
+                "rarity": "N",
+                "portrait": "images/heroes/usopp/hero-usopp-card-n.jpeg",
+                "tags": [
+                        "Strawhat Pirates",
+                        "Pirate"
+                ]
+        },
+        {
+                "id": "aokiji",
+                "name": "Aokiji",
+                "role": "SUP",
+                "rarity": "UR",
+                "portrait": "images/heroes/aokiji/hero-aokiji-card-ur.jpeg",
+                "tags": [
+                        "Marine Admirals",
+                        "Logia Fruit",
+                        "Marine",
+                        "Control",
+                        "Ice"
+                ]
+        },
+        {
+                "id": "sengoku",
+                "name": "Sengoku",
+                "role": "DEF",
+                "rarity": "UR",
+                "portrait": "images/heroes/sengoku/hero-sengoku-card-ur.jpeg",
+                "tags": [
+                        "Marine Marshall",
+                        "Zoan Fruit",
+                        "Marine",
+                        "Tank",
+                        "Shield"
+                ]
+        },
+        {
+                "id": "perospero",
+                "name": "Perospero",
+                "role": "SUP",
+                "rarity": "UR",
+                "portrait": "images/heroes/perospero/hero-perospero-card-ur.jpeg",
+                "tags": [
+                        "Big Mom Band",
+                        "Pirate",
+                        "Superman Fruit",
+                        "Paramecia",
+                        "Control"
+                ]
+        },
+        {
+                "id": "tsuru",
+                "name": "Tsuru",
+                "role": "SUP",
+                "rarity": "UR",
+                "portrait": "images/heroes/tsuru/hero-tsuru-card-ur.jpeg",
+                "tags": [
+                        "Marine",
+                        "Marine Staff",
+                        "Superman Fruit",
+                        "Paramecia",
+                        "Healer"
+                ]
+        },
+        {
+                "id": "shiki",
+                "name": "Shiki",
+                "role": "ATK",
+                "rarity": "UR",
+                "portrait": "images/heroes/shiki/hero-shiki-card-ur.jpeg",
+                "tags": [
+                        "Legendary",
+                        "Pirate",
+                        "No.1 Swordsman",
+                        "Control",
+                        "Flying Pirate"
+                ]
+        },
+        {
+                "id": "moria",
+                "name": "Moria",
+                "role": "SUP",
+                "rarity": "SSR",
+                "portrait": "images/heroes/moria/hero-moria-card-ssr.jpeg",
+                "tags": [
+                        "Pirate",
+                        "Warlord",
+                        "Superman Fruit",
+                        "Paramecia",
+                        "Control"
+                ]
+        },
+        {
+                "id": "law",
+                "name": "Law",
+                "role": "SUP",
+                "rarity": "SSR",
+                "portrait": "images/heroes/law/hero-law-card-ssr.jpeg",
+                "tags": [
+                        "Pirate",
+                        "Worst Generation",
+                        "Superman Fruit",
+                        "Paramecia",
+                        "Healer"
+                ]
+        },
+        {
+                "id": "perona",
+                "name": "Perona",
+                "role": "SUP",
+                "rarity": "SSR",
+                "portrait": "images/heroes/perona/hero-perona-card-ssr.jpeg",
+                "tags": [
+                        "Pirate",
+                        "Thriller Bark",
+                        "Superman Fruit",
+                        "Paramecia",
+                        "Control"
+                ]
+        }
+];
 
       const defaultFormations = [
         {
-          name: "DaÃ±o crÃ­tico estable",
-          purpose: "Arena / progreso general",
-          front1: "kaido",
-          front2: "sengoku",
-          back1: "big-mom",
-          back2: "rayleigh",
-          back3: "marco",
-          notes:
-            "Doble frente resistente para que Big Mom y Rayleigh tengan turnos. Marco sostiene con curaciÃ³n y resurrecciÃ³n.",
-          advice:
-            "Usala cuando no sabes quÃ© vas a enfrentar. Si te falta daÃ±o, cambia Marco por Akainu; si te falta aguante, deja a Marco y sube prioridad de gear DEF en los frontales.",
+                "name": "Más fuerte actual",
+                "purpose": "Arena / progreso general",
+                "front1": "jack",
+                "front2": "kaido",
+                "back1": "big-mom",
+                "back2": "rayleigh",
+                "back3": "marco",
+                "notes": "Jack y Kaido forman el frente más pesado registrado: Jack aguanta y presiona, Kaido suma cuerpo y afinidad Zoan. Big Mom y Rayleigh son los carries; Marco sostiene la pelea.",
+                "advice": "Es la plantilla más completa para pelear sin saber el rival. Si el equipo ya sobrevive bien, prueba cambiar Marco por Akainu o Katakuri y compara daño total. Si mueres rápido, deja a Marco y prioriza gear DEF en Jack/Kaido."
         },
         {
-          name: "Big Mom Band",
-          purpose: "Sinergia de banda",
-          front1: "sengoku",
-          front2: "smoothie",
-          back1: "big-mom",
-          back2: "katakuri",
-          back3: "cracker",
-          notes:
-            "Big Mom, Katakuri, Cracker y Smoothie activan el nÃºcleo Big Mom Band. Sengoku entra como tanque externo porque todavÃ­a falta confirmar otro frontal perfecto de la banda.",
-          advice:
-            "Big Mom debe ser el carry mejor equipado. Katakuri y Cracker aportan daÃ±o constante; Smoothie ayuda a sostener. Si desbloqueas un tanque Big Mom Band fuerte, reemplaza a Sengoku.",
+                "name": "Boss / daño máximo",
+                "purpose": "Ranking de daño",
+                "front1": "jack",
+                "front2": "kaido",
+                "back1": "big-mom",
+                "back2": "rayleigh",
+                "back3": "akainu-new-world",
+                "notes": "Versión más agresiva: sacrifica sustain para juntar tres fuentes fuertes de daño. Big Mom aporta crítico y escalado, Rayleigh daño crítico, Akainu daño multi-hit/área.",
+                "advice": "Usala en Boss si Jack y Kaido aguantan suficiente. Si el jefe mata antes de rotar habilidades, cambia Akainu por Marco, Tsuru o Law; en Boss importa el daño final, no solo poner más atacantes."
         },
         {
-          name: "Legendarios",
-          purpose: "NÃºcleo Legendary / peleas largas",
-          front1: "kaido",
-          front2: "sengoku",
-          back1: "rayleigh",
-          back2: "shiki",
-          back3: "otohime",
-          notes:
-            "Rayleigh y Shiki dan presiÃ³n ofensiva Legendary. Kaido y Sengoku absorben; Otohime aporta soporte para alargar la pelea.",
-          advice:
-            "Buena para probar daÃ±o de carries caros. Rayleigh necesita stats ofensivas; Shiki funciona mejor si el equipo aguanta suficientes turnos para aprovechar combo y crit.",
+                "name": "Big Mom Band pura",
+                "purpose": "Solo Big Mom Band",
+                "front1": "perospero",
+                "front2": "smoothie",
+                "back1": "big-mom",
+                "back2": "katakuri",
+                "back3": "cracker",
+                "notes": "Usa los cinco Big Mom Band registrados: Big Mom, Katakuri, Cracker, Smoothie y Perospero. Big Mom queda como carry principal y Smoothie aporta soporte/curación.",
+                "advice": "Es bonita para activar banda completa, pero no es la más segura porque falta un tanque puro de Big Mom Band. Si se cae rápido, conserva Big Mom/Katakuri/Cracker y cambia Perospero o Smoothie por Jack, Kaido o Sengoku."
         },
         {
-          name: "Marines",
-          purpose: "Marine / Logia",
-          front1: "sengoku",
-          front2: "",
-          back1: "akainu-new-world",
-          back2: "aokiji",
-          back3: "tsuru",
-          notes:
-            "Sengoku activa defensa y bonifica Marine Admirals. Akainu aporta daÃ±o, Aokiji control y Tsuru curaciÃ³n/limpieza.",
-          advice:
-            "Usala contra equipos que dependen de buffs o de moverse primero. Aokiji congela y dispersa; Sengoku compra tiempo para que Akainu limpie. La segunda ranura frontal queda editable para tu mejor DEF.",
+                "name": "Marines + tanque",
+                "purpose": "Marine / control / limpieza",
+                "front1": "sengoku",
+                "front2": "jack",
+                "back1": "akainu-new-world",
+                "back2": "aokiji",
+                "back3": "tsuru",
+                "notes": "Sengoku activa núcleo Marine y compra tiempo. Jack entra como segundo frontal externo porque en los Marines registrados falta otro DEF puro. Akainu daña, Aokiji controla y Tsuru limpia/cura.",
+                "advice": "Muy buena contra equipos con buffs o equipos que dependen de moverse primero. Si quieres una versión más pura de Marine, deja la segunda ranura frontal abierta hasta conseguir otro Marine defensivo fuerte."
         },
         {
-          name: "Control econÃ³mico",
-          purpose: "SSR / control y sustain",
-          front1: "moria",
-          front2: "bartolomeo",
-          back1: "law",
-          back2: "perona",
-          back3: "perospero",
-          notes:
-            "FormaciÃ³n de control con SSR y soportes: Moria sobrevive, Bartolomeo protege, Law cura, Perona aplica Terror y Perospero aÃ±ade control/Vulnerable.",
-          advice:
-            "Ideal para probar alternativas si no tienes todos los UR subidos. No busca explotar daÃ±o mÃ¡ximo: busca negar turnos, sobrevivir y ganar por desgaste.",
+                "name": "Solo legendarios confirmados",
+                "purpose": "Legendary puro / plantilla abierta",
+                "front1": "rayleigh",
+                "front2": "shiki",
+                "back1": "otohime",
+                "back2": "",
+                "back3": "",
+                "notes": "Solo incluye los Legendary confirmados en la wiki: Rayleigh, Shiki y Otohime. Quedan dos ranuras abiertas porque aún no tenemos cinco Legendary confirmados en fichas completas.",
+                "advice": "No es la formación más fuerte todavía: Rayleigh y Shiki no quieren recibir todo el daño frontal. Úsala como plantilla de colección y completa las dos ranuras cuando confirmemos más Legendary."
         },
         {
-          name: "Boss / daÃ±o mÃ¡ximo",
-          purpose: "Boss / rankings de daÃ±o",
-          front1: "kaido",
-          front2: "",
-          back1: "big-mom",
-          back2: "katakuri",
-          back3: "akainu-new-world",
-          notes:
-            "Tres carries fuertes para medir daÃ±o bruto. Kaido intenta sostener el frente; la segunda ranura queda libre para tu mejor tanque o buff real.",
-          advice:
-            "Usala en Boss si el equipo no muere demasiado rÃ¡pido. Si cae antes de rotar habilidades, cambia un carry por Marco, Tsuru o Law y compara el daÃ±o total, no solo el daÃ±o por turno.",
+                "name": "Legendarios competitiva",
+                "purpose": "Legendary con frente real",
+                "front1": "jack",
+                "front2": "kaido",
+                "back1": "rayleigh",
+                "back2": "shiki",
+                "back3": "otohime",
+                "notes": "Mantiene el núcleo Legendary conocido en retaguardia y usa Jack/Kaido para que Rayleigh y Shiki tengan turnos. Otohime ayuda a alargar la pelea.",
+                "advice": "Más jugable que la versión pura. Si Shiki no rinde por falta de aguante o equipo, prueba Big Mom en su lugar y compara daño crítico real."
         },
-      ];
+        {
+                "name": "Zoan / Beasts",
+                "purpose": "Frente duro y afinidad Zoan",
+                "front1": "jack",
+                "front2": "kaido",
+                "back1": "king",
+                "back2": "marco",
+                "back3": "sengoku",
+                "notes": "Junta varios Zoan registrados: Jack, Kaido, King, Marco y Sengoku. Tiene mucho cuerpo y una mezcla de daño, soporte y defensa.",
+                "advice": "Buena cuando el problema es sobrevivir. King aporta daño; Marco puede sostener; Sengoku refuerza defensa. Si necesitas más daño explosivo, cambia Sengoku por Big Mom o Rayleigh."
+        },
+        {
+                "name": "Control económico",
+                "purpose": "SSR / control y sustain",
+                "front1": "moria",
+                "front2": "bartolomeo",
+                "back1": "law",
+                "back2": "perona",
+                "back3": "perospero",
+                "notes": "Formación de control con SSR y soportes: Moria reduce curación y sobrevive, Bartolomeo protege, Law cura, Perona aplica Terror y Perospero añade control/Vulnerable.",
+                "advice": "Ideal si no tienes todos los UR subidos. No busca explotar daño máximo: busca negar turnos, sobrevivir y ganar por desgaste."
+        }
+];
 
       const storageKey = "opIdlePirateFormations";
       const storageVersionKey = "opIdlePirateFormationsVersion";
-      const storageVersion = "3";
+      const storageVersion = "5";
       const list = document.querySelector("#formation-list");
       const template = document.querySelector("#formation-card-template");
       const picker = document.querySelector("#hero-picker");
@@ -389,7 +753,7 @@
         list.innerHTML = "";
         formations.forEach((formation, index) => {
           const card = template.content.firstElementChild.cloneNode(true);
-          card.querySelector("h3").textContent = formation.name || "FormaciÃ³n sin nombre";
+          card.querySelector("h3").textContent = formation.name || "Formación sin nombre";
           card.querySelector(".formation-purpose").textContent = formation.purpose || "Objetivo pendiente";
           Object.entries(slotLabels).forEach(([slotKey, label]) => {
             renderSlot(card.querySelector(`[data-slot="${slotKey}"]`), formation[slotKey], label, index, slotKey);
@@ -432,7 +796,7 @@
         const formations = loadFormations();
         const formation = formations[formationIndex];
         activePick = { formationIndex, slotKey };
-        pickerTitle.textContent = `Elegir hÃ©roe para ${slotLabels[slotKey]}`;
+        pickerTitle.textContent = `Elegir héroe para ${slotLabels[slotKey]}`;
         pickerGrid.innerHTML = "";
         const used = getUsedHeroIds(formation, slotKey);
         const currentHero = formation[slotKey] || "";
@@ -448,7 +812,7 @@
             ? `<img src="${hero.portrait}" alt="${hero.name}" /><span>${hero.name}</span><small class="role-pill role-${hero.role.toLowerCase()}">${hero.role}</small>`
             : `<span class="hero-picker-open">Libre</span><small>Vaciar ranura</small>`;
           if (disabled) {
-            button.title = "Ya estÃ¡ usado en esta formaciÃ³n";
+            button.title = "Ya está usado en esta formación";
           }
           button.addEventListener("click", () => selectHero(hero.id));
           pickerGrid.append(button);
@@ -485,14 +849,14 @@
       document.querySelector("#add-formation").addEventListener("click", () => {
         const formations = loadFormations();
         formations.push({
-          name: "Nueva formaciÃ³n",
+          name: "Nueva formación",
           purpose: "Objetivo pendiente",
           front1: "",
           front2: "",
           back1: "",
           back2: "",
           back3: "",
-          notes: "Completar con pruebas, counters o modo recomendado. Toca cada ranura para elegir hÃ©roe.",
+          notes: "Completar con pruebas, counters o modo recomendado. Toca cada ranura para elegir héroe.",
         });
         saveFormations(formations);
         renderFormations();
