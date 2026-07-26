@@ -1,0 +1,18 @@
+{
+  "name": "One Piece Idle Pirate Wiki",
+  "short_name": "Idle Pirate Wiki",
+  "description": "Wiki no oficial para One Piece Idle Pirate.",
+  "start_url": "index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#0b1118",
+  "theme_color": "#0b1118",
+  "icons": [
+    {
+      "src": "images/ui/icono.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg",
+      "purpose": "any maskable"
+    }
+  ]
+}

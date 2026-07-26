@@ -13,6 +13,7 @@ const entries = [
   "index.css",
   "language.js",
   "Caddyfile",
+  "site.webmanifest",
   "altar.html",
   "arena.html",
   "boss.html",
