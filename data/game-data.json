@@ -2709,7 +2709,7 @@
       "layout": "2 front heroes and 3 back heroes",
       "editable": true,
       "editFlow": "Click a formation slot/image to open a visual hero picker modal. Used heroes are disabled to prevent duplicates.",
-      "storage": "localStorage key opIdlePirateFormations, version opIdlePirateFormationsVersion=8",
+      "storage": "localStorage key opIdlePirateFormations, version opIdlePirateFormationsVersion=10",
       "initialRecommendations": [
         "Mas fuerte actual: Jack, Law, Perona, Cracker y Big Mom",
         "Boss / dano maximo: Jack, Kaido, Rayleigh, Cracker y Big Mom",
@@ -2718,7 +2718,8 @@
         "Dano economico SSR: Jinbe, Law, Perona, Cavendish y Bartolomeo",
         "Marines + tanque y Zoan / Beasts quedan como plantillas alternativas",
         "Worst Generation magnetica: Bege, Law, Kid, X Drake y Luffy (New World)",
-        "Strawhat New World: Franky, Chopper, Luffy, Zoro y Sanji"
+        "Strawhat New World Back Destroy: Franky, Chopper, Luffy, Brook y Sanji",
+        "Strawhat New World: Franky, Chopper, Nami, Zoro y Luffy"
       ],
       "pendingData": [
         "medir dano real de Big Mom vs Rayleigh vs Cracker en Boss con mismos items y diales",
@@ -2797,6 +2798,34 @@
             "Bartolomeo"
           ],
           "reading": "Opcion SSR para aguantar y ganar por habilidades: Jinbe reduce dano, Law cura, Perona controla, Cavendish debilita y Bartolomeo puede hacer de carry."
+        },
+        {
+          "name": "Strawhat New World Back Destroy",
+          "useCase": "Strawhat Pirates / sustain / back destroy",
+          "front": [
+            "Franky (New World)",
+            "Chopper (New World)"
+          ],
+          "back": [
+            "Luffy (New World)",
+            "Brook (New World)",
+            "Sanji (New World)"
+          ],
+          "reading": "Franky y Chopper sostienen el frente; Luffy, Brook y Sanji presionan desde atras para destruir retaguardia o cerrar objetivos blandos."
+        },
+        {
+          "name": "Strawhat New World",
+          "useCase": "Strawhat Pirates / sustain / team destroy",
+          "front": [
+            "Franky (New World)",
+            "Chopper (New World)"
+          ],
+          "back": [
+            "Nami (New World)",
+            "Zoro (New World)",
+            "Luffy (New World)"
+          ],
+          "reading": "Nami aporta buffs de critico y soporte, mientras Zoro y Luffy hacen el dano principal con Franky/Chopper sosteniendo la pelea."
         }
       ]
     }
