@@ -340,12 +340,18 @@
       const sections = [...document.querySelectorAll("[data-search-block]")];
       const emptyState = document.querySelector("#empty-state");
 
+      const normalizeText = (value) =>
+        value
+          .toLowerCase()
+          .normalize("NFD")
+          .replace(/[\u0300-\u036f]/g, "");
+
       searchInput.addEventListener("input", () => {
-        const query = searchInput.value.trim().toLowerCase();
+        const query = normalizeText(searchInput.value.trim());
         let visibleItems = 0;
 
         searchItems.forEach((item) => {
-          const matches = item.textContent.toLowerCase().includes(query);
+          const matches = normalizeText(item.textContent).includes(query);
           item.hidden = query.length > 0 && !matches;
           if (!item.hidden) visibleItems += 1;
         });

@@ -1,0 +1,8 @@
+wiki-onepiece.duckdns.org {
+  root * /usr/share/caddy
+  encode gzip
+  header {
+    X-Content-Type-Options nosniff
+  }
+  file_server
+}
