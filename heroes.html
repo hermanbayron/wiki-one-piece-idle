@@ -89,6 +89,48 @@
         </div>
       </section>
 
+      <section class="section alt" data-search-block>
+        <div class="section-heading">
+          <p class="eyebrow">Prioridades confirmadas</p>
+          <h2>Mejores opciones por función</h2>
+          <p>
+            Este ranking combina capturas, pruebas propias y formaciones que ya funcionaron. No es una tier list fija: cambia según nivel, awaken, items, diales, velocidad y rival.
+          </p>
+        </div>
+        <div class="role-overview-grid priority-rank-grid">
+          <article class="role-overview-card">
+            <span class="status-badge confirmed">Tanque</span>
+            <h3>Jack</h3>
+            <p>Es el tanque más fuerte registrado: revive, reparte reducción de daño y protege con escudo. Prioriza gear DEF y supervivencia.</p>
+          </article>
+          <article class="role-overview-card">
+            <span class="status-badge confirmed">Soporte</span>
+            <h3>Law > Otohime > Perona</h3>
+            <p>Law es el soporte más completo. Otohime destaca por buffs ofensivos y Perona por control/debilitación. Necesitan velocidad para actuar antes que los carries.</p>
+          </article>
+          <article class="role-overview-card">
+            <span class="status-badge observed">Daño SSR barato</span>
+            <h3>Bartolomeo</h3>
+            <p>Es la mejor opción económica de daño SSR observada. Cavendish funciona como suplente si faltan piezas o afinidades.</p>
+          </article>
+          <article class="role-overview-card">
+            <span class="status-badge pending">Big Mom</span>
+            <h3>Necesita Big Mom Band</h3>
+            <p>Big Mom escala mucho mejor con hijos o aliados Big Mom Band. Sin esa sinergia pierde parte de su explosividad real.</p>
+          </article>
+          <article class="role-overview-card">
+            <span class="status-badge pending">Marco</span>
+            <h3>Cuidado con revive</h3>
+            <p>No conviene junto a un tanque que ya revive en primera posición, porque puede reemplazar ese revive por uno más débil. Úsalo con tanques sin revive propio.</p>
+          </article>
+          <article class="role-overview-card">
+            <span class="status-badge observed">Velocidad</span>
+            <h3>Soportes primero</h3>
+            <p>Los soportes deberían llevar objetos y diales de velocidad/movimiento para aplicar curas, buffs o control antes de que los DPS gasten su turno fuerte.</p>
+          </article>
+        </div>
+      </section>
+
       <section class="section alt">
         <div class="section-heading">
           <p class="eyebrow">Héroes registrados</p>
@@ -216,6 +258,7 @@
           </label>
         </div>
         <div id="hero-count" class="strategy-note" aria-live="polite"></div>
+        <div id="hero-podium" class="hero-podium" hidden></div>
         <p class="catalog-help">
           Usa los filtros para comparar carries, tanques, soportes, afinidades y fichas completas o parciales. Las habilidades con valores confirmados salen dentro del popup de cada héroe.
         </p>
@@ -3629,6 +3672,7 @@
 
       const heroCatalog = document.querySelector("#hero-catalog");
       const heroCount = document.querySelector("#hero-count");
+      const heroPodium = document.querySelector("#hero-podium");
       const filters = {
         search: document.querySelector("#hero-search"),
         rarity: document.querySelector("#hero-rarity"),
@@ -3656,6 +3700,37 @@
         SR: 2,
         R: 3,
         N: 4,
+      };
+
+      const mechanicRankings = {
+        "aoe-damage": ["Big Mom", "Rayleigh", "Akainu", "Luffy (Gear 4)", "Kid", "Fujitora", "Perospero", "Cavendish"],
+        "single-burst": ["Bartolomeo", "X Drake", "Franky (New World)", "Bege", "Jack", "Moria"],
+        "backline-focus": ["Brook (New World)", "Kid", "Chopper (New World)", "Jack", "Zoro (New World)"],
+        execute: ["Rayleigh", "Crocodile"],
+        "heal-reduction": ["Tsuru", "Moria", "Luffy (Gear 4)", "Kaido"],
+        vulnerable: ["Jack", "Perona", "Rayleigh", "Otohime"],
+        "damage-down": ["Perona", "Jack", "Smoothie", "Akainu", "Sengoku"],
+        "hit-down": ["Zoro (New World)", "Fujitora", "Moria"],
+        terror: ["Big Mom", "Perona", "Perospero", "Enel"],
+        petrify: ["Perospero"],
+        taunt: ["Bege"],
+        dispel: ["X Drake", "Nami (New World)"],
+        healing: ["Law", "Otohime", "Chopper (New World)", "Marco", "Smoothie", "Perona"],
+        shield: ["Franky (New World)", "Chopper (New World)", "Jack", "Bege", "Kid"],
+        "damage-reduction": ["Jack", "Sengoku", "Franky (New World)", "Bege", "Perona"],
+        "damage-buff": ["Otohime", "Law", "Perona", "Chopper (New World)", "Big Mom"],
+        "crit-buff": ["Otohime", "Nami (New World)", "Big Mom", "Rayleigh", "Kid"],
+        "combo-buff": ["Franky (New World)", "X Drake", "Fujitora", "Kid"],
+        energy: ["Law", "Otohime", "Nami (New World)"],
+        revive: ["Jack", "Kaido", "Moria", "Marco", "Brook (New World)"],
+      };
+
+      const mechanicRankingNotes = {
+        "heal-reduction": "Prioridad basada en bloqueo o reducción de curación visible: Tsuru destaca por Banned Healing, Moria por Heal Reduce alto, Luffy Gear 4 aporta reducción en área.",
+        healing: "Ranking práctico de soporte: Law primero por utilidad total, Otohime por buffs y cura, Perona como apoyo/control.",
+        "damage-reduction": "Jack lidera porque combina aguante, revive y mitigación para el equipo.",
+        "single-burst": "Bartolomeo queda marcado como el mejor daño SSR barato; Cavendish sirve como suplente cuando falta daño económico.",
+        revive: "Marco es fuerte cuando el tanque no revive; con Jack o Kaido puede reemplazar un revive mejor.",
       };
 
       const mechanicFilters = {
@@ -3834,6 +3909,16 @@
         return keywordScore(text, definition);
       }
 
+      function manualMechanicRank(hero, mechanic) {
+        const ranking = mechanicRankings[mechanic] || [];
+        const position = ranking.indexOf(hero.name);
+        return position === -1 ? 0 : 1000 - position;
+      }
+
+      function mechanicValue(hero, mechanic) {
+        return manualMechanicRank(hero, mechanic) + mechanicScore(hero, mechanic);
+      }
+
       function heroMatches(hero) {
         const query = normalize(filters.search.value.trim());
         const text = normalize([hero.name, hero.rarity, hero.role, ...hero.affinities].join(" "));
@@ -3922,6 +4007,48 @@
         `;
       }
 
+      function renderPodiumHero(entry, rank, mechanic) {
+        const labels = ["Trono", "Plata", "Bronce"];
+        const medals = ["gold", "silver", "bronze"];
+        const value = mechanicValue(entry.hero, mechanic);
+        return `
+          <button class="hero-podium-card podium-${medals[rank]}" type="button" data-hero-index="${entry.index}" aria-label="Ver ficha de ${entry.hero.name}">
+            <span class="podium-medal">${labels[rank]}</span>
+            <figure>
+              ${entry.hero.portrait ? `<img src="${entry.hero.portrait}" alt="${entry.hero.name}" />` : `<div class="hero-portrait placeholder">${entry.hero.name.slice(0, 2)}</div>`}
+            </figure>
+            <div>
+              <strong>${entry.hero.name}</strong>
+              <span>${entry.hero.rarity} · ${entry.hero.role}</span>
+              <small>Puntaje ${value}</small>
+            </div>
+          </button>
+        `;
+      }
+
+      function renderMechanicPodium(entries, mechanic) {
+        if (!mechanic || !entries.length) {
+          heroPodium.hidden = true;
+          heroPodium.innerHTML = "";
+          return [];
+        }
+
+        const top = entries.slice(0, 3);
+        const note = mechanicRankingNotes[mechanic] || "El orden combina prioridad manual de la wiki con porcentajes detectados en las habilidades.";
+        heroPodium.hidden = false;
+        heroPodium.innerHTML = `
+          <div class="hero-podium-heading">
+            <p class="eyebrow">Top de mecánica</p>
+            <h3>${mechanicFilters[mechanic].label}</h3>
+            <p>${note}</p>
+          </div>
+          <div class="hero-podium-grid">
+            ${top.map((entry, rank) => renderPodiumHero(entry, rank, mechanic)).join("")}
+          </div>
+        `;
+        return top.map((entry) => entry.index);
+      }
+
       function renderHero(hero, index) {
         const rarityClass = `rarity-${hero.rarity.toLowerCase()}`;
         return `
@@ -3998,23 +4125,26 @@
       }
 
       function renderCatalog() {
+        const mechanic = filters.mechanic.value;
         const visibleheroes = heroes
           .map((hero, index) => ({ hero, index }))
           .filter(({ hero }) => heroMatches(hero))
           .sort((a, b) => {
-            const mechanic = filters.mechanic.value;
             if (mechanic) {
-              const scoreDiff = mechanicScore(b.hero, mechanic) - mechanicScore(a.hero, mechanic);
-              if (scoreDiff) return scoreDiff;
+              const valueDiff = mechanicValue(b.hero, mechanic) - mechanicValue(a.hero, mechanic);
+              if (valueDiff) return valueDiff;
             }
             const rarityDiff = rarityOrder[a.hero.rarity] - rarityOrder[b.hero.rarity];
             if (rarityDiff) return rarityDiff;
             return a.hero.name.localeCompare(b.hero.name);
           });
-        heroCatalog.innerHTML = visibleheroes
+        const podiumIndexes = renderMechanicPodium(visibleheroes, mechanic);
+        const catalogHeroes = mechanic
+          ? visibleheroes.filter(({ index }) => !podiumIndexes.includes(index))
+          : visibleheroes;
+        heroCatalog.innerHTML = catalogHeroes
           .map(({ hero, index }) => renderHero(hero, index))
           .join("");
-        const mechanic = filters.mechanic.value;
         const mechanicLabel = mechanic ? ` - ordenados por ${mechanicFilters[mechanic].label.toLowerCase()}` : "";
         heroCount.textContent = `${visibleheroes.length} héroe${visibleheroes.length === 1 ? "" : "s"} visibles${mechanicLabel}.`;
       }

@@ -70,6 +70,7 @@
               placeholder="Ej: poder, diamantes, ciudad, héroes..."
               autocomplete="off"
             />
+            <div id="global-search-results" class="global-search-results" hidden></div>
           </div>
         </div>
       </section>
@@ -91,6 +92,39 @@
           <span>Estado</span>
           <strong>Wiki en expansión</strong>
         </article>
+      </section>
+
+      <section class="section" data-search-block>
+        <div class="section-heading">
+          <p class="eyebrow">Checklist diario</p>
+          <h2>Over Pirate: tareas para no perder recursos</h2>
+          <p>
+            Las capturas nuevas muestran un panel de misiones diarias y semanales. Sirve como rutina rápida para reclamar EXP, monedas, cristales, fragments y progreso acumulado.
+          </p>
+        </div>
+        <div class="priority-strip checklist-strip">
+          <article data-search-item>
+            <strong>Diario básico</strong>
+            <p>Advanced Summon, Haki Training Room, Resource, Fast Idle, Market, Friends, Guild y Arena aparecen como tareas repetibles.</p>
+          </article>
+          <article data-search-item>
+            <strong>Progreso semanal</strong>
+            <p>Upgrade de héroes, Finish Move, equipo a 5 estrellas, arena, pesca, voyage, boss y summit war suman recompensas grandes.</p>
+          </article>
+          <article data-search-item>
+            <strong>Combate perdido</strong>
+            <p>La pantalla Battle Lost recomienda revisar Summon, Hero y Finishing Move; las estadísticas separan daño, heal/shield y daño recibido.</p>
+          </article>
+        </div>
+        <details class="wiki-disclosure">
+          <summary>Ver capturas del checklist</summary>
+          <div class="strategy-grid">
+            <figure><img src="images/checklist/over-pirate-daily-1.jpeg" alt="Checklist diario Over Pirate" /><figcaption>Misiones diarias de Over Pirate.</figcaption></figure>
+            <figure><img src="images/checklist/over-pirate-weekly-1.jpeg" alt="Checklist semanal Over Pirate" /><figcaption>Misiones semanales y objetivos largos.</figcaption></figure>
+            <figure><img src="images/combate/battle-lost-power-methods.jpeg" alt="Battle Lost recomendaciones" /><figcaption>Battle Lost sugiere mejorar Summon, Hero y Finishing Move.</figcaption></figure>
+            <figure><img src="images/combate/battle-lost-statistics-attackers.jpeg" alt="Estadísticas de combate" /><figcaption>Estadísticas para comparar daño, curación, escudo y daño recibido.</figcaption></figure>
+          </div>
+        </details>
       </section>
 
       <section class="section alt" data-search-block>
@@ -343,12 +377,41 @@
       const searchItems = [...document.querySelectorAll("[data-search-item]")];
       const sections = [...document.querySelectorAll("[data-search-block]")];
       const emptyState = document.querySelector("#empty-state");
+      const globalSearchResults = document.querySelector("#global-search-results");
+      const siteSearchPages = [
+        { title: "Héroes", href: "heroes.html", text: "catalogo filtros habilidades daño curacion soporte tanque afinidades big mom jack law perona kaido bartolomeo" },
+        { title: "Formaciones", href: "formaciones.html", text: "arena boss progreso big mom band legendarios marines strawhat importar exportar equipos" },
+        { title: "Instance", href: "instance.html", text: "resource gear dial exp breakthrough forge enhance crystal dust limite diario gemas" },
+        { title: "Boss", href: "boss.html", text: "boss contest sea train voyage enemy incoming daño ranking recompensas" },
+        { title: "Arena", href: "arena.html", text: "pvp ranking intentos lineup store leaderboard" },
+        { title: "Materiales", href: "materiales.html", text: "exp pass breakthrough pass plantas shards gems gold dials gear" },
+        { title: "Vegapunk", href: "vegapunk.html", text: "sss lab vegapunk laboratorio medicine herb plantas materiales" },
+        { title: "Combate", href: "combate.html", text: "peleas turnos daño estadisticas heal shield revive velocidad buffs debuffs" },
+        { title: "Estrategia", href: "estrategia.html", text: "consejos daño maximo arena progreso mejores heroes rankings pruebas" },
+        { title: "Market", href: "market.html", text: "tienda market vip oro diamantes descuentos refresh compra" },
+      ];
 
       const normalizeText = (value) =>
         value
           .toLowerCase()
           .normalize("NFD")
           .replace(/[\u0300-\u036f]/g, "");
+
+      function renderGlobalResults(query) {
+        if (!query) {
+          globalSearchResults.hidden = true;
+          globalSearchResults.innerHTML = "";
+          return 0;
+        }
+        const matches = siteSearchPages.filter((page) =>
+          normalizeText(`${page.title} ${page.text}`).includes(query)
+        );
+        globalSearchResults.hidden = false;
+        globalSearchResults.innerHTML = matches.length
+          ? matches.map((page) => `<a href="${page.href}"><strong>${page.title}</strong><span>${page.text.split(" ").slice(0, 10).join(" ")}</span></a>`).join("")
+          : "<p>No hay coincidencias globales.</p>";
+        return matches.length;
+      }
 
       searchInput.addEventListener("input", () => {
         const query = normalizeText(searchInput.value.trim());
@@ -367,7 +430,8 @@
           section.hidden = query.length > 0 && !hasVisibleItem;
         });
 
-        emptyState.hidden = visibleItems !== 0;
+        const globalMatches = renderGlobalResults(query);
+        emptyState.hidden = visibleItems !== 0 || globalMatches !== 0;
       });
     </script>
     <script src="language.js"></script>
