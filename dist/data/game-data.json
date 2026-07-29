@@ -2047,7 +2047,25 @@
         "Foco en retaguardia",
         "Magnetic Force"
       ],
-      "advancedFiltersNote": "Los filtros avanzados leen texto de habilidades confirmado y ordenan primero por coincidencia/potencia visible de la mecanica."
+      "advancedFiltersNote": "Los filtros avanzados leen texto de habilidades confirmado y ordenan primero por coincidencia/potencia visible de la mecanica.",
+      "affinityCorrections": {
+        "Paramecia": [
+          "Bartolomeo",
+          "Big Mom",
+          "Cracker",
+          "Fujitora",
+          "Katakuri",
+          "Law",
+          "Luffy (Gear 2)",
+          "Luffy (Gear 4)",
+          "Moria",
+          "Perona",
+          "Perospero",
+          "Smoothie",
+          "Tsuru"
+        ],
+        "note": "Added Paramecia alongside Superman Fruit where the hero's fruit is Paramecia/special Paramecia and the tag was missing."
+      }
     },
     "materials": {
       "generalObserved": {
@@ -2868,4 +2886,4 @@
       }
     }
   }
-}\n
+}
