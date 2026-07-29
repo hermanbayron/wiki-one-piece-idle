@@ -2029,7 +2029,25 @@
         "Fujitora",
         "Law",
         "Perona"
-      ]
+      ],
+      "advancedFilters": [
+        "Daño a todos los enemigos",
+        "Mucho daño a 1 enemigo",
+        "Reduce o bloquea curación",
+        "Vulnerable",
+        "Terror",
+        "Petrify",
+        "Freeze / Frost",
+        "Taunt",
+        "Escudos",
+        "Curación",
+        "Buffs de daño, crítico, combo y energía",
+        "Dispel",
+        "Revive / invencible",
+        "Foco en retaguardia",
+        "Magnetic Force"
+      ],
+      "advancedFiltersNote": "Los filtros avanzados leen texto de habilidades confirmado y ordenan primero por coincidencia/potencia visible de la mecanica."
     },
     "materials": {
       "generalObserved": {
@@ -2850,4 +2868,4 @@
       }
     }
   }
-}
+}\n

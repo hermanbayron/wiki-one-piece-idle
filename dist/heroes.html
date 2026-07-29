@@ -180,6 +180,40 @@
               <option value="pending">Pendientes</option>
             </select>
           </label>
+          <label>
+            Mecánica
+            <select id="hero-mechanic">
+              <option value="">Todas</option>
+              <optgroup label="Daño">
+                <option value="aoe-damage">Daño a todos los enemigos</option>
+                <option value="single-burst">Mucho daño a 1 enemigo</option>
+                <option value="backline-focus">Foco en retaguardia</option>
+                <option value="execute">Remate / más daño a bajo HP</option>
+                <option value="magnetic-force">Magnetic Force</option>
+              </optgroup>
+              <optgroup label="Debuffs y control">
+                <option value="heal-reduction">Reduce o bloquea curación</option>
+                <option value="vulnerable">Aplica Vulnerable</option>
+                <option value="damage-down">Reduce daño enemigo</option>
+                <option value="hit-down">Reduce HIT / precisión</option>
+                <option value="terror">Terror</option>
+                <option value="petrify">Petrify</option>
+                <option value="freeze">Freeze / Frost</option>
+                <option value="taunt">Taunt</option>
+                <option value="dispel">Dispel / quita buffs</option>
+              </optgroup>
+              <optgroup label="Buffs y soporte">
+                <option value="healing">Curación</option>
+                <option value="shield">Escudos</option>
+                <option value="damage-reduction">Reducción de daño aliada</option>
+                <option value="damage-buff">Buff de daño aliado</option>
+                <option value="crit-buff">Buff de crítico</option>
+                <option value="combo-buff">Buff de combo</option>
+                <option value="energy">Energía</option>
+                <option value="revive">Revive / invencible</option>
+              </optgroup>
+            </select>
+          </label>
         </div>
         <div id="hero-count" class="strategy-note" aria-live="polite"></div>
         <p class="catalog-help">
@@ -3539,6 +3573,7 @@
         role: document.querySelector("#hero-role"),
         affinity: document.querySelector("#hero-affinity"),
         status: document.querySelector("#hero-skill-status"),
+        mechanic: document.querySelector("#hero-mechanic"),
       };
 
       const statusLabel = {
@@ -3561,6 +3596,124 @@
         N: 4,
       };
 
+      const mechanicFilters = {
+        "aoe-damage": {
+          label: "Daño a todos los enemigos",
+          include: ["todos los enemigos", "all enemies", "all enemy units", "area", "área"],
+          exclude: ["cura a todos", "todos los aliados", "all allies"],
+          minScore: 1,
+        },
+        "single-burst": {
+          label: "Mucho daño a 1 enemigo",
+          include: ["1 enemigo", "single enemy", "single target", "1 enemy", "a single enemy"],
+          exclude: ["todos los enemigos", "all enemies", "all enemy units"],
+          minPercent: 150,
+          minScore: 150,
+        },
+        "backline-focus": {
+          label: "Foco en retaguardia",
+          include: ["retaguardia", "rear row", "atras", "atrás"],
+          minScore: 1,
+        },
+        "execute": {
+          label: "Remate / más daño a bajo HP",
+          include: ["menor a 45% hp", "menos de 45% hp", "below 45% hp", "lower than 45% hp", "bajo hp", "low hp"],
+          minScore: 1,
+        },
+        "magnetic-force": {
+          label: "Magnetic Force",
+          include: ["magnetic force", "magnetic power", "magnet"],
+          minScore: 1,
+        },
+        "heal-reduction": {
+          label: "Reduce o bloquea curación",
+          include: ["heal reduce", "banned healing", "bloquea la curacion", "bloquea curacion", "reduccion de curacion", "reduce curacion", "curación del objetivo", "no puede recibir curacion"],
+          minScore: 1,
+        },
+        vulnerable: {
+          label: "Aplica Vulnerable",
+          include: ["vulnerable", "vulnerability"],
+          minScore: 1,
+        },
+        "damage-down": {
+          label: "Reduce daño enemigo",
+          include: ["reduce el dano", "reduce daño", "target dmg", "damage by", "dano del objetivo", "daño del objetivo", "dano causado al objetivo"],
+          minScore: 1,
+        },
+        "hit-down": {
+          label: "Reduce HIT / precisión",
+          include: ["reduce hit", "hit rate reduces", "reduce el hit", "precision", "precisión"],
+          minScore: 1,
+        },
+        terror: {
+          label: "Terror",
+          include: ["terror"],
+          minScore: 1,
+        },
+        petrify: {
+          label: "Petrify",
+          include: ["petrify", "petrification", "petrify"],
+          minScore: 1,
+        },
+        freeze: {
+          label: "Freeze / Frost",
+          include: ["freeze", "frozen", "frost", "congela", "congel"],
+          minScore: 1,
+        },
+        taunt: {
+          label: "Taunt",
+          include: ["taunt"],
+          minScore: 1,
+        },
+        dispel: {
+          label: "Dispel / quita buffs",
+          include: ["dispel", "dispersa", "disperse", "quita buff", "buff del objetivo"],
+          minScore: 1,
+        },
+        healing: {
+          label: "Curación",
+          include: ["cura", "curacion", "curación", "healing", "heals"],
+          exclude: ["reduce curacion", "heal reduce", "banned healing"],
+          minScore: 1,
+        },
+        shield: {
+          label: "Escudos",
+          include: ["escudo", "shield"],
+          minScore: 1,
+        },
+        "damage-reduction": {
+          label: "Reducción de daño aliada",
+          include: ["dmg reduction", "reduccion de dano", "reducción de daño", "damage reduction"],
+          minScore: 1,
+        },
+        "damage-buff": {
+          label: "Buff de daño aliado",
+          include: ["dano a todos los aliados", "damage of all friendly", "dano causado", "damage dealt", "skill dmg", "skill damage", "dano de habilidad"],
+          exclude: ["reduce"],
+          minScore: 1,
+        },
+        "crit-buff": {
+          label: "Buff de crítico",
+          include: ["crit rate", "crit dmg", "critico", "crítico"],
+          minScore: 1,
+        },
+        "combo-buff": {
+          label: "Buff de combo",
+          include: ["combo rate", "combo dmg", "combo"],
+          minScore: 1,
+        },
+        energy: {
+          label: "Energía",
+          include: ["energia", "energía", "energy"],
+          minScore: 1,
+        },
+        revive: {
+          label: "Revive / invencible",
+          include: ["revive", "invincible", "invencible"],
+          minScore: 1,
+        },
+      };
+
       const normalize = (value) =>
         value
           .toLowerCase()
@@ -3580,6 +3733,45 @@
       const renderAffinityTag = (affinity) =>
         `<span class="${affinityClass(affinity)}">${affinity}</span>`;
 
+      function heroSkillText(hero) {
+        return normalize(
+          (hero.skills || [])
+            .map((skill) =>
+              [
+                skill.name,
+                skill.type,
+                skill.summary,
+                ...(skill.effects || []).flat(),
+              ].join(" "),
+            )
+            .join(" "),
+        );
+      }
+
+      function extractMaxPercent(text) {
+        const matches = [...text.matchAll(/(\d+(?:\.\d+)?)\s*%/g)].map((match) => Number(match[1]));
+        return matches.length ? Math.max(...matches) : 0;
+      }
+
+      function keywordScore(text, definition) {
+        const includes = definition.include || [];
+        const excludes = definition.exclude || [];
+        if (excludes.some((keyword) => text.includes(normalize(keyword)))) return 0;
+        const matched = includes.filter((keyword) => text.includes(normalize(keyword))).length;
+        if (!matched) return 0;
+        const percent = extractMaxPercent(text);
+        if (definition.minPercent && percent < definition.minPercent) return 0;
+        return Math.max(definition.minScore || 1, matched * 10 + percent);
+      }
+
+      function mechanicScore(hero, mechanic) {
+        if (!mechanic) return 0;
+        const definition = mechanicFilters[mechanic];
+        if (!definition) return 0;
+        const text = heroSkillText(hero);
+        return keywordScore(text, definition);
+      }
+
       function heroMatches(hero) {
         const query = normalize(filters.search.value.trim());
         const text = normalize([hero.name, hero.rarity, hero.role, ...hero.affinities].join(" "));
@@ -3588,7 +3780,8 @@
           (!filters.rarity.value || hero.rarity === filters.rarity.value) &&
           (!filters.role.value || hero.role === filters.role.value) &&
           (!filters.affinity.value || hero.affinities.includes(filters.affinity.value)) &&
-          (!filters.status.value || hero.status === filters.status.value)
+          (!filters.status.value || hero.status === filters.status.value) &&
+          (!filters.mechanic.value || mechanicScore(hero, filters.mechanic.value) > 0)
         );
       }
 
@@ -3746,11 +3939,22 @@
         const visibleheroes = heroes
           .map((hero, index) => ({ hero, index }))
           .filter(({ hero }) => heroMatches(hero))
-          .sort((a, b) => rarityOrder[a.hero.rarity] - rarityOrder[b.hero.rarity]);
+          .sort((a, b) => {
+            const mechanic = filters.mechanic.value;
+            if (mechanic) {
+              const scoreDiff = mechanicScore(b.hero, mechanic) - mechanicScore(a.hero, mechanic);
+              if (scoreDiff) return scoreDiff;
+            }
+            const rarityDiff = rarityOrder[a.hero.rarity] - rarityOrder[b.hero.rarity];
+            if (rarityDiff) return rarityDiff;
+            return a.hero.name.localeCompare(b.hero.name);
+          });
         heroCatalog.innerHTML = visibleheroes
           .map(({ hero, index }) => renderHero(hero, index))
           .join("");
-        heroCount.textContent = `${visibleheroes.length} héroe${visibleheroes.length === 1 ? "" : "s"} visibles.`;
+        const mechanic = filters.mechanic.value;
+        const mechanicLabel = mechanic ? ` - ordenados por ${mechanicFilters[mechanic].label.toLowerCase()}` : "";
+        heroCount.textContent = `${visibleheroes.length} héroe${visibleheroes.length === 1 ? "" : "s"} visibles${mechanicLabel}.`;
       }
 
       heroCatalog.addEventListener("click", (event) => {
