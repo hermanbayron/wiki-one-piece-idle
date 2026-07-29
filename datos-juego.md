@@ -16,7 +16,7 @@ reglas del juego sin confirmarlas.
 
 ## Ciudad principal
 
-Imagen: `images/city/Inicio.jpeg`
+Imagen: `images/city/city-main.jpeg`
 
 Accesos visibles:
 
@@ -57,7 +57,7 @@ Accesos laterales o superiores:
 
 ## Trial
 
-Imagen: `images/trial/Trial.jpeg`
+Imagen: `images/trial/trial-main.jpeg`
 
 Pantalla con cuatro pruebas visibles:
 
@@ -241,7 +241,7 @@ Datos observados:
 
 Imagenes fuente:
 
-- `images/boss/Boss.jpeg`
+- `images/boss/boss-main-menu.jpeg`
 - `images/boss/boss-contest-low-level-list.jpeg`
 - `images/boss/boss-contest-high-level-list.jpeg`
 - `images/boss/boss-contest-luffy-challenge.jpeg`
@@ -415,7 +415,7 @@ Pendiente:
 
 ## Arena
 
-Imagen: `images/arena/Arena.jpeg`
+Imagen: `images/arena/arena-main.jpeg`
 
 Observado:
 
@@ -478,16 +478,16 @@ Inferido pendiente de confirmar:
 ## Imagenes disponibles
 
 - `images/ui/icono.jpg`
-- `images/ui/Fondo.jpg`
-- `images/city/Inicio.jpeg`
-- `images/trial/Trial.jpeg`
-- `images/boss/Boss.jpeg`
-- `images/arena/Arena.jpeg`
-- `images/videos/WhatsApp Video 2026-07-09 at 21.07.13.mp4`
+- `images/ui/wiki-background.jpg`
+- `images/city/city-main.jpeg`
+- `images/trial/trial-main.jpeg`
+- `images/boss/boss-main-menu.jpeg`
+- `images/arena/arena-main.jpeg`
+- `images/videos/combat-video-01.mp4`
 
 ## Video fuente
 
-Imagen/video: `images/videos/WhatsApp Video 2026-07-09 at 21.07.13.mp4`
+Imagen/video: `images/videos/combat-video-01.mp4`
 
 Observado del archivo:
 
@@ -531,7 +531,7 @@ Pendiente:
 
 ## Combate
 
-Fuente principal: `images/videos/WhatsApp Video 2026-07-09 at 21.07.13.mp4`
+Fuente principal: `images/videos/combat-video-01.mp4`
 
 Capturas detalladas seleccionadas: 5 en `images/videos/video-frames-1s/`.
 
@@ -573,7 +573,7 @@ Pendiente:
 
 ## Video fuente 2
 
-Imagen/video: `images/videos/WhatsApp Video 2026-07-09 at 22.19.51.mp4`
+Imagen/video: `images/videos/combat-video-02.mp4`
 
 Observado del archivo:
 
@@ -763,7 +763,7 @@ Pendiente:
 
 ## Video fuente 3
 
-Imagen/video: `images/videos/WhatsApp Video 2026-07-09 at 22.30.21.mp4`
+Imagen/video: `images/videos/combat-video-03.mp4`
 
 Observado del archivo:
 
@@ -824,9 +824,9 @@ Pendiente:
 Imagenes fuente:
 
 - `images/strategy/resumen-danos.jpeg`
-- `images/strategy/duo big mom y cracker.jpeg`
-- `images/strategy/duo katakuri y akainu.jpeg`
-- `images/strategy/duo rayleigh y kaido.jpeg`
+- `images/strategy/duo-big-mom-cracker.jpeg`
+- `images/strategy/duo-katakuri-akainu.jpeg`
+- `images/strategy/duo-rayleigh-kaido.jpeg`
 
 Notas de lectura:
 

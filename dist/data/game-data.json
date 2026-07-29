@@ -15,7 +15,7 @@
   },
   "screens": {
     "trial": {
-      "image": "images/trial/Trial.jpeg",
+      "image": "images/trial/trial-main.jpeg",
       "sourceImages": [
         "images/trial/trial-long-ring-board-before-throw.jpeg",
         "images/trial/trial-long-ring-board-after-throw.jpeg",
@@ -102,7 +102,7 @@
       ]
     },
     "arena": {
-      "image": "images/arena/Arena.jpeg",
+      "image": "images/arena/arena-main.jpeg",
       "type": "PvP / ranking",
       "myRanking": 2,
       "attempts": {
@@ -247,7 +247,7 @@
         "Names and effects of status icons",
         "All combat character names"
       ],
-      "sourceVideoLocalOnly": "images/videos/WhatsApp Video 2026-07-09 at 21.07.13.mp4"
+      "sourceVideoLocalOnly": "images/videos/combat-video-01.mp4"
     },
     "adventure": {
       "sourceVideo": "Video local no publicado; usar frames extraidos en images/videos/",
@@ -273,7 +273,7 @@
         },
         "vipNote": "VIP7 increases Idling Efficiency benefits by 30%"
       },
-      "sourceVideoLocalOnly": "images/videos/WhatsApp Video 2026-07-09 at 22.19.51.mp4"
+      "sourceVideoLocalOnly": "images/videos/combat-video-02.mp4"
     },
     "instance": {
       "sourceImages": [
@@ -519,7 +519,7 @@
     },
     "boss": {
       "sourceImages": [
-        "images/boss/Boss.jpeg",
+        "images/boss/boss-main-menu.jpeg",
         "images/boss/boss-contest-low-level-list.jpeg",
         "images/boss/boss-contest-high-level-list.jpeg",
         "images/boss/boss-contest-luffy-challenge.jpeg"
@@ -689,7 +689,7 @@
         "reward": "Kuro fragments",
         "amount": 80
       },
-      "sourceVideoLocalOnly": "images/videos/WhatsApp Video 2026-07-09 at 22.19.51.mp4"
+      "sourceVideoLocalOnly": "images/videos/combat-video-02.mp4"
     },
     "heroes": {
       "sourceVideo": "Video local no publicado; usar frames extraidos en images/videos/",
@@ -716,7 +716,7 @@
         "images/heroes/kaido/kaido-skill-beasts-end.jpeg",
         "images/heroes/rayleigh/handbook-rayleigh-relation-match.jpeg",
         "images/heroes/big-mom/handbook-big-mom-relation-match.jpeg",
-        "images/heroes/hero-shards-list.jpeg",
+        "images/heroes/common/hero-shards-list.jpeg",
         "images/heroes/cracker/handbook-cracker-relation-match.jpeg",
         "images/heroes/cracker/hero-cracker-profile.jpeg",
         "images/heroes/cracker/cracker-portrait.jpeg",
@@ -1919,7 +1919,7 @@
         "note": "All seven new hero cards have portrait, handbook recommendation image, and skill screenshots connected to the catalog."
       },
       "completeHeroCardsCount": 23,
-      "sourceVideoLocalOnly": "images/videos/WhatsApp Video 2026-07-09 at 22.19.51.mp4",
+      "sourceVideoLocalOnly": "images/videos/combat-video-02.mp4",
       "assetManifest": [
         "images/heroes/luffy-new-world/hero-luffy-new-world-card-ssr.jpeg",
         "images/heroes/luffy-new-world/handbook-luffy-new-world-recommendations.jpeg",
@@ -2149,7 +2149,7 @@
         "priceUsd": 4.99,
         "text": "Top up $4.99 to get Luffy's skin"
       },
-      "sourceVideoLocalOnly": "images/videos/WhatsApp Video 2026-07-09 at 22.19.51.mp4"
+      "sourceVideoLocalOnly": "images/videos/combat-video-02.mp4"
     },
     "arenaStore": {
       "sourceVideo": "Video local no publicado; usar frames extraidos en images/videos/",
@@ -2175,7 +2175,7 @@
         "soldOutObserved": true
       },
       "visibleAction": "Go to Arena",
-      "sourceVideoLocalOnly": "images/videos/WhatsApp Video 2026-07-09 at 22.30.21.mp4"
+      "sourceVideoLocalOnly": "images/videos/combat-video-03.mp4"
     },
     "altar": {
       "sourceVideo": "Video local no publicado; usar frames extraidos en images/videos/",
@@ -2233,14 +2233,14 @@
           "Purple"
         ]
       },
-      "sourceVideoLocalOnly": "images/videos/WhatsApp Video 2026-07-09 at 22.30.21.mp4"
+      "sourceVideoLocalOnly": "images/videos/combat-video-03.mp4"
     },
     "strategyExamples": {
       "sourceImages": [
         "images/strategy/resumen-danos.jpeg",
-        "images/strategy/duo big mom y cracker.jpeg",
-        "images/strategy/duo katakuri y akainu.jpeg",
-        "images/strategy/duo rayleigh y kaido.jpeg"
+        "images/strategy/duo-big-mom-cracker.jpeg",
+        "images/strategy/duo-katakuri-akainu.jpeg",
+        "images/strategy/duo-rayleigh-kaido.jpeg"
       ],
       "warning": "Example values only. Damage changes with items, dials, talents, awaken, buffs, level, formation, and enemy.",
       "damageScaleFromNormalBasic": {
@@ -2288,17 +2288,17 @@
       "duos": [
         {
           "name": "Big Mom + Cracker",
-          "image": "images/strategy/duo big mom y cracker.jpeg",
+          "image": "images/strategy/duo-big-mom-cracker.jpeg",
           "summary": "Big Mom scales massively with critical skill and buffs; Cracker brings high base damage and stable growth."
         },
         {
           "name": "Katakuri + Akainu",
-          "image": "images/strategy/duo katakuri y akainu.jpeg",
+          "image": "images/strategy/duo-katakuri-akainu.jpeg",
           "summary": "Very close maximum productivity; Katakuri leads basic critical damage while Akainu benefits from multi-hit skills."
         },
         {
           "name": "Rayleigh + Kaido",
-          "image": "images/strategy/duo rayleigh y kaido.jpeg",
+          "image": "images/strategy/duo-rayleigh-kaido.jpeg",
           "summary": "Rayleigh scales better with critical damage; Kaido shows steadier buff-based improvement."
         }
       ],
@@ -2408,7 +2408,7 @@
           }
         ]
       },
-      "sourceVideoLocalOnly": "images/videos/WhatsApp Video 2026-07-09 at 22.30.21.mp4"
+      "sourceVideoLocalOnly": "images/videos/combat-video-03.mp4"
     },
     "social": {
       "sourceImages": [

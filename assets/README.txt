@@ -16,12 +16,12 @@ Organizacion actual de ../images:
 
 Imagenes detectadas:
 
-- ../images/city/Inicio.jpeg
-- ../images/trial/Trial.jpeg
-- ../images/boss/Boss.jpeg
-- ../images/arena/Arena.jpeg
+- ../images/city/city-main.jpeg
+- ../images/trial/trial-main.jpeg
+- ../images/boss/boss-main-menu.jpeg
+- ../images/arena/arena-main.jpeg
 - ../images/ui/icono.jpg
-- ../images/ui/Fondo.jpg
+- ../images/ui/wiki-background.jpg
 - ../images/instance/instance-menu.jpeg
 - ../images/instance/instance-resource-exp-stage-37.jpeg
 - ../images/instance/instance-resource-breakthrough-stage-37.jpeg
@@ -116,31 +116,31 @@ Imagenes detectadas:
 - ../images/materials/material-busoshoku-pluck.jpeg
 - ../images/materials/material-basic-pluck.jpeg
 - ../images/strategy/resumen-danos.jpeg
-- ../images/strategy/duo big mom y cracker.jpeg
-- ../images/strategy/duo katakuri y akainu.jpeg
-- ../images/strategy/duo rayleigh y kaido.jpeg
+- ../images/strategy/duo-big-mom-cracker.jpeg
+- ../images/strategy/duo-katakuri-akainu.jpeg
+- ../images/strategy/duo-rayleigh-kaido.jpeg
 - ../images/social/
 - ../images/vip/
-- ../images/videos/WhatsApp Video 2026-07-09 at 21.07.13.mp4
-- ../images/videos/WhatsApp Video 2026-07-09 at 22.19.51.mp4
-- ../images/videos/WhatsApp Video 2026-07-09 at 22.30.21.mp4
+- ../images/videos/combat-video-01.mp4
+- ../images/videos/combat-video-02.mp4
+- ../images/videos/combat-video-03.mp4
 - ../images/videos/video2-frames-2s/
 - ../images/videos/video3-frames-2s/
 
 Paginas ya creadas con imagen:
 
-- ../ciudad.html usa ../images/city/Inicio.jpeg
-- ../trial.html usa ../images/trial/Trial.jpeg
+- ../ciudad.html usa ../images/city/city-main.jpeg
+- ../trial.html usa ../images/trial/trial-main.jpeg
 - ../trial.html usa las capturas trial-* de ../images/
-- ../arena.html usa ../images/arena/Arena.jpeg
+- ../arena.html usa ../images/arena/arena-main.jpeg
 - ../index.html usa ../images/ui/icono.jpg
-- ../index.css usa ../images/ui/Fondo.jpg como fondo global
+- ../index.css usa ../images/ui/wiki-background.jpg como fondo global
 - ../instance.html usa las capturas instance-* de ../images/
 - ../leaderboard.html usa las capturas leaderboard-* de ../images/
 - ../market.html usa las capturas market-* de ../images/
-- ../boss.html usa ../images/boss/Boss.jpeg y las capturas boss-contest-* de ../images/
-- ../video.html usa ../images/videos/WhatsApp Video 2026-07-09 at 21.07.13.mp4
-- ../video.html usa ../images/videos/WhatsApp Video 2026-07-09 at 22.19.51.mp4
+- ../boss.html usa ../images/boss/boss-main-menu.jpeg y las capturas boss-contest-* de ../images/
+- ../video.html usa ../images/videos/combat-video-01.mp4
+- ../video.html usa ../images/videos/combat-video-02.mp4
 - ../summon.html usa frames de ../images/videos/video2-frames-2s/
 - ../heroes.html usa frames de ../images/videos/video2-frames-2s/
 - ../altar.html usa frames de ../images/videos/video3-frames-2s/

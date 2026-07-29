@@ -36,7 +36,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   background:
     linear-gradient(rgba(10, 16, 23, 0.76), rgba(10, 16, 23, 0.86)),
-    url("images/ui/Fondo.jpg") center / cover fixed no-repeat;
+    url("images/ui/wiki-background.jpg") center / cover fixed no-repeat;
 }
 
 body {
