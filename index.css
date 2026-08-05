@@ -3005,3 +3005,23 @@ h4,
     transform: none;
   }
 }
+
+
+.availability-tag,
+.vip-pill {
+  color: #3b2400 !important;
+  background: #f0c35d !important;
+  border: 1px solid #9a6b16 !important;
+  border-radius: 3px;
+  font-weight: 900;
+}
+
+.vip-pill {
+  display: inline-flex;
+  align-items: center;
+  width: max-content;
+  min-height: 24px;
+  padding: 4px 7px;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+}
