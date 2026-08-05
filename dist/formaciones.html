@@ -1048,11 +1048,88 @@
                 "notes": "Equipo tematico Strawhat: Franky da escudo y bloqueo, Chopper cura y protege, Nami bufea criticos, Luffy/Zoro concentran el dano. Tambien deja probada la sinergia de buffs internos Strawhat.",
                 "advice": "No deberia superar a Big Mom Band o Legendary cuando esos UR estan subidos, pero es una base muy clara para progreso SSR y pruebas de afinidad Strawhat. Si muere rapido, cambia Luffy por Nami o Usopp segun necesites soporte o dano."
         },
+        {
+                "name": "VIP maximo / ballena",
+                "purpose": "VIP alto / arena premium",
+                "front1": "garp",
+                "front2": "whitebeard",
+                "back1": "shanks",
+                "back2": "rayleigh",
+                "back3": "law",
+                "notes": "Formacion de referencia para cuentas con acceso VIP alto: Garp requiere VIP 10, Shanks VIP 12 y Whitebeard VIP 14. No es una base universal, pero sirve para comparar el techo de poder premium.",
+                "advice": "Usala solo si esos heroes estan realmente desbloqueados y con recursos. Garp y Whitebeard sostienen el frente, Shanks/Rayleigh cargan el dano y Law debe ir rapido con objetos y diales de velocidad para buffear antes que los carries."
+        },
+        {
+                "name": "Anti curacion y control",
+                "purpose": "Reducir healing / cortar sustain",
+                "front1": "jack",
+                "front2": "magellan",
+                "back1": "perona",
+                "back2": "akainu-new-world",
+                "back3": "law",
+                "notes": "Plantilla pensada contra equipos que ganan por curacion o peleas largas. Magellan y Akainu presionan con efectos de dano/estado, Perona aporta Terror y Law sostiene mientras Jack absorbe golpes.",
+                "advice": "Muy util contra rivales con mucho sustain. Dale velocidad a Law y Perona para actuar antes, y compara Akainu (New World) con Katakuri o Big Mom si necesitas mas dano directo."
+        },
+        {
+                "name": "Soportes veloces",
+                "purpose": "Buff primero / control temprano",
+                "front1": "jack",
+                "front2": "jinbe-new-world",
+                "back1": "law",
+                "back2": "otohime",
+                "back3": "perona",
+                "notes": "Equipo de lectura para probar velocidad: los soportes atras tienen que moverse temprano para curar, buffear, aplicar Terror o potenciar dano antes de que los carries enemigos limpien la pelea.",
+                "advice": "Ideal para confirmar diales y objetos de velocidad. Si el equipo no mata, cambia Jinbe (New World) por Kaido o Big Mom; si muere, conserva doble frente defensivo y sube velocidad en Law/Otohime/Perona."
+        },
+        {
+                "name": "Marines completos",
+                "purpose": "Marine / Almirantes / utilidad",
+                "front1": "garp",
+                "front2": "sengoku",
+                "back1": "akainu-new-world",
+                "back2": "aokiji-new-world",
+                "back3": "tsuru",
+                "notes": "Version Marine mas tematica: Garp y Sengoku forman el frente, Akainu (New World) queda como dano principal, Aokiji (New World) aporta control y Tsuru suma utilidad.",
+                "advice": "Tiene mejor identidad Marine que la version con Jack, pero depende de tener Garp VIP 10. Si no tienes Garp, usa Jack como reemplazo directo; si necesitas mas dano, prueba Kizaru o Fujitora por Tsuru."
+        },
+        {
+                "name": "Beasts ofensivo",
+                "purpose": "Zoan / Beasts Pirates / presion",
+                "front1": "jack",
+                "front2": "kaido",
+                "back1": "king",
+                "back2": "queen",
+                "back3": "yamato",
+                "notes": "Variante Beasts con mas presion que la version de puro aguante. Jack y Kaido sostienen, King/Yamato empujan dano y Queen queda como soporte del nucleo.",
+                "advice": "Buena para probar sinergia Zoan y Beasts. Si Yamato todavia esta bajo o no rinde, cambia por Big Mom, Rayleigh o Akainu y compara dano final."
+        },
+        {
+                "name": "Germa / Vinsmoke",
+                "purpose": "Familia Vinsmoke / pruebas de afinidad",
+                "front1": "vinsmoke-judge",
+                "front2": "vinsmoke-sanji",
+                "back1": "vinsmoke-reiju",
+                "back2": "vinsmoke-ichiji",
+                "back3": "vinsmoke-niji",
+                "notes": "Equipo tematico Vinsmoke para revisar si la familia completa compensa por afinidad. Judge toma el rol defensivo, Reiju/Niji aportan soporte y Sanji/Ichiji cargan dano.",
+                "advice": "Tratala como formacion de prueba hasta tener valores completos de habilidades. Si falta tanqueo, cambia Sanji por Jack; si falta dano, cambia Niji por Big Mom o Rayleigh."
+        },
+        {
+                "name": "Oscuridad y veneno",
+                "purpose": "Estados / desgaste / PvE",
+                "front1": "blackbeard-new-world",
+                "front2": "magellan",
+                "back1": "shiryu",
+                "back2": "perona",
+                "back3": "law",
+                "notes": "Plantilla de desgaste con estados y control: Blackbeard (New World) y Magellan aguantan/presionan, Shiryu aporta dano, Perona controla y Law mantiene vivo al equipo.",
+                "advice": "Puede servir contra peleas largas o enemigos que castigan burst rapido. Si falta defensa real, cambia Shiryu por Jack; si falta dano de cierre, prueba Big Mom por Perona."
+        },
       ];
 
       const storageKey = "opIdlePirateFormations";
       const storageVersionKey = "opIdlePirateFormationsVersion";
-      const storageVersion = "10";
+      const storageVersion = "11";
       const storageClearedKey = "opIdlePirateFormationsCleared";
       const list = document.querySelector("#formation-list");
       const template = document.querySelector("#formation-card-template");
@@ -1086,6 +1163,19 @@
 
       function loadFormations() {
         if (localStorage.getItem(storageVersionKey) !== storageVersion) {
+          try {
+            const stored = JSON.parse(localStorage.getItem(storageKey));
+            if (Array.isArray(stored) && stored.length) {
+              const current = stored.map(normalizeFormation);
+              const currentNames = new Set(current.map((formation) => formation.name));
+              const missingDefaults = defaultFormations
+                .map(normalizeFormation)
+                .filter((formation) => !currentNames.has(formation.name));
+              return saveFormations([...current, ...missingDefaults]);
+            }
+          } catch (error) {
+            return setDefaultFormations();
+          }
           return setDefaultFormations();
         }
         try {
@@ -1365,4 +1455,3 @@
     <script src="language.js"></script>
   </body>
 </html>
-
