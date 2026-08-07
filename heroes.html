@@ -5434,6 +5434,568 @@
         }
       ];
 
+      const transcribedSkillSets = {
+        Shanks: {
+          status: "complete",
+          summary:
+            "Carry UR VIP 12 centrado en Crit DMG. Su activa pega a todos los enemigos y sus pasivas escalan critico, energia, evasion/offset y dano critico acumulado.",
+          skills: [
+            {
+              name: "Typhon",
+              type: "Activa",
+              icon: "images/heroes/shanks/skill-shanks-1.jpeg",
+              summary: "Hace dano a todos los enemigos igual al 100% del ATK y aumenta el Crit DMG en 60%.",
+              effects: [["Dano", "100% ATK a todos los enemigos"], ["Buff propio", "+60% Crit DMG"]],
+            },
+            {
+              name: "Critical Pressure",
+              type: "Pasiva",
+              icon: "images/heroes/shanks/skill-shanks-2.jpeg",
+              summary: "Gana Crit DMG durante la batalla y recupera energia cuando hace dano critico con ataque basico.",
+              effects: [["Buff propio", "+40% Crit DMG"], ["Energia", "al hacer critico con ataque basico recupera 50 energia"]],
+            },
+            {
+              name: "Battle Instinct",
+              type: "Pasiva",
+              icon: "images/heroes/shanks/skill-shanks-3.jpeg",
+              summary: "Aumenta el Crit DMG y puede cancelar un ataque recibido cada 2 rondas.",
+              effects: [["Buff propio", "+30% Crit DMG"], ["Defensa", "cancela 1 ataque, una vez cada 2 rondas"]],
+            },
+            {
+              name: "Haki Counter",
+              type: "Pasiva",
+              icon: "images/heroes/shanks/skill-shanks-4.jpeg",
+              summary: "Al cancelar o esquivar un ataque aumenta su Crit DMG hasta la proxima skill.",
+              effects: [["Condicion", "al cancelar o esquivar ataque"], ["Buff propio", "+20% Crit DMG hasta la proxima skill"]],
+            },
+            {
+              name: "Critical King",
+              type: "Pasiva",
+              icon: "images/heroes/shanks/skill-shanks-5.jpeg",
+              summary: "Cada 30% de Crit Rate aumenta su Crit DMG. El aumento maximo observado es 40%.",
+              effects: [["Escalado", "cada 30% Crit Rate da +10% Crit DMG"], ["Limite", "maximo +40% Crit DMG"]],
+            },
+          ],
+        },
+        Whitebeard: {
+          status: "complete",
+          summary:
+            "Carry UR VIP 14 con dano en area, reduccion de curacion, inmunidad a debuffs por vida alta y escudo cuando baja de HP. Muy fuerte contra equipos de sustain.",
+          skills: [
+            {
+              name: "Quake Strike",
+              type: "Activa",
+              icon: "images/heroes/whitebeard/skill-whitebeard-1.jpeg",
+              summary: "Hace 80% ATK a todos los enemigos y aplica Heal Reduce por 3 turnos.",
+              effects: [["Dano", "80% ATK a todos los enemigos"], ["Heal Reduce", "35% por 3 turnos"]],
+            },
+            {
+              name: "Iron Will",
+              type: "Pasiva",
+              icon: "images/heroes/whitebeard/skill-whitebeard-2.jpeg",
+              summary: "Con mas de 70% HP es inmune a debuffs. Si baja de 70% HP gana un escudo grande una vez por batalla.",
+              effects: [["HP > 70%", "inmune a debuffs"], ["HP < 70%", "escudo de 250% ATK, una vez por batalla"]],
+            },
+            {
+              name: "Emperor's First Blow",
+              type: "Pasiva",
+              icon: "images/heroes/whitebeard/skill-whitebeard-3.jpeg",
+              summary: "La primera activa de cada batalla aumenta su dano. El efecto vuelve a activarse cuando mata un enemigo.",
+              effects: [["Primera activa", "+60% dano"], ["Reset", "recupera el efecto al matar"]],
+            },
+            {
+              name: "Shatter",
+              type: "Pasiva",
+              icon: "images/heroes/whitebeard/skill-whitebeard-4.jpeg",
+              summary: "Los ataques basicos aplican Shatter y Whitebeard pega mas a objetivos con esa marca.",
+              effects: [["Ataque basico", "aplica Shatter"], ["Contra Shatter", "+30% dano"]],
+            },
+            {
+              name: "Landslide",
+              type: "Pasiva",
+              icon: "images/heroes/whitebeard/skill-whitebeard-5.jpeg",
+              summary: "Aumenta su Crit Rate y acumula Crit DMG cada vez que hace un critico.",
+              effects: [["Buff propio", "+40% Crit Rate"], ["Critico", "+6% Crit DMG por stack"], ["Limite", "hasta 10 stacks"]],
+            },
+          ],
+        },
+        Garp: {
+          status: "complete",
+          summary:
+            "DEF UR VIP 10 de duelo y control. Tiene stun, reduccion de dano inicial, Unyielding y una activacion fuerte cuando queda con muy poca vida.",
+          skills: [
+            {
+              name: "Battle Long Blow",
+              type: "Activa",
+              icon: "images/heroes/garp/skill-garp-1.jpeg",
+              summary: "Hace 200% ATK a un enemigo y tiene chance de stun por 1 turno.",
+              effects: [["Dano", "200% ATK a 1 enemigo"], ["Stun", "20% de chance por 1 turno"]],
+            },
+            {
+              name: "Fist of Love",
+              type: "Pasiva",
+              icon: "images/heroes/garp/skill-garp-2.jpeg",
+              summary: "Al empezar la batalla gana 5 stacks de aumento de dano. Pierde 1 stack por turno.",
+              effects: [["Inicio", "5 stacks de +15% dano"], ["Duracion", "pierde 1 stack cada turno"]],
+            },
+            {
+              name: "Unyielding Justice",
+              type: "Pasiva",
+              icon: "images/heroes/garp/skill-garp-3.jpeg",
+              summary: "Al recibir dano mortal activa Unyielding y queda con 1 HP durante 1 turno. Una vez por batalla.",
+              effects: [["Dano mortal", "queda con 1 HP por 1 turno"], ["Limite", "una vez por batalla"]],
+            },
+            {
+              name: "Tough Body",
+              type: "Pasiva",
+              icon: "images/heroes/garp/skill-garp-4.jpeg",
+              summary: "Al empezar la batalla gana 5 stacks de reduccion de dano. Pierde 1 stack por turno.",
+              effects: [["Inicio", "5 stacks de 4% DMG Reduction"], ["Duracion", "pierde 1 stack cada turno"]],
+            },
+            {
+              name: "Last Stand Stun",
+              type: "Pasiva",
+              icon: "images/heroes/garp/skill-garp-5.jpeg",
+              summary: "Cuando queda por debajo de 5% HP recupera energia, garantiza stun en la proxima skill y aumenta el dano recibido por el objetivo.",
+              effects: [["HP < 5%", "recupera 100% energia"], ["Proxima skill", "stun garantizado por 1 turno"], ["Debuff", "objetivo recibe +30% dano por 2 turnos"], ["Limite", "una vez por batalla"]],
+            },
+          ],
+        },
+        "Sabo (Fire Fist)": {
+          status: "complete",
+          summary:
+            "ATK UR de burn/DoT. Aplica dano continuo, reduce curacion en objetivos quemados y usa Flame para recuperar energia.",
+          skills: [
+            {
+              name: "Flame Dragon Lord",
+              type: "Activa",
+              icon: "images/heroes/sabo-fire-fist/skill-sabo-fire-fist-1.jpeg",
+              summary: "Hace 64% ATK a todos, aplica dano continuo y reduce curacion a enemigos con Burning.",
+              effects: [["Dano", "64% ATK a todos"], ["DoT", "2 stacks de 3% ATK por 4 turnos, max 10"], ["Anti heal", "30%-100% healing reduction por 3 turnos contra Burning"]],
+            },
+            {
+              name: "Flame Barrier",
+              type: "Pasiva",
+              icon: "images/heroes/sabo-fire-fist/skill-sabo-fire-fist-2.jpeg",
+              summary: "Al entrar en batalla recibe un escudo basado en su HP.",
+              effects: [["Inicio", "escudo de 35% HP"]],
+            },
+            {
+              name: "Flame Territory",
+              type: "Pasiva",
+              icon: "images/heroes/sabo-fire-fist/skill-sabo-fire-fist-3.jpeg",
+              summary: "Despues de usar skill, la tripulacion entra en Flame y recupera energia al inicio del siguiente turno.",
+              effects: [["Tras skill", "crew entra en Flame"], ["Siguiente turno", "+50% energia"]],
+            },
+            {
+              name: "Dragon Claw Breaker",
+              type: "Pasiva",
+              icon: "images/heroes/sabo-fire-fist/skill-sabo-fire-fist-4.jpeg",
+              summary: "Mientras esta en Flame tiene chance de ganar energia adicional.",
+              effects: [["En Flame", "25% de chance de ganar 50% energia adicional"]],
+            },
+            {
+              name: "Burning Will",
+              type: "Pasiva",
+              icon: "images/heroes/sabo-fire-fist/skill-sabo-fire-fist-5.jpeg",
+              summary: "Sube Crit Rate y Crit DMG. Su ataque basico pega menos, pero agrega dano continuo.",
+              effects: [["Buff propio", "+40% Crit Rate y +30% Crit DMG"], ["Ataque basico", "dano reducido a 90%"], ["DoT basico", "1 stack de 3% ATK por 4 turnos, max 10"]],
+            },
+          ],
+        },
+        "Blackbeard (New World)": {
+          status: "complete",
+          summary:
+            "ATK UR de marcas Shatter, critico, contraataque y robo de dano. Su activa remueve Shatter para aumentar dano.",
+          skills: [
+            {
+              name: "Black Hole Liberation",
+              type: "Activa",
+              icon: "images/heroes/blackbeard-new-world/skill-blackbeard-new-world-1.jpeg",
+              summary: "Hace 80% ATK a todos. Contra objetivos con Shatter aumenta dano y consume la marca.",
+              effects: [["Dano", "80% ATK a todos"], ["Contra Shatter", "+30% dano y remueve Shatter"]],
+            },
+            {
+              name: "Double Fruits",
+              type: "Pasiva",
+              icon: "images/heroes/blackbeard-new-world/skill-blackbeard-new-world-2.jpeg",
+              summary: "Aumenta Crit Rate/Crit DMG y aplica Shatter con ataque comun.",
+              effects: [["Buff propio", "+40% Crit Rate y +30% Crit DMG"], ["Ataque comun", "aplica Shatter"]],
+            },
+            {
+              name: "Black Hole",
+              type: "Pasiva",
+              icon: "images/heroes/blackbeard-new-world/skill-blackbeard-new-world-3.jpeg",
+              summary: "Despues de ser atacado puede contraatacar una vez por turno.",
+              effects: [["Al recibir ataque", "40% chance de contraataque"], ["Limite", "una vez por turno"]],
+            },
+            {
+              name: "Dark Energy",
+              type: "Pasiva",
+              icon: "images/heroes/blackbeard-new-world/skill-blackbeard-new-world-4.jpeg",
+              summary: "Cuando su ataque comun hace critico roba dano del enemigo.",
+              effects: [["Critico con ataque comun", "roba 15% dano por 2 turnos"]],
+            },
+            {
+              name: "Pain Absorption",
+              type: "Pasiva",
+              icon: "images/heroes/blackbeard-new-world/skill-blackbeard-new-world-5.jpeg",
+              summary: "Al recibir dano critico se cura en base a su ATK, una vez por ronda.",
+              effects: [["Al recibir critico", "Healing igual a 65% ATK"], ["Limite", "una vez por ronda"]],
+            },
+          ],
+        },
+        Magellan: {
+          status: "complete",
+          summary:
+            "ATK UR de veneno y dano continuo. Excelente para desgaste, anti sustain y peleas largas donde los DoT acumulados importan.",
+          skills: [
+            {
+              name: "Poison Cloud",
+              type: "Activa",
+              icon: "images/heroes/magellan/skill-magellan-1.jpeg",
+              summary: "Hace 48% ATK a todos y aplica dano constante acumulable.",
+              effects: [["Dano", "48% ATK a todos"], ["DoT", "2 stacks de 6% ATK por 4 turnos, max 10"]],
+            },
+            {
+              name: "Venom Body",
+              type: "Pasiva",
+              icon: "images/heroes/magellan/skill-magellan-2.jpeg",
+              summary: "Sube Crit Rate y Crit DMG. Su ataque comun pega menos, pero agrega dano constante.",
+              effects: [["Buff propio", "+40% Crit Rate y +30% Crit DMG"], ["Ataque comun", "dano reducido a 60%"], ["DoT basico", "1 stack de 6% ATK por 4 turnos, max 10"], ["Nota", "la linea final cada 3 turnos quedo cortada en OCR"]],
+            },
+            {
+              name: "Poison Invasion",
+              type: "Pasiva",
+              icon: "images/heroes/magellan/skill-magellan-3.jpeg",
+              summary: "La skill aplica stacks adicionales de dano constante contra Poison Cloud y Burning.",
+              effects: [["Contra Poison Cloud", "+1 stack de 5% ATK por 4 turnos, max 10"], ["Contra Burning", "+1 stack adicional"]],
+            },
+            {
+              name: "Caustic Touch",
+              type: "Pasiva",
+              icon: "images/heroes/magellan/skill-magellan-4.jpeg",
+              summary: "Aumenta el dano constante durante la batalla.",
+              effects: [["Buff DoT", "+25% dano constante"]],
+            },
+            {
+              name: "Poison Gas Bomb",
+              type: "Pasiva",
+              icon: "images/heroes/magellan/skill-magellan-5.jpeg",
+              summary: "Reduce Hit Rate de objetivos afectados por Poison Cloud.",
+              effects: [["Contra Poison Cloud", "-18% Hit Rate por 3 turnos"]],
+            },
+          ],
+        },
+        Zephyr: {
+          status: "complete",
+          summary:
+            "ATK UR de single target, combo, critico y terror. Funciona bien contra objetivos marcados/controlados.",
+          skills: [
+            {
+              name: "Combo Guard",
+              type: "Pasiva",
+              icon: "images/heroes/zephyr/skill-zephyr-1.jpeg",
+              summary: "Aumenta Combo Rate y, cuando activa combo, sube su chance de bloqueo.",
+              effects: [["Buff propio", "+30% Combo Rate"], ["Al hacer combo", "+10% Block Rate"], ["Limite", "hasta 3 stacks"]],
+            },
+            {
+              name: "Magnetic Targeting",
+              type: "Pasiva",
+              icon: "images/heroes/zephyr/skill-zephyr-2.jpeg",
+              summary: "Aumenta Crit Rate/Crit DMG y prioriza objetivos con Magnetic.",
+              effects: [["Buff propio", "+25% Crit Rate y +30% Crit DMG"], ["Prioridad", "ataca objetivos Magnetic"]],
+            },
+            {
+              name: "Terror Critical",
+              type: "Pasiva",
+              icon: "images/heroes/zephyr/skill-zephyr-3.jpeg",
+              summary: "Sube dano de skill y al hacer critico aplica Terror.",
+              effects: [["Buff propio", "+10% Skill DMG"], ["Critico", "aplica Terror por 2 turnos"], ["Terror", "50% chance de impedir accion"]],
+            },
+            {
+              name: "Gusher",
+              type: "Pasiva",
+              icon: "images/heroes/zephyr/skill-zephyr-4.jpeg",
+              summary: "Hace dano adicional a objetivos bajo control.",
+              effects: [["Contra control", "dano adicional de 30% ATK"]],
+            },
+            {
+              name: "Gusher Cannon Fire",
+              type: "Activa",
+              icon: "images/heroes/zephyr/skill-zephyr-5.jpeg",
+              summary: "Hace 200% ATK a un enemigo. Si Zephyr tiene mas de 70% HP, aumenta el dano.",
+              effects: [["Dano", "200% ATK a 1 enemigo"], ["HP propio > 70%", "+40% dano"]],
+            },
+          ],
+        },
+        Yamato: {
+          status: "complete",
+          summary:
+            "ATK UR Zoan/Wano con area, velocidad, dano por HP maximo, Ice Armor y Vulnerable. Buena contra enemigos con mucha vida.",
+          skills: [
+            {
+              name: "Thunder Bagua",
+              type: "Activa",
+              icon: "images/heroes/yamato/skill-yamato-1.jpeg",
+              summary: "Hace 80% ATK a todos y pega mas a objetivos con HP mayor a 50%.",
+              effects: [["Dano", "80% ATK a todos"], ["Contra HP > 50%", "+30% dano"]],
+            },
+            {
+              name: "Child of Kaido",
+              type: "Pasiva",
+              icon: "images/heroes/yamato/skill-yamato-2.jpeg",
+              summary: "Aumenta critico, dano critico y velocidad. La skill agrega dano basado en HP maximo del objetivo.",
+              effects: [["Buff propio", "+40% Crit Rate, +30% Crit DMG, +10 Speed"], ["Extra", "2% HP maximo del objetivo, hasta 50% del ATK propio"]],
+            },
+            {
+              name: "Ice Armor",
+              type: "Pasiva",
+              icon: "images/heroes/yamato/skill-yamato-3.jpeg",
+              summary: "Al entrar en batalla gana 8 stacks de Ice Armor, cada uno con reduccion de dano.",
+              effects: [["Inicio", "8 stacks de Ice Armor"], ["Cada stack", "+4% DMG Reduction"], ["Duracion", "pierde 1 stack al final del turno"]],
+            },
+            {
+              name: "Sacred Ice Fang",
+              type: "Pasiva",
+              icon: "images/heroes/yamato/skill-yamato-4.jpeg",
+              summary: "Mientras tenga Ice Armor aumenta Crit Rate y es inmune a Terror.",
+              effects: [["Con Ice Armor", "+15% Crit Rate"], ["Inmunidad", "Terror"]],
+            },
+            {
+              name: "Vulnerable Break",
+              type: "Pasiva",
+              icon: "images/heroes/yamato/skill-yamato-5.jpeg",
+              summary: "La skill aplica Vulnerable. Si Yamato tiene un debuff, el efecto de Vulnerable aumenta mucho.",
+              effects: [["Vulnerable", "10% por 2 rondas"], ["Si Yamato tiene debuff", "Vulnerable aumenta 80%"]],
+            },
+          ],
+        },
+        "Vinsmoke Reiju": {
+          status: "complete",
+          summary:
+            "SUP UR Germa/Vinsmoke con curacion en area, Hit Rate, Overload, purificacion y dano continuo. Muy buena para equipos de DoT o Germa.",
+          skills: [
+            {
+              name: "Poison Pink",
+              type: "Activa",
+              icon: "images/heroes/vinsmoke-reiju/skill-vinsmoke-reiju-1.jpeg",
+              summary: "Hace dano a todos, cura a todos los aliados y aumenta Hit Rate.",
+              effects: [["Dano", "24% ATK a todos los enemigos"], ["Curacion", "95% ATK a todos los aliados"], ["Buff aliado", "+15% Hit Rate por 2 turnos"]],
+            },
+            {
+              name: "Butterfly Battlesuit",
+              type: "Pasiva",
+              icon: "images/heroes/vinsmoke-reiju/skill-vinsmoke-reiju-2.jpeg",
+              summary: "Aumenta su velocidad y puede entrar en Overload si empieza turno con energia llena.",
+              effects: [["Buff propio", "+20 Speed"], ["Energia llena al inicio", "gana Overload por 2 turnos, una vez cada 3 turnos"], ["Overload", "inmune a Freeze, Stun y Petrify"]],
+            },
+            {
+              name: "Poison Invasion",
+              type: "Pasiva",
+              icon: "images/heroes/vinsmoke-reiju/skill-vinsmoke-reiju-3.jpeg",
+              summary: "Cuando el objetivo de su skill tiene dano continuo, aplica reduccion de dano acumulable.",
+              effects: [["Contra objetivos con DoT", "aplica 7% DMG Reduction por 2 turnos"], ["Limite", "hasta 5 stacks"]],
+            },
+            {
+              name: "Poison Moderation",
+              type: "Pasiva",
+              icon: "images/heroes/vinsmoke-reiju/skill-vinsmoke-reiju-4.jpeg",
+              summary: "El ataque comun cura al aliado con menor HP. Si el objetivo esta en Overload, purifica un debuff adicional.",
+              effects: [["Ataque comun", "cura 60% ATK al aliado con menor HP"], ["Con Overload", "purifica 1 debuff adicional"]],
+            },
+            {
+              name: "Fierce Poison",
+              type: "Pasiva",
+              icon: "images/heroes/vinsmoke-reiju/skill-vinsmoke-reiju-5.jpeg",
+              summary: "La skill aplica dano continuo acumulable.",
+              effects: [["DoT", "2 stacks de 6% por 4 turnos"], ["Limite", "hasta 10 stacks"]],
+            },
+          ],
+        },
+        "Vinsmoke Sanji": {
+          status: "complete",
+          summary:
+            "ATK UR Vinsmoke con dano continuo, Freeze, Overload e Invisible. Es mas tecnico que un carry directo: escala con control recibido y estados Germa.",
+          skills: [
+            {
+              name: "Cold Pressure",
+              type: "Pasiva",
+              icon: "images/heroes/vinsmoke-sanji/skill-vinsmoke-sanji-1.jpeg",
+              summary: "La skill tiene chance de congelar al objetivo.",
+              effects: [["Freeze", "20% de chance por 1 turno"], ["Control", "Frozen impide actuar"]],
+            },
+            {
+              name: "Diable Jambe",
+              type: "Activa",
+              icon: "images/heroes/vinsmoke-sanji/skill-vinsmoke-sanji-2.jpeg",
+              summary: "Hace dano a todos, aplica dano continuo y empieza la batalla con energia.",
+              effects: [["Dano", "64% ATK a todos"], ["DoT", "2 stacks de 4% ATK por 4 turnos, max 10"], ["Inicio", "+100 energia al empezar batalla"]],
+            },
+            {
+              name: "Gamma Raid Suit",
+              type: "Pasiva",
+              icon: "images/heroes/vinsmoke-sanji/skill-vinsmoke-sanji-3.jpeg",
+              summary: "Aumenta Crit Rate/Crit DMG. Su ataque comun pega menos, pero aplica dano continuo.",
+              effects: [["Buff propio", "+40% Crit Rate y +30% Crit DMG"], ["Ataque comun", "dano reducido a 80%"], ["DoT basico", "1 stack de 4% ATK por 4 turnos, max 10"], ["Nota", "la linea final cada 6 turnos quedo cortada en OCR"]],
+            },
+            {
+              name: "Combat Protection",
+              type: "Pasiva",
+              icon: "images/heroes/vinsmoke-sanji/skill-vinsmoke-sanji-4.jpeg",
+              summary: "Al recibir control, se limpia el control y aumenta su dano continuo.",
+              effects: [["Al recibir control", "remueve el control"], ["Buff", "+10% dano continuo por 2 turnos"], ["Limite", "una vez por turno"]],
+            },
+            {
+              name: "Stealth Black",
+              type: "Pasiva",
+              icon: "images/heroes/vinsmoke-sanji/skill-vinsmoke-sanji-5.jpeg",
+              summary: "Al recibir control gana Invisible y Overload.",
+              effects: [["Al recibir control", "gana Invisible y Overload por 2 turnos"], ["Invisible", "no recibe ataques ni dano"], ["Limite", "una vez por turno"]],
+            },
+          ],
+        },
+        "Vinsmoke Judge": {
+          status: "complete",
+          summary:
+            "DEF UR Germa con DoT, Overload, revive propio y soporte post-muerte para heroes Germa. Buen frontal tematico.",
+          skills: [
+            {
+              name: "Electric Overload",
+              type: "Activa",
+              icon: "images/heroes/vinsmoke-judge/skill-vinsmoke-judge-1.jpeg",
+              summary: "Hace dano a todos, aplica dano constante y entra en Overload.",
+              effects: [["Dano", "64% a todos los enemigos"], ["DoT", "2 stacks de 6% ATK por 4 turnos, max 10"], ["Overload", "entra por 2 turnos, una vez cada 4 turnos"]],
+            },
+            {
+              name: "Lineage Awakening",
+              type: "Pasiva",
+              icon: "images/heroes/vinsmoke-judge/skill-vinsmoke-judge-2.jpeg",
+              summary: "Hace mas dano a objetivos con HP alto y a objetivos Burning.",
+              effects: [["Contra HP > 70%", "+30% dano"], ["Contra Burning", "+15% dano"]],
+            },
+            {
+              name: "Germa Resurrection",
+              type: "Pasiva",
+              icon: "images/heroes/vinsmoke-judge/skill-vinsmoke-judge-3.jpeg",
+              summary: "Revive al turno siguiente despues de morir, recupera HP y entra en Overload.",
+              effects: [["Al morir", "revive al siguiente turno"], ["Curacion", "restaura 20% HP"], ["Overload", "por 2 turnos"], ["Limite", "una vez por batalla"]],
+            },
+            {
+              name: "Overcrow",
+              type: "Pasiva",
+              icon: "images/heroes/vinsmoke-judge/skill-vinsmoke-judge-4.jpeg",
+              summary: "Cuando Judge muere, aplica Overload a todos los heroes Germa.",
+              effects: [["Al morir", "todos los heroes Germa ganan Overload por 2 turnos"]],
+            },
+            {
+              name: "King's Body",
+              type: "Pasiva",
+              icon: "images/heroes/vinsmoke-judge/skill-vinsmoke-judge-5.jpeg",
+              summary: "Cuando baja de HP aumenta su bloqueo.",
+              effects: [["HP < 45%", "+15% Block"]],
+            },
+          ],
+        },
+        "Vinsmoke Ichiji": {
+          status: "complete",
+          summary:
+            "ATK UR Germa con Overload, DoT, critico y supervivencia al caer bajo de vida. Funciona mejor en equipos Vinsmoke.",
+          skills: [
+            {
+              name: "Overload Guard",
+              type: "Pasiva",
+              icon: "images/heroes/vinsmoke-ichiji/skill-vinsmoke-ichiji-1.jpeg",
+              summary: "Aumenta Block Rate y se cura al ganar Overload. En Overload bloquea mas.",
+              effects: [["Buff propio", "+15% Block Rate"], ["Al ganar Overload", "recupera 8% HP"], ["En Overload", "+30% Block Rate"]],
+            },
+            {
+              name: "Sparking Red",
+              type: "Activa",
+              icon: "images/heroes/vinsmoke-ichiji/skill-vinsmoke-ichiji-2.jpeg",
+              summary: "Hace dano a todos, aplica dano continuo y entra en Overload.",
+              effects: [["Dano", "72% ATK a todos"], ["DoT", "2 stacks de 3% ATK por 4 turnos, max 10"], ["Overload", "por 2 turnos, una vez cada 4 turnos"]],
+            },
+            {
+              name: "Red Raid Suit",
+              type: "Pasiva",
+              icon: "images/heroes/vinsmoke-ichiji/skill-vinsmoke-ichiji-3.jpeg",
+              summary: "Aumenta Crit Rate/Crit DMG. Su ataque comun pega menos, pero aplica dano continuo.",
+              effects: [["Buff propio", "+40% Crit Rate y +30% Crit DMG"], ["Ataque comun", "dano reducido a 80%"], ["DoT basico", "1 stack de 3% por 4 rondas, max 10"], ["Nota", "la linea final de HP bajo quedo cortada en OCR"]],
+            },
+            {
+              name: "Red Survival",
+              type: "Pasiva",
+              icon: "images/heroes/vinsmoke-ichiji/skill-vinsmoke-ichiji-4.jpeg",
+              summary: "Empieza perdiendo HP. Cuando baja de 45% HP se cura y gana inmunidad a control.",
+              effects: [["Inicio", "pierde 20% HP propio"], ["HP < 45%", "recupera 50% HP"], ["Decontrol", "inmune a control por 3 turnos"], ["Limite", "una vez por batalla"]],
+            },
+            {
+              name: "Duel Mark",
+              type: "Pasiva",
+              icon: "images/heroes/vinsmoke-ichiji/skill-vinsmoke-ichiji-5.jpeg",
+              summary: "Al inicio aumenta su dano y tambien el dano recibido por el enemigo con mayor ATK.",
+              effects: [["Inicio", "+20% dano propio por 5 turnos"], ["Objetivo", "enemigo con mayor ATK recibe +20% dano por 5 turnos"]],
+            },
+          ],
+        },
+        "Vinsmoke Niji": {
+          status: "complete",
+          summary:
+            "SUP UR Germa de velocidad, Overload y dano continuo. Puede potenciar back row y reducir su dano recibido en Overload.",
+          skills: [
+            {
+              name: "Koschi Mecha Heavy Blazer",
+              type: "Activa",
+              icon: "images/heroes/vinsmoke-niji/skill-vinsmoke-niji-1.jpeg",
+              summary: "Activa multi-hit a todos los enemigos, con dano continuo en el primer golpe.",
+              effects: [["Dano", "4 golpes, total 56% ATK a todos"], ["Primer golpe", "DoT de 3% ATK por 4 turnos, max 10"]],
+            },
+            {
+              name: "Blue Overload",
+              type: "Pasiva",
+              icon: "images/heroes/vinsmoke-niji/skill-vinsmoke-niji-2.jpeg",
+              summary: "Aumenta velocidad y tras usar activa entra en Overload. Durante Overload puede dar Overload a un aliado atras.",
+              effects: [["Buff propio", "+10 Speed"], ["Tras activa", "Overload por 3 turnos, una vez cada 5 turnos"], ["En Overload", "un aliado aleatorio de back row gana Overload por 1 turno"]],
+            },
+            {
+              name: "Burning Blazer",
+              type: "Pasiva",
+              icon: "images/heroes/vinsmoke-niji/skill-vinsmoke-niji-3.jpeg",
+              summary: "Hace mas dano a objetivos con HP alto y su activa aplica Burning.",
+              effects: [["Contra HP > 70%", "+40% dano"], ["Activa", "aplica Burning por 2 rondas"]],
+            },
+            {
+              name: "Row Overload",
+              type: "Pasiva",
+              icon: "images/heroes/vinsmoke-niji/skill-vinsmoke-niji-4.jpeg",
+              summary: "Cambia efecto segun posicion. En frente gana inmunidades; atras agrega dano continuo a ataque normal y skill.",
+              effects: [["Front + Overload", "inmune a petrify, stun y freeze"], ["Back", "primer golpe de ataque normal y activa aplica DoT de 6% ATK por 4 turnos, max 10"]],
+            },
+            {
+              name: "Back Row Amplifier",
+              type: "Pasiva",
+              icon: "images/heroes/vinsmoke-niji/skill-vinsmoke-niji-5.jpeg",
+              summary: "Despues de cada accion aumenta el dano continuo de una fila aliada, priorizando back row.",
+              effects: [["Despues de actuar", "+10% dano continuo a una fila aliada"], ["Limite", "hasta 5 stacks"], ["Prioridad", "back row"], ["Overload", "si el objetivo esta en Overload suma 1 stack adicional"]],
+            },
+            {
+              name: "Overload Speed",
+              type: "Pasiva",
+              icon: "images/heroes/vinsmoke-niji/skill-vinsmoke-niji-6.jpeg",
+              summary: "En Overload aumenta velocidad y reduce el dano recibido.",
+              effects: [["En Overload", "+10 Speed"], ["Defensa", "-30% dano recibido"]],
+            },
+          ],
+        },
+      };
+
+      heroes.forEach((hero) => {
+        const transcription = transcribedSkillSets[hero.name];
+        if (!transcription) return;
+        Object.assign(hero, transcription);
+      });
+
       const heroCatalog = document.querySelector("#hero-catalog");
       const heroCount = document.querySelector("#hero-count");
       const heroPodium = document.querySelector("#hero-podium");
@@ -5467,26 +6029,27 @@
       };
 
       const mechanicRankings = {
-        "aoe-damage": ["Big Mom", "Rayleigh", "Akainu", "Luffy (Gear 4)", "Kid", "Fujitora", "Perospero", "Cavendish"],
-        "single-burst": ["Bartolomeo", "X Drake", "Franky (New World)", "Bege", "Jack", "Moria"],
+        "aoe-damage": ["Big Mom", "Shanks", "Whitebeard", "Yamato", "Rayleigh", "Akainu", "Sabo (Fire Fist)", "Magellan", "Blackbeard (New World)", "Vinsmoke Niji", "Luffy (Gear 4)", "Kid", "Fujitora", "Perospero", "Cavendish"],
+        "single-burst": ["Garp", "Zephyr", "Bartolomeo", "X Drake", "Franky (New World)", "Bege", "Jack", "Moria"],
         "backline-focus": ["Brook (New World)", "Kid", "Chopper (New World)", "Jack", "Zoro (New World)"],
         execute: ["Rayleigh", "Crocodile"],
-        "heal-reduction": ["Tsuru", "Moria", "Luffy (Gear 4)", "Kaido"],
-        vulnerable: ["Jack", "Perona", "Rayleigh", "Otohime"],
-        "damage-down": ["Perona", "Jack", "Smoothie", "Akainu", "Sengoku"],
-        "hit-down": ["Zoro (New World)", "Fujitora", "Moria"],
-        terror: ["Big Mom", "Perona", "Perospero", "Enel"],
+        "heal-reduction": ["Whitebeard", "Sabo (Fire Fist)", "Tsuru", "Moria", "Luffy (Gear 4)", "Kaido"],
+        vulnerable: ["Yamato", "Jack", "Perona", "Rayleigh", "Otohime"],
+        "damage-down": ["Vinsmoke Reiju", "Perona", "Jack", "Smoothie", "Akainu", "Sengoku"],
+        "hit-down": ["Magellan", "Zoro (New World)", "Fujitora", "Moria"],
+        terror: ["Zephyr", "Big Mom", "Perona", "Perospero", "Enel"],
         petrify: ["Perospero"],
+        freeze: ["Vinsmoke Sanji", "Aokiji", "Aokiji (New World)"],
         taunt: ["Bege"],
-        dispel: ["X Drake", "Nami (New World)"],
-        healing: ["Law", "Otohime", "Chopper (New World)", "Marco", "Smoothie", "Perona"],
-        shield: ["Franky (New World)", "Chopper (New World)", "Jack", "Bege", "Kid"],
-        "damage-reduction": ["Jack", "Sengoku", "Franky (New World)", "Bege", "Perona"],
+        dispel: ["Vinsmoke Reiju", "X Drake", "Nami (New World)"],
+        healing: ["Law", "Otohime", "Vinsmoke Reiju", "Chopper (New World)", "Marco", "Smoothie", "Perona"],
+        shield: ["Whitebeard", "Sabo (Fire Fist)", "Franky (New World)", "Chopper (New World)", "Jack", "Bege", "Kid"],
+        "damage-reduction": ["Jack", "Garp", "Yamato", "Vinsmoke Reiju", "Vinsmoke Niji", "Sengoku", "Franky (New World)", "Bege", "Perona"],
         "damage-buff": ["Otohime", "Law", "Perona", "Chopper (New World)", "Big Mom"],
-        "crit-buff": ["Otohime", "Nami (New World)", "Big Mom", "Rayleigh", "Kid"],
-        "combo-buff": ["Franky (New World)", "X Drake", "Fujitora", "Kid"],
-        energy: ["Law", "Otohime", "Nami (New World)"],
-        revive: ["Jack", "Kaido", "Moria", "Marco", "Brook (New World)"],
+        "crit-buff": ["Shanks", "Whitebeard", "Yamato", "Blackbeard (New World)", "Sabo (Fire Fist)", "Otohime", "Nami (New World)", "Big Mom", "Rayleigh", "Kid"],
+        "combo-buff": ["Zephyr", "Franky (New World)", "X Drake", "Fujitora", "Kid"],
+        energy: ["Law", "Shanks", "Sabo (Fire Fist)", "Otohime", "Nami (New World)"],
+        revive: ["Jack", "Kaido", "Garp", "Vinsmoke Judge", "Moria", "Marco", "Brook (New World)"],
       };
 
       const mechanicRankingNotes = {
@@ -5945,6 +6508,3 @@
     <script src="language.js"></script>
   </body>
 </html>
-
-
-
